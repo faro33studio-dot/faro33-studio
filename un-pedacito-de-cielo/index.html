@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Un pedacito de cielo · Faro 33 Studio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Un pedacito de cielo — recámara en el residencial Un rincón cerca del cielo. Un proyecto sobre luz suave, terciopelo y horizontes pequeños. Faro 33 Studio · Culiacán, Sinaloa.">
+<meta property="og:title" content="Un pedacito de cielo · Faro 33 Studio">
+<meta property="og:description" content="Recámara en Un rincón cerca del cielo — luz suave, terciopelo y horizontes pequeños.">
+<meta property="og:image" content="assets/pedacito-3.jpg">
+<meta property="og:type" content="article">
+<link rel="icon" href="assets/logo-faro33.png">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '883854600914341');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* ============================================================
+   FARO 33 — Bodoni MT
+   ============================================================ */
+@font-face { font-family:"Bodoni MT"; src:url("fonts/BOD_R.TTF") format("truetype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Bodoni MT"; src:url("fonts/BOD_I.TTF") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"Bodoni MT"; src:url("fonts/BOD_B.TTF") format("truetype"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"Bodoni MT"; src:url("fonts/BOD_BI.TTF") format("truetype"); font-weight:700; font-style:italic; font-display:swap; }
+
+:root{
+  --navy-800:#13305C; --navy-700:#1E4276; --navy-900:#0E2547; --navy-950:#0A1B36;
+  --linen-50:#FBF8F2; --linen-100:#F4EFE5;
+  --sand-200:#E6DDCB; --sand-300:#C9BCA1;
+  --stone-500:#8A7E68; --stone-700:#54493A;
+  --ink-900:#1B1612;
+  --brass-500:#B8924A; --brass-400:#C9A968;
+  --gold-300:#E2C99A; --champagne-100:#F5EBD6;
+
+  --font-display:"Bodoni MT","Bodoni Moda","Didot",serif;
+  --font-body:"Bodoni MT","Bodoni Moda",Georgia,serif;
+  --font-ui: ui-sans-serif,-apple-system,"Inter","Helvetica Neue",Arial,sans-serif;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  background:var(--linen-50);
+  color:var(--ink-900);
+  font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; }
+
+/* Container width — fluid editorial layout */
+.wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(24px,5vw,64px); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: clamp(16px,2.5vw,24px) clamp(20px,4vw,48px);
+  background: linear-gradient(180deg, rgba(10,27,54,0.55), rgba(10,27,54,0));
+  color:#fff;
+}
+.nav .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; color:#fff; }
+.nav .brand img{ width:36px; height:36px; }
+.nav .brand .lbl{
+  font-family:var(--font-ui);
+  font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
+  font-weight:500;
+}
+.nav .back{
+  font-family:var(--font-ui);
+  font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
+  font-weight:500; text-decoration:none; color:#fff; opacity:0.85;
+}
+.nav .back:hover{ opacity:1; }
+
+/* shared eyebrow */
+.eyebrow{
+  font-family:var(--font-ui);
+  font-size: clamp(11px,1.1vw,13px);
+  letter-spacing:0.32em; text-transform:uppercase; font-weight:500;
+  color:var(--stone-500);
+  display:flex; align-items:center; gap:18px;
+  margin:0 0 28px;
+}
+.eyebrow::before{
+  content:""; display:block; width:42px; height:1px; background:var(--navy-800);
+}
+.on-deep .eyebrow{ color:rgba(255,255,255,0.85); }
+.on-deep .eyebrow::before{ background:rgba(255,255,255,0.7); }
+
+/* ============================================================
+   HERO (slide 1)
+   ============================================================ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  color:#fff;
+  background:
+    linear-gradient(180deg,
+      rgba(10,27,54,0.45) 0%,
+      rgba(10,27,54,0) 28%,
+      rgba(10,27,54,0) 48%,
+      rgba(10,27,54,0.72) 86%,
+      rgba(10,27,54,0.95) 100%),
+    url("assets/pedacito-3.jpg") center 35% / cover no-repeat;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px);
+}
+.hero .top-meta{
+  position:absolute; top: clamp(80px,12vh,120px); left: clamp(24px,5vw,80px);
+  display:flex; flex-direction:column; gap:18px;
+}
+.hero .studio-mark{
+  font-family:var(--font-display); font-weight:700;
+  font-size: clamp(13px,1.3vw,18px);
+  letter-spacing:0.32em; text-transform:uppercase;
+  color:rgba(255,255,255,0.95);
+}
+.hero h1{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(56px,11vw,148px);
+  line-height:0.96;
+  letter-spacing:-0.025em;
+  text-wrap:balance;
+  margin:0;
+  color:#fff;
+}
+.hero h1 em{ font-style:italic; color:var(--gold-300); }
+.hero .sub{
+  margin-top: clamp(18px,2.5vw,28px);
+  font-family:var(--font-display);
+  font-size: clamp(18px,2.4vw,30px);
+  line-height:1.35;
+  color:rgba(255,255,255,0.92);
+  max-width:24ch;
+}
+.hero .sub em{ font-style:italic; color:var(--champagne-100); }
+
+.hero .scroll-cue{
+  position:absolute; bottom: clamp(32px,5vh,56px); left:50%; transform:translateX(-50%);
+  font-family:var(--font-ui);
+  font-size:11px; letter-spacing:0.32em; text-transform:uppercase;
+  color:rgba(255,255,255,0.75);
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.hero .scroll-cue::after{
+  content:""; width:1px; height:36px; background:rgba(255,255,255,0.55);
+  animation: cue 2.4s ease-in-out infinite;
+}
+@keyframes cue{
+  0%,100%{ transform:translateY(0); opacity:0.45; }
+  50%   { transform:translateY(8px); opacity:1; }
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section.block{
+  padding: clamp(72px,10vw,148px) 0;
+}
+.block.cream{ background:var(--linen-50); color:var(--ink-900); }
+.block.linen{ background:var(--linen-100); color:var(--ink-900); }
+.block.deep{ background:var(--navy-800); color:#fff; }
+
+/* Headings */
+h2.section-title{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(40px,7vw,88px);
+  line-height:1; letter-spacing:-0.02em;
+  text-wrap:balance;
+  margin:0 0 clamp(28px,4vw,48px);
+  color:var(--navy-800);
+  max-width:16ch;
+}
+.on-deep h2.section-title{ color:#fff; }
+h2.section-title em{ font-style:italic; }
+.on-deep h2.section-title em{ color:var(--gold-300); }
+
+p.lead{
+  font-family:var(--font-body);
+  font-size: clamp(17px,1.6vw,20px);
+  line-height:1.65;
+  color:var(--stone-700);
+  max-width:56ch;
+  margin:0 0 24px;
+}
+.on-deep p.lead{ color:rgba(255,255,255,0.82); }
+
+/* ------------------------------------------------------------
+   2 — BRIEF
+   ------------------------------------------------------------ */
+.brief .brief-head{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(44px,7.5vw,92px);
+  line-height:1; letter-spacing:-0.02em;
+  color:var(--navy-800);
+  text-wrap:balance; max-width:14ch;
+  margin:0 0 56px;
+}
+.brief .brief-head em{ font-style:italic; }
+.brief .six{
+  border-top:1px solid var(--sand-300);
+  padding-top:36px; max-width:760px;
+  margin-bottom:48px;
+}
+.brief .six .quote{
+  font-family:var(--font-display); font-style:italic;
+  font-size: clamp(28px,4.6vw,56px);
+  line-height:1.12; letter-spacing:-0.015em;
+  color:var(--navy-800);
+  text-wrap:balance;
+  margin:0 0 14px;
+}
+.brief .six .quote .acc{ color:var(--brass-500); }
+.brief .six .attr{
+  font-family:var(--font-ui);
+  font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
+  color:var(--stone-500);
+}
+.brief .body-copy{
+  font-family:var(--font-body);
+  font-size: clamp(17px,1.55vw,20px);
+  line-height:1.65; color:var(--stone-700);
+  max-width:60ch;
+}
+.brief .body-copy strong{
+  font-family:var(--font-display); font-weight:700;
+  color:var(--navy-800);
+}
+
+/* ------------------------------------------------------------
+   3 — PROYECTO (photo + specs)
+   ------------------------------------------------------------ */
+.proyecto .hero-img{
+  position:relative;
+  aspect-ratio: 16/9;
+  background:
+    linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%),
+    url("assets/pedacito-1.jpg") center 40% / cover no-repeat;
+  margin-bottom: clamp(40px,5vw,72px);
+}
+.proyecto .hero-img .tag{
+  position:absolute; left:clamp(20px,3vw,40px); bottom:clamp(16px,2vw,28px);
+  font-family:var(--font-ui);
+  font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.92);
+}
+.proyecto .lead-italic{
+  font-family:var(--font-display); font-style:italic; font-weight:400;
+  font-size: clamp(28px,4vw,46px);
+  line-height:1.14; letter-spacing:-0.01em;
+  color:var(--navy-800);
+  text-wrap:balance; max-width:24ch;
+  margin:0 0 36px;
+}
+.proyecto .lead-italic .acc{ color:var(--brass-500); font-style:italic; }
+.proyecto .specs{
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:32px 56px;
+  padding-top:32px;
+  border-top:1px solid var(--sand-300);
+}
+.proyecto .spec .lbl{
+  font-family:var(--font-ui);
+  font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+  color:var(--stone-500);
+  margin-bottom:8px;
+}
+.proyecto .spec .val{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(18px,1.8vw,24px); line-height:1.25;
+  color:var(--navy-800);
+}
+.proyecto .spec .val em{ font-style:italic; }
+@media (max-width:760px){
+  .proyecto .specs{ grid-template-columns:repeat(2,1fr); gap:28px 24px; }
+}
+
+/* ------------------------------------------------------------
+   4 — METÁFORA
+   ------------------------------------------------------------ */
+.metafora .meta-grid{
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap: clamp(28px,3vw,48px);
+  padding-top:32px;
+  border-top:1px solid var(--sand-300);
+  margin-bottom: clamp(48px,6vw,80px);
+}
+.metafora .meta-item .key{
+  font-family:var(--font-display); font-weight:700;
+  font-size: clamp(22px,2.4vw,30px);
+  letter-spacing:-0.01em;
+  color:var(--navy-800);
+  margin:0 0 8px;
+}
+.metafora .meta-item .key em{ font-style:italic; font-weight:400; }
+.metafora .meta-item .desc{
+  font-family:var(--font-body);
+  font-size: clamp(15px,1.3vw,17px);
+  line-height:1.55; color:var(--stone-700);
+}
+@media (max-width:900px){ .metafora .meta-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px){ .metafora .meta-grid{ grid-template-columns:1fr; } }
+
+.metafora .strip{
+  height: clamp(280px,40vw,520px);
+  background:
+    linear-gradient(180deg, rgba(10,27,54,0) 70%, rgba(10,27,54,0.45) 100%),
+    url("assets/pedacito-2.jpg") center 30% / cover no-repeat;
+}
+
+/* ------------------------------------------------------------
+   5 — PALETA (navy)
+   ------------------------------------------------------------ */
+.paleta{ color:#fff; }
+.paleta .palette{
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  min-height: clamp(280px,32vw,440px);
+  margin-top: clamp(40px,5vw,72px);
+}
+.paleta .sw{
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding: 22px 22px 24px;
+  color:var(--ink-900);
+}
+.paleta .sw.dark{ color:#fff; }
+.paleta .sw .nm{
+  font-family:var(--font-display); font-weight:700;
+  font-size: clamp(15px,1.5vw,22px); line-height:1.1;
+  letter-spacing:-0.005em;
+  margin-bottom:6px;
+}
+.paleta .sw .nm em{ font-style:italic; font-weight:400; }
+.paleta .sw .h{
+  font-family: ui-monospace,"SF Mono",Menlo,monospace;
+  font-size:11px; letter-spacing:0.04em; opacity:0.75;
+}
+@media (max-width:760px){
+  .paleta .palette{ grid-template-columns:repeat(2,1fr); min-height:auto; }
+  .paleta .sw{ min-height:140px; }
+}
+
+/* ------------------------------------------------------------
+   6 — PIEZAS
+   ------------------------------------------------------------ */
+.piezas .pieces{
+  border-top:1px solid var(--sand-300);
+}
+.piezas .piece{
+  display:grid; grid-template-columns:64px 1fr;
+  gap:clamp(20px,3vw,40px);
+  align-items:baseline;
+  padding: clamp(24px,3vw,32px) 0;
+  border-bottom:1px solid var(--sand-200);
+}
+.piezas .piece .n{
+  font-family:var(--font-display); font-weight:700;
+  font-size: clamp(22px,2.4vw,30px);
+  line-height:1; color:var(--brass-500);
+  letter-spacing:-0.01em;
+  font-variant-numeric:tabular-nums;
+}
+.piezas .piece .t{
+  font-family:var(--font-display); font-weight:700;
+  font-size: clamp(22px,2.6vw,30px);
+  line-height:1.2; color:var(--navy-800);
+  letter-spacing:-0.01em;
+  margin:0 0 8px;
+}
+.piezas .piece .t em{ font-style:italic; font-weight:400; }
+.piezas .piece .d{
+  font-family:var(--font-body);
+  font-size: clamp(15px,1.35vw,17px);
+  line-height:1.6; color:var(--stone-700);
+  max-width:60ch;
+  margin:0;
+}
+
+/* ------------------------------------------------------------
+   7 — MATERIALES (linen tint)
+   ------------------------------------------------------------ */
+.materiales .mats{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:0 clamp(28px,4vw,56px);
+  border-top:1px solid var(--sand-300);
+  margin-top: clamp(24px,3vw,40px);
+}
+.materiales .mat{
+  display:grid; grid-template-columns:1fr auto;
+  align-items:baseline; gap:24px;
+  padding: clamp(16px,2vw,22px) 0;
+  border-bottom:1px solid var(--sand-200);
+}
+.materiales .mat .nm{
+  font-family:var(--font-display); font-weight:700;
+  font-size: clamp(17px,1.7vw,22px);
+  line-height:1.2; letter-spacing:-0.005em;
+  color:var(--navy-800);
+}
+.materiales .mat .nm em{ font-style:italic; font-weight:400; }
+.materiales .mat .role{
+  font-family:var(--font-ui);
+  font-size:11px; letter-spacing:0.24em; text-transform:uppercase;
+  color:var(--stone-500); white-space:nowrap;
+}
+@media (max-width:680px){ .materiales .mats{ grid-template-columns:1fr; } }
+
+/* ------------------------------------------------------------
+   8 — FULL BLEED
+   ------------------------------------------------------------ */
+.fullbleed{
+  position:relative;
+  min-height:80vh;
+  color:#fff;
+  background:
+    linear-gradient(180deg, rgba(10,27,54,0) 45%, rgba(10,27,54,0.88) 100%),
+    url("assets/pedacito-3.jpg") center 40% / cover no-repeat;
+  display:flex; align-items:flex-end;
+  padding: clamp(72px,12vh,140px) clamp(24px,5vw,80px);
+}
+.fullbleed .cap{ max-width:880px; }
+.fullbleed .lbl{
+  font-family:var(--font-ui);
+  font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.78);
+  display:block; margin-bottom:18px;
+}
+.fullbleed .h{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(34px,5.5vw,68px);
+  line-height:1.05; letter-spacing:-0.02em;
+  margin:0; text-wrap:balance;
+}
+.fullbleed .h em{ font-style:italic; color:var(--gold-300); }
+
+/* ------------------------------------------------------------
+   9 — PULL QUOTE (navy)
+   ------------------------------------------------------------ */
+.pullquote{ color:#fff; text-align:left; }
+.pullquote .glyph{
+  font-family:var(--font-display); font-style:italic; font-weight:400;
+  font-size: clamp(140px,22vw,240px);
+  line-height:0.6; color:var(--gold-300);
+  opacity:0.55; margin-bottom: clamp(24px,3vw,40px);
+}
+.pullquote .q{
+  font-family:var(--font-display); font-style:italic; font-weight:400;
+  font-size: clamp(36px,6vw,80px);
+  line-height:1.08; letter-spacing:-0.018em;
+  color:#fff; text-wrap:balance; max-width:18ch;
+  margin:0 0 clamp(40px,5vw,72px);
+}
+.pullquote .q .acc{ color:var(--gold-300); }
+.pullquote .attrib{
+  border-top:1px solid rgba(255,255,255,0.18);
+  padding-top:24px;
+  display:flex; flex-direction:column; gap:8px;
+  max-width:480px;
+}
+.pullquote .who{
+  font-family:var(--font-display);
+  font-size: clamp(18px,1.6vw,22px);
+}
+.pullquote .where{
+  font-family:var(--font-ui);
+  font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+}
+
+/* ------------------------------------------------------------
+   10 — CIERRE
+   ------------------------------------------------------------ */
+.cierre{ background:var(--navy-800); color:#fff; padding:0; }
+.cierre .photo{
+  height: clamp(280px,40vh,440px);
+  background:
+    linear-gradient(180deg, rgba(10,27,54,0) 50%, rgba(10,27,54,0.6) 100%),
+    url("assets/pedacito-2.jpg") center 45% / cover no-repeat;
+}
+.cierre .body{
+  padding: clamp(56px,8vw,96px) 0 clamp(72px,10vw,128px);
+}
+.cierre .grid{
+  display:grid; grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px,5vw,80px);
+  align-items:flex-start;
+}
+@media (max-width:820px){ .cierre .grid{ grid-template-columns:1fr; } }
+
+.cierre .quote{
+  font-family:var(--font-display); font-style:italic; font-weight:400;
+  font-size: clamp(32px,5vw,56px);
+  line-height:1.1; letter-spacing:-0.015em;
+  color:#fff; text-wrap:balance; max-width:18ch;
+  margin:32px 0 22px;
+}
+.cierre .quote .acc{ color:var(--gold-300); }
+.cierre .attrib-sm{
+  font-family:var(--font-ui);
+  font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+}
+.cierre .contact{
+  border-top:1px solid rgba(255,255,255,0.18);
+  padding-top:28px;
+  display:flex; flex-direction:column; gap:16px;
+}
+.cierre .contact .row{
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:24px;
+}
+.cierre .contact .lbl{
+  font-family:var(--font-ui);
+  font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+}
+.cierre .contact .val{
+  font-family:var(--font-display);
+  font-size: clamp(15px,1.5vw,20px);
+  color:#fff; text-align:right;
+}
+.cierre .contact a.val{ text-decoration:none; }
+.cierre .contact a.val:hover{ color:var(--gold-300); }
+
+/* ------------------------------------------------------------
+   FOOTER strip
+   ------------------------------------------------------------ */
+.foot{
+  background:var(--navy-950); color:rgba(255,255,255,0.55);
+  padding: 24px clamp(24px,5vw,48px);
+  display:flex; justify-content:space-between; align-items:center; gap:24px;
+  font-family:var(--font-ui);
+  font-size:11px; letter-spacing:0.24em; text-transform:uppercase;
+  flex-wrap:wrap;
+}
+.foot a{ color:inherit; text-decoration:none; }
+.foot a:hover{ color:var(--gold-300); }
+
+/* Long-text readability */
+@media (max-width:560px){
+  .nav .brand .lbl{ display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="brand" href="/">
+    <img src="assets/logo-faro33.png" alt="Faro 33">
+    <span class="lbl">Faro 33 · Studio</span>
+  </a>
+  <a class="back" href="/">← Volver</a>
+</nav>
+
+<!-- 1 · HERO / COVER -->
+<header class="hero">
+  <div class="top-meta">
+    <span class="studio-mark">Faro 33 · Studio</span>
+    <span class="eyebrow" style="color:rgba(255,255,255,0.85)">Portafolio · 2024</span>
+  </div>
+  <h1>Un pedacito<br><em>de cielo.</em></h1>
+  <p class="sub">Recámara en <em>Un rincón cerca del cielo</em> — luz suave, terciopelo y horizontes pequeños.</p>
+  <span class="scroll-cue">Scroll</span>
+</header>
+
+<!-- 2 · BRIEF -->
+<section class="block cream brief">
+  <div class="wrap">
+    <p class="eyebrow">El brief · 01</p>
+    <h2 class="brief-head">Seis palabras <em>y una caja</em> de juguetes.</h2>
+    <div class="six">
+      <p class="quote">"Un <span class="acc">pedacito de cielo</span>."</p>
+      <span class="attr">— Familia · primera visita · enero 2024</span>
+    </div>
+    <p class="body-copy">
+      El brief original cabía en seis palabras. La familia tenía clara una sola cosa: la habitación debía sentirse <strong>suave</strong> — no mínima, no pretenciosa. Un lugar donde quedarse a leer.
+      <br><br>
+      Nos llevamos también una caja: un tren de madera, un Mickey, un par de globos aerostáticos de fieltro guardados por la abuela. Esos objetos — no Pinterest, no un moodboard — fueron el primer punto de partida.
+    </p>
+  </div>
+</section>
+
+<!-- 3 · PROYECTO -->
+<section class="block cream proyecto">
+  <div class="wrap">
+    <div class="hero-img"><span class="tag">Recámara · 24 m² · Un rincón cerca del cielo</span></div>
+    <p class="eyebrow">El proyecto · 02</p>
+    <p class="lead-italic">
+      Globos suspendidos, una <span class="acc">cabecera coronada</span> de terciopelo, nubes y estrellas grabadas en el muro.
+    </p>
+    <div class="specs">
+      <div class="spec"><div class="lbl">Tipología</div><div class="val">Recámara <em>infantil</em></div></div>
+      <div class="spec"><div class="lbl">Ubicación</div><div class="val"><em>Un rincón cerca del cielo</em> · Culiacán</div></div>
+      <div class="spec"><div class="lbl">Programa</div><div class="val">Dormir <em>·</em> jugar <em>·</em> crecer</div></div>
+      <div class="spec"><div class="lbl">Año</div><div class="val">Q3 · 2024</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · METÁFORA -->
+<section class="block cream metafora">
+  <div class="wrap">
+    <p class="eyebrow">La metáfora · 03</p>
+    <h2 class="section-title">Una metáfora, <em>hecha habitación.</em></h2>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <h3 class="key">El <em>cielo</em></h3>
+        <p class="desc">La paleta — salvia, perla, crema, cielo gris. Cinco tonos, ninguno primario.</p>
+      </div>
+      <div class="meta-item">
+        <h3 class="key">Los <em>globos</em></h3>
+        <p class="desc">Apliques de pared y arte gráfico en fieltro a la izquierda de la cabecera.</p>
+      </div>
+      <div class="meta-item">
+        <h3 class="key">Las <em>nubes</em></h3>
+        <p class="desc">El arco generoso de la cabecera — terciopelo salvia, acolchado vertical.</p>
+      </div>
+      <div class="meta-item">
+        <h3 class="key">Las <em>estrellas</em></h3>
+        <p class="desc">Iluminadas dentro de las dos vitrinas a ambos lados del arco.</p>
+      </div>
+    </div>
+  </div>
+  <div class="strip"></div>
+</section>
+
+<!-- 5 · PALETA -->
+<section class="block deep paleta on-deep">
+  <div class="wrap">
+    <p class="eyebrow">La paleta · 04</p>
+    <h2 class="section-title">Cinco tonos, <em>ninguno primario.</em></h2>
+    <p class="lead">La habitación no usaría amarillos, rojos ni azules saturados — el repertorio habitual de una habitación infantil. La paleta debía envejecer con el usuario.</p>
+    <div class="palette">
+      <div class="sw" style="background:#C6CBC9"><div class="nm">Salvia</div><div class="h">#C6CBC9</div></div>
+      <div class="sw" style="background:#D8DEDC"><div class="nm">Perla</div><div class="h">#D8DEDC</div></div>
+      <div class="sw" style="background:#E8E3D1"><div class="nm">Crema</div><div class="h">#E8E3D1</div></div>
+      <div class="sw dark" style="background:#7B8B9A"><div class="nm">Cielo <em>gris</em></div><div class="h">#7B8B9A</div></div>
+      <div class="sw dark" style="background:#13305C"><div class="nm">Navy <em>· acento</em></div><div class="h">#13305C</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · PIEZAS -->
+<section class="block cream piezas">
+  <div class="wrap">
+    <p class="eyebrow">Piezas a medida · 05</p>
+    <h2 class="section-title">Cuatro piezas dibujadas <em>desde cero.</em></h2>
+    <div class="pieces">
+      <article class="piece">
+        <div class="n">01</div>
+        <div>
+          <h3 class="t">La cabecera <em>arqueada</em></h3>
+          <p class="d">Acolchada en terciopelo salvia con costuras verticales. Iluminada por dentro con tira LED 3000 K cálida. Coronada por una pieza en madera lacada.</p>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="n">02</div>
+        <div>
+          <h3 class="t">Dos vitrinas <em>iluminadas</em></h3>
+          <p class="d">Una a cada lado del arco, con repisas de cristal y LED interior. Pensadas para exhibir el peluche favorito — y vaciarlas y rehacerlas en cinco minutos.</p>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="n">03</div>
+        <div>
+          <h3 class="t">Panelado <em>ranurado</em></h3>
+          <p class="d">MDF lacado al agua en los tres muros, ritmo vertical. Cierra la habitación y absorbe el sonido a medianoche.</p>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="n">04</div>
+        <div>
+          <h3 class="t">Muro de <em>mármol</em></h3>
+          <p class="d">Carrara en formato libro detrás del televisor, perímetro de LED indirecto que acaricia la veta sin encandilar.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · MATERIALES -->
+<section class="block linen materiales">
+  <div class="wrap">
+    <p class="eyebrow">Materiales · 06</p>
+    <h2 class="section-title">Lo que <em>sostiene</em> la habitación.</h2>
+    <p class="lead">Cada material elegido por dos cosas — cómo envejece y cómo se limpia. Lacas mate en muros, terciopelos lavables en textiles, barniz al agua en MDF.</p>
+    <div class="mats">
+      <div class="mat"><span class="nm">Terciopelo <em>salvia</em></span><span class="role">Cabecera · banca</span></div>
+      <div class="mat"><span class="nm">MDF lacado</span><span class="role">Panelado ranurado</span></div>
+      <div class="mat"><span class="nm">Mármol Carrara</span><span class="role">Muro de TV</span></div>
+      <div class="mat"><span class="nm">Lino <em>gingham</em></span><span class="role">Ropa de cama</span></div>
+      <div class="mat"><span class="nm">Latón cepillado</span><span class="role">Jaladeras</span></div>
+      <div class="mat"><span class="nm">Pelo corto</span><span class="role">Alfombra · gris cálido</span></div>
+      <div class="mat"><span class="nm">LED 3000 K</span><span class="role">Vitrinas · cabecera</span></div>
+      <div class="mat"><span class="nm">Barniz <em>al agua</em></span><span class="role">Acabado general</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · FULL BLEED -->
+<section class="fullbleed">
+  <div class="cap">
+    <span class="lbl">Vista desde la puerta · 07</span>
+    <h2 class="h">El arco y las vitrinas, <em>iluminadas.</em></h2>
+  </div>
+</section>
+
+<!-- 9 · PULL QUOTE -->
+<section class="block deep pullquote on-deep">
+  <div class="wrap">
+    <p class="eyebrow">Del cliente · 08</p>
+    <div class="glyph" aria-hidden="true">"</div>
+    <p class="q">No queríamos lo mismo,<br>sino algo <span class="acc">único e invaluable.</span></p>
+    <div class="attrib">
+      <span class="who">— Familia</span>
+      <span class="where">Un pedacito de cielo · Culiacán · 2024</span>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · CIERRE -->
+<section class="cierre">
+  <div class="photo"></div>
+  <div class="body">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <p class="eyebrow" style="color:rgba(255,255,255,0.85)">Faro 33 Studio</p>
+          <p class="quote">Interiores que <span class="acc">llevan su tiempo</span>.</p>
+          <span class="attrib-sm">Diseño de interiores · decoración · arquitectura</span>
+        </div>
+        <div class="contact">
+          <div class="row"><span class="lbl">Estudio</span><span class="val">Blv. Pedro María Anaya 1142-E</span></div>
+          <div class="row"><span class="lbl">Col. · CP</span><span class="val">Chapultepec · 80040 · Culiacán</span></div>
+          <div class="row"><span class="lbl">WhatsApp</span><a class="val" href="https://wa.me/526675402559" target="_blank" rel="noopener">+52 667 540 2559</a></div>
+          <div class="row"><span class="lbl">Instagram</span><a class="val" href="https://instagram.com/faro33.studio" target="_blank" rel="noopener">@faro33.studio</a></div>
+          <div class="row"><span class="lbl">Facebook</span><a class="val" href="https://facebook.com/faro33.studio" target="_blank" rel="noopener">@faro33.studio</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <span>© 2024 Faro 33 Studio · Culiacán, Sin.</span>
+  <a href="/">faro33studio.com</a>
+</footer>
+
+</body>
+</html>
