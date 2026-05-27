@@ -406,6 +406,66 @@ p.lead{
 }
 @media (max-width:680px){ .materiales .mats{ grid-template-columns:1fr; } }
 
+/* ---------- GALLERY (horizontal scroller) ---------- */
+.gallery{ background:var(--linen-100); padding: clamp(72px,10vw,148px) 0 0; overflow:hidden; }
+.gallery .head{ padding: 0 clamp(24px,5vw,64px); max-width:1180px; margin:0 auto clamp(28px,4vw,48px); }
+.gallery .head h2{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(36px,6vw,72px);
+  line-height:1; letter-spacing:-0.02em;
+  text-wrap:balance; margin:0 0 16px;
+  color:var(--navy-800); max-width:18ch;
+}
+.gallery .head h2 em{ font-style:italic; }
+.gallery .head .lead{
+  font-family:var(--font-body); font-size: clamp(16px,1.4vw,18px);
+  line-height:1.6; color:var(--stone-700); max-width:56ch; margin:0;
+}
+.gallery .scroller{
+  display:flex; gap: clamp(16px,2vw,24px);
+  overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sand-300) transparent;
+  padding: 8px clamp(24px,5vw,64px) clamp(72px,10vw,128px);
+}
+.gallery .scroller::-webkit-scrollbar{ height:6px; }
+.gallery .scroller::-webkit-scrollbar-track{ background:transparent; }
+.gallery .scroller::-webkit-scrollbar-thumb{ background:var(--sand-300); border-radius:3px; }
+.gallery .item{
+  flex: 0 0 auto;
+  width: min(78vw, 720px);
+  scroll-snap-align: start;
+  display:flex; flex-direction:column; gap:14px;
+}
+.gallery .item .img{
+  aspect-ratio: 4/3;
+  background-size:cover; background-position:center 50%;
+}
+.gallery .item .cap{
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+  color:var(--stone-500);
+  display:flex; align-items:center; gap:14px;
+}
+.gallery .item .cap::before{
+  content:""; display:block; width:28px; height:1px; background:var(--brass-500); flex:0 0 auto;
+}
+.gallery .item .cap em{
+  font-family:var(--font-display); font-style:italic;
+  font-size:14px; letter-spacing:0.04em; text-transform:none; color:var(--navy-800);
+  margin-left:auto;
+}
+.gallery .hint{
+  padding: 0 clamp(24px,5vw,64px) clamp(40px,5vw,72px);
+  max-width:1180px; margin:0 auto;
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+  color:var(--stone-500);
+  display:flex; align-items:center; gap:14px;
+}
+.gallery .hint::before{
+  content:""; display:block; width:28px; height:1px; background:var(--sand-300);
+}
+
 /* ---------- PULL QUOTE ---------- */
 .pullquote{ color:#fff; text-align:left; }
 .pullquote .glyph{
@@ -616,14 +676,14 @@ p.lead{
         <p class="d">Panel acanalado en terciopelo café-tabaco con radiación en abanico, marcos en espejo a ambos lados, plafón con grecas iluminadas y lateral en papel tapiz tono perla. La pieza más larga y baja de la casa.</p>
       </article>
       <article class="room g1">
-        <div class="img" role="img" aria-label="Recámara temática Gamer"></div>
-        <span class="n">02 · Recámara secundaria</span>
+        <div class="img" role="img" aria-label="Recámara de los nietos"></div>
+        <span class="n">02 · Para los nietos</span>
         <h3 class="t">Tapiz <em>gamer</em>, cabeceras navy</h3>
-        <p class="d">Dos camas individuales con cabeceras acanaladas en terciopelo navy, muro principal en papel tapiz temático ("Gamer · level up") sobre fondo azul profundo, mesilla compartida en blanco con grecas doradas.</p>
+        <p class="d">El cuarto que los nietos heredan cuando vienen a quedarse. Dos camas individuales con cabeceras acanaladas en terciopelo navy, muro principal en papel tapiz temático ("Gamer · level up") sobre fondo azul profundo, mesilla compartida en blanco con grecas doradas.</p>
       </article>
       <article class="room r1">
-        <div class="img" role="img" aria-label="Recámara con cabecera arqueada"></div>
-        <span class="n">03 · Recámara rosa</span>
+        <div class="img" role="img" aria-label="Recámara perla"></div>
+        <span class="n">03 · Recámara perla</span>
         <h3 class="t">Arco <em>en gris</em>, muros perlados</h3>
         <p class="d">Cabecera de doble altura en terciopelo gris cálido con arco superior, paneles espejo a los lados, muros en papel tapiz geométrico tono perla y abejas doradas en oro mate como acento gráfico.</p>
       </article>
@@ -694,6 +754,42 @@ p.lead{
       <div class="mat"><span class="nm">Oro <em>cepillado</em></span><span class="role">Estructuras · herrajes · marcos</span></div>
     </div>
   </div>
+</section>
+
+<!-- 9.5 · GALLERY -->
+<section class="gallery">
+  <div class="head">
+    <p class="eyebrow">Galería · 09</p>
+    <h2>Otros <em>ángulos.</em></h2>
+    <p class="lead">Algunos rincones que no caben en las secciones principales — vestíbulos, mesas puestas, sala-cine, áreas de transición.</p>
+  </div>
+  <div class="scroller" role="region" aria-label="Galería horizontal de Casa Quintas">
+    <figure class="item">
+      <div class="img" style="background-image:url('assets/gallery-10.jpg')" role="img" aria-label="Tríptico de cuadros sobre consola"></div>
+      <figcaption class="cap">Sala · tríptico <em>oro y grafito</em></figcaption>
+    </figure>
+    <figure class="item">
+      <div class="img" style="background-image:url('assets/gallery-13.jpg'); background-position:center 60%;" role="img" aria-label="Mesa puesta editorial"></div>
+      <figcaption class="cap">Comedor · mesa <em>puesta</em></figcaption>
+    </figure>
+    <figure class="item">
+      <div class="img" style="background-image:url('assets/gallery-3.jpg')" role="img" aria-label="Sala curva con espejos y mesas en latón"></div>
+      <figcaption class="cap">Sala íntima · espejos y <em>latón</em></figcaption>
+    </figure>
+    <figure class="item">
+      <div class="img" style="background-image:url('assets/gallery-9.jpg'); background-position:center 30%;" role="img" aria-label="Sofá negro bajo dos cuadros"></div>
+      <figcaption class="cap">Estudio · sofá <em>en negro</em></figcaption>
+    </figure>
+    <figure class="item">
+      <div class="img" style="background-image:url('assets/gallery-1.jpg')" role="img" aria-label="Sala-cine con plafón LED"></div>
+      <figcaption class="cap">Sala-cine · plafón <em>LED</em></figcaption>
+    </figure>
+    <figure class="item">
+      <div class="img" style="background-image:url('assets/gallery-15.jpg')" role="img" aria-label="Vestíbulo nocturno con candil"></div>
+      <figcaption class="cap">Vestíbulo · candil <em>al fondo</em></figcaption>
+    </figure>
+  </div>
+  <p class="hint">Desliza para ver más →</p>
 </section>
 
 <!-- 10 · PULL QUOTE -->
