@@ -100,10 +100,10 @@ a{ color:inherit; }
   position:relative; min-height:100vh; color:#fff;
   background:
     linear-gradient(180deg,
-      rgba(10,27,54,0.45) 0%, rgba(10,27,54,0) 28%,
-      rgba(10,27,54,0) 50%, rgba(10,27,54,0.78) 86%,
-      rgba(10,27,54,0.95) 100%),
-    url("assets/colina-1-foyer.jpg") center 30% / cover no-repeat;
+      rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.15) 28%,
+      rgba(10,27,54,0.05) 48%, rgba(10,27,54,0.82) 84%,
+      rgba(10,27,54,0.96) 100%),
+    url("assets/colina-2-sala.jpg") center 45% / cover no-repeat;
   display:flex; flex-direction:column; justify-content:flex-end;
   padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px);
 }
@@ -202,7 +202,7 @@ p.lead{
   position:relative; aspect-ratio: 16/9;
   background:
     linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%),
-    url("assets/colina-2-sala.jpg") center 50% / cover no-repeat;
+    url("assets/colina-1-foyer.jpg") center 30% / cover no-repeat;
   margin-bottom: clamp(40px,5vw,72px);
 }
 .proyecto .hero-img .tag{
@@ -342,31 +342,47 @@ p.lead{
   .paleta .sw{ min-height:140px; }
 }
 
-/* ---------- HABITACIÓN NIÑA (split) ---------- */
+/* ---------- HABITACIÓN NIÑA (single room, video + 2 details) ---------- */
 .ninia{ background:var(--linen-100); }
-.ninia .split{
-  display:grid; grid-template-columns: 1.05fr 1fr;
-  gap: clamp(28px,4vw,56px);
-  align-items:flex-start; margin-top: clamp(32px,4vw,56px);
+.ninia .vid{
+  position:relative; overflow:hidden;
+  aspect-ratio: 16/10;
+  background:#EBE4D2;
+  margin-top: clamp(32px,4vw,56px);
 }
-@media (max-width:880px){ .ninia .split{ grid-template-columns:1fr; } }
-.ninia .panel .img{
+.ninia .vid video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center;
+}
+.ninia .vid .cap{
+  position:absolute; left:clamp(20px,3vw,36px); bottom:clamp(16px,2vw,24px); z-index:2;
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.92);
+  text-shadow: 0 1px 12px rgba(10,27,54,0.5);
+}
+.ninia .twin{
+  display:grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(20px,3vw,32px);
+  margin-top: clamp(32px,4vw,56px);
+}
+@media (max-width:840px){ .ninia .twin{ grid-template-columns:1fr; } }
+.ninia .twin .panel{ display:flex; flex-direction:column; gap:14px; }
+.ninia .twin .panel .img{
   aspect-ratio: 4/3; background-size:cover; background-position:center 50%;
-  margin-bottom:18px;
 }
-.ninia .panel.casita .img{ background-image:url("assets/colina-7-montessori.jpg"); }
-.ninia .panel.bebe .img{ background-image:url("assets/colina-8-bebe.jpg"); }
-.ninia .panel .n{
+.ninia .twin .panel.casita .img{ background-image:url("assets/colina-7-montessori.jpg"); }
+.ninia .twin .panel.juegos .img{ background-image:url("assets/colina-8-bebe.jpg"); }
+.ninia .twin .panel .n{
   font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
   color:var(--brass-500); font-weight:600;
 }
-.ninia .panel .t{
+.ninia .twin .panel .t{
   font-family:var(--font-display); font-weight:700;
-  font-size: clamp(22px,2.2vw,28px); line-height:1.2;
-  letter-spacing:-0.01em; color:var(--navy-800); margin:6px 0 10px;
+  font-size: clamp(20px,2vw,26px); line-height:1.2;
+  letter-spacing:-0.01em; color:var(--navy-800); margin:0;
 }
-.ninia .panel .t em{ font-style:italic; font-weight:400; }
-.ninia .panel .d{
+.ninia .twin .panel .t em{ font-style:italic; font-weight:400; }
+.ninia .twin .panel .d{
   font-family:var(--font-body); font-size: clamp(15px,1.3vw,17px);
   line-height:1.6; color:var(--stone-700); margin:0;
 }
@@ -538,10 +554,6 @@ p.lead{
   <div class="wrap">
     <p class="eyebrow">El brief · 01</p>
     <h2 class="brief-head">La casa ya estaba <em>en pie.</em> Faltaba <em>quien la habitara.</em></h2>
-    <div class="six">
-      <p class="quote">"Compramos los metros. <span class="acc">Queremos los acentos.</span>"</p>
-      <span class="attr">— Los propietarios · primera visita · 2023</span>
-    </div>
     <p class="body-copy">
       Una pareja recién mudada compró una casa <strong>terminada</strong> de 720 m² sobre una colina residencial al sur de Culiacán. Buenas proporciones, buenos acabados base — pero ajena. El encargo no era construir; era <strong>traducirla a sus dueños</strong>.
       <br><br>
@@ -582,13 +594,13 @@ p.lead{
       <p class="eyebrow">El muro de nueve metros · 03</p>
       <h2>Una pared <em>que respira luz.</em></h2>
       <p class="lead">
-        Paneles verticales de madera en lamas de distinto largo, iluminados desde el zócalo. Sube nueve metros — del piso al techo de la doble altura — y reorganiza la sensación de toda la casa al entrar. Es lo primero que se ve, y lo último que se olvida.
+        Paneles verticales de <em>Huanacaxtle</em> en lamas de distinto largo, iluminados desde el zócalo. Sube nueve metros — del piso al techo de la doble altura — y reorganiza la sensación de toda la casa al entrar. Es lo primero que se ve, y lo último que se olvida.
       </p>
     </div>
   </div>
   <div class="meta">
     <div class="item"><div class="lbl">Altura</div><div class="val"><em>9</em> metros</div></div>
-    <div class="item"><div class="lbl">Material</div><div class="val">Madera <em>en lamas</em></div></div>
+    <div class="item"><div class="lbl">Material</div><div class="val">Huanacaxtle <em>en lamas</em></div></div>
     <div class="item"><div class="lbl">Luz</div><div class="val">LED 3000 K <em>·</em> wallwash desde el zócalo</div></div>
   </div>
 </section>
@@ -635,21 +647,30 @@ p.lead{
 <!-- 7 · HABITACIÓN NIÑA -->
 <section class="block ninia">
   <div class="wrap">
-    <p class="eyebrow">Habitación de la hija · 06</p>
-    <h2 class="section-title">Una cama-casita, <em>al ras del suelo.</em></h2>
-    <p class="lead">La habitación de la hija pequeña se trabajó con principios <em>Montessori</em> — cama al ras del suelo para que ella entrara y saliera sola, escala adecuada a su altura, materiales nobles y suaves. Al lado, un rincón distinto para la bebé: una nube acolchada en el techo y siluetas de conejos en la pared.</p>
-    <div class="split">
+    <p class="eyebrow">La habitación de la hija · 06</p>
+    <h2 class="section-title">Un cuarto, <em>tres escalas de niña.</em></h2>
+    <p class="lead">La habitación se trabajó con principios <em>Montessori</em> — cama al ras del suelo para que ella entrara y saliera sola, mobiliario a su altura, materiales nobles y suaves. Una sola habitación que crece con la niña: zona de dormir, zona de juegos, zona de descanso.</p>
+  </div>
+  <div class="vid" aria-label="Recorrido de la habitación de la hija">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/ninia-poster.jpg">
+      <source src="assets/ninia-loop.webm" type="video/webm">
+      <source src="assets/ninia-loop.mp4" type="video/mp4">
+    </video>
+    <span class="cap">Recorrido del cuarto · suelo, nube, conejos</span>
+  </div>
+  <div class="wrap">
+    <div class="twin">
       <article class="panel casita">
         <div class="img" role="img" aria-label="Cama-casita Montessori"></div>
-        <span class="n">06a · Cama-casita</span>
+        <span class="n">06a · La cama-casita</span>
         <h3 class="t">Una casa <em>dentro del cuarto</em></h3>
         <p class="d">Estructura en madera lacada crema, dos ventanas con flores reales en el alféizar, entrada baja y escalera lateral. La cama queda contenida — una "casa de muñecas" habitable, dimensionada a la niña.</p>
       </article>
-      <article class="panel bebe">
-        <div class="img" role="img" aria-label="Rincón de la bebé"></div>
-        <span class="n">06b · El rincón de la bebé</span>
+      <article class="panel juegos">
+        <div class="img" role="img" aria-label="Zona de juegos"></div>
+        <span class="n">06b · La zona de juegos</span>
         <h3 class="t">Cielo, conejos <em>y una mecedora</em></h3>
-        <p class="d">Soffit en forma de nube con luz cálida indirecta, conejos en fieltro en distintos azules y rosas sobre muro pastel, mecedora en terciopelo morado con su otomana. El papel tapiz del flanco completa la atmósfera.</p>
+        <p class="d">Plafón en forma de nube con luz cálida indirecta, conejos en fieltro en distintos azules y rosas sobre muro pastel, mecedora en terciopelo morado. El papel tapiz del flanco completa la atmósfera.</p>
       </article>
     </div>
   </div>
@@ -666,7 +687,7 @@ p.lead{
         <div class="n">01</div>
         <div>
           <h3 class="t">El muro de <em>nueve metros</em></h3>
-          <p class="d">Lamas verticales de madera en distintas profundidades y largos, fijadas sobre muro pintado, iluminadas desde el piso con tira LED 3000 K cálida que abraza cada lama y dibuja sombras en el techo.</p>
+          <p class="d">Lamas verticales de <em>Huanacaxtle</em> en distintas profundidades y largos, fijadas sobre muro pintado, iluminadas desde el piso con tira LED 3000 K cálida que abraza cada lama y dibuja sombras en el techo.</p>
         </div>
       </article>
       <article class="piece">
@@ -712,7 +733,7 @@ p.lead{
       <div class="mat"><span class="nm">Oro <em>cepillado</em></span><span class="role">Estructuras · herrajes · lámparas</span></div>
       <div class="mat"><span class="nm">Mármol veteado</span><span class="role">Comedor · marcos de ventana</span></div>
       <div class="mat"><span class="nm">Papel tapiz <em>texturizado</em></span><span class="role">Sala · comedor · recibidor · master</span></div>
-      <div class="mat"><span class="nm">Madera <em>en lamas</em></span><span class="role">Muro de 9 m · acentos</span></div>
+      <div class="mat"><span class="nm">Huanacaxtle <em>en lamas</em></span><span class="role">Muro de 9 m · acentos</span></div>
       <div class="mat"><span class="nm">Cristal templado</span><span class="role">Barandales · mamparas</span></div>
       <div class="mat"><span class="nm">Cristal <em>de candil</em></span><span class="role">Iluminación principal</span></div>
       <div class="mat"><span class="nm">Vegetación regional</span><span class="role">Jardín · jardineras interiores</span></div>
