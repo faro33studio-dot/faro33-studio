@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centros de Entretenimiento · Faro 33 Studio · Culiacán</title>
+  <meta name="description" content="Diseñamos centros de entretenimiento que integran carpintería, iluminación, acabados de mármol y lambrín. Proyectos integrales en Culiacán, Sinaloa.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://faro33studio.com/centros-de-entretenimiento/">
+  <meta property="og:title"       content="Centros de Entretenimiento · Faro 33 Studio">
+  <meta property="og:description" content="Del concepto al detalle final. Centros de entretenimiento con carácter.">
+  <meta property="og:image"       content="https://faro33studio.com/og-image.jpg">
+  <meta property="og:locale"      content="es_MX">
+  <link rel="canonical" href="https://faro33studio.com/centros-de-entretenimiento/">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '883854600914341');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy:      #13305C;
+      --navy-dark: #0E2547;
+      --navy-mid:  #1a3f73;
+      --linen:     #FBF8F2;
+      --brass:     #B8924A;
+      --brass-lt:  #C9A968;
+      --white:     #FFFFFF;
+      --text-dim:  rgba(251,248,242,0.65);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy-dark);
+      font-family: Georgia, "Bodoni Moda", serif;
+      color: var(--linen);
+      overflow-x: hidden;
+    }
+
+    /* ══ NAV ══════════════════════════════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, rgba(14,37,71,0.95) 0%, transparent 100%);
+      backdrop-filter: blur(2px);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo svg { width: 36px; height: 36px; }
+
+    .nav-brand {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brass-lt);
+    }
+
+    .nav-back {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(251,248,242,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--linen); }
+
+    /* ══ HERO ═════════════════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.8);
+      transition: transform 8s ease;
+    }
+
+    .hero-image:hover img { transform: scale(1.03); }
+
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 40%, var(--navy-dark) 100%);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 120px 64px 80px;
+      background: var(--navy-dark);
+      position: relative;
+    }
+
+    .hero-content::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -1px;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--brass), transparent);
+      opacity: 0.4;
+    }
+
+    .hero-tag {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: 1.0;
+      font-style: italic;
+      color: var(--linen);
+      margin-bottom: 28px;
+    }
+
+    .hero-title em {
+      color: var(--brass-lt);
+      font-style: normal;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-dim);
+      max-width: 400px;
+      margin-bottom: 48px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: transparent;
+      border: 1px solid var(--brass);
+      color: var(--brass-lt);
+      font-family: inherit;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+      width: fit-content;
+    }
+    .hero-cta:hover {
+      background: var(--brass);
+      color: var(--navy-dark);
+    }
+
+    .hero-rule {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: rgba(251,248,242,0.2);
+      writing-mode: vertical-rl;
+    }
+
+    /* ══ SECTION BASE ═════════════════════════════════════════════════════ */
+    .section {
+      padding: 100px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 52px);
+      font-style: italic;
+      line-height: 1.1;
+      color: var(--linen);
+      margin-bottom: 32px;
+    }
+
+    .section-title em {
+      color: var(--brass-lt);
+      font-style: normal;
+    }
+
+    .section-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--brass);
+      opacity: 0.5;
+      margin-bottom: 32px;
+    }
+
+    /* ══ INTRO ════════════════════════════════════════════════════════════ */
+    .intro {
+      background: var(--navy);
+      padding: 100px 0;
+    }
+
+    .intro-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-body {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-dim);
+    }
+
+    .intro-body p + p { margin-top: 20px; }
+
+    .intro-highlight {
+      font-style: italic;
+      color: var(--linen);
+      font-size: 22px;
+      line-height: 1.4;
+      border-left: 2px solid var(--brass);
+      padding-left: 28px;
+    }
+
+    /* ══ ALCANCE ══════════════════════════════════════════════════════════ */
+    .alcance {
+      background: var(--navy-dark);
+    }
+
+    .alcance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 60px;
+    }
+
+    .alcance-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(184,146,74,0.12);
+      padding: 40px 32px;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .alcance-item:hover {
+      background: rgba(184,146,74,0.06);
+      border-color: rgba(184,146,74,0.3);
+    }
+
+    .alcance-num {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--brass);
+      margin-bottom: 16px;
+      font-style: normal;
+    }
+
+    .alcance-name {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--linen);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .alcance-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+
+    /* ══ GALERÍA ══════════════════════════════════════════════════════════ */
+    .galeria {
+      background: var(--navy);
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .galeria-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4px;
+      margin-top: 60px;
+    }
+
+    .galeria-img {
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      position: relative;
+    }
+
+    .galeria-img.tall {
+      aspect-ratio: 3/4;
+      grid-row: span 1;
+    }
+
+    .galeria-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) saturate(0.9);
+      transition: transform 0.6s ease, filter 0.4s ease;
+    }
+
+    .galeria-img:hover img {
+      transform: scale(1.04);
+      filter: brightness(0.95) saturate(1);
+    }
+
+    .galeria-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(184,146,74,0.0);
+      transition: border-color 0.3s;
+    }
+
+    .galeria-img:hover::after {
+      border-color: rgba(184,146,74,0.3);
+    }
+
+    .galeria-caption {
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: rgba(251,248,242,0.35);
+      text-align: right;
+    }
+
+    /* ══ PROCESO ══════════════════════════════════════════════════════════ */
+    .proceso {
+      background: var(--navy-dark);
+    }
+
+    .proceso-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .proceso-steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--brass) 20%, var(--brass) 80%, transparent);
+      opacity: 0.2;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border: 1px solid rgba(184,146,74,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--brass-lt);
+      background: var(--navy-dark);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-style: italic;
+      color: var(--linen);
+    }
+
+    .step-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+
+    /* ══ CTA FINAL ════════════════════════════════════════════════════════ */
+    .cta-section {
+      background: var(--navy);
+      text-align: center;
+      padding: 120px 40px;
+    }
+
+    .cta-section .section-title {
+      margin: 0 auto 20px;
+      max-width: 600px;
+    }
+
+    .cta-sub {
+      font-size: 16px;
+      color: var(--text-dim);
+      max-width: 440px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      font-style: italic;
+      padding: 18px 40px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.2);
+    }
+    .btn-wa:hover { background: #1ebe5d; transform: translateY(-2px); }
+    .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid rgba(184,146,74,0.5);
+      color: var(--brass-lt);
+      font-family: inherit;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 18px 36px;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-outline:hover {
+      border-color: var(--brass);
+      background: rgba(184,146,74,0.08);
+      color: var(--linen);
+    }
+
+    /* ══ FOOTER ═══════════════════════════════════════════════════════════ */
+    .footer {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(184,146,74,0.12);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--brass-lt);
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: rgba(251,248,242,0.35);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--linen); }
+
+    /* ══ RESPONSIVE ════════════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .nav { padding: 16px 24px; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-image {
+        height: 55vw;
+        min-height: 280px;
+      }
+
+      .hero-content {
+        padding: 60px 24px 64px;
+      }
+
+      .hero-content::before { display: none; }
+
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 24px;
+      }
+
+      .alcance-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .galeria-grid {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+      }
+
+      .proceso-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .proceso-steps::before { display: none; }
+
+      .section { padding: 70px 24px; }
+
+      .footer { padding: 30px 24px; }
+    }
+
+    @media (max-width: 580px) {
+      .proceso-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons { flex-direction: column; align-items: center; }
+
+      .footer-links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ════════════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a class="nav-logo" href="/">
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="38" fill="none" stroke="#B8924A" stroke-width="1" opacity="0.4"/>
+      <circle cx="40" cy="40" r="30" fill="none" stroke="#B8924A" stroke-width="0.75" opacity="0.6"/>
+      <path d="M 33 58 L 27 30 L 53 30 L 47 58 Z" fill="#FBF8F2"/>
+      <rect x="25" y="24" width="30" height="7" rx="1" fill="#B8924A"/>
+      <rect x="30" y="10" width="20" height="15" rx="1" fill="#FBF8F2"/>
+      <rect x="33" y="13" width="14" height="7" fill="#B8924A"/>
+      <path d="M 30 10 L 40 2 L 50 10 Z" fill="#FBF8F2"/>
+      <line x1="14" y1="14" x2="30" y2="17" stroke="#B8924A" stroke-width="1.5" opacity="0.7"/>
+      <line x1="66" y1="14" x2="50" y2="17" stroke="#B8924A" stroke-width="1.5" opacity="0.7"/>
+    </svg>
+    <span class="nav-brand">Faro 33 Studio</span>
+  </a>
+  <a class="nav-back" href="/">← Inicio</a>
+</nav>
+
+
+<!-- ═══ HERO ════════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-image">
+    <img src="render.png" alt="Centro de entretenimiento diseñado por Faro 33 Studio — mueble TV con iluminación integrada y acabados de lujo">
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">Espacios · Especialidades</p>
+    <h1 class="hero-title">
+      Centros de<br>
+      <em>Entretenimiento</em>
+    </h1>
+    <p class="hero-subtitle">
+      El muro donde tu sala cobra vida. Diseñamos cada detalle:
+      carpintería, iluminación, mármol y acabados que perduran.
+    </p>
+    <a class="hero-cta" href="#contacto" onclick="try{fbq('track','Lead')}catch(e){}">
+      Cotizar mi proyecto
+    </a>
+    <span class="hero-rule">Faro 33 Studio — Culiacán</span>
+  </div>
+</section>
+
+
+<!-- ═══ INTRO ════════════════════════════════════════════════════════════════ -->
+<section class="intro">
+  <div class="intro-inner">
+    <div>
+      <p class="section-label">El concepto</p>
+      <h2 class="section-title">
+        Más que un <em>mueble</em>,<br>
+        un punto focal.
+      </h2>
+      <div class="section-rule"></div>
+      <div class="intro-body">
+        <p>
+          Un centro de entretenimiento bien diseñado transforma la percepción completa de una sala.
+          No se trata solo de dónde colocar el televisor: es la composición de volúmenes, texturas,
+          luz y material que hace que toda la habitación tenga sentido.
+        </p>
+        <p>
+          En Faro 33 integramos el proyecto de carpintería, iluminación arquitectónica y acabados
+          decorativos en un solo proceso, garantizando coherencia visual y precisión en cada centímetro.
+        </p>
+      </div>
+    </div>
+    <blockquote class="intro-highlight">
+      "El muro que enmarca la pantalla define el carácter de todo el espacio."
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- ═══ ALCANCE ═══════════════════════════════════════════════════════════════ -->
+<section class="alcance">
+  <div class="section" style="max-width:1200px">
+    <p class="section-label">Alcance del proyecto</p>
+    <h2 class="section-title">
+      Todo en un solo <em>proyecto integral</em>
+    </h2>
+    <div class="section-rule"></div>
+    <p style="font-size:16px;color:var(--text-dim);max-width:560px;line-height:1.7;">
+      Coordinamos cada elemento para que el resultado sea exactamente lo que imaginaste,
+      sin improvisación y sin sorpresas.
+    </p>
+
+    <div class="alcance-grid">
+      <div class="alcance-item">
+        <p class="alcance-num">01</p>
+        <h3 class="alcance-name">Mueble inferior</h3>
+        <p class="alcance-desc">Carpintería en melamina o MDF con acabado lacado, entrecalles y puertas abatibles o corredizas según el diseño.</p>
+      </div>
+      <div class="alcance-item">
+        <p class="alcance-num">02</p>
+        <h3 class="alcance-name">Pared de fondo</h3>
+        <p class="alcance-desc">Papel tapiz, placa tipo mármol o lambrín de madera que enmarca la pantalla y define la paleta del espacio.</p>
+      </div>
+      <div class="alcance-item">
+        <p class="alcance-num">03</p>
+        <h3 class="alcance-name">Iluminación integrada</h3>
+        <p class="alcance-desc">Proyecto de iluminación perimetral en bastidor, retroiluminación y puntos focales que modelan el ambiente.</p>
+      </div>
+      <div class="alcance-item">
+        <p class="alcance-num">04</p>
+        <h3 class="alcance-name">Plafón resaltado</h3>
+        <p class="alcance-desc">Falso plafón con bastidor y tira LED perimetral que eleva la lectura del muro principal desde el techo.</p>
+      </div>
+      <div class="alcance-item">
+        <p class="alcance-num">05</p>
+        <h3 class="alcance-name">Acabados de mármol</h3>
+        <p class="alcance-desc">Placa tipo mármol o aplicación de cantera seleccionada para fondos, nichos y detalles estructurales.</p>
+      </div>
+      <div class="alcance-item">
+        <p class="alcance-num">06</p>
+        <h3 class="alcance-name">Adecuaciones eléctricas</h3>
+        <p class="alcance-desc">Cableado oculto, salidas de corriente estratégicas y preparación para audio/video sin instalaciones expuestas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ GALERÍA ═══════════════════════════════════════════════════════════════ -->
+<section class="galeria">
+  <div class="galeria-inner">
+    <p class="section-label">Referencia de proyecto</p>
+    <h2 class="section-title">
+      El espacio <em>antes</em> de que<br>
+      todo tome forma.
+    </h2>
+    <div class="section-rule"></div>
+
+    <div class="galeria-grid">
+      <div class="galeria-img">
+        <img src="render.png" alt="Render de centro de entretenimiento — mueble TV con iluminación, lambrín y acabados de lujo">
+      </div>
+      <div class="galeria-img tall">
+        <img src="espacio.png" alt="Espacio de sala antes de la intervención — Faro 33 Studio">
+      </div>
+    </div>
+    <p class="galeria-caption">Proyecto Sofía Ocampo · Culiacán, 2026</p>
+  </div>
+</section>
+
+
+<!-- ═══ PROCESO ═══════════════════════════════════════════════════════════════ -->
+<section class="proceso">
+  <div class="section">
+    <p class="section-label">Cómo trabajamos</p>
+    <h2 class="section-title">Del boceto al <em>último tornillo</em></h2>
+    <div class="section-rule"></div>
+
+    <div class="proceso-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Consulta inicial</h3>
+        <p class="step-desc">Platicamos sobre tu espacio, estilo, presupuesto y expectativas. Sin costo y sin compromiso.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Propuesta de diseño</h3>
+        <p class="step-desc">Presentamos renders 3D, selección de materiales y presupuesto detallado para tu aprobación.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Producción</h3>
+        <p class="step-desc">Carpintería, acabados y adecuaciones eléctricas se ejecutan en paralelo con supervisión constante.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3 class="step-title">Instalación y entrega</h3>
+        <p class="step-desc">Coordinamos todas las instalaciones y hacemos entrega formal con recorrido y garantía de obra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CTA FINAL ═════════════════════════════════════════════════════════════ -->
+<section class="cta-section" id="contacto">
+  <p class="section-label">Comienza hoy</p>
+  <h2 class="section-title" style="font-size:clamp(32px,5vw,60px)">
+    ¿Ya tienes en mente<br>
+    <em>tu espacio?</em>
+  </h2>
+  <div class="section-rule" style="margin:0 auto 32px;"></div>
+  <p class="cta-sub">
+    Cuéntanos el tamaño del muro, el estilo que te imaginas y cuándo quieres empezar.
+    Respondemos en cinco días hábiles.
+  </p>
+  <div class="cta-buttons">
+    <a class="btn-wa"
+       href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20cotizar%20un%20centro%20de%20entretenimiento.%20%C2%BFPodemos%20platicar%3F"
+       target="_blank" rel="noopener"
+       onclick="try{fbq('track','Contact')}catch(e){}">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Cotizar por WhatsApp
+    </a>
+    <a class="btn-outline" href="/">
+      Ver todos los servicios
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <span class="footer-brand">Faro 33 Studio · Culiacán, Sinaloa</span>
+  <nav class="footer-links">
+    <a href="/">Inicio</a>
+    <a href="/centros-de-entretenimiento/">Centros de Entretenimiento</a>
+    <a href="/contacto/">Contacto</a>
+  </nav>
+</footer>
+
+</body>
+</html>
