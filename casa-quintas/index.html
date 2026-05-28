@@ -835,6 +835,56 @@ p.lead{
   <a href="/">faro33studio.com</a>
 </footer>
 
+<!-- OTROS PROYECTOS -->
+<div class="related-projects" data-current="quintas"></div>
+<style>
+.related-projects{ background:var(--linen-50); padding: clamp(64px,9vw,128px) clamp(24px,5vw,64px); }
+.related-projects .inner{ max-width:1180px; margin:0 auto; }
+.related-projects .head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom: clamp(28px,4vw,48px); flex-wrap:wrap; }
+.related-projects .head .eb{
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase; font-weight:500;
+  color:var(--stone-500); display:flex; align-items:center; gap:18px; margin:0;
+}
+.related-projects .head .eb::before{ content:""; display:block; width:42px; height:1px; background:var(--navy-800); }
+.related-projects .head .t{
+  font-family:var(--font-display); font-weight:400;
+  font-size: clamp(32px,5vw,56px); line-height:1; letter-spacing:-0.02em;
+  color:var(--navy-800); margin:0; text-wrap:balance;
+}
+.related-projects .head .t em{ font-style:italic; }
+.related-projects .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px,3vw,32px); }
+@media (max-width:900px){ .related-projects .grid{ grid-template-columns:1fr; } }
+.related-projects .card{ text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:14px; transition: transform .26s cubic-bezier(.2,.7,.2,1); }
+.related-projects .card:hover{ transform: translateY(-4px); }
+.related-projects .card .img{ aspect-ratio: 4/3; background-size:cover; background-position:center 50%; }
+.related-projects .card .tag{ font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:var(--brass-500); font-weight:600; }
+.related-projects .card .name{ font-family:var(--font-display); font-weight:700; font-size: clamp(20px,2vw,26px); line-height:1.2; letter-spacing:-0.01em; color:var(--navy-800); margin:0; }
+.related-projects .card .name em{ font-style:italic; font-weight:400; }
+.related-projects .card:hover .name{ color:var(--brass-500); }
+</style>
+<script>
+(function(){
+  var ALL = [
+    { id:'pedacito',   tag:'Recámara · 2024',           name:'Un <em>pedacito</em> de cielo',           img:'/un-pedacito-de-cielo/assets/pedacito-3.jpg',  href:'/un-pedacito-de-cielo/' },
+    { id:'rincon',     tag:'Casa completa · 2024',      name:'Un rincón <em>cerca del cielo</em>',      img:'/un-rincon-cerca-del-cielo/assets/rincon-1.jpg', href:'/un-rincon-cerca-del-cielo/' },
+    { id:'colina',     tag:'Renovación · 2023',         name:'Casa en <em>la colina</em>',              img:'/casa-en-la-colina/assets/colina-2-sala.jpg',  href:'/casa-en-la-colina/' },
+    { id:'quintas',    tag:'Casa completa · 2024',      name:'Casa <em>Quintas</em>',                   img:'/casa-quintas/assets/quintas-1-sala.jpg',      href:'/casa-quintas/' },
+    { id:'cocinas',    tag:'Servicio · A medida',       name:'Cocinas',                                  img:'/cocinas/assets/cocina-hero.jpg',              href:'/cocinas/' },
+    { id:'centros',    tag:'Servicio · A medida',       name:'Centros de <em>entretenimiento</em>',     img:'/centros-de-entretenimiento/assets/campaign/centro-warm.jpg', href:'/centros-de-entretenimiento/' }
+  ];
+  function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+  function render(host){
+    var current = host.dataset.current || '';
+    var picks = shuffle(ALL.filter(function(p){ return p.id !== current; })).slice(0, 3);
+    host.innerHTML = '<div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div><div class="grid">' +
+      picks.map(function(p){ return '<a class="card" href="'+p.href+'"><div class="img" style="background-image:url(\''+p.img+'\')" role="img" aria-label="'+p.name.replace(/<[^>]+>/g,'')+'"></div><span class="tag">'+p.tag+'</span><h3 class="name">'+p.name+'</h3></a>'; }).join('') +
+      '</div></div>';
+  }
+  function init(){ document.querySelectorAll('.related-projects').forEach(render); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+
 <style>
 .wa-fab{
   position:fixed; right: clamp(16px,3vw,28px); bottom: clamp(16px,3vw,28px); z-index:60;
