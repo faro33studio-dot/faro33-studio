@@ -2,22 +2,22 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Cocinas · Faro 33 Studio · Culiacán</title>
+<title>Cocinas diseñadas · Faro 33 Studio · Culiacán</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Cocinas hechas a la medida — diseño, carpintería, cubiertas, iluminación y selección de equipos como un solo proyecto integral. Faro 33 Studio · Culiacán.">
-<meta property="og:title" content="Cocinas · Faro 33 Studio">
-<meta property="og:description" content="El centro de la casa, dibujado desde cero. Cocinas a la medida en Culiacán por Faro 33 Studio.">
+<meta name="description" content="Cocinas que se diseñan, no se compran. Dibujamos cada cocina desde cero — alrededor de cómo vives, cocinas y recibes. Diseño, carpintería, cubiertas e iluminación como un solo proyecto. Faro 33 Studio · Culiacán.">
+<meta property="og:title" content="Cocinas diseñadas · Faro 33 Studio">
+<meta property="og:description" content="El diseño es el objetivo, no el acabado. Cocinas a la medida, dibujadas desde cero en Culiacán por Faro 33 Studio.">
 <meta property="og:image" content="https://faro33studio.com/cocinas/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Cocina con barra longitudinal y campana Teka — Faro 33 Studio">
+<meta property="og:image:alt" content="Cocina en blanco satinado con cubierta de mármol e iluminación cálida — Faro 33 Studio">
 <meta property="og:url" content="https://faro33studio.com/cocinas/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Faro 33 Studio">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cocinas · Faro 33 Studio">
-<meta name="twitter:description" content="Cocinas a la medida en Culiacán por Faro 33 Studio.">
+<meta name="twitter:title" content="Cocinas diseñadas · Faro 33 Studio">
+<meta name="twitter:description" content="Cocinas a la medida, dibujadas desde cero en Culiacán por Faro 33 Studio.">
 <meta name="twitter:image" content="https://faro33studio.com/cocinas/og-image.jpg">
 <link rel="canonical" href="https://faro33studio.com/cocinas/">
 <link rel="icon" href="assets/logo-faro33.png">
@@ -162,37 +162,55 @@ p.lead{
   line-height:1.6; color:var(--stone-700); margin:0; max-width:36ch;
 }
 
-/* SHOWCASE — case study mention */
-.showcase{ background:var(--linen-100); }
-.showcase .twin{
-  display:grid; grid-template-columns: 1fr 1fr;
-  gap: clamp(36px,5vw,72px);
-  align-items:center; margin-top: clamp(28px,4vw,48px);
+/* KITCHENS — three real kitchens, alternating */
+.kitchens{ background:var(--linen-50); }
+.kitchens .intro{ max-width:60ch; }
+.kitchen{
+  display:grid; grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px,4vw,64px); align-items:center;
+  margin-top: clamp(48px,7vw,104px);
 }
-@media (max-width:880px){ .showcase .twin{ grid-template-columns:1fr; } }
-.showcase .img{
-  aspect-ratio: 4/3;
-  background:url("assets/cocina-hero.jpg") center 50% / cover no-repeat;
+.kitchen:first-of-type{ margin-top: clamp(40px,5vw,72px); }
+.kitchen .ph{
+  aspect-ratio: 4/3; background-size:cover; background-position:center 50%;
 }
-.showcase .body .t{
+.kitchen.flip{ grid-template-columns: 0.85fr 1.15fr; }
+.kitchen.flip .ph{ order:2; }
+.kitchen.flip .txt{ order:1; }
+@media (max-width:880px){
+  .kitchen, .kitchen.flip{ grid-template-columns:1fr; gap: clamp(20px,4vw,32px); }
+  .kitchen.flip .ph{ order:0; }
+  .kitchen.flip .txt{ order:0; }
+}
+.kitchen .txt .k-no{
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.32em; text-transform:uppercase;
+  color:var(--brass-500); font-weight:600; margin:0 0 14px;
+}
+.kitchen .txt h3{
   font-family:var(--font-display); font-weight:400;
-  font-size: clamp(28px,4vw,46px); line-height:1.14; letter-spacing:-0.01em;
-  font-style:italic; color:var(--navy-800);
-  margin:0 0 18px; text-wrap:balance; max-width:22ch;
+  font-size: clamp(28px,3.6vw,46px); line-height:1.08; letter-spacing:-0.015em;
+  color:var(--navy-800); margin:0 0 16px; text-wrap:balance; max-width:18ch;
 }
-.showcase .body .t .acc{ color:var(--brass-500); }
-.showcase .body .d{
-  font-family:var(--font-body); font-size: clamp(16px,1.4vw,18px);
-  line-height:1.65; color:var(--stone-700); margin:0 0 24px; max-width:50ch;
+.kitchen .txt h3 em{ font-style:italic; color:var(--brass-500); }
+.kitchen .txt p{
+  font-family:var(--font-body); font-size: clamp(15px,1.4vw,18px);
+  line-height:1.65; color:var(--stone-700); margin:0 0 16px; max-width:46ch;
 }
-.showcase .body .cta{
-  display:inline-flex; align-items:center; gap:10px;
-  padding: 14px 22px; background: var(--navy-800); color:#fff;
-  border-radius: 999px; text-decoration:none;
+.kitchen .txt .specs{
+  display:flex; flex-wrap:wrap; gap:8px 10px; margin:18px 0 0; padding:0; list-style:none;
+}
+.kitchen .txt .specs li{
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--stone-700); border:1px solid var(--sand-300); border-radius:999px;
+  padding:6px 12px;
+}
+.kitchen .txt .lnk{
+  display:inline-flex; align-items:center; gap:8px; margin-top:18px;
   font-family:var(--font-ui); font-size:12px; letter-spacing:0.22em; text-transform:uppercase; font-weight:500;
-  transition: transform .2s ease, background .2s ease;
+  color:var(--navy-800); text-decoration:none; border-bottom:1px solid var(--sand-300); padding-bottom:3px;
+  transition: color .2s ease, border-color .2s ease;
 }
-.showcase .body .cta:hover{ background:var(--navy-700); transform:translateY(-2px); }
+.kitchen .txt .lnk:hover{ color:var(--brass-500); border-color:var(--brass-500); }
 
 /* CIERRE */
 .cierre{ background:var(--navy-800); color:#fff; }
@@ -238,24 +256,82 @@ p.lead{
     <span class="studio-mark">Faro 33 · Studio</span>
     <span class="eyebrow" style="color:rgba(255,255,255,0.85)">Servicios · Cocinas</span>
   </div>
-  <h1>Cocinas <em>a la medida.</em></h1>
-  <p class="sub">El centro de la casa — diseñado, fabricado e instalado por <em>un solo equipo</em>.</p>
+  <h1>Cocinas <em>diseñadas.</em></h1>
+  <p class="sub">No elegimos un modelo de catálogo. Dibujamos cada cocina desde cero — alrededor de <em>cómo vives, cocinas y recibes</em>.</p>
 </header>
 
 <!-- INTRO -->
 <section class="block cream">
   <div class="wrap">
     <p class="eyebrow">Cocinas · 01</p>
-    <h2 class="section-title">Una pieza, <em>no un conjunto de muebles.</em></h2>
-    <p class="lead">Diseñamos cocinas como mobiliario único — una sola línea de cubierta, una sola gramática de gabinetería, una iluminación coordinada con la pieza, no agregada después. Cada cocina nace dibujada al milímetro del cuarto que ocupa.</p>
-    <p class="lead">Las cubiertas las elegimos en planta — mármoles, granitos brasileños, cuarzos, según el uso real. La gabinetería se fabrica con nuestros talleres en melamina de alta brillantez, lacas al agua o maderas finas. Y la iluminación cálida es parte del diseño, no un accesorio.</p>
+    <h2 class="section-title">El diseño es el objetivo, <em>no el acabado.</em></h2>
+    <p class="lead">Una cocina no se compra: se proyecta. Antes de cortar una sola lama dibujamos cómo te mueves entre el fregadero, la estufa y el refrigerador; dónde cae la luz; cuántos se sientan a la barra mientras cocinas. El mueble es la consecuencia de esa conversación, no el punto de partida.</p>
+    <p class="lead">Por eso ninguna de nuestras cocinas se parece a otra. La misma mano dibuja una pieza oscura y dramática para un departamento con vista, y al lado una cocina blanca, curva y luminosa para una familia que recibe. Cambia el cliente, cambia el diseño — nunca el oficio detrás de él.</p>
+  </div>
+</section>
+
+<!-- TRES COCINAS -->
+<section class="block kitchens">
+  <div class="wrap">
+    <p class="eyebrow">Proyectos reales · 02</p>
+    <h2 class="section-title">Tres familias, <em>tres cocinas,</em> ningún molde.</h2>
+    <p class="lead intro">Cada una nació de un brief distinto. Lo único que comparten es el método: dibujar primero, fabricar después.</p>
+
+    <article class="kitchen">
+      <div class="ph" style="background-image:url('assets/cocina-curva-1.jpg')" role="img" aria-label="Cocina en blanco satinado con plafón curvo iluminado y vitrinas de cristal"></div>
+      <div class="txt">
+        <p class="k-no">Cocina 01 · Blanco y curva</p>
+        <h3>Luz que <em>dibuja la curva.</em></h3>
+        <p>El reto era ganar amplitud sin perder calidez. Resolvimos el techo con un plafón curvo en lamas de madera y luz de cornisa que envuelve la cocina entera; los altos se volvieron vitrinas de cristal con iluminación interior para exhibir, no solo guardar.</p>
+        <p>Cubierta y antepecho en mármol de veta suave, frente de barra en lamas de madera cálida, y un refrigerador inteligente en acero oscuro que ancla la composición.</p>
+        <ul class="specs">
+          <li>Plafón curvo iluminado</li>
+          <li>Vitrinas de cristal</li>
+          <li>Cubierta en mármol</li>
+          <li>Barra en lamas de madera</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="kitchen flip">
+      <div class="ph" style="background-image:url('assets/cocina-calida-1.jpg')" role="img" aria-label="Cocina cálida en gabinetería beige satinada con península en lamas de madera"></div>
+      <div class="txt">
+        <p class="k-no">Cocina 02 · Cálida</p>
+        <h3>Calidez en <em>lamas de madera.</em></h3>
+        <p>Una cocina para cocinar todos los días, abierta al comedor. Gabinetería en beige satinado, antepecho en mármol blanco continuo y una península en lamas de madera con luz de cornisa que la convierte en el centro tibio de la casa.</p>
+        <p>Tres lámparas colgantes marcan la barra; el plafón en lamas repite la madera de la península y baja la escala del techo para que el espacio se sienta acogedor.</p>
+        <ul class="specs">
+          <li>Gabinetería beige satinado</li>
+          <li>Península en lamas</li>
+          <li>Antepecho en mármol</li>
+          <li>Luz cálida integrada</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="kitchen">
+      <div class="ph" style="background-image:url('assets/cocina-oxford-1.jpg')" role="img" aria-label="Cocina oscura con barra longitudinal de granito brasileño y campana cilíndrica"></div>
+      <div class="txt">
+        <p class="k-no">Cocina 03 · Oxford</p>
+        <h3>Oscura, <em>de cara al panorama.</em></h3>
+        <p>Para un departamento en altura diseñamos una sola pieza: barra longitudinal de granito brasileño natural, frente en lamas de Huanacaxtle y campana cilíndrica como escultura. El anfitrión cocina mirando a sus invitados — y a la vista — desde arriba.</p>
+        <p>Gabinetería en gris Oxford de alta brillantez, servicio y refrigeración ocultos dentro de la estructura. Es la cocina del proyecto <em>Un rincón cerca del cielo</em>.</p>
+        <ul class="specs">
+          <li>Barra longitudinal</li>
+          <li>Granito brasileño</li>
+          <li>Frente en Huanacaxtle</li>
+          <li>Gris Oxford brillante</li>
+        </ul>
+        <a class="lnk" href="/un-rincon-cerca-del-cielo/">Ver el proyecto completo →</a>
+      </div>
+    </article>
   </div>
 </section>
 
 <!-- SERVICIOS -->
 <section class="block linen servicios">
   <div class="wrap">
-    <p class="eyebrow">Qué entregamos · 02</p>
+    <p class="eyebrow">Qué entregamos · 03</p>
     <h2 class="section-title">De la idea <em>al primer plato.</em></h2>
     <div class="grid">
       <div class="item">
@@ -287,22 +363,6 @@ p.lead{
         <p class="n">06</p>
         <h3 class="t">Instalación <em>llave en mano</em></h3>
         <p class="d">Coordinamos plomería, electricidad, gas y entrega. Una sola interlocución del brief al primer plato.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SHOWCASE — Rincón kitchen featured -->
-<section class="block showcase">
-  <div class="wrap">
-    <p class="eyebrow">Caso destacado · 03</p>
-    <h2 class="section-title">Una pieza maestra, <em>de cara al río.</em></h2>
-    <div class="twin">
-      <div class="img" role="img" aria-label="Cocina con barra longitudinal y campana Teka"></div>
-      <div class="body">
-        <p class="t">Barra <span class="acc">longitudinal</span>, estufa al centro, anfitrión que mira a sus invitados desde arriba.</p>
-        <p class="d">La cocina del proyecto <em>Un rincón cerca del cielo</em> es un solo mueble de granito brasileño natural con frente en lamas de Huanacaxtle. Cinco asientos a la barra; campana cilíndrica Teka como escultura; refrigerador y servicio ocultos dentro de la estructura.</p>
-        <a class="cta" href="/un-rincon-cerca-del-cielo/">Ver caso completo →</a>
       </div>
     </div>
   </div>
