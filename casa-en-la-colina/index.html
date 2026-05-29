@@ -898,5 +898,21 @@ p.lead{
   <span class="wa-fab-lbl">Hablemos</span>
 </a>
 
+<script>
+/* Meta Pixel — WhatsApp clicks are the conversion signal (user leaves to the app). */
+(function(){
+  function fire(label){
+    if (typeof fbq === 'function'){
+      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = t && t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]') : null;
+    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
+  }, true);
+  window.f33TrackWhatsApp = fire; // callable from form handlers
+})();
+</script>
 </body>
 </html>
