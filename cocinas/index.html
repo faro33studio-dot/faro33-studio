@@ -89,7 +89,7 @@ a{ color:inherit; }
   position:relative; min-height:100vh; color:#fff;
   background:
     linear-gradient(180deg, rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.05) 28%, rgba(10,27,54,0.05) 50%, rgba(10,27,54,0.85) 86%, rgba(10,27,54,0.96) 100%),
-    url("assets/cocina-hero.jpg") center 50% / cover no-repeat;
+    url("assets/cocina-oxford-2.jpg") center 50% / cover no-repeat;
   display:flex; flex-direction:column; justify-content:flex-end;
   padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px);
 }
@@ -114,6 +114,14 @@ a{ color:inherit; }
   line-height:1.35; color:rgba(255,255,255,0.92); max-width:30ch;
 }
 .hero .sub em{ font-style:italic; }
+.hero .cotiza{
+  display:inline-flex; align-items:center; gap:10px; margin-top: clamp(24px,3vw,36px);
+  font-family:var(--font-ui); font-size:13px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600;
+  color:var(--navy-900,#0e1b2c); background:var(--gold-300); text-decoration:none;
+  padding:16px 32px; border-radius:2px; align-self:flex-start;
+  transition: background .2s ease, transform .2s ease;
+}
+.hero .cotiza:hover{ background:#fff; transform:translateY(-2px); }
 
 section.block{ padding: clamp(72px,10vw,148px) 0; }
 .block.cream{ background:var(--linen-50); }
@@ -266,6 +274,7 @@ p.lead{
   </div>
   <h1>Cocinas <em>diseñadas.</em></h1>
   <p class="sub">No elegimos un modelo de catálogo. Dibujamos cada cocina desde cero — alrededor de <em>cómo vives, cocinas y recibes</em>.</p>
+  <a class="cotiza" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20quiero%20cotizar%20una%20cocina%20a%20la%20medida." target="_blank" rel="noopener">Cotiza la tuya →</a>
 </header>
 
 <!-- INTRO -->
