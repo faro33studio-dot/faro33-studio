@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#13305C">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.facebook.com">
+
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
 <script>
@@ -679,8 +685,22 @@ img { display: block; max-width: 100%; }
 @media (max-width: 640px){ .hero h1{ font-size: clamp(44px, 12vw, 76px); } .hero-actions .btn{ flex:1 1 auto; justify-content:center; } }
 .pcard{ text-decoration:none; }
 
+/* FAQ */
+.faq-list{ border-top:1px solid var(--sand-200); }
+.faq-item{ border-bottom:1px solid var(--sand-200); }
+.faq-item summary{ list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:26px 0; font-family:var(--font-display); font-weight:400; font-size:clamp(20px,2.3vw,28px); line-height:1.2; color:var(--navy-800); }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-ic{ flex:0 0 auto; position:relative; width:20px; height:20px; }
+.faq-ic::before,.faq-ic::after{ content:""; position:absolute; background:var(--brass-500); transition:transform var(--dur-fast) var(--ease-out); }
+.faq-ic::before{ top:50%; left:0; right:0; height:1.5px; transform:translateY(-50%); }
+.faq-ic::after{ left:50%; top:0; bottom:0; width:1.5px; transform:translateX(-50%); }
+.faq-item[open] .faq-ic::after{ transform:translateX(-50%) scaleY(0); }
+.faq-item summary:hover{ color:var(--navy-600); }
+.faq-a{ padding:0 0 28px; max-width:72ch; }
+.faq-a p{ font-family:var(--font-body); font-size:17px; line-height:1.65; color:var(--stone-700); margin:0; }
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta un proyecto de interiorismo?", "acceptedAnswer": {"@type": "Answer", "text": "Cada proyecto se cotiza a la medida. Tras un primer brief sin costo entregamos un presupuesto realista según el alcance, los metros y los materiales. Trabajamos desde una sola área hasta una casa completa."}}, {"@type": "Question", "name": "¿Trabajan fuera de Culiacán?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Estamos en Culiacán y desarrollamos proyectos en todo Sinaloa y estados vecinos —por ejemplo, Casa Quintas en Mazatlán. Para proyectos foráneos coordinamos visitas y dirección de obra según cada caso."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma un proyecto?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del alcance. Como referencia: diseño de 6 a 10 semanas y obra de 12 a 20 semanas, más una semana de instalación. Tomamos un proyecto integral a la vez por founder para cuidar cada etapa."}}, {"@type": "Question", "name": "¿Qué incluye un proyecto integral?", "acceptedAnswer": {"@type": "Answer", "text": "Levantamiento, distribución, planos ejecutivos, paleta de materiales, iluminación, ebanistería de obra, dirección de obra y curaduría final. Un solo equipo, del croquis a la entrega."}}, {"@type": "Question", "name": "¿Fabrican el mobiliario a la medida?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, en taller propio: carpintería, tapicería, herrería y acabados. Es un servicio complementario para clientes de interiorismo, coordinado por el mismo equipo que diseña el proyecto."}}, {"@type": "Question", "name": "¿Cómo empezamos?", "acceptedAnswer": {"@type": "Answer", "text": "Escríbenos por WhatsApp con un brief corto de tu espacio. Respondemos en cinco días hábiles; si no somos el estudio indicado, lo decimos rápido y te recomendamos quién sí."}}]}</script>
 </head>
 <body class="f33-page">
 
@@ -850,6 +870,45 @@ img { display: block; max-width: 100%; }
           <div class="studio-stat"><div class="v">01</div><div class="l">Proyecto a la vez</div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="f33-section" id="faq">
+  <div class="f33-container">
+    <div class="sh">
+      <div class="sh-l">
+        <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">Preguntas frecuentes</span></div>
+        <h2>Lo que suelen <em>preguntarnos</em>.</h2>
+      </div>
+      <div class="sh-r">Si tu duda no está aquí, escríbenos por WhatsApp y te respondemos directo.</div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta un proyecto de interiorismo?<span class="faq-ic" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Cada proyecto se cotiza a la medida. Tras un primer brief sin costo entregamos un presupuesto realista según el alcance, los metros y los materiales. Trabajamos desde una sola área hasta una casa completa.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajan fuera de Culiacán?<span class="faq-ic" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Sí. Estamos en Culiacán y desarrollamos proyectos en todo Sinaloa y estados vecinos —por ejemplo, Casa Quintas en Mazatlán. Para proyectos foráneos coordinamos visitas y dirección de obra según cada caso.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo toma un proyecto?<span class="faq-ic" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Depende del alcance. Como referencia: diseño de 6 a 10 semanas y obra de 12 a 20 semanas, más una semana de instalación. Tomamos un proyecto integral a la vez por founder para cuidar cada etapa.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué incluye un proyecto integral?<span class="faq-ic" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Levantamiento, distribución, planos ejecutivos, paleta de materiales, iluminación, ebanistería de obra, dirección de obra y curaduría final. Un solo equipo, del croquis a la entrega.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Fabrican el mobiliario a la medida?<span class="faq-ic" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Sí, en taller propio: carpintería, tapicería, herrería y acabados. Es un servicio complementario para clientes de interiorismo, coordinado por el mismo equipo que diseña el proyecto.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo empezamos?<span class="faq-ic" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Escríbenos por WhatsApp con un brief corto de tu espacio. Respondemos en cinco días hábiles; si no somos el estudio indicado, lo decimos rápido y te recomendamos quién sí.</p></div>
+      </details>
     </div>
   </div>
 </section>

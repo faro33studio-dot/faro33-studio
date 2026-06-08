@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://faro33studio.com/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://faro33studio.com/nosotros/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://faro33studio.com/cocinas/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://faro33studio.com/centros-de-entretenimiento/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/un-rincon-cerca-del-cielo/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/casa-en-la-colina/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/casa-quintas/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/un-pedacito-de-cielo/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://faro33studio.com/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://faro33studio.com/assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg</image:loc><image:title>Un rincón cerca del cielo — interiorismo en Culiacán por Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f.jpg</image:loc><image:title>Casa en la colina — interiorismo residencial en Culiacán por Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg</image:loc><image:title>Casa Quintas — interiorismo en Mazatlán por Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa.jpg</image:loc><image:title>Un pedacito de cielo — recámara infantil en Culiacán por Faro 33 Studio</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/nosotros/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/cocinas/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://faro33studio.com/cocinas/assets/cocina-oxford-2.jpg</image:loc><image:title>Cocina a la medida con barra alta — Faro 33 Studio, Culiacán</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/centros-de-entretenimiento/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/un-rincon-cerca-del-cielo/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/casa-en-la-colina/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/casa-quintas/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faro33studio.com/un-pedacito-de-cielo/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
