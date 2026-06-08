@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://faro33studio.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://faro33studio.com/nosotros/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://faro33studio.com/cocinas/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://faro33studio.com/centros-de-entretenimiento/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/un-rincon-cerca-del-cielo/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/casa-en-la-colina/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/casa-quintas/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://faro33studio.com/un-pedacito-de-cielo/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://faro33studio.com/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://faro33studio.com/nosotros/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://faro33studio.com/cocinas/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://faro33studio.com/centros-de-entretenimiento/</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://faro33studio.com/un-rincon-cerca-del-cielo/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://faro33studio.com/casa-en-la-colina/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://faro33studio.com/casa-quintas/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://faro33studio.com/un-pedacito-de-cielo/</loc><lastmod>2026-05-30</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
 </urlset>

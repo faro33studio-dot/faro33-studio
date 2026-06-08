@@ -27,10 +27,11 @@
   fbq('track', 'PageView');
   fbq('track', 'ViewContent', {content_name: 'Centros de Entretenimiento', content_category: 'Campaign'});
 </script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript><img height="1" width="1" alt="" style="display:none"
   src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
 <!-- /Meta Pixel -->
 <link rel="icon" href="assets/logo-faro33.png">
+<link rel="apple-touch-icon" href="assets/logo-faro33.png">
 <link rel="canonical" href="https://faro33studio.com/centros-de-entretenimiento/">
 <link rel="stylesheet" href="colors_and_type.css">
 <style>
@@ -84,7 +85,7 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background-image: url("assets/campaign/centro-warm.jpg");
+    background-image:url("assets/campaign/centro-warm.jpg");background-image:image-set(url("assets/campaign/centro-warm.webp") type('image/webp'), url("assets/campaign/centro-warm.jpg") type('image/jpeg'));
     background-size: cover; background-position: center;
     filter: saturate(1.05) contrast(1.02);
   }
@@ -531,7 +532,7 @@
     <p>Dos paletas, mismo oficio. Cada proyecto se ajusta a la luz natural del cuarto y a la temperatura del resto del interiorismo.</p>
   </div>
   <div class="look-grid">
-    <article class="look" style="background-image: url('assets/campaign/centro-warm.jpg');">
+    <article class="look" style="background-image:url('assets/campaign/centro-warm.jpg');background-image:image-set(url('assets/campaign/centro-warm.webp') type('image/webp'), url('assets/campaign/centro-warm.jpg') type('image/jpeg'));">
       <div class="look-body">
         <span class="tag">Lenguaje 01</span>
         <h3>Cálido <em>diurno</em></h3>
@@ -544,7 +545,7 @@
         </div>
       </div>
     </article>
-    <article class="look" style="background-image: url('assets/campaign/centro-noir.jpg');">
+    <article class="look" style="background-image:url('assets/campaign/centro-noir.jpg');background-image:image-set(url('assets/campaign/centro-noir.webp') type('image/webp'), url('assets/campaign/centro-noir.jpg') type('image/jpeg'));">
       <div class="look-body">
         <span class="tag">Lenguaje 02</span>
         <h3>Cinemático <em>nocturno</em></h3>
@@ -643,6 +644,7 @@
 .related-projects .card .name{ font-family:var(--font-display); font-weight:700; font-size: clamp(20px,2vw,26px); line-height:1.2; letter-spacing:-0.01em; color:var(--navy-800); margin:0; }
 .related-projects .card .name em{ font-style:italic; font-weight:400; }
 .related-projects .card:hover .name{ color:var(--brass-500); }
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
 <script>
 (function(){

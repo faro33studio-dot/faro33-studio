@@ -32,7 +32,7 @@
     fbq('track', 'Lead');          // ← evento clave para optimización de anuncios
   </script>
   <noscript>
-    <img height="1" width="1" style="display:none"
+    <img height="1" width="1" alt="" style="display:none"
       src="https://www.facebook.com/tr?id=883854600914341&ev=Lead&noscript=1"/>
   </noscript>
   <!-- ════════════════════════════════════════════════════════════════════ -->
@@ -188,7 +188,8 @@
       transition: color 0.2s;
     }
     .back:hover { color: rgba(255,255,255,0.6); }
-  </style>
+  @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
