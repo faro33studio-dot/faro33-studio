@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <title>Cocinas a la medida en Culiacán — Faro 33 Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91L2N1S9T3');
+</script>
+<!-- /GA4 -->
+
 <meta name="description" content="Cocinas que se diseñan, no se compran. Dibujamos cada cocina desde cero — alrededor de cómo vives, cocinas y recibes. Diseño, carpintería, cubiertas e iluminación como un solo proyecto. Faro 33 Studio · Culiacán.">
 <meta property="og:title" content="Cocinas diseñadas · Faro 33 Studio">
 <meta property="og:description" content="El diseño es el objetivo, no el acabado. Cocinas a la medida, dibujadas desde cero en Culiacán por Faro 33 Studio.">
@@ -547,6 +557,9 @@ p.lead{
   function fire(label){
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+    if (typeof gtag === 'function'){
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){

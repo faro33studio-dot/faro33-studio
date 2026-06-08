@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91L2N1S9T3');
+</script>
+<!-- /GA4 -->
+
 <title>Centros de entretenimiento a la medida — Culiacán | Faro 33</title>
 <meta name="description" content="El corazón de toda área social. Centros de entretenimiento hechos a la medida — diseño, carpintería, iluminación y acabados en un solo proyecto integral. Faro 33 Studio · Culiacán.">
 <meta property="og:type"        content="website">
@@ -711,6 +721,9 @@
   function fire(label){
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+    if (typeof gtag === 'function'){
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){

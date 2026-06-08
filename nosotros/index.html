@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <title>Sobre Faro 33 Studio — Interiorismo en Culiacán</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91L2N1S9T3');
+</script>
+<!-- /GA4 -->
+
 <meta name="description" content="Faro 33 es un estudio de interiorismo en Culiacán que llega al espacio íntimo desde el estudio de las ciudades. Formación en economía, planeación metropolitana y urbanismo. Conócenos.">
 <meta property="og:title" content="Acerca de nosotros · Faro 33 Studio">
 <meta property="og:description" content="Venimos del estudio de las ciudades. Un estudio de interiorismo en Culiacán que entiende el espacio antes de diseñarlo.">
@@ -554,6 +564,9 @@ p.lead{
   function fire(label){
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+    if (typeof gtag === 'function'){
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){

@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91L2N1S9T3');
+</script>
+<!-- /GA4 -->
+
 <meta name="google-site-verification" content="R-dPJDwwi-DBvaPDzIN1f2us-5OZ7F5X10Z0atdBuME">
 <title>Diseño de interiores en Culiacán — Faro 33 Studio</title>
 <meta name="description" content="Estudio de proyectos integrales de interiorismo en Culiacán, Sinaloa. Espacios que guían — como un faro al final de la bahía.">
@@ -997,6 +1007,9 @@ img { display: block; max-width: 100%; }
   function fire(label){
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+    if (typeof gtag === 'function'){
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){
