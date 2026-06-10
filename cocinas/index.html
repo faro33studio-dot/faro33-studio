@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Cocinas a la medida en Culiacán — Faro 33 Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="theme-color" content="#13305C">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
@@ -103,14 +104,29 @@ a{ color:inherit; }
 
 /* HERO */
 .hero{
-  position:relative; min-height:100vh; color:#fff;
-  background:
-    linear-gradient(180deg, rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.05) 28%, rgba(10,27,54,0.05) 50%, rgba(10,27,54,0.85) 86%, rgba(10,27,54,0.96) 100%),
-    url("assets/cocina-oxford-2.jpg") center 50% / cover no-repeat;
-  background-image: linear-gradient(180deg, rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.05) 28%, rgba(10,27,54,0.05) 50%, rgba(10,27,54,0.85) 86%, rgba(10,27,54,0.96) 100%), image-set(url("assets/cocina-oxford-2.webp") type('image/webp'), url("assets/cocina-oxford-2.jpg") type('image/jpeg'));
+  position:relative; min-height:100vh; color:#fff; overflow:hidden;
+  background:var(--navy-950);
   display:flex; flex-direction:column; justify-content:flex-end;
   padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px);
 }
+.hero-bg{
+  position:absolute; inset:-4%; z-index:0;
+  background:url("assets/cocina-oxford-2.jpg") center 50% / cover no-repeat;
+  background-image:image-set(url("assets/cocina-oxford-2.webp") type('image/webp'), url("assets/cocina-oxford-2.jpg") type('image/jpeg'));
+}
+html.js .hero-bg{ animation: f33-kenburns 22s ease-in-out infinite alternate; }
+@keyframes f33-kenburns{ from{ transform:scale(1) translateY(0); } to{ transform:scale(1.07) translateY(-1.2%); } }
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(180deg, rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.05) 28%, rgba(10,27,54,0.05) 50%, rgba(10,27,54,0.85) 86%, rgba(10,27,54,0.96) 100%);
+}
+.hero > *:not(.hero-bg){ position:relative; z-index:2; }
+@keyframes f33-rise{ from{ opacity:0; transform:translateY(28px); } to{ opacity:1; transform:none; } }
+@keyframes f33-fade{ to{ opacity:1; } }
+html.js .hero .top-meta{ opacity:0; animation:f33-rise .9s cubic-bezier(.2,.7,.2,1) .1s both; }
+html.js .hero h1{ opacity:0; animation:f33-rise 1s cubic-bezier(.2,.7,.2,1) .28s both; }
+html.js .hero .sub{ opacity:0; animation:f33-rise 1s cubic-bezier(.2,.7,.2,1) .5s both; }
+html.js .hero .cotiza{ opacity:0; animation:f33-fade .9s ease .75s both; }
 .hero .top-meta{
   position:absolute; top: clamp(80px,12vh,120px); left: clamp(24px,5vw,80px);
   display:flex; flex-direction:column; gap:18px;
@@ -310,6 +326,7 @@ p.lead{
 
 <!-- HERO -->
 <header class="hero" id="main">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="top-meta">
     <span class="studio-mark">Faro 33 · Studio</span>
     <span class="eyebrow" style="color:rgba(255,255,255,0.85)">Servicios · Cocinas</span>
@@ -337,7 +354,11 @@ p.lead{
     <p class="lead intro">Cada una nace de un brief distinto. Lo único que comparten es el método: dibujar primero, fabricar después. Estas son solo tres.</p>
 
     <article class="kitchen">
-      <div class="ph" style="background-image:url('assets/cocina-curva-1.jpg');background-image:image-set(url('assets/cocina-curva-1.webp') type('image/webp'), url('assets/cocina-curva-1.jpg') type('image/jpeg'))" role="img" aria-label="Cocina en blanco satinado con plafón curvo iluminado y vitrinas de cristal"></div>
+      <div class="ph gal" role="img" aria-label="Cocina en blanco satinado con plafón curvo iluminado y vitrinas de cristal">
+        <div class="gal-layer is-on" style="background-image:url('assets/cocina-curva-1.jpg');background-image:image-set(url('assets/cocina-curva-1.webp') type('image/webp'), url('assets/cocina-curva-1.jpg') type('image/jpeg'))"></div>
+        <div class="gal-layer" style="background-image:url('assets/cocina-curva-2.jpg');background-image:image-set(url('assets/cocina-curva-2.webp') type('image/webp'), url('assets/cocina-curva-2.jpg') type('image/jpeg'))"></div>
+        <div class="gal-dots" aria-hidden="true"><span class="on"></span><span></span></div>
+      </div>
       <div class="txt">
         <p class="k-no">Cocina 01 · Blanco y curva</p>
         <h3>Luz que <em>dibuja la curva.</em></h3>
@@ -353,7 +374,12 @@ p.lead{
     </article>
 
     <article class="kitchen flip">
-      <div class="ph" style="background-image:url('assets/cocina-calida-1.jpg');background-image:image-set(url('assets/cocina-calida-1.webp') type('image/webp'), url('assets/cocina-calida-1.jpg') type('image/jpeg'))" role="img" aria-label="Cocina cálida en gabinetería beige satinada con península en lamas de madera"></div>
+      <div class="ph gal" role="img" aria-label="Cocina cálida en gabinetería beige satinada con península en lamas de madera">
+        <div class="gal-layer is-on" style="background-image:url('assets/cocina-calida-1.jpg');background-image:image-set(url('assets/cocina-calida-1.webp') type('image/webp'), url('assets/cocina-calida-1.jpg') type('image/jpeg'))"></div>
+        <div class="gal-layer" style="background-image:url('assets/cocina-calida-2.jpg');background-image:image-set(url('assets/cocina-calida-2.webp') type('image/webp'), url('assets/cocina-calida-2.jpg') type('image/jpeg'))"></div>
+        <div class="gal-layer" style="background-image:url('assets/cocina-calida-3.jpg');background-image:image-set(url('assets/cocina-calida-3.webp') type('image/webp'), url('assets/cocina-calida-3.jpg') type('image/jpeg'))"></div>
+        <div class="gal-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+      </div>
       <div class="txt">
         <p class="k-no">Cocina 02 · Cálida</p>
         <h3>Calidez en <em>lamas de madera.</em></h3>
@@ -369,7 +395,11 @@ p.lead{
     </article>
 
     <article class="kitchen">
-      <div class="ph" style="background-image:url('assets/cocina-oxford-1.jpg');background-image:image-set(url('assets/cocina-oxford-1.webp') type('image/webp'), url('assets/cocina-oxford-1.jpg') type('image/jpeg'))" role="img" aria-label="Cocina oscura con barra longitudinal de granito brasileño y campana cilíndrica"></div>
+      <div class="ph gal" role="img" aria-label="Cocina oscura con barra longitudinal de granito brasileño y campana cilíndrica">
+        <div class="gal-layer is-on" style="background-image:url('assets/cocina-oxford-1.jpg');background-image:image-set(url('assets/cocina-oxford-1.webp') type('image/webp'), url('assets/cocina-oxford-1.jpg') type('image/jpeg'))"></div>
+        <div class="gal-layer" style="background-image:url('assets/cocina-oxford-2.jpg');background-image:image-set(url('assets/cocina-oxford-2.webp') type('image/webp'), url('assets/cocina-oxford-2.jpg') type('image/jpeg'))"></div>
+        <div class="gal-dots" aria-hidden="true"><span class="on"></span><span></span></div>
+      </div>
       <div class="txt">
         <p class="k-no">Cocina 03 · Oxford</p>
         <h3>Oscura, <em>de cara al panorama.</em></h3>
@@ -560,6 +590,21 @@ p.lead{
   .wa-fab .wa-fab-lbl{ display:none; }
 }
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy-800);color:#fff;padding:12px 20px;font-family:var(--font-ui);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:0}
+/* Cinematic reveals */
+html.js .reveal{ opacity:0; transform:translateY(30px); transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1); }
+html.js .reveal.is-in{ opacity:1; transform:none; }
+html.js .eyebrow.reveal::before{ width:0; transition:width .9s cubic-bezier(.2,.7,.2,1) .25s; }
+html.js .eyebrow.reveal.is-in::before{ width:42px; }
+@media (prefers-reduced-motion: reduce){ html.js .reveal{ opacity:1; transform:none; } }
+/* Kitchen crossfade galleries */
+.kitchen .ph{ position:relative; overflow:hidden; }
+.gal-layer{ position:absolute; inset:0; background-size:cover; background-position:center 50%; opacity:0; transition:opacity 1.4s ease; }
+html.js .gal-layer{ transform:scale(1.045); transition:opacity 1.4s ease, transform 7s ease-out; }
+.gal-layer.is-on{ opacity:1; }
+html.js .gal-layer.is-on{ transform:scale(1); }
+.gal-dots{ position:absolute; left:18px; bottom:16px; display:flex; gap:7px; z-index:2; }
+.gal-dots span{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.45); box-shadow:0 1px 4px rgba(0,0,0,0.35); transition:background .35s, transform .35s; }
+.gal-dots span.on{ background:#fff; transform:scale(1.2); }
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
 <a class="wa-fab" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20una%20cocina%20a%20la%20medida." target="_blank" rel="noopener" aria-label="Hablemos por WhatsApp">
@@ -584,6 +629,51 @@ p.lead{
     if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
   }, true);
   window.f33TrackWhatsApp = fire; // callable from form handlers
+})();
+</script>
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* Scroll reveals */
+  var sels = ['section.block .eyebrow','.cierre .eyebrow','h2.section-title','p.lead','.kitchen','.servicios .item','.cierre .quote','.cierre .cotiza','.cierre .row','.specs li'];
+  var els = [];
+  sels.forEach(function(q){ document.querySelectorAll(q).forEach(function(el){ els.push(el); }); });
+  els.forEach(function(el){ el.classList.add('reveal'); });
+  document.querySelectorAll('.servicios .grid').forEach(function(g){
+    Array.prototype.forEach.call(g.children, function(el,i){ el.style.transitionDelay = (i%3)*0.12 + 's'; });
+  });
+  document.querySelectorAll('.specs').forEach(function(u){
+    Array.prototype.forEach.call(u.children, function(el,i){ el.style.transitionDelay = (0.1 + i*0.08) + 's'; });
+  });
+  if (reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+  /* Crossfade galleries */
+  document.querySelectorAll('.gal').forEach(function(gal){
+    var layers = gal.querySelectorAll('.gal-layer');
+    var dots = gal.querySelectorAll('.gal-dots span');
+    if (layers.length < 2 || reduce || !('IntersectionObserver' in window)) return;
+    var i = 0, timer = null;
+    function show(n){
+      layers[i].classList.remove('is-on'); if (dots[i]) dots[i].classList.remove('on');
+      i = n % layers.length;
+      layers[i].classList.add('is-on'); if (dots[i]) dots[i].classList.add('on');
+    }
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){ if (!timer) timer = setInterval(function(){ show(i+1); }, 4600); }
+        else { clearInterval(timer); timer = null; }
+      });
+    }, { threshold:0.3 });
+    io2.observe(gal);
+  });
 })();
 </script>
 </body>
