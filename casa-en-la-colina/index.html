@@ -21,7 +21,7 @@ gtag('config', 'G-91L2N1S9T3');
 <!-- /GA4 -->
 
 <meta name="description" content="Casa en la colina — renovación de mobiliario, recubrimientos y jardín en una residencia de 720 m² sobre una loma al sur de Culiacán. Faro 33 Studio.">
-<meta property="og:title" content="Casa en la colina · Faro 33 Studio">
+<meta property="og:title" content="Casa en la colina · Interiorismo en Culiacán — Faro 33">
 <meta property="og:description" content="Una casa de 720 m² interpretada — mobiliario, recubrimientos y jardín por Faro 33 Studio.">
 <meta property="og:image" content="https://faro33studio.com/casa-en-la-colina/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -32,7 +32,7 @@ gtag('config', 'G-91L2N1S9T3');
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Faro 33 Studio">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Casa en la colina · Faro 33 Studio">
+<meta name="twitter:title" content="Casa en la colina · Interiorismo en Culiacán — Faro 33">
 <meta name="twitter:description" content="Una casa de 720 m² interpretada — mobiliario, recubrimientos y jardín por Faro 33 Studio.">
 <meta name="twitter:image" content="https://faro33studio.com/casa-en-la-colina/og-image.jpg">
 <link rel="canonical" href="https://faro33studio.com/casa-en-la-colina/">
@@ -66,7 +66,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
   --navy-800:#13305C; --navy-700:#1E4276; --navy-900:#0E2547; --navy-950:#0A1B36;
   --linen-50:#FBF8F2; --linen-100:#F4EFE5;
   --sand-200:#E6DDCB; --sand-300:#C9BCA1;
-  --stone-500:#8A7E68; --stone-700:#54493A;
+  --stone-500:#766C59; --stone-700:#54493A;
   --ink-900:#1B1612;
   --brass-500:#B8924A; --brass-400:#C9A968;
   --gold-300:#E2C99A; --champagne-100:#F5EBD6;
@@ -121,6 +121,10 @@ a{ color:inherit; }
       rgba(10,27,54,0.05) 48%, rgba(10,27,54,0.82) 84%,
       rgba(10,27,54,0.96) 100%),
     url("assets/colina-2-sala.jpg") center 45% / cover no-repeat;
+  background-image: linear-gradient(180deg,
+      rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.15) 28%,
+      rgba(10,27,54,0.05) 48%, rgba(10,27,54,0.82) 84%,
+      rgba(10,27,54,0.96) 100%), image-set(url("assets/colina-2-sala.webp") type('image/webp'), url("assets/colina-2-sala.jpg") type('image/jpeg'));
   display:flex; flex-direction:column; justify-content:flex-end;
   padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px);
 }
@@ -220,6 +224,7 @@ p.lead{
   background:
     linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%),
     url("assets/colina-1-foyer.jpg") center 30% / cover no-repeat;
+  background-image: linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%), image-set(url("assets/colina-1-foyer.webp") type('image/webp'), url("assets/colina-1-foyer.jpg") type('image/jpeg'));
   margin-bottom: clamp(40px,5vw,72px);
 }
 .proyecto .hero-img .tag{
@@ -499,6 +504,7 @@ p.lead{
   background:
     linear-gradient(180deg, rgba(10,27,54,0) 50%, rgba(10,27,54,0.6) 100%),
     url("assets/colina-5-master.jpg") center 35% / cover no-repeat;
+  background-image: linear-gradient(180deg, rgba(10,27,54,0) 50%, rgba(10,27,54,0.6) 100%), image-set(url("assets/colina-5-master.webp") type('image/webp'), url("assets/colina-5-master.jpg") type('image/jpeg'));
 }
 .cierre .body{ padding: clamp(56px,8vw,96px) 0 clamp(72px,10vw,128px); }
 .cierre .grid{
@@ -572,6 +578,7 @@ p.lead{
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://faro33studio.com/"},{"@type":"ListItem","position":2,"name":"Casa en la colina","item":"https://faro33studio.com/casa-en-la-colina/"}]}</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
 <nav class="nav">
   <a class="brand" href="/"><img src="assets/logo-faro33.png" alt="Faro 33"><span class="lbl">Faro 33 · Studio</span></a>
@@ -579,7 +586,7 @@ p.lead{
 </nav>
 
 <!-- 1 · HERO -->
-<header class="hero">
+<header class="hero" id="main">
   <div class="top-meta">
     <span class="studio-mark">Faro 33 · Studio</span>
     <span class="eyebrow" style="color:rgba(255,255,255,0.85)">Portafolio · 2023</span>
@@ -836,12 +843,19 @@ p.lead{
 </section>
 
 <footer class="foot">
-  <span>© 2023 Faro 33 Studio · Culiacán, Sin.</span>
+  <span>© 2026 Faro 33 Studio · Culiacán, Sin.</span>
   <a href="/">faro33studio.com</a>
 </footer>
 
 <!-- OTROS PROYECTOS -->
-<div class="related-projects" data-current="colina"></div>
+<div class="related-projects" data-current="colina">
+<div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div>
+  <div class="grid">
+    <a class="card" href="/un-pedacito-de-cielo/"><div class="img" style="background-image:url('/un-pedacito-de-cielo/assets/pedacito-3.jpg')" role="img" aria-label="Un pedacito de cielo"></div><span class="tag">Recámara · 2024</span><h3 class="name">Un <em>pedacito</em> de cielo</h3></a>
+    <a class="card" href="/un-rincon-cerca-del-cielo/"><div class="img" style="background-image:url('/un-rincon-cerca-del-cielo/assets/rincon-1.jpg')" role="img" aria-label="Un rincón cerca del cielo"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Un rincón <em>cerca del cielo</em></h3></a>
+    <a class="card" href="/casa-quintas/"><div class="img" style="background-image:url('/casa-quintas/assets/quintas-1-sala.jpg')" role="img" aria-label="Casa Quintas"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Casa <em>Quintas</em></h3></a>
+  </div></div>
+</div>
 <style>
 .related-projects{ background:var(--linen-50); padding: clamp(64px,9vw,128px) clamp(24px,5vw,64px); }
 .related-projects .inner{ max-width:1180px; margin:0 auto; }
@@ -910,6 +924,7 @@ p.lead{
   .wa-fab{ padding:14px; gap:0; }
   .wa-fab .wa-fab-lbl{ display:none; }
 }
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy-800);color:#fff;padding:12px 20px;font-family:var(--font-ui);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:0}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
 <a class="wa-fab" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vi%20el%20caso%20%E2%80%9CCasa%20en%20la%20colina%E2%80%9D%20y%20me%20gustar%C3%ADa%20platicar." target="_blank" rel="noopener" aria-label="Hablemos por WhatsApp">
