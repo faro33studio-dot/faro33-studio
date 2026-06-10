@@ -417,10 +417,43 @@ p.lead{
   </div>
 </section>
 
+<!-- PROCESO: RENDER vs REALIDAD -->
+<section class="block deep proceso">
+  <div class="wrap">
+    <p class="eyebrow">Proceso · 03</p>
+    <h2 class="section-title">Del plano <em>a la cocina.</em></h2>
+    <p class="lead">Cada cocina se dibuja y se visualiza a detalle antes de cortar una sola lama. Esta es la propuesta que aprobó el cliente para la cocina blanca y curva — y la cocina que entregamos. Desliza para comparar.</p>
+    <div class="compare" id="cmpCurva">
+      <div class="lay" style="background-image:url('assets/cocina-curva-2.jpg');background-image:image-set(url('assets/cocina-curva-2.webp') type('image/webp'), url('assets/cocina-curva-2.jpg') type('image/jpeg'))" role="img" aria-label="Cocina blanca y curva terminada"></div>
+      <div class="lay top" style="background-image:url('assets/render-curva-frente.jpg');background-image:image-set(url('assets/render-curva-frente.webp') type('image/webp'), url('assets/render-curva-frente.jpg') type('image/jpeg'))" role="img" aria-label="Render de la propuesta de la cocina blanca y curva"></div>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="knob" aria-hidden="true">◂▸</span>
+      <span class="chip l">Render · Propuesta</span>
+      <span class="chip r">Cocina entregada</span>
+      <input type="range" min="0" max="100" value="50" step="0.5" aria-label="Comparar render y fotografía de la cocina terminada">
+    </div>
+    <p class="compare-note">Propuesta preliminar · Agosto 2025 · Visualización del estudio</p>
+    <div class="renders">
+      <figure>
+        <div class="img" style="background-image:url('assets/render-curva-cocina.jpg');background-image:image-set(url('assets/render-curva-cocina.webp') type('image/webp'), url('assets/render-curva-cocina.jpg') type('image/jpeg'))" role="img" aria-label="Render de la zona de cocción y refrigerador"></div>
+        <figcaption>Zona de trabajo · Render</figcaption>
+      </figure>
+      <figure>
+        <div class="img" style="background-image:url('assets/render-curva-alacenas.jpg');background-image:image-set(url('assets/render-curva-alacenas.webp') type('image/webp'), url('assets/render-curva-alacenas.jpg') type('image/jpeg'))" role="img" aria-label="Render de alacenas con nichos de madera iluminados"></div>
+        <figcaption>Alacenas y nichos · Render</figcaption>
+      </figure>
+      <figure>
+        <div class="img" style="background-image:url('assets/render-curva-tarja.jpg');background-image:image-set(url('assets/render-curva-tarja.webp') type('image/webp'), url('assets/render-curva-tarja.jpg') type('image/jpeg'))" role="img" aria-label="Render de la zona de tarja con antepecho de mármol"></div>
+        <figcaption>Zona de tarja · Render</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICIOS -->
 <section class="block linen servicios">
   <div class="wrap">
-    <p class="eyebrow">Qué entregamos · 03</p>
+    <p class="eyebrow">Qué entregamos · 04</p>
     <h2 class="section-title">De la idea <em>al primer plato.</em></h2>
     <div class="grid">
       <div class="item">
@@ -590,6 +623,38 @@ p.lead{
   .wa-fab .wa-fab-lbl{ display:none; }
 }
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy-800);color:#fff;padding:12px 20px;font-family:var(--font-ui);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:0}
+/* PROCESO — render vs realidad */
+.block.deep .eyebrow{ color:rgba(255,255,255,0.85); }
+.block.deep .eyebrow::before{ background:var(--brass-500); }
+.compare{ position:relative; aspect-ratio:16/10; overflow:hidden; margin-top:clamp(28px,4vw,48px); --pos:50%; }
+.compare .lay{ position:absolute; inset:0; background-size:cover; background-position:center; }
+.compare .lay.top{ clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.compare .bar{ position:absolute; top:0; bottom:0; left:var(--pos); width:2px; background:#fff; transform:translateX(-1px); box-shadow:0 0 14px rgba(0,0,0,0.4); pointer-events:none; }
+.compare .knob{
+  position:absolute; top:50%; left:var(--pos); transform:translate(-50%,-50%);
+  width:46px; height:46px; border-radius:50%; background:#fff; color:var(--navy-800);
+  display:flex; align-items:center; justify-content:center; gap:2px;
+  font-family:var(--font-ui); font-size:13px; letter-spacing:-1px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.4); pointer-events:none;
+}
+.compare input[type="range"]{ position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; -webkit-appearance:none; }
+.compare .chip{
+  position:absolute; top:16px; z-index:2; pointer-events:none;
+  font-family:var(--font-ui); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase;
+  padding:8px 14px; background:rgba(10,27,54,0.65); color:#fff;
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+}
+.compare .chip.l{ left:16px; } .compare .chip.r{ right:16px; }
+@media (max-width:640px){
+  .compare .chip{ font-size:9.5px; padding:6px 10px; }
+  .compare .chip.r{ top:auto; bottom:14px; }
+}
+.compare-note{ font-family:var(--font-ui); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin:14px 0 0; }
+.renders{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2.5vw,28px); margin-top:clamp(36px,5vw,64px); }
+@media (max-width:880px){ .renders{ grid-template-columns:1fr; } }
+.renders figure{ margin:0; }
+.renders .img{ aspect-ratio:16/10; background-size:cover; background-position:center; }
+.renders figcaption{ font-family:var(--font-ui); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-top:12px; }
 /* Cinematic reveals */
 html.js .reveal{ opacity:0; transform:translateY(30px); transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1); }
 html.js .reveal.is-in{ opacity:1; transform:none; }
@@ -635,7 +700,7 @@ html.js .gal-layer.is-on{ transform:scale(1); }
 (function(){
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   /* Scroll reveals */
-  var sels = ['section.block .eyebrow','.cierre .eyebrow','h2.section-title','p.lead','.kitchen','.servicios .item','.cierre .quote','.cierre .cotiza','.cierre .row','.specs li'];
+  var sels = ['section.block .eyebrow','.cierre .eyebrow','h2.section-title','p.lead','.kitchen','.servicios .item','.cierre .quote','.cierre .cotiza','.cierre .row','.specs li','.compare','.compare-note','.renders figure'];
   var els = [];
   sels.forEach(function(q){ document.querySelectorAll(q).forEach(function(el){ els.push(el); }); });
   els.forEach(function(el){ el.classList.add('reveal'); });
@@ -654,6 +719,12 @@ html.js .gal-layer.is-on{ transform:scale(1); }
       });
     }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
     els.forEach(function(el){ io.observe(el); });
+  }
+  /* Render vs realidad slider */
+  var cmp = document.getElementById('cmpCurva');
+  if (cmp){
+    var rng = cmp.querySelector('input[type="range"]');
+    rng.addEventListener('input', function(){ cmp.style.setProperty('--pos', rng.value + '%'); });
   }
   /* Crossfade galleries */
   document.querySelectorAll('.gal').forEach(function(gal){
