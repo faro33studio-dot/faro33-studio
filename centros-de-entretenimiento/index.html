@@ -392,6 +392,19 @@ gtag('config', 'G-91L2N1S9T3');
 
   /* ===================== Reveal ===================== */
 
+
+  .case-sub { font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--brass-400); margin: clamp(52px,6vw,76px) 0 22px; display: flex; align-items: center; gap: 16px; }
+  .case-sub::before { content: ""; width: 36px; height: 1px; background: var(--brass-400); }
+  .proc-grid { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(16px,2.4vw,28px); align-items: start; }
+  @media (max-width: 860px) { .proc-grid { grid-template-columns: 1fr; } }
+  .proc-grid figure { margin: 0; }
+  .proc-grid .img { background-size: cover; background-position: center; }
+  .proc-tall .img { aspect-ratio: 3/4; }
+  .proc-wide .img { aspect-ratio: 4/3; }
+  @media (max-width: 860px) { .proc-tall .img, .proc-wide .img { aspect-ratio: 4/3; } }
+  .proc-grid figcaption { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(236,229,214,0.58); margin-top: 14px; line-height: 1.5; }
+  .proc-grid figcaption b { color: var(--brass-400); font-weight: 600; }
+
   /* ===================== Caso real ===================== */
   .case { padding: clamp(90px,12vw,150px) clamp(22px,5vw,64px); background: #0d0c0a; border-top: 1px solid rgba(236,229,214,0.08); }
   .case-inner { max-width: 1320px; margin: 0 auto; }
@@ -610,9 +623,21 @@ gtag('config', 'G-91L2N1S9T3');
     <div class="case-head">
       <div class="what-eyebrow"><span class="rule"></span><span>03 · Un proyecto entregado</span></div>
       <h2>Del render <em>a tu sala.</em></h2>
-      <p>No es un render: es un muro que entregamos hace unas semanas en Culiacán. El lenguaje <em>Cálido diurno</em> llevado a obra — muro completo en listones de madera, marco de piedra natural alrededor de la pantalla, luz de cornisa regulable y gabinete flotante a la medida. Esto es lo que recibes.</p>
+      <p>Un muro que entregamos hace unas semanas en Culiacán — del esqueleto en obra a la pieza terminada. Muro completo en listones de madera, marco de piedra natural veteada alrededor de la pantalla, luz de cornisa regulable y gabinete flotante a la medida. No es un render: es lo que recibes.</p>
     </div>
-    <div class="case-feature">
+<div class="case-sub">Así se construye</div>
+    <div class="proc-grid">
+      <figure class="proc-tall">
+        <div class="img" style="background-image:url('assets/campaign/centro-proceso-1.jpg');background-image:image-set(url('assets/campaign/centro-proceso-1.webp') type('image/webp'), url('assets/campaign/centro-proceso-1.jpg') type('image/jpeg'))" role="img" aria-label="Obra: estructura del muro en listones de madera con luz de cornisa encendida y gabinete flotante instalado, antes de colocar la piedra"></div>
+        <figcaption><b>01</b> · Estructura, cableado oculto y luz de cornisa, montados en sitio</figcaption>
+      </figure>
+      <figure class="proc-wide">
+        <div class="img" style="background-image:url('assets/campaign/centro-proceso-2.jpg');background-image:image-set(url('assets/campaign/centro-proceso-2.webp') type('image/webp'), url('assets/campaign/centro-proceso-2.jpg') type('image/jpeg'))" role="img" aria-label="Obra: tres instaladores colocando la placa de piedra natural veteada en oro, alineada con nivel láser"></div>
+        <figcaption><b>02</b> · Marco de piedra natural —cuarzo veteado— montado a nivel láser</figcaption>
+      </figure>
+    </div>
+    <div class="case-sub">Así quedó</div>
+        <div class="case-feature">
       <div class="img" style="background-image:url('assets/campaign/centro-real-1.jpg');background-image:image-set(url('assets/campaign/centro-real-1.webp') type('image/webp'), url('assets/campaign/centro-real-1.jpg') type('image/jpeg'))" role="img" aria-label="Centro de entretenimiento entregado en Culiacán: muro de listones de madera con marco de piedra natural, luz de cornisa y gabinete flotante"></div>
       <span class="badge">Recién entregado · Culiacán · 2026</span>
     </div>
