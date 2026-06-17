@@ -647,6 +647,31 @@ img { display: block; max-width: 100%; }
 .ftr-col a:hover { color: #fff; }
 .ftr-bottom { padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; align-items: center; font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); flex-wrap: wrap; gap: 12px; }
 
+
+/* ============ Especialidades slider ============ */
+.lineshow{ position:relative; height:clamp(440px,76vh,760px); overflow:hidden; background:var(--navy-950); }
+.ls-slide{ position:absolute; inset:0; opacity:0; visibility:hidden; transition:opacity 1s var(--ease-out); }
+.ls-slide.is-active{ opacity:1; visibility:visible; }
+.ls-bg{ position:absolute; inset:0; background-size:cover; background-position:center; }
+html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
+@keyframes ls-kb{ from{ transform:scale(1.06); } to{ transform:scale(1); } }
+.ls-slide::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,27,54,0.35) 0%, rgba(10,27,54,0.10) 35%, rgba(10,27,54,0.88) 100%); }
+.ls-content{ position:absolute; left:0; bottom:0; z-index:2; padding:clamp(28px,5vw,72px); max-width:720px; color:#fff; }
+.ls-content h2{ font-family:var(--font-display); font-weight:400; font-size:clamp(40px,6vw,84px); line-height:0.98; letter-spacing:-0.025em; margin:18px 0 16px; color:#fff; text-wrap:balance; }
+.ls-content h2 em{ font-style:italic; color:var(--gold-300); }
+.ls-content p{ font-family:var(--font-body); font-size:clamp(16px,1.6vw,19px); line-height:1.5; color:rgba(255,255,255,0.86); max-width:44ch; margin:0 0 28px; }
+.ls-cta{ display:inline-flex; align-items:center; gap:10px; font-family:var(--font-ui); font-size:12px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--navy-800); background:#fff; padding:15px 28px; border-radius:2px; transition:gap var(--dur-fast) var(--ease-out), background var(--dur-fast); }
+.ls-cta:hover{ background:var(--gold-300); gap:16px; }
+.ls-arrow{ position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:52px; height:52px; border-radius:50%; background:rgba(13,12,10,0.4); color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.25); font-size:24px; line-height:0; display:flex; align-items:center; justify-content:center; transition:background var(--dur-fast); }
+.ls-arrow:hover{ background:rgba(13,12,10,0.72); }
+.ls-arrow.prev{ left:clamp(16px,3vw,40px); } .ls-arrow.next{ right:clamp(16px,3vw,40px); }
+.ls-dots{ position:absolute; right:clamp(28px,5vw,72px); bottom:clamp(34px,5vw,80px); z-index:3; display:flex; gap:10px; }
+.ls-dots button{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.4); transition:background .3s, transform .3s; }
+.ls-dots button.on{ background:#fff; transform:scale(1.25); }
+.ls-count{ position:absolute; left:clamp(28px,5vw,72px); top:clamp(96px,12vh,128px); z-index:3; font-family:var(--font-ui); font-size:12px; letter-spacing:0.22em; color:rgba(255,255,255,0.7); }
+.ls-count b{ color:var(--gold-300); font-weight:500; }
+@media (max-width:700px){ .ls-arrow{ display:none; } }
+
 /* ============ Floating WhatsApp ============ */
 .wa-fab {
   position: fixed; right: 28px; bottom: 28px; z-index: 60;
@@ -778,6 +803,41 @@ img { display: block; max-width: 100%; }
       </article>
     </div>
   </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="lineshow" id="especialidades" aria-roledescription="carrusel" aria-label="Nuestras especialidades">
+  <div class="ls-count"><b class="ls-now">01</b> / 03</div>
+  <article class="ls-slide is-active">
+    <div class="ls-bg" style="background-image:url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg');background-image:image-set(url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp') type('image/webp'), url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg') type('image/jpeg'))" role="img" aria-label="Sala de un proyecto integral de interiorismo en Culiacán"></div>
+    <div class="ls-content">
+      <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Especialidad 01</span></div>
+      <h2>Interiorismo <em>integral</em></h2>
+      <p>Casas y espacios comerciales completos — del primer plano a la última lámpara colocada.</p>
+      <a class="ls-cta" href="#proyectos">Ver proyectos <span>→</span></a>
+    </div>
+  </article>
+  <article class="ls-slide">
+    <div class="ls-bg" style="background-image:url('cocinas/assets/cocina-oxford-2.jpg');background-image:image-set(url('cocinas/assets/cocina-oxford-2.webp') type('image/webp'), url('cocinas/assets/cocina-oxford-2.jpg') type('image/jpeg'))" role="img" aria-label="Cocina a la medida con barra alta diseñada por Faro 33 Studio"></div>
+    <div class="ls-content">
+      <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Especialidad 02</span></div>
+      <h2>Cocinas <em>a la medida</em></h2>
+      <p>Dibujadas desde cero alrededor de cómo vives, cocinas y recibes. Diseño, carpintería e iluminación como un solo proyecto.</p>
+      <a class="ls-cta" href="/cocinas/">Ver cocinas <span>→</span></a>
+    </div>
+  </article>
+  <article class="ls-slide">
+    <div class="ls-bg" style="background-image:url('centros-de-entretenimiento/assets/campaign/centro-warm.jpg');background-image:image-set(url('centros-de-entretenimiento/assets/campaign/centro-warm.webp') type('image/webp'), url('centros-de-entretenimiento/assets/campaign/centro-warm.jpg') type('image/jpeg'))" role="img" aria-label="Centro de entretenimiento a la medida en muro de listones de madera"></div>
+    <div class="ls-content">
+      <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Especialidad 03</span></div>
+      <h2>Centros de <em>entretenimiento</em></h2>
+      <p>El muro que reúne a la casa. Listones de madera, luz de cornisa y piedra natural — diseñado, fabricado e instalado por el estudio.</p>
+      <a class="ls-cta" href="/centros-de-entretenimiento/">Ver centros <span>→</span></a>
+    </div>
+  </article>
+  <button class="ls-arrow prev" type="button" aria-label="Especialidad anterior">&#8249;</button>
+  <button class="ls-arrow next" type="button" aria-label="Especialidad siguiente">&#8250;</button>
+  <div class="ls-dots" aria-label="Seleccionar especialidad"></div>
 </section>
 
 <!-- PROYECTOS -->
@@ -975,6 +1035,7 @@ img { display: block; max-width: 100%; }
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#proceso">Proceso</a></li>
           <li><a href="/cocinas/">Cocinas</a></li>
+          <li><a href="/centros-de-entretenimiento/">Centros de entretenimiento</a></li>
           <li><a href="/nosotros/">Sobre nosotros</a></li>
         </ul>
       </div>
@@ -1079,6 +1140,41 @@ img { display: block; max-width: 100%; }
     if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
   }, true);
   window.f33TrackWhatsApp = fire; // callable from form handlers
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('especialidades'); if(!root) return;
+  var slides=[].slice.call(root.querySelectorAll('.ls-slide'));
+  var dotsWrap=root.querySelector('.ls-dots');
+  var now=root.querySelector('.ls-now');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i=0,timer=null,DUR=6000;
+  var dots=slides.map(function(_,n){
+    var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Ir a especialidad '+(n+1));
+    if(n===0)b.className='on'; b.addEventListener('click',function(){ go(n); restart(); }); dotsWrap.appendChild(b); return b;
+  });
+  function render(){
+    slides.forEach(function(s,n){ s.classList.toggle('is-active',n===i); });
+    dots.forEach(function(d,n){ d.classList.toggle('on',n===i); });
+    if(now) now.textContent=('0'+(i+1)).slice(-2);
+  }
+  function go(n){ i=(n+slides.length)%slides.length; render(); }
+  function next(){ go(i+1); } function prev(){ go(i-1); }
+  function start(){ if(reduce||timer) return; timer=setInterval(next,DUR); }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  function restart(){ stop(); start(); }
+  root.querySelector('.ls-arrow.next').addEventListener('click',function(){ next(); restart(); });
+  root.querySelector('.ls-arrow.prev').addEventListener('click',function(){ prev(); restart(); });
+  root.addEventListener('mouseenter',stop); root.addEventListener('mouseleave',start);
+  root.addEventListener('focusin',stop); root.addEventListener('focusout',start);
+  var x0=null;
+  root.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+  root.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40){ (dx<0?next:prev)(); restart(); } x0=null; });
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting?start():stop(); }); },{threshold:0.25}).observe(root);
+  } else { start(); }
+  render();
 })();
 </script>
 </body>
