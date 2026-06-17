@@ -391,6 +391,32 @@ gtag('config', 'G-91L2N1S9T3');
   @media (max-width: 640px) { .wa-fab { right: 18px; bottom: 18px; padding: 14px; } .wa-fab .lbl { display: none; } }
 
   /* ===================== Reveal ===================== */
+
+  /* ===================== Caso real ===================== */
+  .case { padding: clamp(90px,12vw,150px) clamp(22px,5vw,64px); background: #0d0c0a; border-top: 1px solid rgba(236,229,214,0.08); }
+  .case-inner { max-width: 1320px; margin: 0 auto; }
+  .case-head { max-width: 64ch; margin: 0 0 clamp(40px,6vw,72px); }
+  .case-head h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(36px,5.2vw,72px); line-height: 1.02; letter-spacing: -0.025em; margin: 24px 0 24px; color: #ece5d6; text-wrap: balance; }
+  .case-head h2 em { font-style: italic; color: var(--brass-400); }
+  .case-head p { font-size: 18px; line-height: 1.65; color: rgba(236,229,214,0.72); max-width: 56ch; }
+  .case-feature { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+  .case-feature .img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 9s var(--ease-out); }
+  .case.is-in .case-feature .img { transform: scale(1.05); }
+  .case-feature .badge { position: absolute; left: 0; bottom: 0; z-index: 2; font-family: var(--font-ui); font-size: 10.5px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: #0d0c0a; background: var(--brass-400); padding: 11px 20px; }
+  .case-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(16px,2.4vw,28px); margin-top: clamp(16px,2.4vw,28px); }
+  @media (max-width: 880px) { .case-grid { grid-template-columns: 1fr; } }
+  .case-grid .shot { aspect-ratio: 4/3; background-size: cover; background-position: center; min-height: 260px; }
+  .case-scope { background: #15130f; border: 1px solid rgba(236,229,214,0.10); padding: clamp(28px,3.4vw,46px); display: flex; flex-direction: column; }
+  .case-scope .ttl { font-family: var(--font-display-condensed); font-style: italic; font-size: 20px; color: var(--brass-400); margin: 0 0 20px; }
+  .case-scope ul { list-style: none; margin: 0 0 28px; padding: 0; }
+  .case-scope li { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; padding: 13px 0; border-top: 1px solid rgba(236,229,214,0.10); }
+  .case-scope li:last-of-type { border-bottom: 1px solid rgba(236,229,214,0.10); }
+  .case-scope li b { font-family: var(--font-body); font-weight: 400; font-size: 15.5px; color: #ece5d6; }
+  .case-scope li span { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(236,229,214,0.5); white-space: nowrap; }
+  .case-scope .case-cta { margin-top: auto; display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; font-family: var(--font-ui); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #0d0c0a; background: var(--brass-400); padding: 15px 26px; border-radius: 2px; transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast); }
+  .case-scope .case-cta:hover { background: #d8b878; transform: translateY(-2px); }
+  .case-scope .case-cta svg { width: 17px; height: 17px; }
+
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out); }
   .reveal.is-in { opacity: 1; transform: none; }
 
@@ -578,10 +604,43 @@ gtag('config', 'G-91L2N1S9T3');
   </div>
 </section>
 
+<!-- ===================== Caso real ===================== -->
+<section class="case reveal">
+  <div class="case-inner">
+    <div class="case-head">
+      <div class="what-eyebrow"><span class="rule"></span><span>03 · Un proyecto entregado</span></div>
+      <h2>Del render <em>a tu sala.</em></h2>
+      <p>No es un render: es un muro que entregamos hace unas semanas en Culiacán. El lenguaje <em>Cálido diurno</em> llevado a obra — muro completo en listones de madera, marco de piedra natural alrededor de la pantalla, luz de cornisa regulable y gabinete flotante a la medida. Esto es lo que recibes.</p>
+    </div>
+    <div class="case-feature">
+      <div class="img" style="background-image:url('assets/campaign/centro-real-1.jpg');background-image:image-set(url('assets/campaign/centro-real-1.webp') type('image/webp'), url('assets/campaign/centro-real-1.jpg') type('image/jpeg'))" role="img" aria-label="Centro de entretenimiento entregado en Culiacán: muro de listones de madera con marco de piedra natural, luz de cornisa y gabinete flotante"></div>
+      <span class="badge">Recién entregado · Culiacán · 2026</span>
+    </div>
+    <div class="case-grid">
+      <div class="shot" style="background-image:url('assets/campaign/centro-real-2.jpg');background-image:image-set(url('assets/campaign/centro-real-2.webp') type('image/webp'), url('assets/campaign/centro-real-2.jpg') type('image/jpeg'))" role="img" aria-label="Vista lateral del centro de entretenimiento mostrando el relieve de los listones y la luz indirecta"></div>
+      <div class="case-scope">
+        <p class="ttl">Qué incluyó este proyecto</p>
+        <ul>
+          <li><b>Muro completo en listones de madera</b><span>Piso a techo</span></li>
+          <li><b>Marco de piedra natural en la pantalla</b><span>Cuarzo veteado</span></li>
+          <li><b>Luz de cornisa perimetral regulable</b><span>2700K · atenuable</span></li>
+          <li><b>Gabinete flotante a la medida</b><span>Push-to-open</span></li>
+          <li><b>Soporte de pantalla integrado y oculto</b><span>Acero anclado</span></li>
+          <li><b>Paso de cables y ventilación ocultos</b><span>Sin cables a la vista</span></li>
+        </ul>
+        <a class="case-cta" href="https://wa.me/526675402559?text=Hola%20Faro%2033%20%E2%80%94%20vi%20el%20centro%20de%20entretenimiento%20que%20entregaron%20y%20quiero%20uno%20as%C3%AD%20para%20mi%20sala.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm5.84 16.183c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
+          Quiero uno así
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== Reel ===================== -->
 <section class="reel">
   <div class="reel-side">
-    <div class="what-eyebrow"><span class="rule"></span><span>03 · El reel</span></div>
+    <div class="what-eyebrow"><span class="rule"></span><span>04 · El reel</span></div>
     <h2>El muro <em>cobra vida</em><br>al atardecer.</h2>
     <p>La luz indirecta no se enciende — emerge. Calibrada para que el muro respire a la misma temperatura que tu lámpara de mesa.</p>
   </div>
