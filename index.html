@@ -863,7 +863,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     </div>
   </article>
   <article class="ls-slide">
-    <div class="ls-bg" style="background-image:url('cocinas/assets/cocina-oxford-2.jpg');background-image:image-set(url('cocinas/assets/cocina-oxford-2.webp') type('image/webp'), url('cocinas/assets/cocina-oxford-2.jpg') type('image/jpeg'))" role="img" aria-label="Cocina a la medida con barra alta diseñada por Faro 33 Studio"></div>
+    <div class="ls-bg" data-bg="background-image:url('cocinas/assets/cocina-oxford-2.jpg');background-image:image-set(url('cocinas/assets/cocina-oxford-2.webp') type('image/webp'), url('cocinas/assets/cocina-oxford-2.jpg') type('image/jpeg'))" role="img" aria-label="Cocina a la medida con barra alta diseñada por Faro 33 Studio"></div>
     <div class="ls-content">
       <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Especialidad 02</span></div>
       <h2>Cocinas <em>a la medida</em></h2>
@@ -872,7 +872,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     </div>
   </article>
   <article class="ls-slide">
-    <div class="ls-bg" style="background-image:url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg');background-image:image-set(url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp') type('image/webp'), url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg') type('image/jpeg'))" role="img" aria-label="Sala de un proyecto integral de interiorismo en Culiacán"></div>
+    <div class="ls-bg" data-bg="background-image:url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg');background-image:image-set(url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp') type('image/webp'), url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg') type('image/jpeg'))" role="img" aria-label="Sala de un proyecto integral de interiorismo en Culiacán"></div>
     <div class="ls-content">
       <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Especialidad 03</span></div>
       <h2>Interiorismo <em>integral</em></h2>
@@ -1142,11 +1142,12 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   ];
   function startHeroRotation(){
     if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    heroImgs.forEach(function(src){ var i = new Image(); i.src = src; });
     var hi = 0;
     setInterval(function(){
-      hi = (hi + 1) % heroImgs.length;
-      heroBg.style.backgroundImage = "url('" + heroImgs[hi] + "')";
+      var next = (hi + 1) % heroImgs.length;
+      var im = new Image();
+      im.onload = function(){ hi = next; heroBg.style.backgroundImage = "url('" + heroImgs[next] + "')"; };
+      im.src = heroImgs[next];
     }, 5500);
   }
   if ('requestIdleCallback' in window) requestIdleCallback(startHeroRotation, { timeout: 4000 });
@@ -1213,7 +1214,13 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   }
   function go(n){ i=(n+slides.length)%slides.length; render(); }
   function next(){ go(i+1); } function prev(){ go(i-1); }
-  function start(){ if(reduce||timer) return; timer=setInterval(next,DUR); }
+  function hydrate(){
+    root.querySelectorAll('.ls-bg[data-bg]').forEach(function(el){
+      el.setAttribute('style', el.getAttribute('data-bg'));
+      el.removeAttribute('data-bg');
+    });
+  }
+  function start(){ hydrate(); if(reduce||timer) return; timer=setInterval(next,DUR); }
   function stop(){ if(timer){ clearInterval(timer); timer=null; } }
   function restart(){ stop(); start(); }
   root.querySelector('.ls-arrow.next').addEventListener('click',function(){ next(); restart(); });
