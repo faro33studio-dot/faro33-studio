@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="theme-color" content="#13305C">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
@@ -486,7 +487,7 @@ img { display: block; max-width: 100%; }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: background-image var(--dur-slow) var(--ease-out); }
 .hero-bg::after { content: ""; position: absolute; inset: 0; background:
   linear-gradient(180deg, rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.2) 28%, rgba(10,27,54,0.78) 100%); }
-.hero-inner { position: relative; z-index: 1; padding: 0 48px 88px; max-width: 1440px; margin: 0 auto; width: 100%; }
+.hero-inner { position: relative; z-index: 2; padding: 0 48px 88px; max-width: 1440px; margin: 0 auto; width: 100%; }
 @media (max-width: 900px) { .hero-inner { padding: 0 24px 72px; } }
 
 .hero-tag { font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.78); margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
@@ -724,6 +725,49 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
 .faq-a{ padding:0 0 28px; max-width:72ch; }
 .faq-a p{ font-family:var(--font-body); font-size:17px; line-height:1.65; color:var(--stone-700); margin:0; }
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy-800);color:#fff;padding:12px 20px;font-family:var(--font-ui);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:0}
+
+/* ============ Animations (Faro 33 - Animations spec) ============ */
+/* Scroll reveal — 900ms editorial */
+html.js .rv{ opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+html.js .rv.in{ opacity:1; transform:none; }
+/* Hero line-by-line mask reveal */
+html.js .hero-line{ display:block; overflow:hidden; padding-bottom:0.04em; }
+html.js .hero-line>span{ display:block; transform:translateY(118%); transition:transform 1.1s var(--ease-out); }
+html.js .hero.ready .hero-line>span{ transform:none; }
+html.js .hero-fade{ opacity:0; transform:translateY(14px); transition:opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+html.js .hero.ready .hero-fade{ opacity:1; transform:none; }
+/* Lighthouse beam sweep */
+.beam{ position:absolute; top:-30%; left:50%; width:60%; height:160%; pointer-events:none; z-index:0;
+  background:linear-gradient(100deg, transparent 0%, rgba(226,201,154,0) 38%, rgba(245,235,214,0.16) 50%, rgba(226,201,154,0) 62%, transparent 100%);
+  transform:translateX(-120%) skewX(-12deg); animation:beamSweep 11s var(--ease-in-out) infinite; mix-blend-mode:screen; }
+@keyframes beamSweep{
+  0%{ transform:translateX(-130%) skewX(-12deg); opacity:0; }
+  18%{ opacity:1; } 55%{ opacity:1; }
+  78%{ transform:translateX(120%) skewX(-12deg); opacity:0; }
+  100%{ transform:translateX(120%) skewX(-12deg); opacity:0; } }
+/* Nav underline wipe */
+.hdr-nav a:not(.hdr-cta){ position:relative; }
+.hdr-nav a:not(.hdr-cta)::after{ content:""; position:absolute; left:0; bottom:2px; height:1px; width:100%; background:currentColor; transform:scaleX(0); transform-origin:left; transition:transform 320ms var(--ease-out); }
+.hdr-nav a:not(.hdr-cta):hover::after{ transform:scaleX(1); }
+/* Full-bleed parallax band */
+.px-frame{ position:relative; overflow:hidden; height:clamp(320px,62vh,720px); }
+.px-frame .px-img{ position:absolute; inset:-16% 0; background-size:cover; background-position:center; will-change:transform; }
+.px-frame .px-shade{ position:absolute; inset:0; background:linear-gradient(to top, rgba(10,27,54,0.55), transparent 60%); }
+/* Proceso timeline (design #05) */
+.proc-wrap{ position:relative; max-width:780px; }
+.proc-line{ position:absolute; left:19px; top:8px; bottom:8px; width:1px; background:var(--sand-300); }
+.proc-line i{ position:absolute; inset:0; background:var(--brass-500); transform:scaleY(0); transform-origin:top; }
+.proc-step{ display:grid; grid-template-columns:40px 1fr; gap:28px; align-items:start; padding:26px 0; }
+.proc-num{ font-family:var(--font-display); font-weight:700; font-size:20px; color:var(--navy-800); width:40px; height:40px; border:1px solid var(--sand-300); display:flex; align-items:center; justify-content:center; background:var(--linen-50); position:relative; z-index:1; transition:border-color .5s var(--ease-out) .2s, color .5s var(--ease-out) .2s; }
+html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--brass-500); }
+.proc-h{ font-family:var(--font-display); font-weight:700; font-size:24px; color:var(--navy-800); margin:4px 0 8px; }
+.proc-b{ font-family:var(--font-body); font-size:16px; line-height:1.55; color:var(--stone-700); max-width:52ch; margin:0; }
+.proc-dur{ margin-top:10px; font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass-500); }
+@media (prefers-reduced-motion: reduce){
+  html.js .rv, html.js .hero-fade, html.js .hero-line>span{ opacity:1 !important; transform:none !important; transition:none !important; }
+  .beam{ display:none; }
+}
+
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta un proyecto de interiorismo?", "acceptedAnswer": {"@type": "Answer", "text": "Cada proyecto se cotiza a la medida. Tras un primer brief sin costo entregamos un presupuesto realista según el alcance, los metros y los materiales. Trabajamos desde una sola área hasta una casa completa."}}, {"@type": "Question", "name": "¿Trabajan fuera de Culiacán?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Estamos en Culiacán y desarrollamos proyectos en todo Sinaloa y estados vecinos —por ejemplo, Casa Quintas en Mazatlán. Para proyectos foráneos coordinamos visitas y dirección de obra según cada caso."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma un proyecto?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del alcance. Como referencia: diseño de 6 a 10 semanas y obra de 12 a 20 semanas, más una semana de instalación. Tomamos un proyecto integral a la vez por founder para cuidar cada etapa."}}, {"@type": "Question", "name": "¿Qué incluye un proyecto integral?", "acceptedAnswer": {"@type": "Answer", "text": "Levantamiento, distribución, planos ejecutivos, paleta de materiales, iluminación, ebanistería de obra, dirección de obra y curaduría final. Un solo equipo, del croquis a la entrega."}}, {"@type": "Question", "name": "¿Fabrican el mobiliario a la medida?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, en taller propio: carpintería, tapicería, herrería y acabados. Es un servicio complementario para clientes de interiorismo, coordinado por el mismo equipo que diseña el proyecto."}}, {"@type": "Question", "name": "¿Cómo empezamos?", "acceptedAnswer": {"@type": "Answer", "text": "Escríbenos por WhatsApp con un brief corto de tu espacio. Respondemos en cinco días hábiles; si no somos el estudio indicado, lo decimos rápido y te recomendamos quién sí."}}]}</script>
@@ -750,15 +794,16 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
 <!-- HERO -->
 <section class="hero" id="top"><span id="main"></span>
   <div class="hero-bg" id="heroBg" style="background-image:url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg');background-image:image-set(url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp') type('image/webp'), url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg') type('image/jpeg'))"></div>
+  <div class="beam" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div class="hero-tag"><span style="display:inline-block;width:56px;height:1px;background:rgba(255,255,255,0.6)"></span>Faro 33 Studio · Culiacán, Sinaloa · Desde 2020</div>
-    <h1>Proyectos integrales <em>de interiorismo</em> de <em>autor.</em></h1>
-    <p class="hero-sub">Diseñamos espacios completos — del primer plano a la última lámpara colocada. Cada proyecto responde a la luz, al material y al ritmo de quien lo habita.</p>
-    <div class="hero-actions">
+    <div class="hero-tag hero-fade" style="transition-delay:700ms"><span style="display:inline-block;width:56px;height:1px;background:rgba(255,255,255,0.6)"></span>Faro 33 Studio · Culiacán, Sinaloa · Desde 2020</div>
+    <h1><span class="hero-line"><span style="transition-delay:120ms">Proyectos integrales</span></span><span class="hero-line"><span style="transition-delay:240ms"><em>de interiorismo</em></span></span><span class="hero-line"><span style="transition-delay:360ms">de <em>autor.</em></span></span></h1>
+    <p class="hero-sub hero-fade" style="transition-delay:560ms">Diseñamos espacios completos — del primer plano a la última lámpara colocada. Cada proyecto responde a la luz, al material y al ritmo de quien lo habita.</p>
+    <div class="hero-actions hero-fade" style="transition-delay:660ms">
       <a class="btn btn--on-deep" href="#proyectos">Ver proyectos <span class="arrow">→</span></a>
       <a class="btn btn--on-deep-ghost" href="#contacto">Iniciar un proyecto <span class="arrow">→</span></a>
     </div>
-    <div class="hero-meta">
+    <div class="hero-meta hero-fade" style="transition-delay:780ms">
       <span>Residencial</span><span>Comercial</span><span>Remodelación</span><span>Dirección de obra</span>
       <span class="right">33 proyectos · Sinaloa · desde 2020</span>
     </div>
@@ -878,6 +923,12 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
   </div>
 </section>
 
+<!-- BANDA PARALLAX -->
+<section class="px-frame">
+  <div class="px-img" style="background-image:url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg');background-image:image-set(url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp') type('image/webp'), url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg') type('image/jpeg'))" data-parallax="0.14" role="img" aria-label="Comedor de Casa Quintas en Mazatlán — proyecto de interiorismo de Faro 33 Studio"></div>
+  <div class="px-shade" aria-hidden="true"></div>
+</section>
+
 <!-- MANIFIESTO -->
 <section class="f33-section manifesto">
   <div class="manifesto-inner">
@@ -902,14 +953,15 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
       </div>
       <div class="sh-r">Trabajamos con un proyecto integral a la vez por founder. El proceso es el mismo para residencial, comercial o remodelación.</div>
     </div>
-    <ol class="proc-list">
-      <li class="proc-row"><span class="n">— 01</span><h3 class="t">Brief</h3><p class="d">Primera conversación. Sitio, luz, materiales, presupuesto, modo de vivir. Escuchamos más de lo que hablamos.</p><span class="dur">1 semana</span></li>
-      <li class="proc-row"><span class="n">— 02</span><h3 class="t">Esquema</h3><p class="d">Levantamiento, primeros planos, paleta de materiales acotada y un primer presupuesto realista.</p><span class="dur">2 semanas</span></li>
-      <li class="proc-row"><span class="n">— 03</span><h3 class="t">Diseño</h3><p class="d">Planos ejecutivos, detalles de ebanistería, especificaciones de iluminación y planeación de obra.</p><span class="dur">6–10 semanas</span></li>
-      <li class="proc-row"><span class="n">— 04</span><h3 class="t">Obra</h3><p class="d">Albañilería, instalaciones, ebanistería de obra y fabricación de mobiliario. Visitas semanales con bitácora.</p><span class="dur">12–20 semanas</span></li>
-      <li class="proc-row"><span class="n">— 05</span><h3 class="t">Instalación</h3><p class="d">Una semana de cierre. El estudio está en sitio todos los días — colocando, ajustando, fotografiando.</p><span class="dur">1 semana</span></li>
-      <li class="proc-row"><span class="n">— 06</span><h3 class="t">Después</h3><p class="d">Visita a un año. Los materiales se acomodan; el estudio regresa una vez sin costo.</p><span class="dur">12 meses</span></li>
-    </ol>
+    <div class="proc-wrap" data-proc>
+      <div class="proc-line" aria-hidden="true"><i data-proc-fill></i></div>
+      <div class="proc-step"><div class="proc-num">01</div><div><h3 class="proc-h">Brief</h3><p class="proc-b">Primera conversación. Sitio, luz, materiales, presupuesto, modo de vivir. Escuchamos más de lo que hablamos.</p><div class="proc-dur">1 semana</div></div></div>
+      <div class="proc-step"><div class="proc-num">02</div><div><h3 class="proc-h">Esquema</h3><p class="proc-b">Levantamiento, primeros planos, paleta de materiales acotada y un primer presupuesto realista.</p><div class="proc-dur">2 semanas</div></div></div>
+      <div class="proc-step"><div class="proc-num">03</div><div><h3 class="proc-h">Diseño</h3><p class="proc-b">Planos ejecutivos, detalles de ebanistería, especificaciones de iluminación y planeación de obra.</p><div class="proc-dur">6–10 semanas</div></div></div>
+      <div class="proc-step"><div class="proc-num">04</div><div><h3 class="proc-h">Obra</h3><p class="proc-b">Albañilería, instalaciones, ebanistería de obra y fabricación de mobiliario. Visitas semanales con bitácora.</p><div class="proc-dur">12–20 semanas</div></div></div>
+      <div class="proc-step"><div class="proc-num">05</div><div><h3 class="proc-h">Instalación</h3><p class="proc-b">Una semana de cierre. El estudio está en sitio todos los días — colocando, ajustando, fotografiando.</p><div class="proc-dur">1 semana</div></div></div>
+      <div class="proc-step"><div class="proc-num">06</div><div><h3 class="proc-h">Después</h3><p class="proc-b">Visita a un año. Los materiales se acomodan; el estudio regresa una vez sin costo.</p><div class="proc-dur">12 meses</div></div></div>
+    </div>
   </div>
 </section>
 
@@ -927,9 +979,9 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
         <p>Somos un equipo pequeño en un taller propio sobre Bulevar Pedro María Anaya. Cada proyecto está liderado por un founder, del croquis a la entrega — no se delega.</p>
         <p>Rechazamos más proyectos de los que aceptamos. Ese es el punto. Cuando un proyecto entra al estudio, entra completo — y se queda hasta que la última pieza está en su lugar.</p>
         <div class="studio-stats">
-          <div class="studio-stat"><div class="v">33+</div><div class="l">Proyectos entregados</div></div>
-          <div class="studio-stat"><div class="v">07</div><div class="l">Años en el oficio</div></div>
-          <div class="studio-stat"><div class="v">01</div><div class="l">Proyecto a la vez</div></div>
+          <div class="studio-stat"><div class="v"><span data-count="33">33</span>+</div><div class="l">Proyectos entregados</div></div>
+          <div class="studio-stat"><div class="v"><span data-count="7" data-pad="2">07</span></div><div class="l">Años en el oficio</div></div>
+          <div class="studio-stat"><div class="v"><span data-count="1" data-pad="2">01</span></div><div class="l">Proyecto a la vez</div></div>
         </div>
       </div>
     </div>
@@ -1175,6 +1227,93 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
     new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting?start():stop(); }); },{threshold:0.25}).observe(root);
   } else { start(); }
   render();
+})();
+</script>
+<script>
+/* Faro 33 - Animations spec: reveals, hero entrance, parallax, proc line, counters */
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('.hero');
+
+  /* hero entrance */
+  if (hero){
+    if (reduce) hero.classList.add('ready');
+    else setTimeout(function(){ hero.classList.add('ready'); }, 120);
+  }
+
+  /* scroll reveals */
+  var sels=['.sh .eyebrow-row','.sh h2','.sh-r','.serv-card','.manifesto blockquote','.manifesto-attr','.manifesto-side','.proc-step','.studio-body .eyebrow-row','.studio-body p','.studio-stat','.faq-item','.contact h2','.contact-lede','.contact-detail .item','.cform'];
+  var els=[];
+  sels.forEach(function(q){ document.querySelectorAll(q).forEach(function(el){ els.push(el); }); });
+  var pDelays=[0,120,60,180];
+  document.querySelectorAll('.pgrid .pcard').forEach(function(el,i){ el.style.transitionDelay=pDelays[i%4]+'ms'; els.push(el); });
+  document.querySelectorAll('.studio-stat').forEach(function(el,i){ el.style.transitionDelay=(i*120)+'ms'; });
+  els.forEach(function(el){ el.classList.add('rv'); });
+  function inView(el){ var r=el.getBoundingClientRect(); return r.top < (window.innerHeight||0)*0.92; }
+  if (reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.08,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ if(inView(el)) el.classList.add('in'); else io.observe(el); });
+  }
+
+  /* stat count-up */
+  var counters=document.querySelectorAll('[data-count]');
+  function fmt(v,pad){ v=String(v); while(v.length<pad) v='0'+v; return v; }
+  function runCount(el){
+    if (el.__done) return; el.__done=true;
+    var target=parseInt(el.getAttribute('data-count'),10);
+    var pad=parseInt(el.getAttribute('data-pad')||'0',10);
+    if (reduce){ el.textContent=fmt(target,pad); return; }
+    var dur=1200, t0=performance.now();
+    requestAnimationFrame(function tick(t){
+      var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+      el.textContent=fmt(Math.round(target*e),pad);
+      if(p<1) requestAnimationFrame(tick);
+    });
+    setTimeout(function(){ el.textContent=fmt(target,pad); }, dur+250);
+  }
+  if (counters.length){
+    if (reduce || !('IntersectionObserver' in window)){ counters.forEach(runCount); }
+    else {
+      counters.forEach(function(el){ el.textContent=fmt(0,parseInt(el.getAttribute('data-pad')||'0',10)); });
+      var io2=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ runCount(e.target); io2.unobserve(e.target); } }); },{threshold:0.4});
+      counters.forEach(function(el){ io2.observe(el); });
+    }
+  }
+
+  /* scroll fx: hero parallax, band parallax, proc line draw */
+  var fill=document.querySelector('[data-proc-fill]');
+  if (reduce){ if(fill) fill.style.transform='scaleY(1)'; return; }
+  var heroBg=document.getElementById('heroBg');
+  var bands=document.querySelectorAll('[data-parallax]');
+  var proc=document.querySelector('[data-proc]');
+  var ticking=false;
+  function fx(){
+    ticking=false;
+    var vh=window.innerHeight||document.documentElement.clientHeight;
+    if (heroBg && hero){
+      var r=hero.getBoundingClientRect();
+      if (r.bottom>0){ var shift=Math.min(0,r.top)*-0.18; heroBg.style.transform='translateY('+shift+'px) scale(1.06)'; }
+    }
+    bands.forEach(function(el){
+      var f=el.parentElement, r=f.getBoundingClientRect();
+      if (r.bottom<0||r.top>vh) return;
+      var sp=parseFloat(el.getAttribute('data-parallax'))||0.14;
+      var off=(r.top + r.height/2 - vh/2)*sp;
+      el.style.transform='translateY('+(-off)+'px)';
+    });
+    if (proc && fill){
+      var r2=proc.getBoundingClientRect();
+      var start=vh*0.72, end=vh*0.35;
+      var prog=Math.max(0,Math.min(1,(start-r2.top)/(r2.height+(start-end))));
+      fill.style.transform='scaleY('+prog+')';
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(fx); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  fx();
 })();
 </script>
 </body>
