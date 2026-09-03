@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <title>Casa en la colina · Interiorismo en Culiacán — Faro 33</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#13305C">
@@ -224,9 +225,9 @@ p.lead{
   background:
     linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%),
     url("assets/colina-1-foyer.jpg") center 30% / cover no-repeat;
-  background-image: linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%), image-set(url("assets/colina-1-foyer.webp") type('image/webp'), url("assets/colina-1-foyer.jpg") type('image/jpeg'));
   margin-bottom: clamp(40px,5vw,72px);
 }
+html:not(.js) .proyecto .hero-img, .proyecto.is-near .hero-img{ background-image: linear-gradient(180deg, rgba(10,27,54,0) 60%, rgba(10,27,54,0.35) 100%), image-set(url("assets/colina-1-foyer.webp") type('image/webp'), url("assets/colina-1-foyer.jpg") type('image/jpeg')); }
 .proyecto .hero-img .tag{
   position:absolute; left:clamp(20px,3vw,40px); bottom:clamp(16px,2vw,28px);
   font-family:var(--font-ui); font-size:12px; letter-spacing:0.28em; text-transform:uppercase;
@@ -320,8 +321,10 @@ p.lead{
   aspect-ratio: 4/3;
   background-size:cover; background-position:center 50%;
 }
-.sala-comedor .twin .panel.sala .img{ background-image:url("assets/colina-2-sala.jpg");background-image:image-set(url("assets/colina-2-sala.webp") type('image/webp'), url("assets/colina-2-sala.jpg") type('image/jpeg')); }
-.sala-comedor .twin .panel.com .img{ background-image:url("assets/colina-3-comedor.jpg");background-image:image-set(url("assets/colina-3-comedor.webp") type('image/webp'), url("assets/colina-3-comedor.jpg") type('image/jpeg')); }
+.sala-comedor .twin .panel.sala .img{  }
+html:not(.js) .sala-comedor .twin .panel.sala .img, .sala-comedor.is-near .twin .panel.sala .img{ background-image:url("assets/colina-2-sala.jpg"); background-image:image-set(url("assets/colina-2-sala.webp") type('image/webp'), url("assets/colina-2-sala.jpg") type('image/jpeg')); }
+.sala-comedor .twin .panel.com .img{  }
+html:not(.js) .sala-comedor .twin .panel.com .img, .sala-comedor.is-near .twin .panel.com .img{ background-image:url("assets/colina-3-comedor.jpg"); background-image:image-set(url("assets/colina-3-comedor.webp") type('image/webp'), url("assets/colina-3-comedor.jpg") type('image/jpeg')); }
 .sala-comedor .twin .panel .n{
   font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
   color:var(--brass-500); font-weight:600;
@@ -392,8 +395,10 @@ p.lead{
 .ninia .twin .panel .img{
   aspect-ratio: 4/3; background-size:cover; background-position:center 50%;
 }
-.ninia .twin .panel.casita .img{ background-image:url("assets/colina-7-montessori.jpg");background-image:image-set(url("assets/colina-7-montessori.webp") type('image/webp'), url("assets/colina-7-montessori.jpg") type('image/jpeg')); }
-.ninia .twin .panel.juegos .img{ background-image:url("assets/colina-8-bebe.jpg");background-image:image-set(url("assets/colina-8-bebe.webp") type('image/webp'), url("assets/colina-8-bebe.jpg") type('image/jpeg')); }
+.ninia .twin .panel.casita .img{  }
+html:not(.js) .ninia .twin .panel.casita .img, .ninia.is-near .twin .panel.casita .img{ background-image:url("assets/colina-7-montessori.jpg"); background-image:image-set(url("assets/colina-7-montessori.webp") type('image/webp'), url("assets/colina-7-montessori.jpg") type('image/jpeg')); }
+.ninia .twin .panel.juegos .img{  }
+html:not(.js) .ninia .twin .panel.juegos .img, .ninia.is-near .twin .panel.juegos .img{ background-image:url("assets/colina-8-bebe.jpg"); background-image:image-set(url("assets/colina-8-bebe.webp") type('image/webp'), url("assets/colina-8-bebe.jpg") type('image/jpeg')); }
 .ninia .twin .panel .n{
   font-family:var(--font-ui); font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
   color:var(--brass-500); font-weight:600;
@@ -504,8 +509,8 @@ p.lead{
   background:
     linear-gradient(180deg, rgba(10,27,54,0) 50%, rgba(10,27,54,0.6) 100%),
     url("assets/colina-5-master.jpg") center 35% / cover no-repeat;
-  background-image: linear-gradient(180deg, rgba(10,27,54,0) 50%, rgba(10,27,54,0.6) 100%), image-set(url("assets/colina-5-master.webp") type('image/webp'), url("assets/colina-5-master.jpg") type('image/jpeg'));
 }
+html:not(.js) .cierre .photo, .cierre.is-near .photo{ background-image: linear-gradient(180deg, rgba(10,27,54,0) 50%, rgba(10,27,54,0.6) 100%), image-set(url("assets/colina-5-master.webp") type('image/webp'), url("assets/colina-5-master.jpg") type('image/jpeg')); }
 .cierre .body{ padding: clamp(56px,8vw,96px) 0 clamp(72px,10vw,128px); }
 .cierre .grid{
   display:grid; grid-template-columns: 1.1fr 1fr;
@@ -633,9 +638,9 @@ p.lead{
 <!-- 4 · MURO DE 9 METROS (video loop) -->
 <section class="muro">
   <div class="stage">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/muro-poster.jpg" aria-label="Muro de paneles verticales iluminados">
+    <video muted loop playsinline preload="none" data-autoplay poster="assets/muro-poster.jpg" aria-label="Muro de paneles verticales iluminados">
+      <source src="assets/muro-loop.mp4" type="video/mp4" data-hd="assets/muro-loop-hd.mp4">
       <source src="assets/muro-loop.webm" type="video/webm">
-      <source src="assets/muro-loop.mp4" type="video/mp4">
     </video>
     <div class="cap">
       <p class="eyebrow">El muro de nueve metros · 03</p>
@@ -699,9 +704,9 @@ p.lead{
     <p class="lead">La habitación se trabajó con principios <em>Montessori</em> — cama al ras del suelo para que ella entrara y saliera sola, mobiliario a su altura, materiales nobles y suaves. Una sola habitación que crece con la niña: zona de dormir, zona de juegos, zona de descanso.</p>
   </div>
   <div class="vid" aria-label="Recorrido de la habitación de la hija">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/ninia-poster.jpg">
+    <video muted loop playsinline preload="none" data-autoplay poster="assets/ninia-poster.jpg">
+      <source src="assets/ninia-loop.mp4" type="video/mp4" data-hd="assets/ninia-loop-hd.mp4">
       <source src="assets/ninia-loop.webm" type="video/webm">
-      <source src="assets/ninia-loop.mp4" type="video/mp4">
     </video>
     <span class="cap">Recorrido del cuarto · suelo, nube, conejos</span>
   </div>
@@ -851,9 +856,9 @@ p.lead{
 <div class="related-projects" data-current="colina">
 <div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div>
   <div class="grid">
-    <a class="card" href="/un-pedacito-de-cielo/"><div class="img" style="background-image:url('/un-pedacito-de-cielo/assets/pedacito-3.jpg')" role="img" aria-label="Un pedacito de cielo"></div><span class="tag">Recámara · 2024</span><h3 class="name">Un <em>pedacito</em> de cielo</h3></a>
-    <a class="card" href="/un-rincon-cerca-del-cielo/"><div class="img" style="background-image:url('/un-rincon-cerca-del-cielo/assets/rincon-1.jpg')" role="img" aria-label="Un rincón cerca del cielo"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Un rincón <em>cerca del cielo</em></h3></a>
-    <a class="card" href="/casa-quintas/"><div class="img" style="background-image:url('/casa-quintas/assets/quintas-1-sala.jpg')" role="img" aria-label="Casa Quintas"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Casa <em>Quintas</em></h3></a>
+    <a class="card" href="/un-pedacito-de-cielo/"><div class="img" style="background-image:url('/assets/thumbs/pedacito-3-900.jpg');background-image:image-set(url('/assets/thumbs/pedacito-3-900.webp') type('image/webp'), url('/assets/thumbs/pedacito-3-900.jpg') type('image/jpeg'))" role="img" aria-label="Un pedacito de cielo"></div><span class="tag">Recámara · 2024</span><h3 class="name">Un <em>pedacito</em> de cielo</h3></a>
+    <a class="card" href="/un-rincon-cerca-del-cielo/"><div class="img" style="background-image:url('/assets/thumbs/rincon-1-900.jpg');background-image:image-set(url('/assets/thumbs/rincon-1-900.webp') type('image/webp'), url('/assets/thumbs/rincon-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Un rincón cerca del cielo"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Un rincón <em>cerca del cielo</em></h3></a>
+    <a class="card" href="/casa-quintas/"><div class="img" style="background-image:url('/assets/thumbs/quintas-1-sala-900.jpg');background-image:image-set(url('/assets/thumbs/quintas-1-sala-900.webp') type('image/webp'), url('/assets/thumbs/quintas-1-sala-900.jpg') type('image/jpeg'))" role="img" aria-label="Casa Quintas"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Casa <em>Quintas</em></h3></a>
   </div></div>
 </div>
 <style>
@@ -884,19 +889,19 @@ p.lead{
 <script>
 (function(){
   var ALL = [
-    { id:'pedacito',   tag:'Recámara · 2024',           name:'Un <em>pedacito</em> de cielo',           img:'/un-pedacito-de-cielo/assets/pedacito-3.jpg',  href:'/un-pedacito-de-cielo/' },
-    { id:'rincon',     tag:'Casa completa · 2024',      name:'Un rincón <em>cerca del cielo</em>',      img:'/un-rincon-cerca-del-cielo/assets/rincon-1.jpg', href:'/un-rincon-cerca-del-cielo/' },
-    { id:'colina',     tag:'Renovación · 2023',         name:'Casa en <em>la colina</em>',              img:'/casa-en-la-colina/assets/colina-2-sala.jpg',  href:'/casa-en-la-colina/' },
-    { id:'quintas',    tag:'Casa completa · 2024',      name:'Casa <em>Quintas</em>',                   img:'/casa-quintas/assets/quintas-1-sala.jpg',      href:'/casa-quintas/' },
-    { id:'cocinas',    tag:'Servicio · A medida',       name:'Cocinas',                                  img:'/cocinas/assets/cocina-hero.jpg',              href:'/cocinas/' },
-    { id:'centros',    tag:'Servicio · A medida',       name:'Centros de <em>entretenimiento</em>',     img:'/centros-de-entretenimiento/assets/campaign/centro-warm.jpg', href:'/centros-de-entretenimiento/' }
+    { id:'pedacito',   tag:'Recámara · 2024',           name:'Un <em>pedacito</em> de cielo',           img:'/assets/thumbs/pedacito-3-900.jpg',  href:'/un-pedacito-de-cielo/' },
+    { id:'rincon',     tag:'Casa completa · 2024',      name:'Un rincón <em>cerca del cielo</em>',      img:'/assets/thumbs/rincon-1-900.jpg', href:'/un-rincon-cerca-del-cielo/' },
+    { id:'colina',     tag:'Renovación · 2023',         name:'Casa en <em>la colina</em>',              img:'/assets/thumbs/colina-2-sala-900.jpg',  href:'/casa-en-la-colina/' },
+    { id:'quintas',    tag:'Casa completa · 2024',      name:'Casa <em>Quintas</em>',                   img:'/assets/thumbs/quintas-1-sala-900.jpg',      href:'/casa-quintas/' },
+    { id:'cocinas',    tag:'Servicio · A medida',       name:'Cocinas',                                  img:'/assets/thumbs/cocina-hero-900.jpg',              href:'/cocinas/' },
+    { id:'centros',    tag:'Servicio · A medida',       name:'Centros de <em>entretenimiento</em>',     img:'/assets/thumbs/centro-warm-900.jpg', href:'/centros-de-entretenimiento/' }
   ];
   function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
   function render(host){
     var current = host.dataset.current || '';
     var picks = shuffle(ALL.filter(function(p){ return p.id !== current; })).slice(0, 3);
     host.innerHTML = '<div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div><div class="grid">' +
-      picks.map(function(p){ return '<a class="card" href="'+p.href+'"><div class="img" style="background-image:url(\''+p.img+'\')" role="img" aria-label="'+p.name.replace(/<[^>]+>/g,'')+'"></div><span class="tag">'+p.tag+'</span><h3 class="name">'+p.name+'</h3></a>'; }).join('') +
+      picks.map(function(p){ return '<a class="card" href="'+p.href+'"><div class="img" style="background-image:url(\''+p.img+'\');background-image:image-set(url(\''+p.img.replace(/\.jpg$/,'.webp')+'\') type(\'image/webp\'), url(\''+p.img+'\') type(\'image/jpeg\'))" role="img" aria-label="'+p.name.replace(/<[^>]+>/g,'')+'"></div><span class="tag">'+p.tag+'</span><h3 class="name">'+p.name+'</h3></a>'; }).join('') +
       '</div></div>';
   }
   function init(){ document.querySelectorAll('.related-projects').forEach(render); }
@@ -951,6 +956,7 @@ p.lead{
   window.f33TrackWhatsApp = fire; // callable from form handlers
 })();
 </script>
+<script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 </body>
 </html>

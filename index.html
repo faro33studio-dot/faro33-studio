@@ -484,7 +484,9 @@ img { display: block; max-width: 100%; }
 
 /* ============ Hero ============ */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: background-image var(--dur-slow) var(--ease-out); }
+.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.hero-bg-next { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.4s var(--ease-out); }
+.hero-bg-next.on { opacity: 1; }
 .hero-bg::after { content: ""; position: absolute; inset: 0; background:
   linear-gradient(180deg, rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.2) 28%, rgba(10,27,54,0.78) 100%); }
 .hero-inner { position: relative; z-index: 2; padding: 0 48px 88px; max-width: 1440px; margin: 0 auto; width: 100%; }
@@ -804,7 +806,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 
 <!-- HERO -->
 <section class="hero" id="top"><span id="main"></span>
-  <div class="hero-bg" id="heroBg" style="background-image:url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg');background-image:image-set(url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp') type('image/webp'), url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg') type('image/jpeg'))"></div>
+  <div class="hero-bg" id="heroBg" style="background-image:url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg');background-image:image-set(url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp') type('image/webp'), url('assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg') type('image/jpeg'))"><div class="hero-bg-next" id="heroBgNext" aria-hidden="true"></div></div>
   <div class="beam" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-tag hero-fade" style="transition-delay:700ms"><span style="display:inline-block;width:56px;height:1px;background:rgba(255,255,255,0.6)"></span>Faro 33 Studio · Culiacán, Sinaloa · Desde 2020</div>
@@ -929,22 +931,22 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     </div>
     <div class="pgrid">
       <a class="pcard" href="/un-rincon-cerca-del-cielo/">
-        <div class="pcard-img"><span class="tag">Residencial · Integral</span><picture><source type="image/webp" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp"><img class="img" src="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg" alt="Sala de “Un rincón cerca del cielo”, proyecto integral de interiorismo en Culiacán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
+        <div class="pcard-img"><span class="tag">Residencial · Integral</span><picture><source type="image/webp" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp 1800w" sizes="(max-width: 900px) 100vw, 44vw"><img class="img" src="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.jpg 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg 1800w" sizes="(max-width: 900px) 100vw, 44vw" alt="Sala de “Un rincón cerca del cielo”, proyecto integral de interiorismo en Culiacán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
         <div class="pcard-meta"><div class="pcard-name">Un rincón cerca del <em>cielo</em></div><div class="pcard-loc">Culiacán · 2024</div></div>
         <div class="pcard-specs">Casa completa · 280 m² · plaster, terciopelo, latón</div>
       </a>
       <a class="pcard" href="/casa-en-la-colina/">
-        <div class="pcard-img"><span class="tag">Residencial · Integral</span><picture><source type="image/webp" srcset="assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f.webp"><img class="img" src="assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f.jpg" alt="Recámara de “Casa en la colina”, interiorismo residencial en Culiacán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
+        <div class="pcard-img"><span class="tag">Residencial · Integral</span><picture><source type="image/webp" srcset="assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f-900.webp 900w, assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f.webp 1800w" sizes="(max-width: 900px) 100vw, 44vw"><img class="img" src="assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f.jpg" srcset="assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f-900.jpg 900w, assets/home/4aa55ac5-6aff-40c7-b820-acabbf8a128f.jpg 1800w" sizes="(max-width: 900px) 100vw, 44vw" alt="Recámara de “Casa en la colina”, interiorismo residencial en Culiacán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
         <div class="pcard-meta"><div class="pcard-name">Casa en <em>la colina</em></div><div class="pcard-loc">Culiacán · 2023</div></div>
         <div class="pcard-specs">Casa completa · 420 m² · oro, terciopelo, mármol</div>
       </a>
       <a class="pcard" href="/casa-quintas/">
-        <div class="pcard-img"><span class="tag">Residencial · Integral</span><picture><source type="image/webp" srcset="assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp"><img class="img" src="assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg" alt="Comedor de “Casa Quintas”, proyecto de interiorismo en Mazatlán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
+        <div class="pcard-img"><span class="tag">Residencial · Integral</span><picture><source type="image/webp" srcset="assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb-900.webp 900w, assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp 1800w" sizes="(max-width: 900px) 100vw, 44vw"><img class="img" src="assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg" srcset="assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb-900.jpg 900w, assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg 1800w" sizes="(max-width: 900px) 100vw, 44vw" alt="Comedor de “Casa Quintas”, proyecto de interiorismo en Mazatlán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
         <div class="pcard-meta"><div class="pcard-name">Casa Quintas · <em>Planta baja</em></div><div class="pcard-loc">Mazatlán · 2024</div></div>
         <div class="pcard-specs">Sala, comedor, vestíbulo · 180 m² · oro cepillado, lino, cristal</div>
       </a>
       <a class="pcard" href="/un-pedacito-de-cielo/">
-        <div class="pcard-img"><span class="tag">Residencial · Por área</span><picture><source type="image/webp" srcset="assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa.webp"><img class="img" src="assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa.jpg" alt="Habitación infantil “Un pedacito de cielo”, interiorismo en Culiacán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
+        <div class="pcard-img"><span class="tag">Residencial · Por área</span><picture><source type="image/webp" srcset="assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa-900.webp 900w, assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa.webp 1800w" sizes="(max-width: 900px) 100vw, 44vw"><img class="img" src="assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa.jpg" srcset="assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa-900.jpg 900w, assets/home/944d9a61-0445-43fa-b023-1320d30ed1fa.jpg 1800w" sizes="(max-width: 900px) 100vw, 44vw" alt="Habitación infantil “Un pedacito de cielo”, interiorismo en Culiacán por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
         <div class="pcard-meta"><div class="pcard-name">Un <em>pedacito</em> de cielo</div><div class="pcard-loc">Culiacán · 2024</div></div>
         <div class="pcard-specs">Habitación infantil · 24 m² · salvia, cielo, crema</div>
       </a>
@@ -1166,6 +1168,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 
   // Hero background rotation — WebP, deferred, respects reduced-motion
   var heroBg = document.getElementById('heroBg');
+  var heroNext = document.getElementById('heroBgNext');
   var heroImgs = [
     'assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp',
     'assets/home/3cee3872-c624-401b-b89d-d0ce90abca6e.webp',
@@ -1178,7 +1181,20 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     setInterval(function(){
       var next = (hi + 1) % heroImgs.length;
       var im = new Image();
-      im.onload = function(){ hi = next; heroBg.style.backgroundImage = "url('" + heroImgs[next] + "')"; };
+      im.onload = function(){
+        hi = next;
+        var url = "url('" + heroImgs[next] + "')";
+        if (!heroNext){ heroBg.style.backgroundImage = url; return; }
+        heroNext.style.backgroundImage = url;
+        heroNext.classList.add('on');
+        setTimeout(function(){
+          heroBg.style.backgroundImage = url;
+          heroNext.style.transition = 'none';
+          heroNext.classList.remove('on');
+          void heroNext.offsetWidth;
+          heroNext.style.transition = '';
+        }, 1500);
+      };
       im.src = heroImgs[next];
     }, 5500);
   }
@@ -1355,6 +1371,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   fx();
 })();
 </script>
+<script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 </body>
 </html>
