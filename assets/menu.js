@@ -13,6 +13,7 @@
       ['Muros para negocios', '/acabados-de-pared/#negocios']
     ],
     proyectos: [
+      ['Todos los proyectos', '/proyectos/'],
       ['Un rincón cerca del cielo', '/un-rincon-cerca-del-cielo/'],
       ['Casa en la colina', '/casa-en-la-colina/'],
       ['Casa Quintas', '/casa-quintas/'],

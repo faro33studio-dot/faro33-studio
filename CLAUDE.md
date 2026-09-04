@@ -7,11 +7,12 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 
 | URL | Rol |
 |---|---|
-| `/` | Home: hero → Servicios (2 cards) → **slider Especialidades** → **directorio de servicios (strip)** → Proyectos → banda parallax → Manifiesto → Proceso (timeline) → Estudio (stats) → FAQ → Contacto → Footer |
+| `/` | Home: hero → **Explora por espacio** (6 tiles → `/proyectos/?espacio=…`) → Servicios (2 cards) → **slider Especialidades** → **directorio de servicios (strip)** → Proyectos → banda parallax → Manifiesto → Proceso (timeline) → Estudio (stats) → FAQ → Contacto → Footer |
 | `/cocinas/` `/centros-de-entretenimiento/` `/acabados-de-pared/` | Landings de servicio (SEO + Meta Ads) |
 | `/acabados-de-pared/#negocios` | Ángulo comercial (muros para negocios) |
+| `/proyectos/` | **Índice de proyectos** con filtros por espacio (`?espacio=casa|sala|cocina|recamara|bano|tv|muros|comercial`); tarjetas = 4 casos + showcases de servicios |
 | `/nosotros/` | Acerca de + mapa (pin verificado 24.8172379,-107.3883888) |
-| `/casa-en-la-colina/` `/casa-quintas/` `/un-rincon-cerca-del-cielo/` `/un-pedacito-de-cielo/` | Proyectos |
+| `/casa-en-la-colina/` `/casa-quintas/` `/un-rincon-cerca-del-cielo/` `/un-pedacito-de-cielo/` | Proyectos (con bloque `.proj-next`: CTA WhatsApp específico + anterior/siguiente en ciclo rincón→colina→quintas→pedacito) |
 | `/contacto/` | Puente a WhatsApp para ads (noindex) |
 
 ## ⚠️ Checklist: agregar un NUEVO SERVICIO (seguir en orden, sin excepciones)
@@ -27,10 +28,18 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 6. Verificar en preview (desktop + 390px móvil, sin scroll horizontal) y deploy.
 7. Pedir indexación en Search Console.
 
+## Checklist: agregar un NUEVO PROYECTO (caso)
+
+1. Copiar la estructura de `/casa-quintas/` (hero, brief, specs, secciones, gallery `.scroller`, cierre, `.proj-next`, related, trackers, `gallery.js`+`motion.js`+`menu.js`).
+2. Tarjeta en `/proyectos/index.html` con `data-tags` (espacios que resuelve) — es el índice filtrable.
+3. Enlazar en el ciclo anterior/siguiente (`.pn-nav`) del proyecto vecino y del nuevo.
+4. `menu.js` (sección Proyectos), home `.pgrid` si es destacado, `ALL` de related-projects, `sitemap.xml`, miniatura 900px en `/assets/thumbs/`.
+
 ## Convenciones (no romper)
 
 - **Menú lateral**: `/assets/menu.js` es la navegación universal (botón "Menú" inyectado en cada header + drawer). Las páginas nuevas solo necesitan `<script src="/assets/menu.js" defer></script>` antes de `</body>`.
 - **Motor de movimiento**: `/assets/motion.js` (incluir antes de `menu.js`, + `<script>document.documentElement.classList.add('js')</script>` en el `<head>`). Da a toda página: reveals genéricos (`.mo/.in` sobre hijos de `.wrap`, grupos `.specs/.twin/.rooms/...` con stagger — se desactiva solo si la página ya trae `.rv`/`.reveal`), header `.nav.is-scrolled`, fondos diferidos (`data-bg="background-image:..."` inline, o reglas CSS gateadas como `html:not(.js) .sec .img, .sec.is-near .img{background-image:...}`), y videos `<video muted loop playsinline preload="none" data-autoplay>` que solo se descargan/reproducen en pantalla (`<source data-hd="...-hd.mp4">` para ≥900px). Videos: 720px móvil (`-crf 30`) + `-hd` 1080px; nunca `autoplay` en el HTML.
+- **Galería/lightbox**: `/assets/gallery.js` (antes de `motion.js`) amplía fotos conocidas por selector (`.gallery .scroller .img`, `.twin .panel .img`, `.rooms .room .img`, `.proyecto .hero-img`, `.ph.gal`, `.finish .ph`, `.case-feature .img`…) leyendo el fondo computado — sin marcado extra; agrega flechas + arrastre a `.gallery .scroller`. Pie de foto = `aria-label` del elemento o `figcaption`.
 - **Miniaturas**: tarjetas de "Otros proyectos" y del home usan `/assets/thumbs/*-900.{jpg,webp}` y `assets/home/<id>-900.*` con `srcset`; no apuntar tarjetas a fotos de 1800px.
 
 - **Datos canónicos**: WhatsApp `526675402559` · correo `faro33studio@gmail.com` · dirección Blv. Pedro María Anaya 1142-E, Col. Chapultepec, 80040 Culiacán · horario Lun–Vie 10:00–17:00, Sáb 10:00–14:00 · IG `faro_33studio` · FB `faro33studio` · fundado **2020** por Fernando Aramburo · © 2026.

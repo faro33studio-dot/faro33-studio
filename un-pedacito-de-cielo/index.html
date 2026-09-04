@@ -830,6 +830,46 @@ html:not(.js) .cierre .photo, .cierre.is-near .photo{ background-image: linear-g
   <a href="/">faro33studio.com</a>
 </footer>
 
+<style>
+.proj-next{ background:var(--linen-100); padding: clamp(64px,9vw,120px) 0; }
+.proj-next .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(24px,5vw,64px); }
+.pn-cta{ display:grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px,5vw,72px); align-items:center; padding-bottom: clamp(40px,6vw,72px); border-bottom:1px solid var(--sand-300); }
+@media (max-width:860px){ .pn-cta{ grid-template-columns:1fr; } }
+.pn-cta .eyebrow{ margin-bottom:18px; }
+.pn-cta h2{ font-family:var(--font-display); font-weight:400; font-size: clamp(30px,4.2vw,50px); line-height:1.05; letter-spacing:-0.015em; color:var(--navy-800); margin:0 0 18px; }
+.pn-cta h2 em{ font-style:italic; }
+.pn-cta p.pn-p{ font-family:var(--font-body); font-size:17px; line-height:1.6; color:var(--stone-700); margin:0; max-width:52ch; }
+.pn-wa{ display:inline-flex; align-items:center; justify-content:center; gap:12px; background:var(--navy-800); color:#fff; text-decoration:none; font-family:var(--font-ui); font-size:12px; letter-spacing:.22em; text-transform:uppercase; font-weight:600; padding:20px 28px; border-radius:2px; transition: background .2s ease, transform .3s var(--ease-out); justify-self:end; }
+@media (max-width:860px){ .pn-wa{ justify-self:start; } }
+.pn-wa:hover{ background:var(--brass-500); transform: translateY(-2px); }
+.pn-nav{ display:grid; grid-template-columns: 1fr auto 1fr; gap:24px; align-items:center; padding-top: clamp(28px,4vw,44px); }
+@media (max-width:640px){ .pn-nav{ grid-template-columns:1fr; } .pn-nav .next{ text-align:left; } }
+.pn-nav a{ text-decoration:none; color:var(--navy-800); display:flex; flex-direction:column; gap:8px; }
+.pn-nav .next{ text-align:right; }
+.pn-nav .lbl{ font-family:var(--font-ui); font-size:10.5px; letter-spacing:.28em; text-transform:uppercase; color:var(--stone-500); font-weight:600; }
+.pn-nav .name{ font-family:var(--font-display); font-size: clamp(22px,2.4vw,30px); line-height:1.1; transition: color .2s ease; }
+.pn-nav .name em{ font-style:italic; }
+.pn-nav a:hover .name{ color:var(--brass-500); }
+.pn-nav .all{ font-family:var(--font-ui); font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:600; color:var(--navy-800); border:1px solid var(--sand-300); padding:12px 18px; border-radius:2px; flex-direction:row; white-space:nowrap; }
+.pn-nav .all:hover{ border-color:var(--navy-800); }
+</style>
+<section class="proj-next" aria-label="Siguiente paso">
+  <div class="wrap">
+    <div class="pn-cta">
+      <div>
+        <p class="eyebrow">¿Un proyecto así en tu casa?</p>
+        <h2>Recámara infantil · 24 m² — <em>cuéntanos el tuyo.</em></h2>
+        <p class="pn-p">Mándanos una foto del espacio y lo que te gustaría resolver. Respondemos por WhatsApp el mismo día con los siguientes pasos y una primera cita en el estudio.</p>
+      </div>
+      <a class="pn-wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vi%20el%20caso%20%E2%80%9CUn%20pedacito%20de%20cielo%E2%80%9D%20y%20quiero%20un%20proyecto%20parecido%20%28rec%C3%A1mara%29.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">Quiero un proyecto así <span aria-hidden="true">→</span></a>
+    </div>
+    <nav class="pn-nav" aria-label="Más proyectos">
+      <a class="prev" href="/casa-quintas/" rel="prev"><span class="lbl">← Proyecto anterior</span><span class="name">Casa <em>Quintas</em></span></a>
+      <a class="all" href="/proyectos/">Todos los proyectos</a>
+      <a class="next" href="/un-rincon-cerca-del-cielo/" rel="next"><span class="lbl">Siguiente proyecto →</span><span class="name">Un rincón <em>cerca del cielo</em></span></a>
+    </nav>
+  </div>
+</section>
 <!-- OTROS PROYECTOS -->
 <div class="related-projects" data-current="pedacito">
 <div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div>
@@ -934,6 +974,7 @@ html:not(.js) .cierre .photo, .cierre.is-near .photo{ background-image: linear-g
   window.f33TrackWhatsApp = fire; // callable from form handlers
 })();
 </script>
+<script src="/assets/gallery.js" defer></script>
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 </body>

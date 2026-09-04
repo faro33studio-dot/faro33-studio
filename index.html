@@ -823,6 +823,44 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   </div>
   <div class="hero-scroll"><span>Desliza</span><span class="tick"></span></div>
 </section>
+<!-- EXPLORA POR ESPACIO -->
+<style>
+.espacios{ padding: clamp(64px,8vw,104px) 0 0; }
+.espacios .sh{ margin-bottom: clamp(32px,4vw,48px); }
+.esp-grid{ display:grid; grid-template-columns: repeat(6,1fr); gap: clamp(12px,1.5vw,20px); }
+@media (max-width:1100px){ .esp-grid{ grid-template-columns: repeat(3,1fr); } }
+@media (max-width:560px){ .esp-grid{ grid-template-columns: repeat(2,1fr); gap:12px; } }
+.esp-tile{ position:relative; display:block; aspect-ratio: 4/5; overflow:hidden; background:var(--navy-900); text-decoration:none; color:#fff; }
+.esp-img{ position:absolute; inset:0; background-size:cover; background-position:center; transition: transform 900ms var(--ease-out); }
+.esp-tile::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,27,54,.82) 0%, rgba(10,27,54,.15) 55%, rgba(10,27,54,0) 100%); }
+.esp-tile:hover .esp-img{ transform: scale(1.06); }
+.esp-lbl{ position:absolute; left:16px; right:12px; bottom:14px; z-index:2; font-family:var(--font-display); font-size: clamp(17px,1.5vw,21px); line-height:1.15; display:flex; justify-content:space-between; align-items:flex-end; gap:8px; }
+.esp-lbl .arrow{ font-family:var(--font-ui); font-size:14px; color:var(--gold-300); transition: transform 320ms var(--ease-out); }
+.esp-tile:hover .esp-lbl .arrow{ transform: translateX(4px); }
+.esp-tile:focus-visible{ outline:2px solid var(--brass-500); outline-offset:3px; }
+.esp-all{ margin-top: clamp(20px,2.5vw,28px); font-family:var(--font-ui); font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--navy-800); text-decoration:none; display:inline-flex; gap:10px; }
+.esp-all:hover{ color:var(--brass-500); }
+</style>
+<section class="espacios" id="espacios" style="background:var(--linen-50)">
+  <div class="f33-container">
+    <div class="sh">
+      <div class="sh-l">
+        <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">Explora por espacio</span></div>
+        <h2>¿Qué quieres <em>resolver</em>?</h2>
+      </div>
+      <div class="sh-r esp-sub">Elige el espacio y te llevamos directo a los proyectos donde ya lo resolvimos — con materiales, medidas y proceso.</div>
+    </div>
+    <div class="esp-grid">
+      <a class="esp-tile" href="/proyectos/?espacio=sala"><span class="esp-img" style="background-image:url('/assets/thumbs/quintas-1-sala-900.jpg');background-image:image-set(url('/assets/thumbs/quintas-1-sala-900.webp') type('image/webp'), url('/assets/thumbs/quintas-1-sala-900.jpg') type('image/jpeg'))" role="img" aria-label="Sala y comedor"></span><span class="esp-lbl">Sala y comedor <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a class="esp-tile" href="/proyectos/?espacio=cocina"><span class="esp-img" style="background-image:url('/assets/thumbs/cocina-curva-1-900.jpg');background-image:image-set(url('/assets/thumbs/cocina-curva-1-900.webp') type('image/webp'), url('/assets/thumbs/cocina-curva-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Cocina"></span><span class="esp-lbl">Cocina <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a class="esp-tile" href="/proyectos/?espacio=recamara"><span class="esp-img" style="background-image:url('/assets/thumbs/quintas-4-master-900.jpg');background-image:image-set(url('/assets/thumbs/quintas-4-master-900.webp') type('image/webp'), url('/assets/thumbs/quintas-4-master-900.jpg') type('image/jpeg'))" role="img" aria-label="Recámara"></span><span class="esp-lbl">Recámara <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a class="esp-tile" href="/proyectos/?espacio=bano"><span class="esp-img" style="background-image:url('/assets/thumbs/acabado-tapiz-900.jpg');background-image:image-set(url('/assets/thumbs/acabado-tapiz-900.webp') type('image/webp'), url('/assets/thumbs/acabado-tapiz-900.jpg') type('image/jpeg'))" role="img" aria-label="Baño"></span><span class="esp-lbl">Baño <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a class="esp-tile" href="/proyectos/?espacio=tv"><span class="esp-img" style="background-image:url('/assets/thumbs/centro-real-1-900.jpg');background-image:image-set(url('/assets/thumbs/centro-real-1-900.webp') type('image/webp'), url('/assets/thumbs/centro-real-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Centro de TV"></span><span class="esp-lbl">Centro de TV <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a class="esp-tile" href="/proyectos/?espacio=muros"><span class="esp-img" style="background-image:url('/assets/thumbs/acabado-comercial-900.jpg');background-image:image-set(url('/assets/thumbs/acabado-comercial-900.webp') type('image/webp'), url('/assets/thumbs/acabado-comercial-900.jpg') type('image/jpeg'))" role="img" aria-label="Muros y negocios"></span><span class="esp-lbl">Muros y negocios <span class="arrow" aria-hidden="true">→</span></span></a>
+    </div>
+    <a class="esp-all" href="/proyectos/">Ver todos los proyectos <span aria-hidden="true">→</span></a>
+  </div>
+</section>
 
 <!-- SERVICIOS -->
 <section class="f33-section" id="servicios">
@@ -915,7 +953,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     <a href="/cocinas/">Cocinas a la medida</a><span class="sep" aria-hidden="true">·</span>
     <a href="/centros-de-entretenimiento/">Centros de entretenimiento</a><span class="sep" aria-hidden="true">·</span>
     <a href="/acabados-de-pared/">Acabados de pared</a><span class="sep" aria-hidden="true">·</span>
-    <a href="/acabados-de-pared/#negocios">Muros para negocios</a>
+    <a href="/acabados-de-pared/#negocios">Muros para negocios</a><span class="sep">·</span><a href="/proyectos/">Todos los proyectos →</a>
   </div>
 </nav>
 
@@ -951,7 +989,8 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
         <div class="pcard-specs">Habitación infantil · 24 m² · salvia, cielo, crema</div>
       </a>
     </div>
-    <div style="margin-top:80px;text-align:center">
+    <div style="margin-top:80px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a class="btn btn--secondary" href="/proyectos/">Ver todos los proyectos <span class="arrow">→</span></a>
       <a class="btn btn--secondary" href="#contacto">Iniciar un proyecto <span class="arrow">→</span></a>
     </div>
   </div>
@@ -1129,6 +1168,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
         <ul>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#proceso">Proceso</a></li>
+          <li><a href="/proyectos/">Todos los proyectos</a></li>
           <li><a href="/nosotros/">Sobre nosotros</a></li>
           <li><a href="#faq">Preguntas frecuentes</a></li>
         </ul>
@@ -1297,12 +1337,13 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   }
 
   /* scroll reveals */
-  var sels=['.sh .eyebrow-row','.sh h2','.sh-r','.serv-card','.manifesto blockquote','.manifesto-attr','.manifesto-side','.proc-step','.studio-body .eyebrow-row','.studio-body p','.studio-stat','.faq-item','.contact h2','.contact-lede','.contact-detail .item','.cform'];
+  var sels=['.espacios .esp-sub','.espacios .esp-all','.esp-tile','.sh .eyebrow-row','.sh h2','.sh-r','.serv-card','.manifesto blockquote','.manifesto-attr','.manifesto-side','.proc-step','.studio-body .eyebrow-row','.studio-body p','.studio-stat','.faq-item','.contact h2','.contact-lede','.contact-detail .item','.cform'];
   var els=[];
   sels.forEach(function(q){ document.querySelectorAll(q).forEach(function(el){ els.push(el); }); });
   var pDelays=[0,120,60,180];
   document.querySelectorAll('.pgrid .pcard').forEach(function(el,i){ el.style.transitionDelay=pDelays[i%4]+'ms'; els.push(el); });
   document.querySelectorAll('.studio-stat').forEach(function(el,i){ el.style.transitionDelay=(i*120)+'ms'; });
+  document.querySelectorAll('.esp-tile').forEach(function(el,i){ el.style.transitionDelay=(i*70)+'ms'; });
   els.forEach(function(el){ el.classList.add('rv'); });
   function inView(el){ var r=el.getBoundingClientRect(); return r.top < (window.innerHeight||0)*0.92; }
   if (reduce || !('IntersectionObserver' in window)){
