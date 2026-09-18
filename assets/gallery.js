@@ -12,8 +12,8 @@
 
   var css = ''
     + '.lb-z{cursor:zoom-in}'
-    + '.lb-hint{position:absolute;right:14px;bottom:14px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(10,27,54,.55);color:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.85;transition:opacity .2s}'
-    + '.lb-hint svg{width:16px;height:16px}'
+    + '.lb-hint{position:absolute;right:14px;bottom:14px;z-index:3;width:34px;height:34px;border-radius:50%;--lg-alpha:.3;color:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.85;transition:opacity .2s}'
+    + '.lb-hint svg{width:16px;height:16px;position:relative;z-index:1}'
     + '@media (hover:hover){.lb-hint{opacity:0}.lb-z:hover .lb-hint{opacity:1}}'
     + '.lb{position:fixed;inset:0;z-index:300;background:rgba(10,27,54,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease}'
     + '.lb.on{opacity:1;pointer-events:auto}'
@@ -21,14 +21,14 @@
     + '.lb.on img.ok{transform:none;opacity:1}'
     + '.lb-cap{position:absolute;left:clamp(16px,4vw,48px);right:clamp(16px,4vw,48px);bottom:clamp(14px,3vh,28px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;color:#fff;font-family:"Bodoni MT","Bodoni Moda",Georgia,serif;font-size:clamp(15px,1.6vw,20px);line-height:1.3}'
     + '.lb-cap .n{font-family:ui-sans-serif,-apple-system,"Inter",Arial,sans-serif;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#E2C99A;white-space:nowrap}'
-    + '.lb-btn{position:absolute;background:none;border:0;color:#fff;cursor:pointer;padding:14px;opacity:.8;transition:opacity .15s}'
-    + '.lb-btn:hover{opacity:1}.lb-btn svg{width:26px;height:26px;display:block}'
+    + '.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;--lg-alpha:.22}'
+    + '.lb-btn svg{width:22px;height:22px;display:block;position:relative;z-index:1}'
     + '.lb-x{top:clamp(10px,2vh,22px);right:clamp(10px,2vw,22px)}'
     + '.lb-p,.lb-n{top:50%;transform:translateY(-50%)}.lb-p{left:clamp(4px,1.5vw,18px)}.lb-n{right:clamp(4px,1.5vw,18px)}'
     + '@media (max-width:640px){.lb-p,.lb-n{top:auto;bottom:calc(clamp(14px,3vh,28px) + 44px);transform:none}.lb-cap{padding-right:0;flex-direction:column;align-items:flex-start;gap:6px}}'
     + '.gallery{position:relative}'
-    + '.gsc-btn{position:absolute;top:50%;z-index:4;width:48px;height:48px;border-radius:50%;border:1px solid rgba(19,48,92,.25);background:rgba(251,248,242,.92);color:#13305C;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(10,27,54,.18);transition:transform .2s,opacity .2s;opacity:.95}'
-    + '.gsc-btn:hover{transform:scale(1.06)}.gsc-btn[disabled]{opacity:.25;cursor:default;transform:none}.gsc-btn svg{width:20px;height:20px}'
+    + '.gsc-btn{position:absolute;top:50%;z-index:4;width:52px;height:52px;border-radius:50%;border:1px solid transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .25s,scale .45s cubic-bezier(.3,1.35,.5,1)}'
+    + '.gsc-btn[disabled]{opacity:0;pointer-events:none}.gsc-btn svg{width:20px;height:20px;position:relative;z-index:1}'
     + '.gsc-btn.p{left:clamp(10px,2vw,28px)}.gsc-btn.n{right:clamp(10px,2vw,28px)}'
     + '.scroller.drag{cursor:grabbing;scroll-snap-type:none!important}.scroller.drag *{pointer-events:none}'
     + (reduce ? '.lb,.lb img,.lb-hint,.gsc-btn{transition:none!important}' : '');
@@ -62,9 +62,9 @@
   function build() {
     lb = doc.createElement('div'); lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Foto ampliada');
     lb.innerHTML = '<img alt=""><div class="lb-cap"><span class="c"></span><span class="n"></span></div>'
-      + '<button class="lb-btn lb-x" aria-label="Cerrar">' + ICON_X + '</button>'
-      + '<button class="lb-btn lb-p" aria-label="Anterior">' + ICON_L + '</button>'
-      + '<button class="lb-btn lb-n" aria-label="Siguiente">' + ICON_R + '</button>';
+      + '<button class="lb-btn lg lg-press lb-x" aria-label="Cerrar">' + ICON_X + '</button>'
+      + '<button class="lb-btn lg lg-press lb-p" aria-label="Anterior">' + ICON_L + '</button>'
+      + '<button class="lb-btn lg lg-press lb-n" aria-label="Siguiente">' + ICON_R + '</button>';
     doc.body.appendChild(lb);
     img = lb.querySelector('img'); cap = lb.querySelector('.c'); num = lb.querySelector('.n');
     lb.querySelector('.lb-x').addEventListener('click', close);
@@ -122,7 +122,7 @@
       el.setAttribute('role', el.getAttribute('role') || 'button');
       if (!el.querySelector('.lb-hint')) {
         if (getComputedStyle(el).position === 'static') el.style.position = 'relative';
-        var h = doc.createElement('span'); h.className = 'lb-hint'; h.setAttribute('aria-hidden', 'true'); h.innerHTML = ICON_Z; el.appendChild(h);
+        var h = doc.createElement('span'); h.className = 'lb-hint lg'; h.setAttribute('aria-hidden', 'true'); h.innerHTML = ICON_Z; el.appendChild(h);
       }
       function act() {
         /* resolver src al momento: los fondos diferidos ya cargaron cuando el usuario llega */
@@ -141,7 +141,7 @@
     [].forEach.call(doc.querySelectorAll('.gallery .scroller'), function (sc) {
       var host = sc.closest('.gallery') || sc.parentElement;
       var p = doc.createElement('button'), n = doc.createElement('button');
-      p.className = 'gsc-btn p'; n.className = 'gsc-btn n';
+      p.className = 'gsc-btn lg lg-light lg-press p'; n.className = 'gsc-btn lg lg-light lg-press n';
       p.setAttribute('aria-label', 'Fotos anteriores'); n.setAttribute('aria-label', 'Más fotos');
       p.innerHTML = ICON_L; n.innerHTML = ICON_R;
       host.appendChild(p); host.appendChild(n);

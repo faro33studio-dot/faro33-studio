@@ -31,14 +31,16 @@
 
   /* ---------- estilos ---------- */
   var css = ''
-    + '.f33m-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:1px solid rgba(255,255,255,0.45);border-radius:2px;color:#fff;cursor:pointer;padding:10px 16px;font-family:var(--font-ui,sans-serif);font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;transition:background .15s ease,border-color .15s ease}'
-    + '.f33m-btn:hover{background:rgba(255,255,255,0.1);border-color:#fff}'
+    + '.f33m-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:999px;color:#fff;cursor:pointer;padding:10px 18px;font-family:var(--font-ui,sans-serif);font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;--lg-alpha:.22}'
+    + '.f33m-btn .ic,.f33m-btn .tx{position:relative;z-index:1}'
     + '.f33m-btn .ic{display:inline-flex;flex-direction:column;gap:4px}'
     + '.f33m-btn .ic i{display:block;width:16px;height:1.5px;background:currentColor;transition:transform .2s ease}'
-    + '@media (max-width:560px){.f33m-btn .tx{display:none}.f33m-btn{padding:10px 12px}}'
+    + '@media (max-width:560px){.f33m-btn .tx{display:none}.f33m-btn{padding:12px 13px}}'
     + '.f33m-backdrop{position:fixed;inset:0;z-index:190;background:rgba(10,27,54,0.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .35s ease}'
     + '.f33m-open .f33m-backdrop{opacity:1;pointer-events:auto}'
-    + '.f33m-panel{position:fixed;top:0;right:0;bottom:0;z-index:200;width:min(440px,100vw);background:#0A1B36;color:#fff;transform:translateX(102%);transition:transform .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;box-shadow:-24px 0 60px rgba(0,0,0,0.35)}'
+    + '.f33m-panel{position:fixed;top:0;right:0;bottom:0;z-index:200;width:min(440px,100vw);color:#fff;transform:translateX(102%);transition:transform .55s cubic-bezier(.3,1.15,.5,1);display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;--lg-alpha:.8;--lg-a:250deg}'
+    + '@media (min-width:600px){.f33m-panel{top:10px;right:10px;bottom:10px;border-radius:26px;width:min(440px,calc(100vw - 20px))}}'
+    + '.f33m-panel>*{position:relative;z-index:1}'
     + '.f33m-open .f33m-panel{transform:none}'
     + '.f33m-head{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(24px,6vw,40px);border-bottom:1px solid rgba(255,255,255,0.12)}'
     + '.f33m-head .mark{display:flex;align-items:center;gap:12px;font-family:var(--font-display,serif);font-weight:700;font-size:15px;letter-spacing:0.08em;color:#fff;text-decoration:none}'
@@ -75,7 +77,7 @@
   var wrap = document.createElement('div');
   wrap.innerHTML = ''
     + '<div class="f33m-backdrop" data-f33m-close></div>'
-    + '<aside class="f33m-panel" role="dialog" aria-modal="true" aria-label="Menú del sitio">'
+    + '<aside class="f33m-panel lg" role="dialog" aria-modal="true" aria-label="Menú del sitio">'
     + '<div class="f33m-head"><a class="mark" href="/"><img src="/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt="">FARO 33</a>'
     + '<button class="f33m-close" data-f33m-close aria-label="Cerrar menú">×</button></div>'
     + '<div class="f33m-body">'
@@ -115,7 +117,7 @@
   function makeBtn() {
     var b = document.createElement('button');
     b.type = 'button';
-    b.className = 'f33m-btn';
+    b.className = 'f33m-btn lg lg-press';
     b.setAttribute('aria-label', 'Abrir menú');
     b.setAttribute('aria-expanded', 'false');
     b.innerHTML = '<span class="ic" aria-hidden="true"><i></i><i></i></span><span class="tx">Menú</span>';
@@ -134,7 +136,7 @@
       back.parentNode.insertBefore(group, back);
       group.appendChild(back); group.appendChild(b);
     } else {
-      b.style.cssText += ';position:fixed;top:18px;right:18px;z-index:120;background:rgba(10,27,54,0.6);backdrop-filter:blur(8px)';
+      b.style.cssText += ';position:fixed;top:18px;right:18px;z-index:120';
       document.body.appendChild(b);
     }
     btns.push(b);

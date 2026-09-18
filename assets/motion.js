@@ -17,8 +17,6 @@
   var css = ''
     + '.mo{opacity:0;transform:translateY(22px);transition:opacity .9s ' + EASE + ',transform .9s ' + EASE + ';will-change:opacity,transform}'
     + '.mo.in{opacity:1;transform:none;will-change:auto}'
-    + '.nav{transition:background .35s ease,padding .35s ' + EASE + ',box-shadow .35s ease}'
-    + '.nav.is-scrolled{background:rgba(10,27,54,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding-top:12px;padding-bottom:12px;box-shadow:0 1px 0 rgba(255,255,255,.07)}'
     + (reduce ? '.mo{opacity:1!important;transform:none!important;transition:none!important}' : '');
   var st = doc.createElement('style');
   st.textContent = css;

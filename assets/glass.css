@@ -1,0 +1,133 @@
+/* Faro 33 — Liquid Glass.
+   Material para la CAPA FLOTANTE (navegación, controles, etiquetas sobre fotografía).
+   Nunca para contenido: textos largos, tarjetas y secciones siguen en linen/navy sólidos.
+   Tinte navy + reflejo blanco + filo de latón. glass.js añade refracción (Chromium de escritorio)
+   y el brillo que sigue al puntero. Sin backdrop-filter o con "reducir transparencia": navy sólido. */
+
+:root{
+  --lg-tint: 10,27,54;                     /* navy-950 */
+  --lg-alpha: .34;
+  --lg-blur: 18px;
+  --lg-sat: 1.7;
+  --lg-edge: rgba(255,255,255,.62);        /* reflejo superior */
+  --lg-brass: rgba(226,201,154,.5);        /* filo de latón (gold-300) */
+  --lg-shadow: 0 12px 32px -10px rgba(10,27,54,.5), 0 2px 8px -3px rgba(10,27,54,.3);
+  --lg-spring: cubic-bezier(.3,1.35,.5,1);
+  --lg-ease: cubic-bezier(.2,.7,.2,1);
+}
+
+/* ---------- material ---------- */
+:where(.lg){ position:relative; }
+html :is(.lg, header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled, .wa-fab, .ls-arrow,
+         .hero .btn--on-deep-ghost, .pcard-img .tag, .proyecto .hero-img .tag, .pc .im .tg){
+  isolation:isolate;
+  color:#fff;
+  border-color:transparent;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,.03) 38%, rgba(255,255,255,0) 62%, rgba(255,255,255,.07) 100%),
+    rgba(var(--lg-tint), var(--lg-alpha));
+  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat)) brightness(1.05);
+          backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat)) brightness(1.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.34),
+    inset 0 -1px 0 rgba(255,255,255,.07),
+    inset 0 0 22px rgba(255,255,255,.05),
+    var(--lg-shadow);
+}
+/* brillo especular: sigue al puntero (--lg-x/--lg-y los pone glass.js) */
+html :is(.lg, header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled, .wa-fab, .ls-arrow,
+         .hero .btn--on-deep-ghost, .pcard-img .tag, .proyecto .hero-img .tag, .pc .im .tg)::before{
+  content:""; position:absolute; inset:0; z-index:-1; border-radius:inherit; pointer-events:none;
+  background: radial-gradient(140% 110% at var(--lg-x,28%) var(--lg-y,-30%), rgba(255,255,255,.26), rgba(255,255,255,0) 58%);
+  transition: opacity .35s var(--lg-ease);
+}
+/* filo: blanco arriba, latón en la diagonal; el ángulo gira con el puntero (--lg-a) */
+html :is(.lg, header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled, .wa-fab, .ls-arrow,
+         .hero .btn--on-deep-ghost, .pcard-img .tag, .proyecto .hero-img .tag, .pc .im .tg)::after{
+  content:""; position:absolute; inset:0; z-index:0; border-radius:inherit; pointer-events:none;
+  padding:1px;
+  background: linear-gradient(var(--lg-a,160deg), var(--lg-edge) 0%, var(--lg-brass) 26%, rgba(255,255,255,.05) 52%, rgba(255,255,255,.1) 78%, var(--lg-brass) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+}
+
+/* variante clara (sobre fotografía, controles de galería) */
+html body .lg.lg-light.lg-light{
+  --lg-tint: 251,248,242; --lg-alpha:.5; --lg-edge: rgba(255,255,255,.9); --lg-brass: rgba(184,146,74,.45);
+  --lg-shadow: 0 10px 28px -10px rgba(10,27,54,.35), 0 2px 6px -2px rgba(10,27,54,.2);
+  color:#13305C;
+}
+
+/* interacción: presión "líquida" (usa `scale`, no pisa transforms existentes) */
+html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost){
+  transition: scale .45s var(--lg-spring), box-shadow .3s var(--lg-ease), background-color .3s var(--lg-ease);
+}
+@media (hover:hover){
+  html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost):hover{ scale:1.04; }
+  html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost):hover::before{ opacity:1.35; }
+}
+html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost):active{ scale:.95; transition-duration:.12s; }
+
+/* ---------- componentes ---------- */
+
+/* Header: al hacer scroll se convierte en cápsula flotante */
+html :is(header.hdr, nav.nav, header.top){
+  transition: top .6s var(--lg-spring), left .6s var(--lg-spring), right .6s var(--lg-spring),
+              border-radius .6s var(--lg-ease), padding .45s var(--lg-ease), box-shadow .4s var(--lg-ease);
+}
+html :is(header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled){
+  --lg-alpha:.72;                           /* legible sobre secciones claras */
+  top:10px; left:max(12px, calc(50% - 700px)); right:max(12px, calc(50% - 700px));
+  border-radius:22px; border-bottom-color:transparent;
+}
+html nav.nav.is-scrolled{ padding-top:10px; padding-bottom:10px; }
+html header.top.is-scrolled{ padding-top:12px; padding-bottom:12px; }
+html header.hdr--scrolled .hdr-inner{ padding:12px 22px; }
+/* con el menú lateral disponible, el header del home no necesita los enlaces de texto en pantallas medianas */
+html .hdr-cta{ white-space:nowrap; }
+@media (max-width:1180px){ html .hdr-nav a:not(.hdr-cta){ display:none; } html .hdr-nav{ gap:14px; } }
+@media (max-width:640px){
+  html :is(header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled){ top:8px; left:8px; right:8px; border-radius:18px; }
+}
+/* botón Menú dentro de un header ya de vidrio: sin doble vidrio, solo el filo */
+html :is(header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled) .f33m-btn{
+  --lg-alpha:0; -webkit-backdrop-filter:none; backdrop-filter:none; box-shadow: inset 0 1px 0 rgba(255,255,255,.22);
+}
+
+/* WhatsApp flotante */
+html body .wa-fab{ --lg-alpha:.68; border-radius:999px; }
+html body .wa-fab svg{ color:#E2C99A; position:relative; z-index:1; }
+html body .wa-fab > span{ position:relative; z-index:1; }
+@media (max-width:640px){ html body .wa-fab{ border-radius:50%; } }
+
+/* flechas del slider del home + CTA secundario del hero */
+html .ls-arrow{ --lg-alpha:.24; }
+html .hero .btn--on-deep-ghost{ --lg-alpha:.18; }
+
+/* etiquetas sobre fotografía */
+html :is(.pcard-img .tag, .pc .im .tg){ --lg-alpha:.32; border-radius:999px; }
+html .proyecto .hero-img .tag{ --lg-alpha:.32; border-radius:999px; padding:9px 16px; font-size:11px; }
+
+/* ---------- respaldo ---------- */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  html :is(.lg, header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled, .wa-fab, .ls-arrow,
+           .hero .btn--on-deep-ghost, .pcard-img .tag, .proyecto .hero-img .tag, .pc .im .tg){ --lg-alpha:.9; }
+  html body .lg.lg-light.lg-light{ --lg-alpha:.95; }
+}
+@media (prefers-reduced-transparency: reduce){
+  html :is(.lg, header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled, .wa-fab, .ls-arrow,
+           .hero .btn--on-deep-ghost, .pcard-img .tag, .proyecto .hero-img .tag, .pc .im .tg){
+    --lg-alpha:.94; -webkit-backdrop-filter:none; backdrop-filter:none;
+  }
+  html body .lg.lg-light.lg-light{ --lg-alpha:.97; }
+}
+@media (prefers-contrast: more){
+  html :is(.lg, header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled, .wa-fab, .ls-arrow,
+           .hero .btn--on-deep-ghost, .pcard-img .tag, .proyecto .hero-img .tag, .pc .im .tg){ --lg-alpha:.9; }
+}
+@media (prefers-reduced-motion: reduce){
+  html :is(header.hdr, nav.nav, header.top, .lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost){ transition:none !important; }
+  html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost):is(:hover,:active){ scale:1; }
+}
