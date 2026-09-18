@@ -100,7 +100,7 @@
       '<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/>' +
       '<feImage href="' + lensMap(w, h, rad, bezel) + '" x="0" y="0" width="' + w + '" height="' + h + '" preserveAspectRatio="none" result="m"/>' +
       '<feDisplacementMap in="b" in2="m" scale="' + Math.round(bezel * 1.6) + '" xChannelSelector="R" yChannelSelector="G" result="d"/>' +
-      '<feColorMatrix in="d" type="saturate" values="1.7"/>';
+      '<feColorMatrix in="d" type="saturate" values="1.5"/>';
     defs.appendChild(f);
     var keys = Object.keys(cache);
     if (keys.length > 24) { var old = cache[keys[0]]; delete cache[keys[0]]; var n = doc.getElementById(old.id); if (n) n.remove(); }
