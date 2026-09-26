@@ -10,6 +10,9 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 | `/` | Home: hero → **Explora por espacio** (6 tiles → `/proyectos/?espacio=…`) → Servicios (2 cards) → **slider Especialidades** → **directorio de servicios (strip)** → Proyectos → banda parallax → Manifiesto → Proceso (timeline) → Estudio (stats) → FAQ → Contacto → Footer |
 | `/cocinas/` `/centros-de-entretenimiento/` `/acabados-de-pared/` | Landings de servicio (SEO + Meta Ads) |
 | `/acabados-de-pared/#negocios` | Ángulo comercial (muros para negocios) |
+| `/centros-de-entretenimiento/configurador/` | Configurador 2D (SVG acotado: muro, consola, torres) → WhatsApp con las medidas + enlace 3D. La URL guarda el diseño (`#d=…`) y se restaura al cargar |
+| `/centros-de-entretenimiento/maqueta/` | Maqueta 3D animada (Three.js): Día · Cine · Reunión · Noche + vistas Carpintería y Planta. Sin hash = modelo de muestra (`DESIGN` en `scene.js`); con `#d=…` = el diseño del cliente (guion de `buildSteps`). `wallLayout()` replica `computeLayout()` del configurador: si cambia una regla de geometría, cambiarla en ambos. Depurar con `?debug&paso=N` o `?debug&vista=planta` |
+| `/centros-de-entretenimiento/diseno.js` | Esquema compartido configurador ↔ maqueta: rangos (deben coincidir con los `<input type="range">`), nombres, `encode/decode/fromHash`. Todo lo que llega por URL se sanea aquí |
 | `/proyectos/` | **Índice de proyectos** con filtros por espacio (`?espacio=casa|sala|cocina|recamara|bano|tv|muros|comercial`); tarjetas = 4 casos + showcases de servicios |
 | `/nosotros/` | Acerca de + mapa (pin verificado 24.8172379,-107.3883888) |
 | `/casa-en-la-colina/` `/casa-quintas/` `/un-rincon-cerca-del-cielo/` `/un-pedacito-de-cielo/` | Proyectos (con bloque `.proj-next`: CTA WhatsApp específico + anterior/siguiente en ciclo rincón→colina→quintas→pedacito) |
@@ -47,6 +50,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 - **Imágenes**: solo trabajo REAL del estudio (nunca fotos de Pinterest/terceros). Pipeline: exif-transpose → ≤1800px → JPG q72-80 + WebP (`cwebp -q 72`) → referenciar con `image-set()` (comillas simples en `type('image/webp')` — las dobles rompen atributos `style`).
 - **Conversión**: todo CTA va a WhatsApp con prefill específico del contexto; los clics en `wa.me` disparan Pixel `Lead` + GA4 `generate_lead` (script global por página).
 - **Animación**: reveals gateados por `html.js` (nunca ocultar contenido sin JS), respetar `prefers-reduced-motion`, solo transform/opacity, sin dependencias externas.
+- **Única dependencia externa (aislada):** Three.js r186 autoalojado en `/assets/vendor/three/` (bundle minificado + solo los addons que usa la maqueta; ver `README.txt`). Solo lo carga `/centros-de-entretenimiento/maqueta/` vía importmap; no usarlo en otras páginas sin razón.
 - **Tipografía/paleta**: Bodoni MT (woff2 compartidas en `/assets/home/`), tokens navy/linen/brass — copiar `:root` de una página existente.
 - **El home `index.html` ya NO es el bundle Wix** — es HTML estático normal; editar con cuidado normal (Python con asserts para cambios repetitivos).
 - IDs GA4 `G-91L2N1S9T3` · Pixel `883854600914341` · GSC verificado por meta tag en el home (no quitar).

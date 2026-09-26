@@ -9,6 +9,8 @@
       ['Interiorismo integral', '/#servicios'],
       ['Cocinas a la medida', '/cocinas/'],
       ['Centros de entretenimiento', '/centros-de-entretenimiento/'],
+      ['Diseña tu centro (configurador)', '/centros-de-entretenimiento/configurador/'],
+      ['Centro transformable en 3D', '/centros-de-entretenimiento/maqueta/'],
       ['Acabados de pared', '/acabados-de-pared/'],
       ['Muros para negocios', '/acabados-de-pared/#negocios']
     ],

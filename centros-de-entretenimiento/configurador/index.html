@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#13305C">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.facebook.com">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91L2N1S9T3');
+</script>
+<!-- /GA4 -->
+
+<title>Configurador de centros de entretenimiento — Faro 33</title>
+<meta name="description" content="Diseña tu centro de entretenimiento a la medida: muro, consola y torres iluminadas, con plano acotado al instante. Cotízalo por WhatsApp. Faro 33.">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://faro33studio.com/centros-de-entretenimiento/configurador/">
+<meta property="og:title"       content="Configurador de centros de entretenimiento — Faro 33">
+<meta property="og:description" content="Arma tu centro de entretenimiento a la medida y mira el plano acotado en vivo. Faro 33 Studio, Culiacán.">
+<meta property="og:image"       content="https://faro33studio.com/og-image.jpg">
+<meta property="og:locale"      content="es_MX">
+<meta property="og:site_name"   content="Faro 33 Studio">
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '883854600914341');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name: 'Configurador Centros de Entretenimiento', content_category: 'Tool'});
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none"
+  src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
+<!-- /Meta Pixel -->
+<link rel="icon" href="../assets/logo-faro33.png">
+<link rel="apple-touch-icon" href="../assets/logo-faro33.png">
+<link rel="canonical" href="https://faro33studio.com/centros-de-entretenimiento/configurador/">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="/assets/glass.css">
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--fg); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+
+  /* ---------- header ---------- */
+  .top{
+    position:sticky; top:0; z-index:40;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 16px clamp(18px,4vw,40px);
+    background: rgba(251,248,242,0.92);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-bottom: var(--hairline);
+  }
+  .top .mark{ display:flex; align-items:center; gap:12px; font-family:var(--font-display); font-weight:700; font-size:15px; letter-spacing:0.06em; color:var(--accent); text-decoration:none; }
+  .top .mark img{ width:32px; height:32px; border-radius:50%; }
+  .top .back{
+    font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:var(--accent);
+    padding:9px 16px; border:1px solid var(--border-strong); border-radius:var(--radius-pill);
+    transition: background var(--dur-fast) var(--ease-out);
+  }
+  .top .back:hover{ background:var(--linen-100); }
+
+  /* ---------- intro ---------- */
+  .cfg-head{ max-width:1320px; margin:0 auto; padding: clamp(40px,6vw,72px) clamp(18px,4vw,40px) clamp(20px,3vw,32px); }
+  .cfg-head h1{ font-family:var(--font-display); font-weight:400; font-size:clamp(34px,5vw,56px); line-height:1.05; letter-spacing:-0.02em; margin: 16px 0 0; color:var(--fg); text-wrap:balance; }
+  .cfg-head h1 em{ font-style:italic; color:var(--accent); }
+  .cfg-head p{ margin:18px 0 0; max-width:58ch; font-size:16px; line-height:1.6; color:var(--fg-muted); }
+  .cfg-head .to-3d{ margin-top:10px; font-family:var(--font-ui); font-size:12px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; }
+  .cfg-head .to-3d a{ color:var(--accent); text-decoration:none; border-bottom:1px solid var(--border-strong); padding-bottom:2px; }
+  .cfg-head .to-3d a:hover{ border-bottom-color:var(--accent); }
+
+  /* ---------- layout ---------- */
+  .cfg-wrap{
+    max-width:1320px; margin:0 auto; padding: 0 clamp(18px,4vw,40px) clamp(48px,7vw,88px);
+    display:flex; gap: clamp(24px,3vw,40px); align-items:flex-start; flex-wrap:wrap;
+  }
+  .cfg-panel{
+    flex: 1 1 320px; max-width:380px;
+    background: var(--bg-elev); border: var(--hairline); border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+    padding: var(--space-6);
+    display:flex; flex-direction:column; gap: var(--space-6);
+    position: sticky; top: 82px;
+    order:2;
+  }
+  .cfg-canvas{
+    flex: 2 1 480px; min-width:0;
+    display:flex; flex-direction:column; gap: var(--space-5);
+    order:1;
+  }
+  @media (max-width:860px){
+    .cfg-panel{ position:static; max-width:none; order:1; }
+    .cfg-canvas{ order:2; }
+  }
+
+  /* ---------- form controls ---------- */
+  .fld{ display:flex; flex-direction:column; gap:8px; }
+  .fld .lbl{ display:flex; justify-content:space-between; align-items:baseline; font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--fg-muted); }
+  .fld .lbl b{ font-family:var(--font-ui); font-size:12.5px; letter-spacing:0.02em; color:var(--accent); font-weight:700; }
+  .fld input[type="range"]{ width:100%; accent-color: var(--accent); height:22px; }
+  .fld-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+  .fld-group{ display:flex; flex-direction:column; gap:var(--space-5); padding-top:var(--space-5); border-top:var(--hairline); }
+  .fld-group:first-child{ padding-top:0; border-top:none; }
+
+  .switch-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .switch-row .lbl{ margin:0; }
+  .switch{ position:relative; width:42px; height:24px; flex:0 0 auto; }
+  .switch input{ position:absolute; inset:0; opacity:0; margin:0; cursor:pointer; }
+  .switch .track{ position:absolute; inset:0; background:var(--border-strong); border-radius:999px; transition:background var(--dur-fast) var(--ease-out); }
+  .switch .knob{ position:absolute; top:3px; left:3px; width:18px; height:18px; background:#fff; border-radius:50%; box-shadow:var(--shadow-1); transition:transform var(--dur-fast) var(--ease-out); }
+  .switch input:checked + .track{ background:var(--accent); }
+  .switch input:checked + .track + .knob{ transform:translateX(18px); }
+  .tv-subfields{ display:flex; flex-direction:column; gap:14px; padding-top:4px; }
+
+  .swatches{ display:flex; gap:10px; flex-wrap:wrap; }
+  .swatch{ width:34px; height:34px; border-radius:50%; border:2px solid transparent; cursor:pointer; padding:0; box-shadow: inset 0 0 0 1px rgba(19,48,92,0.15); transition: box-shadow var(--dur-fast) var(--ease-out); }
+  .swatch[aria-pressed="true"]{ border-color:var(--accent); box-shadow: 0 0 0 2px var(--bg-elev), 0 0 0 3px var(--accent); }
+
+  .wswatches{ display:flex; gap:10px; flex-wrap:wrap; }
+  .wswatch{ width:56px; height:40px; border-radius:var(--radius-2); border:2px solid transparent; cursor:pointer; padding:0; background-size:cover; box-shadow: inset 0 0 0 1px rgba(19,48,92,0.15); transition: box-shadow var(--dur-fast) var(--ease-out); }
+  .wswatch[aria-pressed="true"]{ border-color:var(--accent); box-shadow: 0 0 0 2px var(--bg-elev), 0 0 0 3px var(--accent); }
+  .wswatch-lbl{ font-family:var(--font-ui); font-size:9.5px; letter-spacing:0.06em; color:var(--fg-muted); text-align:center; margin-top:4px; }
+
+  .seg{ display:flex; border:1px solid var(--border-strong); border-radius:var(--radius-2); overflow:hidden; }
+  .seg-btn{ flex:1; padding:9px 8px; background:var(--bg-elev); border:none; border-right:1px solid var(--border-strong); font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--fg-muted); cursor:pointer; transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out); }
+  .seg-btn:last-child{ border-right:none; }
+  .seg-btn[aria-pressed="true"]{ background:var(--accent); color:#fff; }
+
+  .hint{ font-family:var(--font-ui); font-size:12px; line-height:1.55; color:var(--fg-muted); background:var(--linen-100); border-radius:var(--radius-2); padding:12px 14px; }
+
+  /* ---------- canvas / drawings ---------- */
+  .view{ background:var(--bg-elev); border:var(--hairline); border-radius:var(--radius-2); box-shadow:var(--shadow-1); padding: clamp(14px,2.4vw,22px); }
+  .view .cap{ font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--fg-muted); margin:0 0 10px; }
+  .view svg{ display:block; width:100%; height:auto; }
+  .cfg-bay{ cursor:pointer; }
+  .cfg-bay:hover{ filter:brightness(1.06); }
+
+  /* ---------- summary + WhatsApp CTA ---------- */
+  .cfg-cta{
+    max-width:1320px; margin:0 auto clamp(48px,7vw,88px); padding: 0 clamp(18px,4vw,40px);
+    display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    background: var(--navy-800); color:#fff; border-radius: var(--radius-2);
+    padding: clamp(22px,3vw,32px) clamp(22px,4vw,40px);
+    margin-left:clamp(18px,4vw,40px); margin-right:clamp(18px,4vw,40px);
+  }
+  .cfg-cta .summary{ font-family:var(--font-ui); font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.85); }
+  .cfg-cta .summary b{ font-family:var(--font-display); font-size:19px; font-weight:700; letter-spacing:0; color:#fff; display:block; margin-bottom:4px; }
+  .wa-btn{
+    display:inline-flex; align-items:center; gap:12px; flex:0 0 auto;
+    background:#25D366; color:#fff; font-family:var(--font-ui); font-size:12px; font-weight:600;
+    letter-spacing:0.18em; text-transform:uppercase; padding:16px 26px; border-radius:2px; border:none;
+    box-shadow: 0 8px 28px -8px rgba(37,211,102,0.5);
+    transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  }
+  .wa-btn:hover{ background:#1ebd58; transform:translateY(-2px); }
+  .wa-btn svg{ width:18px; height:18px; flex:0 0 18px; }
+  .cta-btns{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn-3d{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    border:1px solid rgba(255,255,255,0.5); color:#fff; text-decoration:none;
+    font-family:var(--font-ui); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;
+    padding:16px 22px; border-radius:2px; transition: background var(--dur-fast) var(--ease-out);
+  }
+  .btn-3d:hover{ background:rgba(255,255,255,0.1); }
+
+  @media (max-width:600px){
+    .cfg-cta{ flex-direction:column; align-items:stretch; }
+    .cta-btns{ flex-direction:column; }
+    .wa-btn{ justify-content:center; text-align:center; }
+  }
+
+  footer.pg-foot{ text-align:center; padding:28px; font-family:var(--font-ui); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--fg-muted); border-top:var(--hairline); }
+  footer.pg-foot a{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="/"><img src="/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt="">FARO 33</a>
+  <a class="back" href="/centros-de-entretenimiento/">← Centros de entretenimiento</a>
+</header>
+
+<main>
+  <div class="cfg-head">
+    <div class="f33-eyebrow"><span class="f33-rule" style="display:inline-block;width:42px;margin-right:14px;"></span>Herramienta de diseño</div>
+    <h1>Diseña tu <em>centro de entretenimiento</em>.</h1>
+    <p>Elige el acabado del muro, arma la consola de TV, agrega torres laterales iluminadas. El plano de frente y planta se dibuja al instante, acotado en centímetros — luego mándanoslo por WhatsApp y te damos una propuesta real.</p>
+    <p class="to-3d"><a href="/centros-de-entretenimiento/maqueta/">¿Quieres verlo en movimiento? Mira la maqueta 3D →</a></p>
+  </div>
+
+  <div class="cfg-wrap">
+    <section class="cfg-panel" aria-label="Controles del diseño">
+
+      <div class="fld-group">
+        <div class="fld">
+          <div class="lbl"><span>Acabado de muro</span><b id="out-wallfinish">Pintura</b></div>
+          <div class="wswatches" id="wswatches" role="group" aria-label="Acabado de muro"></div>
+        </div>
+      </div>
+
+      <div class="fld-group">
+        <div class="fld">
+          <div class="lbl"><span>Ancho total (muro)</span><b id="out-w">280 cm</b></div>
+          <input type="range" id="in-w" min="180" max="450" step="5" value="280">
+        </div>
+        <div class="fld">
+          <div class="lbl"><span>Alto total (muro)</span><b id="out-h">220 cm</b></div>
+          <input type="range" id="in-h" min="150" max="280" step="5" value="220">
+        </div>
+        <div class="fld">
+          <div class="lbl"><span>Profundidad</span><b id="out-d">40 cm</b></div>
+          <input type="range" id="in-d" min="30" max="60" step="5" value="40">
+        </div>
+      </div>
+
+      <div class="fld-group">
+        <div class="fld">
+          <div class="lbl"><span>Largo de la consola de TV</span><b id="out-consolelen">200 cm</b></div>
+          <input type="range" id="in-consolelen" min="120" max="240" step="5" value="200">
+        </div>
+        <div class="fld">
+          <div class="lbl"><span>Alto de la consola</span><b id="out-consoleh">35 cm</b></div>
+          <input type="range" id="in-consoleh" min="20" max="45" step="1" value="35">
+        </div>
+        <div class="fld">
+          <div class="lbl"><span>Compartimentos</span><b id="out-cols">4</b></div>
+          <input type="range" id="in-cols" min="2" max="6" step="1" value="4">
+        </div>
+        <div class="hint">Haz clic sobre cada compartimento de la consola en el dibujo de frente para cambiar entre abierto, puerta lisa, puerta con vidrio y cajón.</div>
+      </div>
+
+      <div class="fld-group">
+        <div class="switch-row">
+          <div class="lbl" style="margin:0;"><span>Pantalla de TV</span></div>
+          <label class="switch">
+            <input type="checkbox" id="in-tv" checked>
+            <span class="track"></span><span class="knob"></span>
+          </label>
+        </div>
+        <div class="tv-subfields" id="tv-subfields">
+          <div class="fld">
+            <div class="lbl"><span>Ancho de pantalla</span><b id="out-tvw">130 cm</b></div>
+            <input type="range" id="in-tvw" min="40" max="260" step="5" value="130">
+          </div>
+          <div class="fld">
+            <div class="lbl"><span>Alto de pantalla</span><b id="out-tvh">70 cm</b></div>
+            <input type="range" id="in-tvh" min="30" max="120" step="5" value="70">
+          </div>
+        </div>
+      </div>
+
+      <div class="fld-group">
+        <div class="fld">
+          <div class="lbl"><span>Torres laterales</span></div>
+          <div class="seg" id="seg-towercount" role="group" aria-label="Número de torres">
+            <button type="button" class="seg-btn" data-val="0">Ninguna</button>
+            <button type="button" class="seg-btn" data-val="1">1</button>
+            <button type="button" class="seg-btn" data-val="2">2</button>
+          </div>
+        </div>
+        <div class="tv-subfields" id="tower-subfields" style="display:none;">
+          <div class="fld" id="tower-side-fld" style="display:none;">
+            <div class="lbl"><span>Lado</span></div>
+            <div class="seg" id="seg-towerside">
+              <button type="button" class="seg-btn" data-val="izquierda">Izquierda</button>
+              <button type="button" class="seg-btn" data-val="derecha">Derecha</button>
+            </div>
+          </div>
+          <div class="fld">
+            <div class="lbl"><span>Empieza desde</span></div>
+            <div class="seg" id="seg-towerstart">
+              <button type="button" class="seg-btn" data-val="piso">Piso</button>
+              <button type="button" class="seg-btn" data-val="consola">Sobre la consola</button>
+            </div>
+          </div>
+          <div class="fld">
+            <div class="lbl"><span>Ancho de torre</span><b id="out-towerw">28 cm</b></div>
+            <input type="range" id="in-towerw" min="20" max="35" step="1" value="28">
+          </div>
+          <div class="fld">
+            <div class="lbl"><span>Alto de torre</span><b id="out-towerh">200 cm</b></div>
+            <input type="range" id="in-towerh" min="80" max="240" step="5" value="200">
+          </div>
+          <div class="switch-row">
+            <div class="lbl" style="margin:0;"><span>Iluminar torres</span></div>
+            <label class="switch">
+              <input type="checkbox" id="in-towerslit" checked>
+              <span class="track"></span><span class="knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="fld-group">
+        <div class="fld">
+          <div class="lbl"><span>Acabado del mueble</span><b id="out-finish">Navy lacado</b></div>
+          <div class="swatches" id="swatches" role="group" aria-label="Acabado del mueble"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="cfg-canvas" aria-label="Dibujo acotado">
+      <div class="view">
+        <p class="cap">Vista de frente</p>
+        <svg id="svg-front" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+      <div class="view">
+        <p class="cap">Vista de planta</p>
+        <svg id="svg-plan" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+    </section>
+  </div>
+
+  <div class="cfg-cta">
+    <div class="summary"><b id="cta-summary">280 × 220 × 40 cm</b><span id="cta-detail">4 compartimentos · Navy lacado</span></div>
+    <div class="cta-btns">
+    <a class="btn-3d" id="cfg-3d" href="/centros-de-entretenimiento/maqueta/">Ver mi diseño en 3D <span aria-hidden="true">→</span></a>
+    <a class="wa-btn" id="wa-cfg" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm5.84 16.183c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
+      Cotizar este diseño por WhatsApp
+    </a>
+    </div>
+  </div>
+</main>
+
+<footer class="pg-foot">
+  <a href="/centros-de-entretenimiento/">← Volver a Centros de entretenimiento</a>
+</footer>
+
+<script src="../diseno.js"></script>
+<script src="configurador.js"></script>
+<script>
+/* Meta Pixel — WhatsApp clicks son la señal de conversión (el usuario sale a la app). */
+(function(){
+  function fire(label){
+    if (typeof fbq === 'function'){
+      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+    if (typeof gtag === 'function'){
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
+    }
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = t && t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]') : null;
+    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
+  }, true);
+})();
+</script>
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/menu.js" defer></script>
+<script src="/assets/glass.js" defer></script>
+</body>
+</html>

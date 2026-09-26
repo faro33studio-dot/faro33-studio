@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#13305C">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.facebook.com">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91L2N1S9T3');
+</script>
+<!-- /GA4 -->
+
+<title>Centro de entretenimiento transformable en 3D — Faro 33</title>
+<meta name="description" content="Maqueta 3D animada de un centro de entretenimiento transformable: listones corredizos que ocultan la TV, consola flotante, torres con LED y bar integrado. Diseñado y fabricado a la medida por Faro 33 Studio en Culiacán.">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://faro33studio.com/centros-de-entretenimiento/maqueta/">
+<meta property="og:title"       content="Centro de entretenimiento transformable en 3D — Faro 33">
+<meta property="og:description" content="Un muro, cuatro momentos: día, cine, reunión y noche. Mira cómo se transforma. Faro 33 Studio, Culiacán.">
+<meta property="og:image"       content="https://faro33studio.com/og-image.jpg">
+<meta property="og:locale"      content="es_MX">
+<meta property="og:site_name"   content="Faro 33 Studio">
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '883854600914341');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name: 'Maqueta 3D Centros', content_category: 'Tool'});
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none"
+  src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
+<!-- /Meta Pixel -->
+<link rel="icon" href="../assets/logo-faro33.png">
+<link rel="apple-touch-icon" href="../assets/logo-faro33.png">
+<link rel="canonical" href="https://faro33studio.com/centros-de-entretenimiento/maqueta/">
+<link rel="modulepreload" href="/assets/vendor/three/three.module.min.js">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="/assets/glass.css">
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--fg); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  :root{ --hdr:65px; }
+
+  /* ---------- header (igual que el configurador) ---------- */
+  .top{
+    position:sticky; top:0; z-index:40; height:var(--hdr);
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 0 clamp(18px,4vw,40px);
+    background: rgba(251,248,242,0.92);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-bottom: var(--hairline);
+  }
+  .top .mark{ display:flex; align-items:center; gap:12px; font-family:var(--font-display); font-weight:700; font-size:15px; letter-spacing:0.06em; color:var(--accent); text-decoration:none; }
+  .top .mark img{ width:32px; height:32px; border-radius:50%; }
+  .top .back{
+    font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:var(--accent);
+    padding:9px 16px; border:1px solid var(--border-strong); border-radius:var(--radius-pill);
+    transition: background var(--dur-fast) var(--ease-out);
+  }
+  .top .back:hover{ background:var(--linen-100); }
+  @media (max-width:560px){ .top .back .lbl{ display:none; } }
+
+  /* ---------- escenario 3D ---------- */
+  .stage{
+    position:relative; height:calc(100svh - var(--hdr)); min-height:560px; overflow:hidden;
+    background:#E7E2DB; color:var(--ink);
+    --ink:#1B1612; --muted:rgba(27,22,18,0.55); --line:rgba(27,22,18,0.25);
+    transition: background-color .6s var(--ease-out);
+  }
+  .stage.is-night{ background:#0E1C33; --ink:#F4EFE5; --muted:rgba(244,239,229,0.6); --line:rgba(244,239,229,0.3); }
+  #maqueta{ position:absolute; inset:0; width:100%; height:100%; display:block; opacity:0; transition:opacity .9s var(--ease-out); touch-action:pan-y; cursor:grab; }
+  #maqueta:active{ cursor:grabbing; }
+  .stage.ready #maqueta{ opacity:1; }
+  .loading, .no-webgl-msg{ position:absolute; inset:0; display:grid; place-items:center; text-align:center; padding:24px; font-family:var(--font-ui); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); transition:opacity .5s; }
+  .stage.ready .loading{ opacity:0; pointer-events:none; }
+  .no-webgl-msg{ display:none; letter-spacing:0.06em; text-transform:none; font-size:15px; line-height:1.6; }
+  .stage.no-webgl .no-webgl-msg{ display:grid; }
+  .stage.no-webgl .loading, .stage.no-webgl .ov-bottom{ display:none; }
+
+  .ov{ position:absolute; left:0; right:0; padding: clamp(16px,2.6vw,34px) clamp(16px,3.2vw,44px); pointer-events:none; color:var(--ink); transition:color .6s var(--ease-out); }
+  .ov a, .ov button, .ov .bar{ pointer-events:auto; }
+  .ov-top{ top:0; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
+  .meta{ font-family:var(--font-ui); font-size:10.5px; font-weight:500; letter-spacing:0.26em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; }
+  .ttl h1{ font-family:var(--font-display); font-weight:400; font-size:clamp(28px,3.4vw,50px); line-height:1.02; letter-spacing:-0.02em; margin:0; max-width:11ch; }
+  .ttl h1 em{ font-style:italic; }
+  .cta-wa{
+    display:inline-flex; align-items:center; gap:9px; margin-top:16px;
+    background:#25D366; color:#fff; text-decoration:none; font-family:var(--font-ui); font-size:10.5px; font-weight:600;
+    letter-spacing:0.18em; text-transform:uppercase; padding:11px 16px; border-radius:2px;
+    box-shadow:0 8px 24px -10px rgba(37,211,102,0.6); transition:background var(--dur-fast) var(--ease-out);
+  }
+  .cta-wa:hover{ background:#1ebd58; }
+  .custom-links{ display:none; }
+  .is-custom .custom-links{ display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin:14px 0 0; font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; }
+  .custom-links a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px; }
+  .custom-links a:hover{ border-bottom-color:var(--ink); }
+  .cta-wa svg{ width:15px; height:15px; }
+
+  .ov-bottom{ bottom:0; display:flex; align-items:flex-end; justify-content:space-between; gap:20px 40px; flex-wrap:wrap; }
+  .timeline{ flex:1 1 420px; max-width:640px; }
+  #chapters{ display:grid; grid-template-columns:repeat(4,1fr); margin-bottom:6px; }
+  .ch{ background:none; border:0; padding:6px 0; text-align:left; cursor:pointer; color:var(--muted); font-family:var(--font-display); font-size:clamp(17px,1.7vw,25px); display:flex; align-items:baseline; gap:8px; transition:color .3s; }
+  .ch .n{ font-style:italic; font-size:0.6em; }
+  .ch.on, .ch:hover{ color:var(--ink); }
+  .ch.on .n{ color:var(--brass-500); }
+  .bar{ position:relative; height:26px; cursor:pointer; touch-action:none; outline:none; }
+  .bar::before{ content:""; position:absolute; left:0; right:0; top:50%; height:1px; background:var(--line); }
+  .bar:focus-visible{ outline:2px solid var(--brass-500); outline-offset:2px; border-radius:4px; }
+  .bar-fill{ position:absolute; left:0; top:50%; height:1px; background:var(--ink); }
+  .tick{ position:absolute; top:calc(50% - 5px); width:1px; height:10px; background:var(--line); }
+  .bar-head{ position:absolute; top:50%; width:12px; height:12px; margin:-6px 0 0 -6px; border-radius:50%; background:var(--brass-500); box-shadow:0 0 0 4px rgba(184,146,74,0.2); }
+
+  .side{ display:flex; flex-direction:column; align-items:flex-end; gap:14px; }
+  .caption{ font-family:var(--font-display); font-size:clamp(17px,1.5vw,22px); line-height:1.3; margin:0; min-height:1.3em; text-align:right; }
+  .caption.in{ animation:capIn .55s var(--ease-out); }
+  @keyframes capIn{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
+  .btns{ display:flex; gap:10px; }
+  .pill{ display:inline-flex; align-items:center; gap:10px; height:44px; padding:0 20px; border-radius:999px; border:1px solid transparent; font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; cursor:pointer; --lg-alpha:.5; }
+  .pill .ic, .pill .tx{ position:relative; z-index:1; }
+  .pill .ic{ font-size:10px; letter-spacing:0; }
+  .pill.lg-light{ --lg-alpha:.66; }
+
+  /* ---------- pestañas y vistas ---------- */
+  .tabs{ display:flex; gap:22px; }
+  .tabs button{ background:none; border:0; border-bottom:1px solid transparent; padding:6px 0; font-family:var(--font-ui); font-size:12px; letter-spacing:0.06em; color:var(--muted); cursor:pointer; transition:color .3s, border-color .3s; }
+  .tabs button:hover{ color:var(--ink); }
+  .tabs button[aria-selected="true"]{ color:var(--ink); border-bottom-color:var(--ink); }
+  .view-note, .back-anim{ display:none; }
+  .stage:not([data-view="general"]) .timeline,
+  .stage:not([data-view="general"]) .btns,
+  .stage:not([data-view="general"]) .caption{ display:none; }
+  .stage:not([data-view="general"]) .view-note{ display:block; margin:0; font-family:var(--font-display); font-size:clamp(17px,1.5vw,22px); text-align:right; }
+  .stage:not([data-view="general"]) .back-anim{ display:inline-flex; }
+  .stage:not([data-view="general"]) .ov-bottom{ justify-content:flex-end; }
+
+  .labels, .cotas{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:0; transition:opacity .45s var(--ease-out); }
+  .stage.show-labels .labels, .stage.show-cotas .cotas{ opacity:1; }
+  .lbl3d{ position:absolute; left:0; top:0; width:0; height:0; }
+  .lbl3d i{ position:absolute; left:-5px; top:-5px; width:10px; height:10px; border-radius:50%; background:var(--brass-500); box-shadow:0 0 0 4px rgba(184,146,74,0.22); }
+  .lbl3d em{ position:absolute; left:0; top:0; height:1px; background:rgba(27,22,18,0.55); transform-origin:0 0; }
+  .lbl3d span{ position:absolute; left:0; top:0; background:rgba(251,248,242,0.95); box-shadow:var(--shadow-2); padding:6px 10px 7px; border-radius:2px; font-family:var(--font-ui); font-size:11px; line-height:1.35; color:#1B1612; white-space:nowrap; }
+  .lbl3d b{ display:block; font-weight:600; letter-spacing:0.02em; }
+  .lbl3d small{ display:block; font-size:10.5px; color:var(--stone-500); }
+  .c-line{ stroke:#13305C; stroke-width:1; }
+  .c-tick{ stroke:#13305C; stroke-width:1.2; }
+  .c-bg{ fill:#EFEBE4; stroke:rgba(19,48,92,0.25); }
+  .c-txt{ fill:#13305C; font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.04em; }
+
+  @media (max-width:700px){
+    .stage{ min-height:600px; }
+    .tabs{ flex-direction:column; align-items:flex-end; gap:2px; }
+    .tabs button{ font-size:11px; padding:4px 0; }
+    .stage:not([data-view="general"]) .view-note{ text-align:left; font-size:17px; }
+    .lbl3d span{ font-size:10px; padding:4px 7px; }
+    .lbl3d small{ display:none; }
+    .ov-bottom{ flex-direction:column; align-items:stretch; gap:12px; }
+    .side{ align-items:stretch; }
+    .caption{ text-align:left; font-size:17px; }
+    .timeline{ flex:none; }
+    .ch{ flex-direction:column; gap:0; font-size:16px; }
+    .btns .pill{ flex:1; justify-content:center; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .caption.in{ animation:none; }
+    #maqueta, .stage, .ov{ transition:none; }
+  }
+
+  /* ---------- contenido bajo el pliegue ---------- */
+  .info{ max-width:1100px; margin:0 auto; padding: clamp(56px,8vw,104px) clamp(18px,4vw,40px) clamp(32px,5vw,56px); }
+  .info h2{ font-family:var(--font-display); font-weight:400; font-size:clamp(32px,4.4vw,52px); line-height:1.05; letter-spacing:-0.02em; margin:14px 0 0; }
+  .info h2 em{ font-style:italic; color:var(--accent); }
+  .moments{ list-style:none; padding:0; margin:clamp(28px,4vw,44px) 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; border-top:var(--hairline); padding-top:28px; }
+  .moments b{ display:block; font-family:var(--font-display); font-size:22px; font-weight:400; margin-bottom:8px; }
+  .moments b i{ font-size:0.62em; color:var(--brass-500); margin-right:6px; }
+  .moments p{ margin:0; font-size:15.5px; line-height:1.65; color:var(--stone-700); }
+  .info .note{ margin:32px 0 0; max-width:62ch; font-size:17px; line-height:1.65; color:var(--fg); }
+  .design-note{ display:none; }
+  .is-custom .design-note{ display:block; margin:28px 0 0; max-width:62ch; font-size:17px; line-height:1.65; color:var(--fg); }
+  .is-custom .moments, .is-custom .info .note{ display:none; }
+
+  .cfg-cta{
+    display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    background:var(--navy-800); color:#fff; border-radius:var(--radius-2);
+    padding: clamp(22px,3vw,32px) clamp(22px,4vw,40px);
+    margin: 0 clamp(18px,4vw,40px) clamp(48px,7vw,88px);
+  }
+  .cfg-cta .summary{ font-family:var(--font-ui); font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.85); }
+  .cfg-cta .summary b{ font-family:var(--font-display); font-size:21px; font-weight:400; letter-spacing:0; color:#fff; display:block; margin-bottom:4px; }
+  .cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn-ghost, .btn-wa{ display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:var(--font-ui); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; padding:16px 24px; border-radius:2px; text-decoration:none; }
+  .btn-ghost{ border:1px solid rgba(255,255,255,0.45); color:#fff; }
+  .btn-ghost:hover{ background:rgba(255,255,255,0.08); }
+  .btn-wa{ background:#25D366; color:#fff; box-shadow:0 8px 28px -8px rgba(37,211,102,0.5); }
+  .btn-wa:hover{ background:#1ebd58; }
+  .btn-wa svg{ width:18px; height:18px; }
+  @media (max-width:600px){ .cfg-cta{ flex-direction:column; align-items:stretch; } .cta-row{ flex-direction:column; } }
+
+  footer.pg-foot{ text-align:center; padding:28px; font-family:var(--font-ui); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--fg-muted); border-top:var(--hairline); }
+  footer.pg-foot a{ color:var(--accent); }
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "/assets/vendor/three/three.module.min.js", "three/addons/": "/assets/vendor/three/addons/" } }
+</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="/"><img src="/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt="">FARO 33</a>
+  <a class="back" href="/centros-de-entretenimiento/">← <span class="lbl">Centros de entretenimiento</span></a>
+</header>
+
+<main>
+  <section class="stage" id="stage" data-view="general" aria-label="Maqueta 3D del centro de entretenimiento transformable">
+    <canvas id="maqueta" role="img" aria-label="Maqueta 3D animada: sala con muro de TV de madera y mármol que se transforma entre día, cine, reunión y noche."></canvas>
+    <div class="loading" aria-hidden="true">Cargando maqueta…</div>
+    <div class="no-webgl-msg"><p>Tu navegador no puede mostrar la maqueta 3D.<br>Abajo te contamos cómo funciona, o <a href="/centros-de-entretenimiento/">mira los centros que hemos entregado</a>.</p></div>
+
+    <div class="ov ov-top" id="ov-top">
+      <div class="ttl">
+        <p class="meta">Sala · 5.2 × 4.0 m · 21 m²</p>
+        <h1>Centro de entretenimiento <em>transformable</em></h1>
+        <a class="cta-wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%20%E2%80%94%20vi%20la%20maqueta%203D%20del%20centro%20de%20entretenimiento%20transformable%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20sala.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm5.84 16.183c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
+          Quiero uno así
+        </a>
+        <p class="custom-links"><a id="lnk-edit" href="/centros-de-entretenimiento/configurador/">← Editar en el configurador</a><a href="/centros-de-entretenimiento/maqueta/">Ver el modelo de muestra</a></p>
+      </div>
+      <nav class="tabs" role="tablist" aria-label="Vistas de la maqueta">
+        <button type="button" role="tab" data-view="general" aria-selected="true">General</button>
+        <button type="button" role="tab" data-view="carpinteria" aria-selected="false">Carpintería</button>
+        <button type="button" role="tab" data-view="planta" aria-selected="false">Planta</button>
+      </nav>
+    </div>
+
+    <div class="labels" id="labels" aria-hidden="true"></div>
+    <svg class="cotas" id="cotas" aria-hidden="true"></svg>
+
+    <div class="ov ov-bottom" id="ov-bottom">
+      <div class="timeline">
+        <div id="chapters" role="group" aria-label="Momentos"></div>
+        <div class="bar" id="bar" role="slider" tabindex="0" aria-label="Línea de tiempo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="tick" style="left:0"></span><span class="tick" style="left:25%"></span><span class="tick" style="left:50%"></span><span class="tick" style="left:75%"></span><span class="tick" style="left:100%"></span>
+          <span class="bar-fill" id="bar-fill"></span>
+          <span class="bar-head" id="bar-head"></span>
+        </div>
+      </div>
+      <div class="side">
+        <p class="caption" id="caption" aria-live="polite"></p>
+        <p class="view-note" id="view-note" aria-live="polite"></p>
+        <button type="button" class="pill lg lg-light lg-press back-anim" id="btn-back"><span class="ic" aria-hidden="true">▶</span><span class="tx">Ver la animación</span></button>
+        <div class="btns">
+          <button type="button" class="pill lg lg-light lg-press" id="btn-play" aria-pressed="false"><span class="ic" aria-hidden="true">▶</span><span class="tx">Reproducir</span></button>
+          <button type="button" class="pill lg lg-light lg-press" id="btn-next"><span class="tx">Siguiente</span><span class="ic" aria-hidden="true">▶</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="f33-eyebrow"><span class="f33-rule" style="display:inline-block;width:42px;margin-right:14px;vertical-align:middle;"></span>Cómo funciona</div>
+    <h2>Un muro, <em>cuatro</em> momentos.</h2>
+    <ol class="moments">
+      <li><b><i>01</i>Día</b><p>La mesa de centro se eleva para trabajar desde el sofá y la lámpara de lectura gira hacia el asiento. La TV queda oculta tras los listones.</p></li>
+      <li><b><i>02</i>Cine</b><p>Las cortinas se cierran, los listones corredizos revelan la pantalla, la puerta abatible deja ver las consolas y las torres se iluminan.</p></li>
+      <li><b><i>03</i>Reunión</b><p>Se abre el bar integrado en la torre, los pufs salen de debajo de la mesa y la mesa sube a altura de servicio.</p></li>
+      <li><b><i>04</i>Noche</b><p>Todo vuelve a su lugar: la pantalla se oculta, el bar se cierra y sólo queda encendida la tira LED.</p></li>
+    </ol>
+    <p class="design-note" id="design-note"></p>
+    <p class="note">Todo lo que ves en madera — la consola flotante, las torres con LED, el bar, los listones corredizos y el panel de mármol — lo diseñamos y fabricamos a la medida en nuestro taller de Culiacán.</p>
+  </section>
+
+  <div class="cfg-cta">
+    <div class="summary"><b>¿Lo quieres con tus medidas?</b>Arma el tuyo en el configurador o cuéntanos de tu sala.</div>
+    <div class="cta-row">
+      <a class="btn-ghost" href="/centros-de-entretenimiento/configurador/">Diseña el tuyo →</a>
+      <a class="btn-wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%20%E2%80%94%20vi%20la%20maqueta%203D%20del%20centro%20de%20entretenimiento%20transformable%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20sala.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm5.84 16.183c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="pg-foot">
+  <a href="/centros-de-entretenimiento/">← Volver a Centros de entretenimiento</a>
+</footer>
+
+<script src="../diseno.js"></script>
+<script type="module" src="main.js"></script>
+<script>
+/* Meta Pixel — WhatsApp clicks son la señal de conversión (el usuario sale a la app). */
+(function(){
+  function fire(label){
+    if (typeof fbq === 'function'){
+      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    }
+    if (typeof gtag === 'function'){
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
+    }
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = t && t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]') : null;
+    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
+  }, true);
+})();
+</script>
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/menu.js" defer></script>
+<script src="/assets/glass.js" defer></script>
+</body>
+</html>
