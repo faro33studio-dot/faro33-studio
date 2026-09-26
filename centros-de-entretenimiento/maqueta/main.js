@@ -1,13 +1,8 @@
-/* Faro 33 — Maqueta 3D: arranque (renderer, cámara isométrica, post-proceso, vistas, loop bajo demanda). */
+/* Faro 33 — Maqueta 3D: página completa (línea de tiempo, UI, vistas, loop bajo demanda). */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
-import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { buildScene, DESIGN, roomFor, wallLayout } from './scene.js';
+import { DESIGN, roomFor, wallLayout } from './scene.js';
+import { createViewer, AZ, EL } from './viewer.js';
 import { createTimeline, STEPS, INITIAL, buildSteps, initialFor } from './timeline.js';
 import { createUI } from './ui.js';
 import { VIEW_STATES, VIEW_NOTES, setClay, createLabels, createCotas } from './views.js';
@@ -66,45 +61,12 @@ function applyDesignCopy(d) {
 if (custom) applyDesignCopy(custom);
 
 function start() {
-  let renderer;
-  try {
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
-  } catch (e) { stage.classList.add('no-webgl'); return; }
-  if (!renderer.getContext()) { stage.classList.add('no-webgl'); return; }
-
   const low = matchMedia('(max-width: 760px)').matches || (navigator.hardwareConcurrency || 8) <= 4;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.5 : 2));
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFShadowMap;
-  renderer.toneMapping = THREE.NeutralToneMapping;
-  renderer.toneMappingExposure = 0.95;
-
-  const { scene, decor, apply, bounds, labels, layout, room } = buildScene(design);
-  scene.traverse((o) => { if (o.isDirectionalLight) o.shadow.mapSize.set(low ? 1024 : 2048, low ? 1024 : 2048); });
-
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-  pmrem.dispose();
-
-  /* ---------- cámara ortográfica isométrica (como el video) ---------- */
-  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 100);
-  const target = new THREE.Vector3(room.W / 2, 0.9, room.D / 2);
-  const AZ = THREE.MathUtils.degToRad(32), EL = THREE.MathUtils.degToRad(30), R = 20;
+  const viewer = createViewer(canvas, design, { low });
+  if (!viewer) { stage.classList.add('no-webgl'); return; }
+  const { scene, decor, apply, labels, layout, room, renderer, camera, target, composer, setAngles, getAngles } = viewer;
   const PLAN_EL = THREE.MathUtils.degToRad(89.5);
-  function setAngles(az, el) {
-    camera.position.set(
-      target.x + Math.sin(az) * Math.cos(el) * R,
-      target.y + Math.sin(el) * R,
-      target.z + Math.cos(az) * Math.cos(el) * R
-    );
-    camera.lookAt(target);
-  }
-  function getAngles() {
-    const o = camera.position.clone().sub(target);
-    return [Math.atan2(o.x, o.z), Math.asin(o.y / o.length())];
-  }
-  setAngles(AZ, EL);
 
   let controls = null;
   if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
@@ -121,27 +83,11 @@ function start() {
     controls.update();
   }
 
-  /* ---------- post-proceso: render → oclusión ambiental → bloom → tone mapping / sRGB ---------- */
-  const rt = new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: low ? 0 : 4 });
-  const composer = new EffectComposer(renderer, rt);
-  composer.addPass(new RenderPass(scene, camera));
-  if (!low) {
-    const gtao = new GTAOPass(scene, camera, 512, 512);
-    gtao.updateGtaoMaterial({ radius: 0.32, distanceExponent: 1.6, thickness: 1.2, scale: 1.15, samples: 16, distanceFallOff: 1 });
-    gtao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 5, rings: 2, samples: 16 });
-    gtao.blendIntensity = 0.9;
-    composer.addPass(gtao);
-  }
-  const bloom = new UnrealBloomPass(new THREE.Vector2(512, 512), 0.05, 0.35, 1.05);
-  composer.addPass(bloom);
-  composer.addPass(new OutputPass());
-
   /* ---------- estado: la línea de tiempo manda en "General"; las otras vistas fijan su propio estado ---------- */
   let dirty = true, view = 'general', current = null;
   function applyValues(v) {
     current = v;
     apply(v);
-    bloom.strength = 0.03 + 0.4 * v.noche;
     ui.update(v);
     dirty = true;
   }
@@ -160,37 +106,20 @@ function start() {
   applyValues(tl.values());
 
   /* ---------- encuadre: la maqueta completa en el área libre entre el título y los controles ---------- */
-  const corners = [];
-  for (const x of [bounds.min.x, bounds.max.x]) for (const y of [bounds.min.y, bounds.max.y]) for (const z of [bounds.min.z, bounds.max.z]) corners.push(new THREE.Vector3(x, y, z));
   let W = 1, H = 1;
   function fitFrustum() {
-    camera.updateMatrixWorld();
-    const inv = camera.matrixWorldInverse, v = new THREE.Vector3();
-    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-    for (const c of corners) {
-      v.copy(c).applyMatrix4(inv);
-      minX = Math.min(minX, v.x); maxX = Math.max(maxX, v.x);
-      minY = Math.min(minY, v.y); maxY = Math.max(maxY, v.y);
-    }
     const sr = stage.getBoundingClientRect();
     const wide = W > 900;
-    let topIn = ui.topEl.getBoundingClientRect().bottom - sr.top + 8;
-    if (wide) topIn = Math.min(topIn, H * 0.12);
-    const botIn = sr.bottom - ui.bottomEl.getBoundingClientRect().top + 8;
-    const padX = wide ? W * 0.06 : 12;
-    const aw = W - 2 * padX, ah = Math.max(120, H - topIn - botIn);
-    const s = Math.max((maxX - minX) / aw, (maxY - minY) / ah) * (view === 'planta' ? 1.18 : 1.02);
-    const cx = (minX + maxX) / 2, cy = (minY + maxY) / 2;
-    const ax = padX + aw / 2, ay = topIn + ah / 2;
-    camera.left = cx - ax * s; camera.right = camera.left + W * s;
-    camera.top = cy + ay * s; camera.bottom = camera.top - H * s;
-    camera.updateProjectionMatrix();
+    let top = ui.topEl.getBoundingClientRect().bottom - sr.top + 8;
+    if (wide) top = Math.min(top, H * 0.12);
+    const bottom = sr.bottom - ui.bottomEl.getBoundingClientRect().top + 8;
+    const side = wide ? W * 0.06 : 12;
+    viewer.fit(W, H, { top, bottom, left: side, right: side }, view === 'planta' ? 1.18 : 1.02);
     dirty = true;
   }
   function resize() {
     W = stage.clientWidth; H = stage.clientHeight;
-    renderer.setSize(W, H, false);
-    composer.setSize(W, H);
+    viewer.resize(W, H);
     fitFrustum();
   }
   resize();

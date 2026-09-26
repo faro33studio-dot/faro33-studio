@@ -23,7 +23,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 1. Crear `/<slug>/index.html` **copiando la estructura de `/acabados-de-pared/`** (es la plantilla más completa: GA4, Pixel con `ViewContent`, JSON-LD LocalBusiness+Breadcrumb+FAQPage, fuentes compartidas de `/assets/home/*.woff2`, reveals, skip-link, related-projects, FAB).
 2. **`/assets/menu.js`**: añadir la entrada al array `MENU` (menú lateral universal — presente en las 9 páginas; UNA edición cubre toda la navegación entre páginas).
 3. Home — **3 puntos de entrada obligatorios**:
-   a. Slide en el slider `#especialidades` (usar `data-bg` para diferir la imagen; actualizar el contador `/ 0N`).
+   a. Slide en el slider `#especialidades` (usar `data-bg` para diferir la imagen; actualizar el contador `/ 0N`). La diapositiva 02 es la maqueta 3D en vivo: iframe diferido a `/centros-de-entretenimiento/maqueta/teaser.html` (sin analítica, `noindex`), que el carrusel dispara con `postMessage` al mostrarla; `data-dur` le da más tiempo (9.5 s) para que termine el giro → luz → fade. En móvil los puntos del carrusel van en la fila del contador (con 5 diapositivas chocaban con el botón).
    b. Enlace en el **directorio** `.svc-index` (strip bajo el slider).
    c. `<li>` en el footer, columna **Servicios**.
 4. `sitemap.xml`: `<url>` con `lastmod` del día + `image:image` del hero.

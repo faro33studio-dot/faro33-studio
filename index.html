@@ -676,6 +676,19 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
 .ls-dots button:focus-visible{ outline:2px solid var(--gold-300); outline-offset:-2px; border-radius:50%; }
 .ls-count{ position:absolute; left:clamp(28px,5vw,72px); top:clamp(96px,12vh,128px); z-index:3; font-family:var(--font-ui); font-size:12px; letter-spacing:0.22em; color:rgba(255,255,255,0.7); }
 .ls-count b{ color:var(--gold-300); font-weight:500; }
+/* diapositiva 02: maqueta 3D en vivo (iframe diferido, controlado por el carrusel) */
+.ls-slide--3d .ls-bg{ background-color:#E7E2DB; }
+html.js .ls-slide--3d.is-active .ls-bg{ animation:none; }
+.ls-3d{ position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none; background:transparent; }
+.ls-slide--3d::after{ background:linear-gradient(90deg, rgba(10,27,54,0.92) 0%, rgba(10,27,54,0.66) 30%, rgba(10,27,54,0) 56%); }
+@media (min-width:701px){ .lineshow.ls-on-light .ls-dots button::before{ background:rgba(19,48,92,0.3); } .lineshow.ls-on-light .ls-dots button.on::before{ background:var(--navy-800); } }
+@media (max-width:700px){
+  .ls-slide--3d::after{ background:linear-gradient(0deg, rgba(10,27,54,0.94) 0%, rgba(10,27,54,0.72) 40%, rgba(10,27,54,0) 62%); }
+  .lineshow.ls-on-light .ls-count{ color:rgba(19,48,92,0.75); } .lineshow.ls-on-light .ls-count b{ color:var(--brass-500); }
+  /* con 5 diapositivas los puntos chocarían con el botón: suben a la fila del contador */
+  .ls-dots{ top:clamp(96px,12vh,128px); bottom:auto; right:clamp(12px,4vw,24px); margin-top:-7px; }
+  .lineshow.ls-on-light .ls-dots button::before{ background:rgba(19,48,92,0.3); } .lineshow.ls-on-light .ls-dots button.on::before{ background:var(--navy-800); }
+}
 @media (max-width:700px){ .ls-arrow{ display:none; } }
 
 
@@ -907,7 +920,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 
 <!-- ESPECIALIDADES -->
 <section class="lineshow" id="especialidades" aria-roledescription="carrusel" aria-label="Nuestras especialidades">
-  <div class="ls-count"><b class="ls-now">01</b> / 04</div>
+  <div class="ls-count"><b class="ls-now">01</b> / 05</div>
   <article class="ls-slide is-active">
     <div class="ls-bg" style="background-image:url('centros-de-entretenimiento/assets/campaign/centro-warm.jpg');background-image:image-set(url('centros-de-entretenimiento/assets/campaign/centro-warm.webp') type('image/webp'), url('centros-de-entretenimiento/assets/campaign/centro-warm.jpg') type('image/jpeg'))" role="img" aria-label="Centro de entretenimiento a la medida en muro de listones de madera"></div>
     <div class="ls-content">
@@ -915,6 +928,17 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
       <h2>Centros de <em>entretenimiento</em></h2>
       <p>El muro que reúne a la casa. Listones de madera, luz de cornisa y piedra natural — diseñado, fabricado e instalado por el estudio.</p>
       <a class="ls-cta" href="/centros-de-entretenimiento/">Ver centros <span>→</span></a>
+    </div>
+  </article>
+  <article class="ls-slide ls-slide--3d" data-dur="9500">
+    <div class="ls-bg">
+      <iframe class="ls-3d" data-src="/centros-de-entretenimiento/maqueta/teaser.html" title="Maqueta 3D animada de un centro de entretenimiento" tabindex="-1" aria-hidden="true"></iframe>
+    </div>
+    <div class="ls-content">
+      <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Configurador 3D</span></div>
+      <h2>Diseña tu <em>centro</em></h2>
+      <p>Elige medidas, acabados y torres con luz LED — y míralo en 3D antes de que lo fabriquemos.</p>
+      <a class="ls-cta" href="/centros-de-entretenimiento/configurador/">Diseñar el mío <span>→</span></a>
     </div>
   </article>
   <article class="ls-slide">
@@ -1304,10 +1328,21 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Ir a especialidad '+(n+1));
     if(n===0)b.className='on'; b.addEventListener('click',function(){ go(n); restart(); }); dotsWrap.appendChild(b); return b;
   });
+  /* diapositiva con la maqueta 3D: el iframe se carga al acercarse el carrusel y se reproduce al mostrarse */
+  var frame3d=root.querySelector('.ls-3d'), slide3d=frame3d&&frame3d.closest('.ls-slide');
+  function teaser(action){
+    if(frame3d&&frame3d.getAttribute('src')&&frame3d.contentWindow) frame3d.contentWindow.postMessage({type:'f33-teaser',action:action},location.origin);
+  }
+  window.addEventListener('message',function(e){
+    if(e.origin!==location.origin||!e.data||e.data.type!=='f33-teaser'||!frame3d||e.source!==frame3d.contentWindow) return;
+    if(e.data.status==='ready'&&slides[i]===slide3d) teaser('play');
+    if(e.data.status==='no-webgl'){ frame3d.remove(); frame3d=null; root.classList.remove('ls-on-light'); slide3d.querySelector('.ls-bg').setAttribute('style',"background-image:url('/assets/thumbs/centro-real-1-900.jpg');background-image:image-set(url('/assets/thumbs/centro-real-1-900.webp') type('image/webp'), url('/assets/thumbs/centro-real-1-900.jpg') type('image/jpeg'))"); }
+  });
   function render(){
     slides.forEach(function(s,n){ s.classList.toggle('is-active',n===i); });
     dots.forEach(function(d,n){ d.classList.toggle('on',n===i); });
     if(now) now.textContent=('0'+(i+1)).slice(-2);
+    if(slide3d){ var on=slides[i]===slide3d; root.classList.toggle('ls-on-light',on&&!!frame3d); teaser(on?'play':'stop'); }
   }
   function go(n){ i=(n+slides.length)%slides.length; render(); }
   function next(){ go(i+1); } function prev(){ go(i-1); }
@@ -1316,9 +1351,12 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
       el.setAttribute('style', el.getAttribute('data-bg'));
       el.removeAttribute('data-bg');
     });
+    if(frame3d&&!frame3d.getAttribute('src')) frame3d.setAttribute('src',frame3d.getAttribute('data-src'));
   }
-  function start(){ hydrate(); if(reduce||timer) return; timer=setInterval(next,DUR); }
-  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  /* cada diapositiva puede pedir más tiempo (data-dur), p. ej. la maqueta 3D para terminar su animación */
+  function schedule(){ timer=setTimeout(function(){ next(); schedule(); }, +(slides[i].getAttribute('data-dur')||DUR)); }
+  function start(){ hydrate(); if(reduce||timer) return; schedule(); }
+  function stop(){ if(timer){ clearTimeout(timer); timer=null; } }
   function restart(){ stop(); start(); }
   root.querySelector('.ls-arrow.next').addEventListener('click',function(){ next(); restart(); });
   root.querySelector('.ls-arrow.prev').addEventListener('click',function(){ prev(); restart(); });
