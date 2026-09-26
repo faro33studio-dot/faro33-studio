@@ -31,7 +31,7 @@
 
   /* ---------- estilos ---------- */
   var css = ''
-    + '.f33m-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:999px;color:#fff;cursor:pointer;padding:10px 18px;font-family:var(--font-ui,sans-serif);font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;--lg-alpha:.22}'
+    + '.f33m-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;min-width:44px;border:1px solid transparent;border-radius:999px;color:#fff;cursor:pointer;padding:10px 18px;font-family:var(--font-ui,sans-serif);font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;--lg-alpha:.22}'
     + '.f33m-btn .ic,.f33m-btn .tx{position:relative;z-index:1}'
     + '.f33m-btn .ic{display:inline-flex;flex-direction:column;gap:4px}'
     + '.f33m-btn .ic i{display:block;width:16px;height:1.5px;background:currentColor;transition:transform .2s ease}'
@@ -58,7 +58,7 @@
     + '.f33m-wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#E2C99A;color:#0E2547;text-decoration:none;font-family:var(--font-ui,sans-serif);font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;padding:15px 20px;border-radius:2px;margin-bottom:18px;transition:background .15s}'
     + '.f33m-wa:hover{background:#fff}'
     + '.f33m-meta{font-family:var(--font-ui,sans-serif);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.5);line-height:2}'
-    + '.f33m-meta a{color:rgba(255,255,255,0.75);text-decoration:none}'
+    + '.f33m-meta a{color:rgba(255,255,255,0.75);text-decoration:none;display:inline-block;padding:7px 2px;margin:-7px 0}'
     + '.f33m-meta a:hover{color:#fff}'
     + (reduce ? '.f33m-panel,.f33m-backdrop,.f33m-sec a{transition:none !important}' : '');
   var st = document.createElement('style');
@@ -110,7 +110,16 @@
     if (a) setOpen(false); /* anclas en la misma página */
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && document.documentElement.classList.contains('f33m-open')) setOpen(false);
+    if (!document.documentElement.classList.contains('f33m-open')) return;
+    if (e.key === 'Escape') { setOpen(false); return; }
+    if (e.key !== 'Tab') return;
+    /* foco atrapado dentro del menú mientras está abierto */
+    var f = panel.querySelectorAll('a[href], button');
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (!panel.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+    else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
   /* ---------- botón "Menú" en el header de cada página ---------- */

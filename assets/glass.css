@@ -94,6 +94,12 @@ html :is(header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled) .f33
   --lg-alpha:0; -webkit-backdrop-filter:none; backdrop-filter:none; box-shadow: inset 0 1px 0 rgba(255,255,255,.22);
 }
 
+/* objetivos táctiles: controles del header ≥ 44 px, enlaces sueltos ≥ 24 px */
+html .hdr-cta{ min-height:44px; display:inline-flex; align-items:center; }
+html :is(.esp-all, .pn-nav .all){ min-height:44px; align-items:center; }
+html .serv-foot a{ min-height:44px; align-items:center; }
+html :is(.footer, footer) :is(li a, .foot a){ display:inline-block; padding:4px 0; min-height:24px; }
+
 /* WhatsApp flotante */
 html body .wa-fab{ --lg-alpha:.68; border-radius:999px; }
 html body .wa-fab svg{ color:#E2C99A; position:relative; z-index:1; }

@@ -25,7 +25,7 @@
     + '.lb-btn svg{width:22px;height:22px;display:block;position:relative;z-index:1}'
     + '.lb-x{top:clamp(10px,2vh,22px);right:clamp(10px,2vw,22px)}'
     + '.lb-p,.lb-n{top:50%;transform:translateY(-50%)}.lb-p{left:clamp(4px,1.5vw,18px)}.lb-n{right:clamp(4px,1.5vw,18px)}'
-    + '@media (max-width:640px){.lb-p,.lb-n{top:auto;bottom:calc(clamp(14px,3vh,28px) + 44px);transform:none}.lb-cap{padding-right:0;flex-direction:column;align-items:flex-start;gap:6px}}'
+    + '@media (max-width:640px){.lb-p,.lb-n{top:auto;bottom:calc(clamp(14px,3vh,28px) + 92px);transform:none}.lb-cap{padding-right:0;flex-direction:column;align-items:flex-start;gap:6px}}'
     + '.gallery{position:relative}'
     + '.gsc-btn{position:absolute;top:50%;z-index:4;width:52px;height:52px;border-radius:50%;border:1px solid transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .25s,scale .45s cubic-bezier(.3,1.35,.5,1)}'
     + '.gsc-btn[disabled]{opacity:0;pointer-events:none}.gsc-btn svg{width:20px;height:20px;position:relative;z-index:1}'
@@ -73,6 +73,13 @@
     lb.addEventListener('click', function (e) { if (e.target === lb || e.target === img) close(); });
     doc.addEventListener('keydown', function (e) {
       if (!lb.classList.contains('on')) return;
+      if (e.key === 'Tab') {
+        var f = lb.querySelectorAll('button'), first = f[0], last = f[f.length - 1];
+        if (!lb.contains(doc.activeElement)) { e.preventDefault(); first.focus(); }
+        else if (e.shiftKey && doc.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && doc.activeElement === last) { e.preventDefault(); first.focus(); }
+        return;
+      }
       if (e.key === 'Escape') close();
       else if (e.key === 'ArrowRight') go(1);
       else if (e.key === 'ArrowLeft') go(-1);

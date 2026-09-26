@@ -592,7 +592,8 @@ img { display: block; max-width: 100%; }
 /* ============ Studio ============ */
 .studio-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 96px; align-items: start; }
 @media (max-width: 900px) { .studio-grid { grid-template-columns: 1fr; gap: 48px; } }
-.studio-portrait { aspect-ratio: 3/4; background-image: url("assets/home/386bcbdf-09de-4a78-9f29-f2eabe0b0ecd.jpg"); background-size: cover; background-position: center 30%; position: relative; }
+.studio-portrait { aspect-ratio: 3/4; background-color: var(--navy-900); background-size: cover; background-position: center 30%; position: relative; }
+html:not(.js) .studio-portrait, #estudio.is-near .studio-portrait { background-image: url("assets/home/386bcbdf-portrait.jpg"); background-image: image-set(url("assets/home/386bcbdf-portrait.webp") type('image/webp'), url("assets/home/386bcbdf-portrait.jpg") type('image/jpeg')); }
 .studio-portrait::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,27,54,0.55), transparent 50%); }
 .studio-portrait::after { content: ""; position: absolute; left: 24px; bottom: 24px; right: 24px; height: 1px; background: rgba(255,255,255,0.3); }
 .studio-portrait .caption { position: absolute; left: 24px; bottom: 44px; right: 24px; font-family: var(--font-ui); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.92); display: flex; justify-content: space-between; }
@@ -613,7 +614,7 @@ img { display: block; max-width: 100%; }
 .contact-lede { font-family: var(--font-body); font-size: 19px; line-height: 1.6; color: rgba(255,255,255,0.85); max-width: 44ch; margin: 0 0 48px; }
 .contact-detail { display: grid; gap: 28px; }
 .contact-detail .item { display: grid; grid-template-columns: 130px 1fr; gap: 24px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.16); }
-.contact-detail .item h5 { font-family: var(--font-ui); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-200); margin: 0; font-weight: 500; }
+.contact-detail .item h3 { font-family: var(--font-ui); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-200); margin: 0; font-weight: 500; }
 .contact-detail .item p { font-family: var(--font-body); font-size: 17px; line-height: 1.5; color: #fff; margin: 0; }
 .contact-detail .item a { border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 2px; transition: border-color var(--dur-fast); }
 .contact-detail .item a:hover { border-bottom-color: #fff; }
@@ -668,9 +669,11 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
 .ls-arrow{ position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:52px; height:52px; border-radius:50%; background:rgba(13,12,10,0.4); color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.25); font-size:24px; line-height:0; display:flex; align-items:center; justify-content:center; transition:background var(--dur-fast); }
 .ls-arrow:hover{ background:rgba(13,12,10,0.72); }
 .ls-arrow.prev{ left:clamp(16px,3vw,40px); } .ls-arrow.next{ right:clamp(16px,3vw,40px); }
-.ls-dots{ position:absolute; right:clamp(28px,5vw,72px); bottom:clamp(34px,5vw,80px); z-index:3; display:flex; gap:10px; }
-.ls-dots button{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.4); transition:background .3s, transform .3s; }
-.ls-dots button.on{ background:#fff; transform:scale(1.25); }
+.ls-dots{ position:absolute; right:clamp(20px,calc(5vw - 8px),64px); bottom:clamp(26px,calc(5vw - 8px),72px); z-index:3; display:flex; gap:2px; }
+.ls-dots button{ width:26px; height:26px; position:relative; }
+.ls-dots button::before{ content:""; position:absolute; left:8.5px; top:8.5px; width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.4); transition:background .3s, transform .3s; }
+.ls-dots button.on::before{ background:#fff; transform:scale(1.25); }
+.ls-dots button:focus-visible{ outline:2px solid var(--gold-300); outline-offset:-2px; border-radius:50%; }
 .ls-count{ position:absolute; left:clamp(28px,5vw,72px); top:clamp(96px,12vh,128px); z-index:3; font-family:var(--font-ui); font-size:12px; letter-spacing:0.22em; color:rgba(255,255,255,0.7); }
 .ls-count b{ color:var(--gold-300); font-weight:500; }
 @media (max-width:700px){ .ls-arrow{ display:none; } }
@@ -999,7 +1002,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 
 <!-- BANDA PARALLAX -->
 <section class="px-frame">
-  <div class="px-img" style="background-image:url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg');background-image:image-set(url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp') type('image/webp'), url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg') type('image/jpeg'))" data-parallax="0.14" role="img" aria-label="Comedor de Casa Quintas en Culiacán — proyecto de interiorismo de Faro 33 Studio"></div>
+  <div class="px-img" data-bg="background-image:url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg');background-image:image-set(url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp') type('image/webp'), url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg') type('image/jpeg'))" data-parallax="0.14" role="img" aria-label="Comedor de Casa Quintas en Culiacán — proyecto de interiorismo de Faro 33 Studio"></div>
   <div class="px-shade" aria-hidden="true"></div>
 </section>
 
@@ -1109,10 +1112,10 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
       <h2>Tres palabras en una servilleta <em>bastan para empezar</em>.</h2>
       <p class="contact-lede">Envía un brief corto. Respondemos en cinco días hábiles. Si no somos el estudio indicado para tu proyecto, lo decimos rápido y recomendamos quién sí.</p>
       <div class="contact-detail">
-        <div class="item"><h5>Estudio</h5><p>BLV. Pedro María Anaya 1142-E<br>Col. Chapultepec · Culiacán, Sinaloa<br>C.P. 80040</p></div>
-        <div class="item"><h5>WhatsApp</h5><p><a href="https://wa.me/526675402559" target="_blank" rel="noopener">+52 667 540 2559</a></p></div>
-        <div class="item"><h5>Correo</h5><p><a href="mailto:faro33studio@gmail.com">faro33studio@gmail.com</a></p></div>
-        <div class="item"><h5>Horario</h5><p>Lunes a Viernes · 10:00–17:00 · Sábado 10:00–14:00</p></div>
+        <div class="item"><h3>Estudio</h3><p>BLV. Pedro María Anaya 1142-E<br>Col. Chapultepec · Culiacán, Sinaloa<br>C.P. 80040</p></div>
+        <div class="item"><h3>WhatsApp</h3><p><a href="https://wa.me/526675402559" target="_blank" rel="noopener">+52 667 540 2559</a></p></div>
+        <div class="item"><h3>Correo</h3><p><a href="mailto:faro33studio@gmail.com">faro33studio@gmail.com</a></p></div>
+        <div class="item"><h3>Horario</h3><p>Lunes a Viernes · 10:00–17:00 · Sábado 10:00–14:00</p></div>
       </div>
     </div>
     <form class="cform" id="briefForm">
@@ -1218,8 +1221,13 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   ];
   function startHeroRotation(){
     if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var hi = 0;
+    if (navigator.connection && navigator.connection.saveData) return;
+    var hi = 0, heroOn = true;
+    if ('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ heroOn = es[0].isIntersecting; }, { threshold: 0.15 }).observe(heroBg);
+    }
     setInterval(function(){
+      if (!heroOn || document.hidden) return; /* no descargar fotos que nadie está viendo */
       var next = (hi + 1) % heroImgs.length;
       var im = new Image();
       im.onload = function(){

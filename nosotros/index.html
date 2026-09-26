@@ -21,7 +21,7 @@ gtag('config', 'G-91L2N1S9T3');
 </script>
 <!-- /GA4 -->
 
-<meta name="description" content="Faro 33 es un estudio de interiorismo en Culiacán que llega al espacio íntimo desde el estudio de las ciudades. Formación en economía, planeación metropolitana y urbanismo. Conócenos.">
+<meta name="description" content="Faro 33 Studio, estudio de interiorismo en Culiacán desde 2020. Llegamos al espacio íntimo desde el urbanismo y la planeación de ciudades. Conócenos.">
 <meta property="og:title" content="Sobre Faro 33 Studio — Interiorismo en Culiacán">
 <meta property="og:description" content="Venimos del estudio de las ciudades. Un estudio de interiorismo en Culiacán que entiende el espacio antes de diseñarlo.">
 <meta property="og:image" content="https://faro33studio.com/nosotros/og-image.jpg">
@@ -457,9 +457,9 @@ p.lead{
 <div class="related-projects" data-current="nosotros">
 <div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div>
   <div class="grid">
-    <a class="card" href="/un-pedacito-de-cielo/"><div class="img" style="background-image:url('/assets/thumbs/pedacito-3-900.jpg');background-image:image-set(url('/assets/thumbs/pedacito-3-900.webp') type('image/webp'), url('/assets/thumbs/pedacito-3-900.jpg') type('image/jpeg'))" role="img" aria-label="Un pedacito de cielo"></div><span class="tag">Recámara · 2024</span><h3 class="name">Un <em>pedacito</em> de cielo</h3></a>
-    <a class="card" href="/un-rincon-cerca-del-cielo/"><div class="img" style="background-image:url('/assets/thumbs/rincon-1-900.jpg');background-image:image-set(url('/assets/thumbs/rincon-1-900.webp') type('image/webp'), url('/assets/thumbs/rincon-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Un rincón cerca del cielo"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Un rincón <em>cerca del cielo</em></h3></a>
-    <a class="card" href="/casa-en-la-colina/"><div class="img" style="background-image:url('/assets/thumbs/colina-2-sala-900.jpg');background-image:image-set(url('/assets/thumbs/colina-2-sala-900.webp') type('image/webp'), url('/assets/thumbs/colina-2-sala-900.jpg') type('image/jpeg'))" role="img" aria-label="Casa en la colina"></div><span class="tag">Renovación · 2023</span><h3 class="name">Casa en <em>la colina</em></h3></a>
+    <a class="card" href="/un-pedacito-de-cielo/"><div class="img" data-bg="background-image:url('/assets/thumbs/pedacito-3-900.jpg');background-image:image-set(url('/assets/thumbs/pedacito-3-900.webp') type('image/webp'), url('/assets/thumbs/pedacito-3-900.jpg') type('image/jpeg'))" role="img" aria-label="Un pedacito de cielo"></div><span class="tag">Recámara · 2024</span><h3 class="name">Un <em>pedacito</em> de cielo</h3></a>
+    <a class="card" href="/un-rincon-cerca-del-cielo/"><div class="img" data-bg="background-image:url('/assets/thumbs/rincon-1-900.jpg');background-image:image-set(url('/assets/thumbs/rincon-1-900.webp') type('image/webp'), url('/assets/thumbs/rincon-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Un rincón cerca del cielo"></div><span class="tag">Casa completa · 2024</span><h3 class="name">Un rincón <em>cerca del cielo</em></h3></a>
+    <a class="card" href="/casa-en-la-colina/"><div class="img" data-bg="background-image:url('/assets/thumbs/colina-2-sala-900.jpg');background-image:image-set(url('/assets/thumbs/colina-2-sala-900.webp') type('image/webp'), url('/assets/thumbs/colina-2-sala-900.jpg') type('image/jpeg'))" role="img" aria-label="Casa en la colina"></div><span class="tag">Renovación · 2023</span><h3 class="name">Casa en <em>la colina</em></h3></a>
   </div></div>
 </div>
 
@@ -532,7 +532,7 @@ p.lead{
       '<div class="grid">' +
       picks.map(function(p){
         return '<a class="card" href="' + p.href + '">' +
-          '<div class="img" style="background-image:url(\''+p.img+'\');background-image:image-set(url(\''+p.img.replace(/\.jpg$/,'.webp')+'\') type(\'image/webp\'), url(\''+p.img+'\') type(\'image/jpeg\'))" role="img" aria-label="' + p.name.replace(/<[^>]+>/g,'') + '"></div>' +
+          '<div class="img" data-bg="background-image:url(\''+p.img+'\');background-image:image-set(url(\''+p.img.replace(/\.jpg$/,'.webp')+'\') type(\'image/webp\'), url(\''+p.img+'\') type(\'image/jpeg\'))" role="img" aria-label="' + p.name.replace(/<[^>]+>/g,'') + '"></div>' +
           '<span class="tag">' + p.tag + '</span>' +
           '<h3 class="name">' + p.name + '</h3>' +
           '</a>';
