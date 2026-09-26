@@ -100,6 +100,7 @@
   }
   function reveals() {
     if (doc.querySelector('.rv, .reveal')) return; /* la página trae su propio motor */
+    if (root.hasAttribute('data-no-reveal')) return; /* p. ej. páginas legales: texto quieto */
     var targets = [];
     function add(el, delay) {
       if (!el || el.__mo) return;

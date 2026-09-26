@@ -92,7 +92,8 @@
     + '<div class="f33m-meta">Blv. Pedro María Anaya 1142-E · Culiacán<br>'
     + '<a href="https://www.instagram.com/faro_33studio/" target="_blank" rel="noopener">Instagram</a> · '
     + '<a href="https://www.facebook.com/faro33studio" target="_blank" rel="noopener">Facebook</a> · '
-    + '<a href="mailto:faro33studio@gmail.com">Correo</a></div>'
+    + '<a href="mailto:faro33studio@gmail.com">Correo</a><br>'
+    + '<a href="/aviso-de-privacidad/">Aviso de privacidad</a> · <a href="/aviso-de-privacidad/#cookies" data-cookie-prefs>Cookies</a></div>'
     + '</div></aside>';
   document.body.appendChild(wrap);
 

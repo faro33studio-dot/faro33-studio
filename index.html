@@ -10,6 +10,7 @@
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.facebook.com">
 
+<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies, no se carga medición */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null');if(c&&c.c==='no'&&Date.now()-c.t<31536e6){window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
 <script>
@@ -1166,6 +1167,8 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
           <button type="submit" class="btn btn--on-deep" id="cf-submit">Enviar brief <span class="arrow">→</span></button>
         </div>
       </div>
+      <style>.cform-legal{grid-column:1/-1;margin:14px 0 0;font-family:var(--font-ui);font-size:11.5px;line-height:1.6;letter-spacing:.02em;color:rgba(255,255,255,.58)}.cform-legal a{color:rgba(255,255,255,.85);text-underline-offset:2px}.cform-legal a:hover{color:#fff}</style>
+      <p class="cform-legal">Usamos tus datos solo para responder tu solicitud y preparar tu propuesta. Consulta nuestro <a href="/aviso-de-privacidad/">aviso de privacidad</a>.</p>
     </form>
   </div>
 </section>
@@ -1213,7 +1216,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     </div>
     <div class="ftr-bottom">
       <div>© 2026 Faro 33 Studio</div>
-      <div>Interiorismo · Culiacán, México</div>
+      <div>Interiorismo · Culiacán, México · <a href="/aviso-de-privacidad/">Aviso de privacidad</a> · <a href="/aviso-de-privacidad/#cookies" data-cookie-prefs>Cookies</a></div>
     </div>
   </div>
 </footer>
@@ -1462,5 +1465,6 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/glass.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.facebook.com">
 
+<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies, no se carga medición */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null');if(c&&c.c==='no'&&Date.now()-c.t<31536e6){window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
 <script>
@@ -521,7 +522,7 @@ p.lead{
 
 <footer class="foot">
   <span>© 2026 Faro 33 Studio · Culiacán, Sin.</span>
-  <a href="/">faro33studio.com</a>
+  <span><a href="/aviso-de-privacidad/">Aviso de privacidad</a> · <a href="/aviso-de-privacidad/#cookies" data-cookie-prefs>Cookies</a></span>
 </footer>
 
 <!-- Otros proyectos: shared component (inline for portability) -->
@@ -752,5 +753,6 @@ html.js .gal-layer.is-on{ transform:scale(1); }
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/glass.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>
