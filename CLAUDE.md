@@ -8,6 +8,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 | URL | Rol |
 |---|---|
 | `/` | Home: hero → **Explora por espacio** (6 tiles → `/proyectos/?espacio=…`) → Servicios (2 cards) → **slider Especialidades** → **directorio de servicios (strip)** → Proyectos → banda parallax → Manifiesto → Proceso (timeline) → Estudio (stats) → FAQ → Contacto → Footer |
+| `/proyecto-integral/` | Qué es un proyecto integral (del brochure): punto de partida, comparación, alcance, 7 pasos, rangos de inversión con IVA (sección `#inversion`, se puede quitar completa), FAQ + FAQPage. Destino de "Interiorismo integral" en menú, strip, footer, slide y serv-card |
 | `/cocinas/` `/centros-de-entretenimiento/` `/acabados-de-pared/` | Landings de servicio (SEO + Meta Ads) |
 | `/acabados-de-pared/#negocios` | Ángulo comercial (muros para negocios) |
 | `/centros-de-entretenimiento/configurador/` | Configurador 2D (SVG acotado: muro, consola, torres) → WhatsApp con las medidas + enlace 3D. La URL guarda el diseño (`#d=…`) y se restaura al cargar |

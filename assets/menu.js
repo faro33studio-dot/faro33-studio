@@ -6,7 +6,7 @@
 
   var MENU = {
     especialidades: [
-      ['Interiorismo integral', '/#servicios'],
+      ['Interiorismo integral', '/proyecto-integral/'],
       ['Cocinas a la medida', '/cocinas/'],
       ['Centros de entretenimiento', '/centros-de-entretenimiento/'],
       ['Diseña tu centro (configurador)', '/centros-de-entretenimiento/configurador/'],
