@@ -37,11 +37,14 @@ function applyDesignCopy(d) {
   h1.appendChild(em);
   document.getElementById('lnk-edit').href = editUrl;
 
-  const towers = L.hasLeft || L.hasRight
-    ? `${L.hasLeft && L.hasRight ? '2 torres' : '1 torre'} de ${cm(L.tw)}×${cm(L.th)} cm${d.towerStart === 'consola' ? ' sobre la consola' : ''}${d.towersLit ? (L.hasLeft && L.hasRight ? ', iluminadas' : ', iluminada') : ''}`
+  const both = L.hasLeft && L.hasRight;
+  const towers = L.sides
+    ? `${both ? '2 torres' : '1 torre'} de ${cm(L.tw)}×${cm(L.th)} cm ${L.mount === 'sobre' ? 'sobre el mueble' : 'al lado del mueble'}${d.towersLit ? (both ? ', iluminadas' : ', iluminada') : ''}`
     : 'sin torres';
-  const msg = `Hola Faro 33 — armé mi centro de entretenimiento en el configurador y lo vi en 3D: muro de ${d.w}×${d.h} cm (${N.WALL_NAMES[d.wallFinish]}), ` +
-    `consola de ${cm(L.cl)}×${cm(L.ch)} cm con ${d.cols} compartimentos, ${towers}, acabado ${N.FINISH_NAMES[d.finish]}. ` +
+  const tvPanel = L.panel ? `, panel flotante detrás de la TV${d.tvPanelLit ? ' con luz' : ''}` : '';
+  const finishes = d.panels.length ? ` Acabados atrás: ${N.describePanels(d.panels)}.` : '';
+  const msg = `Hola Faro 33 — armé mi centro de entretenimiento en el configurador y lo vi en 3D: muro de ${d.w}×${d.h} cm, ` +
+    `consola de ${cm(L.cl)}×${cm(L.ch)} cm con ${d.cols} compartimentos${tvPanel}, ${towers}.${finishes} Acabado del mueble: ${N.FINISH_NAMES[d.finish]}. ` +
     `Míralo aquí: https://faro33studio.com/centros-de-entretenimiento/maqueta/#d=${code} ¿Podemos platicar sobre cotización?`;
   document.querySelectorAll('.cta-wa, .btn-wa').forEach((a) => { a.href = 'https://wa.me/526675402559?text=' + encodeURIComponent(msg); });
 

@@ -2,21 +2,22 @@
    Unidades: metros. x = a lo largo del muro de TV, z = hacia la cámara, y = arriba.
    El muro de TV se construye desde un `design` con el mismo esquema (en cm) que `state`
    en ../configurador/configurador.js (ver ../diseno.js). `wallLayout` replica su `computeLayout`
-   para que la maqueta coincida con el plano 2D. */
+   línea por línea (en cm) para que la maqueta coincida con el plano 2D. */
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
-import { createMaterials, wallTexture, finishSet, contactShadowTexture } from './materials.js';
+import { createMaterials, wallTexture, finishSet, slatSet, haloTexture, shelfGlowTexture, contactShadowTexture } from './materials.js';
 
-/* Modelo de muestra. `float`, `tvGap` y `extras` solo existen aquí: el configurador no los ofrece. */
+/* Modelo de muestra (como la referencia: lambrín a un lado, panel de TV con luz, torre iluminada al lado del mueble).
+   `float`, `tvGap` y `extras` solo existen aquí: el configurador no los ofrece. */
 export const DESIGN = {
   w: 340, h: 260, d: 40,
-  wallFinish: 'marmol',
   consoleLen: 220, consoleH: 36, cols: 4, doors: [1, 1, 1, 1],
-  tvOn: true, tvW: 140, tvH: 80,
-  towerCount: 2, towerSide: 'derecha', towerStart: 'piso', towerW: 34, towerH: 240, towersLit: true,
+  tvOn: true, tvW: 140, tvH: 80, tvPanel: true, tvPanelLit: true,
+  towerCount: 1, towerSide: 'derecha', towerMount: 'lado', towerOffset: 0, towerW: 34, towerH: 240, towersLit: true,
   finish: 'roble',
+  panels: [{ type: 'lambrin', tone: 'nogal', x: 0, w: 70 }],
   float: 16, tvGap: 22,
-  extras: { listones: true, bar: true, flip: 1, glow: true, seams: 'center' }
+  extras: { listones: true, flip: 1 }
 };
 
 /* La sala crece si el muro de TV lo pide (deja espacio para la planta y la puerta). */
@@ -29,36 +30,65 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const clamp01 = (v) => clamp(v, 0, 1);
 const smooth = (t) => t * t * (3 - 2 * t);
 
-/* Misma geometría que computeLayout() del configurador, en metros y con y hacia arriba. */
+/* Misma regla que computeLayout() del configurador (se calcula en cm y se devuelve en metros, y hacia arriba).
+   · Torre "lado": en el piso, pegada al extremo de la consola; el grupo va centrado en el muro; el offset la separa.
+   · Torre "sobre": apoyada en la cubierta, en el extremo; el offset la recorre hacia el centro.
+   · La TV (y su panel) se centran en el tramo libre de la consola. */
 export function wallLayout(D, room) {
-  const w = D.w / 100, h = D.h / 100, dep = D.d / 100;
-  const x0 = room.W / 2 - w / 2;
+  const w = D.w, h = D.h;
   const hasLeft = D.towerCount === 2 || (D.towerCount === 1 && D.towerSide === 'izquierda');
   const hasRight = D.towerCount === 2 || (D.towerCount === 1 && D.towerSide === 'derecha');
-  const tw = clamp(D.towerW, 20, Math.floor(D.w * 0.3)) / 100;
-  const innerL = hasLeft ? tw + 0.08 : 0, innerR = hasRight ? w - tw - 0.08 : w;
-  const avail = Math.max(0.6, innerR - innerL);
-  const cl = clamp(D.consoleLen / 100, 0.8, avail);
-  const ch = clamp(D.consoleH / 100, 0.15, Math.max(0.15, h * 0.5));
-  const float = (D.float ?? 4) / 100;
+  const sides = (hasLeft ? 1 : 0) + (hasRight ? 1 : 0);
+  const mount = D.towerMount;
+  const tw = clamp(D.towerW, 20, Math.floor(w * 0.3));
+  const ch = clamp(D.consoleH, 15, Math.max(15, h * 0.5));
+  const float = D.float ?? 4;
   const cTop = float + ch;
-  const cx0 = x0 + innerL + (avail - cl) / 2;
+  let cl, cx0, off = 0, tLx = 0, tRx = 0, ty0 = 0, th = 0;
 
-  let th = 0, ty0 = 0;
-  if (hasLeft || hasRight) {
-    if (D.towerStart === 'consola') { ty0 = cTop; th = clamp(D.towerH / 100, 0.3, Math.max(0.3, h - cTop - 0.04)); }
-    else th = clamp(D.towerH / 100, 0.4, h);
+  const f5 = (v) => Math.floor(v / 5) * 5;          // mismos topes que los sliders del configurador
+  if (sides && mount === 'lado') {
+    cl = clamp(D.consoleLen, 80, f5(w - sides * tw));
+    off = clamp(D.towerOffset || 0, 0, Math.min(120, Math.max(0, f5((w - cl - sides * tw) / sides))));
+    const gx0 = (w - (cl + sides * (tw + off))) / 2;
+    cx0 = gx0 + (hasLeft ? tw + off : 0);
+    tLx = gx0; tRx = cx0 + cl + off;
+    th = clamp(D.towerH, 40, h);
+  } else {
+    cl = clamp(D.consoleLen, 80, w);
+    cx0 = (w - cl) / 2;
+    if (sides) {
+      off = clamp(D.towerOffset || 0, 0, Math.min(120, Math.max(0, f5((cl - sides * tw - 40) / sides))));
+      tLx = cx0 + off; tRx = cx0 + cl - tw - off;
+      ty0 = cTop; th = clamp(D.towerH, 30, Math.max(30, f5(h - cTop - 4)));
+    }
   }
 
-  let tv = null;
+  let fx0 = cx0, fx1 = cx0 + cl;
+  if (sides && mount === 'sobre') { if (hasLeft) fx0 = tLx + tw; if (hasRight) fx1 = tRx; }
+
+  let tv = null, panel = null;
   if (D.tvOn) {
-    const gap = (D.tvGap ?? 12) / 100;
-    const tvW = clamp(D.tvW / 100, 0.4, w - 0.16);
-    const tvH = clamp(D.tvH / 100, 0.2, Math.max(0.2, h - cTop - 0.2));
-    const fromTop = Math.max(0.04, h - cTop - gap - tvH);
-    tv = { x0: room.W / 2 - tvW / 2, y0: h - fromTop - tvH, w: tvW, h: tvH };
+    const gap = D.tvGap ?? 12;
+    const tvW = clamp(D.tvW, 40, Math.max(40, fx1 - fx0 - 10));
+    const tvH = clamp(D.tvH, 20, Math.max(20, h - cTop - 20));
+    const top = Math.min(h - 4, cTop + gap + tvH);
+    tv = { x: (fx0 + fx1) / 2 - tvW / 2, y0: top - tvH, w: tvW, h: tvH };
+    if (D.tvPanel) {
+      const pw = Math.min(tvW + 50, fx1 - fx0);
+      const py0 = Math.max(cTop + 4, tv.y0 - 18), py1 = Math.min(h - 6, top + 18);
+      panel = { x: tv.x + tvW / 2 - pw / 2, y0: py0, w: pw, h: py1 - py0 };
+    }
   }
-  return { w, h, dep, x0, hasLeft, hasRight, tw, cl, ch, cx0, float, cTop, th, ty0, tv };
+
+  const m = (v) => v / 100, x0 = room.W / 2 - m(w) / 2, ax = (v) => x0 + m(v);
+  const rect = (r) => r && { x0: ax(r.x), y0: m(r.y0), w: m(r.w), h: m(r.h) };
+  return {
+    w: m(w), h: m(h), dep: m(D.d), x0, hasLeft, hasRight, sides, mount, off: m(off),
+    tw: m(tw), th: m(th), ty0: m(ty0), tLx: ax(tLx), tRx: ax(tRx),
+    cl: m(cl), ch: m(ch), cx0: ax(cx0), float: m(float), cTop: m(cTop), fx0: ax(fx0), fx1: ax(fx1),
+    tv: rect(tv), panel: rect(panel)
+  };
 }
 
 const geoCache = new Map();
@@ -190,113 +220,80 @@ function buildCurtains(root, M) {
   return { left: mk(z0, 1), right: mk(z1, -1) };
 }
 
-const WALL_LABELS = {
-  marmol: ['Panel de mármol', '122 × 280 por placa'],
-  piedra: ['Piedra mosaico', 'piezas de 60 × 120'],
-  papel: ['Papel tapiz', 'franjas de 50 cm']
+const PANEL_LABELS = {
+  lambrin: 'Lambrín', marmol: 'Mármol', piedra: 'Piedra mosaico', papel: 'Papel tapiz'
 };
 
 /* -------------------------------------------------- muro de TV (Faro 33) */
 function buildMillwork(root, M, D, decor, room) {
   const L = wallLayout(D, room), ex = D.extras || {}, F = finishSet(M, D.finish);
   const t = 0.018, dep = L.dep, tw = L.tw;
-  const labels = [], lights = { led: [], bar: null, glow: [], tv: null }, doorRigs = [];
+  const labels = [], doorRigs = [], towerLights = [];
+  const lights = { tv: null };
   const r = mulberry(4);
-  let barDoor = null, panels = [];
+  let panels = [], halo = null;
+  const panelsDef = D.panels || [];
+  const side = (x) => (x < room.W / 2 ? -1 : 1);
 
-  // acabado de muro a todo lo ancho; el mueble se adelanta su espesor para no quedar dentro
-  let z0 = 0;
-  if (D.wallFinish !== 'pintura') {
-    const mat = new THREE.MeshStandardMaterial({ map: wallTexture(D.wallFinish, L.w, L.h, ex.seams || 'left'), roughness: D.wallFinish === 'marmol' ? 0.28 : 0.9 });
-    B(root, L.x0, 0, 0, L.w, L.h, 0.02, mat, { r: 0.002 });
-    z0 = 0.02;
-    const [text, sub] = WALL_LABELS[D.wallFinish];
-    const xr = L.x0 + L.w - (L.hasRight ? tw : 0) - 0.4;
-    labels.push({ text, sub, pos: new THREE.Vector3(xr, L.h - 0.35, z0 + 0.01), dir: [60, -40] });
-  }
-
-  const books = (g, y, x0, x1) => {
-    let x = x0;
-    while (true) {
-      const bw = 0.018 + r() * 0.022, bh = 0.18 + r() * 0.13;
-      if (x + bw > x1) break;
-      B(g, x, y, 0.06 + r() * 0.04, bw, bh, Math.min(dep - 0.1, 0.2 + r() * 0.06), M.book[Math.floor(r() * M.book.length)], { r: 0.002 });
-      x += bw + 0.002;
+  /* acabados atrás: franjas a todo lo alto; el mueble se adelanta el espesor del más grueso */
+  const z0 = panelsDef.some((p) => p.type === 'lambrin') ? 0.035 : panelsDef.length ? 0.02 : 0;
+  panelsDef.forEach((p) => {
+    const px = L.x0 + p.x / 100, pw = p.w / 100;
+    if (p.type === 'lambrin') {
+      B(root, px, 0, 0, pw, L.h, 0.012, M.felt, { r: 0 });
+      const slat = 0.04, gap = 0.016, n = Math.max(1, Math.floor((pw + gap) / (slat + gap)));
+      const lead = (pw - (n * slat + (n - 1) * gap)) / 2;
+      const inst = new THREE.InstancedMesh(roundedGeo(slat, L.h, 0.023, 0.004), slatSet(M, p.tone), n);
+      const mtx = new THREE.Matrix4();
+      for (let k = 0; k < n; k++) inst.setMatrixAt(k, mtx.makeTranslation(px + lead + k * (slat + gap) + slat / 2, L.h / 2, 0.012 + 0.0115));
+      inst.castShadow = true; inst.receiveShadow = true;
+      root.add(inst);
+    } else {
+      const mat = new THREE.MeshStandardMaterial({ map: wallTexture(p.type, pw, L.h, ex.seams || 'left'), roughness: p.type === 'marmol' ? 0.4 : 0.9 });
+      B(root, px, 0, 0, pw, L.h, 0.02, mat, { r: 0.002 });
     }
-  };
+    const name = PANEL_LABELS[p.type] + (p.type === 'lambrin' ? ` ${p.tone}` : '');
+    labels.push({ text: name, sub: `${p.w} cm de ancho`, pos: new THREE.Vector3(px + pw / 2, L.h - 0.3, 0.04), dir: [side(px + pw / 2) * 70, -45] });
+  });
 
-  // torres (desde el piso o flotando sobre la altura de la consola)
-  const tower = (xL, side, bar) => {
-    const g = G(root, xL, L.ty0, z0, 'tower'), th = L.th, floor = L.ty0 < 0.01;
-    B(g, 0, 0, 0, t, th, dep, F.body); B(g, tw - t, 0, 0, t, th, dep, F.body);
-    B(g, t, th - t, 0, tw - 2 * t, t, dep, F.body);
+  /* torres de repisas abiertas; si van iluminadas, la luz sale bajo cada repisa y baña el fondo */
+  const tower = (xL) => {
+    const floor = L.mount !== 'sobre', th = L.th, td = Math.min(dep, 0.38);
+    const g = G(root, xL, L.ty0, z0, 'tower');
+    B(g, 0, 0, 0, t, th, td, F.body); B(g, tw - t, 0, 0, t, th, td, F.body);
+    B(g, t, th - t, 0, tw - 2 * t, t, td, F.body);
     let yb = 0;
-    if (floor) { B(g, t, 0, 0.03, tw - 2 * t, 0.08, dep - 0.03, M.cap, { r: 0.002 }); yb = 0.08; }
-    B(g, t, yb, 0, tw - 2 * t, t, dep, F.body);
-    B(g, t, yb, 0, tw - 2 * t, th - yb, 0.012, F.inner, { r: 0 });
-    let y = yb;
-    const lowerDoor = floor && th >= 1.0;
-    if (lowerDoor) {
-      B(g, 0.003, 0.1, dep, tw - 0.006, 0.52, 0.018, F.door);
-      B(g, t, 0.64, 0, tw - 2 * t, t, dep, F.body);
-      if (!bar) cyl(g, 0.1, 0.64 + t, 0.2, 0.05, 0.06, 0.22, M.cream);
-      y = 0.64;
+    if (floor) { B(g, t, 0, 0.03, tw - 2 * t, 0.08, td - 0.03, M.cap, { r: 0.002 }); yb = 0.08; }
+    B(g, t, yb, 0, tw - 2 * t, t, td, F.body);
+    const y1 = yb + t, y2 = th - t, n = Math.max(1, Math.round((y2 - y1) / 0.38)), sp = (y2 - y1) / n;
+    const back = F.inner.clone();
+    back.emissive = new THREE.Color('#FFB866');
+    back.emissiveMap = shelfGlowTexture();
+    back.emissiveIntensity = 0;
+    const tl = { mat: back, lights: [] };
+    for (let k = 0; k < n; k++) {
+      const bb = y1 + k * sp, bt = bb + sp;                                   // entrepaño: de la repisa de abajo a la de arriba
+      B(g, t, bb, 0, tw - 2 * t, sp, 0.012, back, { r: 0 });
+      if (k > 0) B(g, t, bb - 0.01, 0.012, tw - 2 * t, 0.02, td - 0.012, F.body, { r: 0.002 });
+      B(g, t + 0.004, bt - (k === n - 1 ? 0.006 : 0.016), td - 0.03, tw - 2 * t - 0.008, 0.006, 0.012, M.led, { cast: false, r: 0 });
+      const cx = t + (tw - 2 * t) / 2, base = bb + (k > 0 ? 0.01 : 0);
+      if (k % 3 === 0) { cyl(g, cx - 0.04, base, td * 0.45, 0.035, 0.045, Math.min(0.2, sp * 0.55), M.cream); cyl(g, cx + 0.06, base, td * 0.55, 0.03, 0.03, Math.min(0.1, sp * 0.3), M.terracotta); }
+      else if (k % 3 === 1) { B(g, cx - 0.1, base, td * 0.3, 0.2, 0.035, 0.16, M.book[1], { r: 0.003 }); B(g, cx - 0.08, base + 0.035, td * 0.32, 0.16, 0.03, 0.14, M.book[2], { r: 0.003 }); }
+      else cyl(g, cx, base, td * 0.5, 0.07, 0.05, Math.min(0.07, sp * 0.2), M.black);
+      if (k % 2 === 0) { const l = pointLight(g, cx, bt - 0.12, td * 0.8, '#FFBE78', 0.7); tl.lights.push(l); }
     }
-    if (bar && th >= 1.6) {
-      // bar: interior oscuro, repisa de vidrio, botellas, copas y luz
-      B(g, t, 0.66, 0.012, tw - 2 * t, 0.9, 0.004, M.felt, { r: 0 });
-      B(g, t, 1.1, 0.02, tw - 2 * t, 0.008, dep - 0.04, M.shelfGlass, { r: 0, cast: false });
-      [[0.05, 0.3, M.bottle], [0.12, 0.26, M.bottleAmber], [0.2, 0.32, M.bottle], [0.27, 0.24, M.bottleAmber]].forEach(([bx, bh, bm]) => {
-        if (bx < tw - 2 * t) {
-          cyl(g, t + bx, 0.64 + t, 0.18, 0.028, 0.032, bh * 0.75, bm);
-          cyl(g, t + bx, 0.64 + t + bh * 0.75, 0.18, 0.01, 0.024, bh * 0.25, bm);
-        }
-      });
-      for (const gx of [0.06, 0.15, 0.24]) {
-        if (gx > tw - 2 * t) continue;
-        cyl(g, t + gx, 1.108, 0.14, 0.025, 0.02, 0.1, M.shelfGlass, { cast: false });
-        cyl(g, t + gx, 1.108, 0.26, 0.025, 0.02, 0.1, M.shelfGlass, { cast: false });
-      }
-      B(g, t + 0.01, 1.555, 0.05, tw - 2 * t - 0.02, 0.006, 0.012, M.ledBar, { cast: false, r: 0 });
-      lights.bar = pointLight(g, tw / 2, 1.4, 0.25, '#FFC98A', 1.4);
-      barDoor = G(g, tw - 0.003, 0.66, dep);
-      B(barDoor, -(tw - 0.006), 0, 0, tw - 0.006, 0.9, 0.018, F.door);
-      B(barDoor, -(tw - 0.006) + 0.03, 0.4, 0.018, 0.008, 0.12, 0.012, M.brass);
-      B(g, t, 1.58, 0, tw - 2 * t, t, dep, F.body);
-      labels.push({ text: 'Bar integrado', sub: 'luz y repisa de vidrio', pos: new THREE.Vector3(xL + tw / 2, 1.2, z0 + dep), dir: [80, 0] });
-      y = 1.58;
-    }
-    // entrepaños abiertos cada 40 cm, con libros y algún objeto
-    const levels = [y];
-    for (let sy = y + 0.4; sy < th - 0.25; sy += 0.4) { B(g, t, sy, 0, tw - 2 * t, t, dep, F.body); levels.push(sy); }
-    levels.forEach((ly, k) => {
-      const space = (k + 1 < levels.length ? levels[k + 1] : th - t) - ly - t;
-      if (space < 0.34 || (lowerDoor && !bar && k === 0)) return;
-      if (k % 2) { books(g, ly + t, t + 0.02, tw - t - 0.13); cyl(g, tw - t - 0.06, ly + t, 0.2, 0.04, 0.05, 0.16, M.terracotta); }
-      else books(g, ly + t, t + 0.01, tw - t - 0.02);
-    });
-    if (!bar && !labels.some((l) => l.tower)) {
+    towerLights.push(tl);
+    if (xL === (L.hasRight ? L.tRx : L.tLx)) {                             // con dos torres se etiqueta la derecha
       labels.push({
-        tower: true, text: D.towersLit ? 'Torre con LED' : 'Torre', sub: `${Math.round(tw * 100)} × ${Math.round(th * 100)} cm`,
-        pos: new THREE.Vector3(xL + tw / 2, L.ty0 + th * 0.8, z0 + dep), dir: side === 'L' ? [-80, -40] : [80, -40]
+        text: D.towersLit ? 'Torre iluminada' : 'Torre', sub: `${Math.round(tw * 100)} × ${Math.round(th * 100)} cm · ${floor ? 'al lado del mueble' : 'sobre el mueble'}`,
+        pos: new THREE.Vector3(xL + tw / 2, L.ty0 + th * 0.75, z0 + td), dir: [side(xL) * 90, -30]
       });
     }
   };
-  if (L.hasLeft) tower(L.x0, 'L', false);
-  if (L.hasRight) tower(L.x0 + L.w - tw, 'R', !!ex.bar);
+  if (L.hasLeft) tower(L.tLx);
+  if (L.hasRight) tower(L.tRx);
 
-  // tiras LED en el canto interior de cada torre + baño de luz suave sobre el muro
-  if (D.towersLit && L.th > 0) {
-    const edges = [];
-    if (L.hasLeft) edges.push([L.x0 + tw, 1]);
-    if (L.hasRight) edges.push([L.x0 + L.w - tw, -1]);
-    for (const [ex_, dir] of edges) {
-      B(root, dir > 0 ? ex_ : ex_ - 0.006, L.ty0 + 0.1, z0 + dep - 0.035, 0.006, L.th - 0.2, 0.014, M.led, { cast: false, r: 0 });
-      for (const f of [0.2, 0.5, 0.8]) lights.led.push(pointLight(root, ex_ + dir * 0.3, L.ty0 + L.th * f, z0 + 0.42, '#FFB866', 2.2));
-    }
-  }
-
-  // consola flotante: cada compartimento como en el configurador (abierto, puerta lisa, vidrio o cajón)
+  /* consola flotante: cada compartimento como en el configurador (abierto, puerta lisa, vidrio o cajón) */
   const n = D.cols, dw = L.cl / n, ch = L.ch;
   const cg = G(root, L.cx0, L.float, z0, 'console');
   B(cg, 0, ch - t, 0, L.cl, t, dep - 0.018, F.body);
@@ -317,12 +314,10 @@ function buildMillwork(root, M, D, decor, room) {
       B(cg, x + fw - 0.17, t, 0.18, 0.13, 0.035, 0.09, M.black, { r: 0.012 });
       B(cg, x + fw - 0.17, t, 0.06, 0.13, 0.035, 0.09, M.black, { r: 0.012 });
     } else if (type === 0) {
-      // nicho abierto: libros acostados y una bocina
       B(cg, x + 0.04, t, 0.08, Math.min(0.26, fw * 0.5), 0.05, 0.2, M.book[0], { r: 0.003 });
       B(cg, x + 0.05, t + 0.05, 0.1, Math.min(0.22, fw * 0.45), 0.035, 0.17, M.book[2], { r: 0.003 });
       if (fw > 0.3 && inside > 0.2) cyl(cg, x + fw - 0.1, t, 0.2, 0.06, 0.06, Math.min(0.18, inside - 0.03), M.black);
     } else if (type === 1 || type === 2) {
-      // puerta con bisagra; la jaladera va del lado contrario (como en el plano 2D)
       const hingeLeft = i % 2 === 0;
       const p = G(cg, hingeLeft ? x : x + fw, 0.004, fz);
       const ox = hingeLeft ? 0 : -fw;
@@ -339,52 +334,64 @@ function buildMillwork(root, M, D, decor, room) {
       doorRigs.push({ type: 'hinge', g: p, sign: hingeLeft ? -1 : 1 });
       if (type === 1) B(cg, x + 0.05, t, 0.06, Math.min(0.3, fw - 0.1), Math.min(0.12, inside - 0.02), 0.22, M.book[4], { r: 0.004 });
     } else {
-      // cajón: frente + charola que sale hacia el frente
-      const g = G(cg, x, 0.004, fz), td = dep - 0.07;
+      const g = G(cg, x, 0.004, fz), tdr = dep - 0.07;
       B(g, 0, 0, 0, fw, fh, 0.018, F.door);
-      B(g, 0.02, 0.02, -td, fw - 0.04, 0.012, td, F.inner, { r: 0 });
-      B(g, 0.02, 0.02, -td, 0.012, fh * 0.55, td, F.inner, { r: 0 });
-      B(g, fw - 0.032, 0.02, -td, 0.012, fh * 0.55, td, F.inner, { r: 0 });
-      B(g, 0.02, 0.02, -td, fw - 0.04, fh * 0.55, 0.012, F.inner, { r: 0 });
-      B(g, 0.05, 0.032, -td + 0.03, Math.max(0.05, fw * 0.4), Math.min(0.08, fh * 0.4), td * 0.6, M.fabricDark, { r: 0.02 });
+      B(g, 0.02, 0.02, -tdr, fw - 0.04, 0.012, tdr, F.inner, { r: 0 });
+      B(g, 0.02, 0.02, -tdr, 0.012, fh * 0.55, tdr, F.inner, { r: 0 });
+      B(g, fw - 0.032, 0.02, -tdr, 0.012, fh * 0.55, tdr, F.inner, { r: 0 });
+      B(g, 0.02, 0.02, -tdr, fw - 0.04, fh * 0.55, 0.012, F.inner, { r: 0 });
+      B(g, 0.05, 0.032, -tdr + 0.03, Math.max(0.05, fw * 0.4), Math.min(0.08, fh * 0.4), tdr * 0.6, M.fabricDark, { r: 0.02 });
       B(g, fw / 2 - 0.06, fh * 0.76, 0.018, 0.12, 0.008, 0.012, M.brass, { r: 0.002 });
-      doorRigs.push({ type: 'drawer', g, z: fz, dist: Math.min(0.3, td - 0.04) });
+      doorRigs.push({ type: 'drawer', g, z: fz, dist: Math.min(0.3, tdr - 0.04) });
     }
   }
-  if (ex.glow) {
-    B(cg, 0.05, -0.006, dep - 0.07, L.cl - 0.1, 0.006, 0.012, M.led, { cast: false, r: 0 });
-    lights.glow = [-L.cl / 3, 0, L.cl / 3].map((dx) => pointLight(root, L.cx0 + L.cl / 2 + dx, 0.12, z0 + 0.3, '#FFB866', 1.1));
-  }
   const kinds = ex.flip != null ? 'puertas' : 'compartimentos';
-  labels.push({ text: ex.glow ? 'Consola flotante' : 'Consola de TV', sub: `${Math.round(L.cl * 100)} × ${Math.round(ch * 100)} cm · ${n} ${kinds}`, pos: new THREE.Vector3(L.cx0 + L.cl * 0.83, L.float + ch / 2, z0 + dep), dir: [50, 70] });
+  labels.push({ text: ex.flip != null ? 'Consola flotante' : 'Consola de TV', sub: `${Math.round(L.cl * 100)} × ${Math.round(ch * 100)} cm · ${n} ${kinds}`, pos: new THREE.Vector3(L.cx0 + L.cl * 0.5, L.float + ch / 2, z0 + dep), dir: [40, 75] });
 
-  // TV
+  /* panel flotante detrás de la TV (separado del muro), con halo de luz que asoma por sus orillas */
+  let tvZ = z0;
+  if (L.panel) {
+    const P = L.panel, margin = 0.35;
+    B(root, P.x0, P.y0, z0 + 0.03, P.w, P.h, 0.04, M.tvPanel, { r: 0.004 });
+    B(root, P.x0 + P.w / 2 - 0.3, P.y0 + 0.1, z0, 0.6, P.h - 0.2, 0.03, M.felt, { r: 0 });
+    tvZ = z0 + 0.07;
+    if (D.tvPanelLit) {
+      halo = new THREE.Mesh(
+        new THREE.PlaneGeometry(P.w + 2 * margin, P.h + 2 * margin),
+        new THREE.MeshBasicMaterial({ map: haloTexture(P.w, P.h, margin), color: '#FFC47A', transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false })
+      );
+      halo.position.set(P.x0 + P.w / 2, P.y0 + P.h / 2, z0 + 0.006);
+      root.add(halo);
+    }
+    labels.push({ text: 'Panel de TV', sub: D.tvPanelLit ? 'flotante, con luz detrás' : 'flotante', pos: new THREE.Vector3(P.x0 + 0.08, P.y0 + 0.12, tvZ), dir: [-70, 65] });
+  }
+
+  /* TV */
   if (L.tv) {
     const tv = L.tv;
-    B(decor, tv.x0, tv.y0, z0, tv.w, tv.h, 0.035, M.black, { r: 0.004 });
-    B(decor, tv.x0 + 0.012, tv.y0 + 0.012, z0 + 0.0352, tv.w - 0.024, tv.h - 0.024, 0.002, M.screen, { r: 0, cast: false });
-    lights.tv = pointLight(root, room.W / 2, tv.y0 + tv.h / 2, 0.9, '#D7B3C9', 3.2);
+    B(decor, tv.x0, tv.y0, tvZ, tv.w, tv.h, 0.035, M.black, { r: 0.004 });
+    B(decor, tv.x0 + 0.012, tv.y0 + 0.012, tvZ + 0.0352, tv.w - 0.024, tv.h - 0.024, 0.002, M.screen, { r: 0, cast: false });
+    lights.tv = pointLight(root, tv.x0 + tv.w / 2, tv.y0 + tv.h / 2, 0.9, '#D7B3C9', 3.2);
 
     // paneles de listones corredizos (4 hojas en 2 rieles) que ocultan la TV — solo el modelo de muestra
     if (ex.listones) {
       const pw = (tv.w + 0.12) / 4, pY = Math.max(L.cTop + 0.03, tv.y0 - 0.12), pH = tv.y0 + tv.h + 0.12 - pY;
-      const cover0 = room.W / 2 - 2 * pw;
-      const inL = L.x0 + (L.hasLeft ? tw : 0), inR = L.x0 + L.w - (L.hasRight ? tw : 0);
-      B(root, inL + 0.08, pY + pH + 0.006, z0 + 0.045, inR - inL - 0.16, 0.035, 0.075, M.frame, { r: 0.003 });
+      const cover0 = tv.x0 + tv.w / 2 - 2 * pw, zb = tvZ + 0.049, zf = tvZ + 0.083;
+      B(root, cover0 - pw - 0.06, pY + pH + 0.006, tvZ + 0.045, 6 * pw + 0.12, 0.035, 0.075, M.frame, { r: 0.003 });
       const slats = 7, sw = 0.04, gap = (pw - slats * sw) / (slats - 1);
       panels = [0, 1, 2, 3].map((j) => {
         const front = j === 0 || j === 3;
-        const g = G(root, cover0 + j * pw, pY, z0 + (front ? 0.083 : 0.049), 'listones');
+        const g = G(root, cover0 + j * pw, pY, front ? zf : zb, 'listones');
         B(g, 0.004, 0.01, 0, pw - 0.008, pH - 0.02, 0.01, M.felt, { r: 0 });
         for (let k = 0; k < slats; k++) B(g, k * (sw + gap), 0, 0.01, sw, pH, 0.022, M.slat, { r: 0.004 });
         const open = [cover0 - pw - 0.03, cover0 - pw - 0.012, cover0 + 4 * pw + 0.012, cover0 + 4 * pw + 0.03][j];
         return { g, closed: cover0 + j * pw, open, inner: !front };
       });
-      labels.push({ text: 'Listones corredizos', sub: 'ocultan la pantalla', pos: new THREE.Vector3(cover0 - pw / 2, pY + pH * 0.45, z0 + 0.12), dir: [-90, 50] });
+      labels.push({ text: 'Listones corredizos', sub: 'ocultan la pantalla', pos: new THREE.Vector3(cover0 + 2 * pw, pY + pH * 0.5, zf + 0.03), dir: [-40, -110] });
     }
   }
 
-  return { labels, lights, doorRigs, barDoor, panels, geo: { x0: L.x0, w: L.w, dep, tw, cx0: L.cx0, cl: L.cl, z0 } };
+  return { labels, lights, doorRigs, panels, towerLights, halo, geo: { x0: L.x0, w: L.w, dep, tw, cx0: L.cx0, cl: L.cl, z0, towers: [L.hasLeft && L.tLx, L.hasRight && L.tRx].filter((v) => v !== false) } };
 }
 
 /* ----------------------------------------------------------- mobiliario */
@@ -471,6 +478,7 @@ function buildFurniture(decor, M, room) {
 
 /* ------------------------------------------------------------ escena */
 export function buildScene(design = DESIGN) {
+  const D_ = design;
   const M = createMaterials();
   const room = roomFor(design);
   const scene = new THREE.Scene();
@@ -544,13 +552,14 @@ export function buildScene(design = DESIGN) {
       else d.g.position.z = d.z + d.dist * u;
     });
 
-    M.led.emissiveIntensity = 4 * v.led;
-    for (const l of mw.lights.led) l.intensity = 0.22 * v.led;
-    for (const l of mw.lights.glow) l.intensity = 0.16 * v.led;
-
-    if (mw.barDoor) mw.barDoor.rotation.y = 1.9 * smooth(v.bar);
-    M.ledBar.emissiveIntensity = 3 * v.barLuz;
-    if (mw.lights.bar) mw.lights.bar.intensity = 1.4 * v.barLuz;
+    // luz del mueble (`led`): LED bajo cada repisa + fondo de las torres, y halo detrás del panel de TV
+    const kt = D_.towersLit ? v.led : 0;
+    M.led.emissiveIntensity = 4 * kt;
+    for (const tl of mw.towerLights) {
+      tl.mat.emissiveIntensity = 1.3 * kt;
+      for (const l of tl.lights) l.intensity = 0.3 * kt * (1 - 0.9 * v.luzDia);   // de día su derrame por los costados quemaría el muro
+    }
+    if (mw.halo) mw.halo.material.opacity = 0.95 * v.led;
   }
 
   const bounds = new THREE.Box3(

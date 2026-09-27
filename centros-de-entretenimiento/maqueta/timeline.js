@@ -7,7 +7,7 @@ export const CHAPTERS = ['Día', 'Cine', 'Reunión', 'Noche'];
 /* Estado de reposo = final del bucle (noche). El primer paso trae la mañana. */
 export const INITIAL = {
   luzDia: 0, noche: 1, calidez: 0, lampara: 0, mesa: 0, cortinas: 0,
-  paneles: 0, tv: 0, consolas: 0, led: 0.35, bar: 0, barLuz: 0, pufs: 0
+  paneles: 0, tv: 0, consolas: 0, led: 0.35, pufs: 0
 };
 
 export const STEPS = [
@@ -21,26 +21,33 @@ export const STEPS = [
   { ch: 1, text: 'Los listones se deslizan y revelan la TV', dur: 1.5, to: { paneles: 1 } },
   { ch: 1, text: 'La pantalla se enciende', dur: 0.9, to: { tv: 1 } },
   { ch: 1, text: 'La puerta abatible revela las consolas', dur: 1.0, to: { consolas: 1 } },
-  { ch: 1, text: 'Las torres se encienden', dur: 1.0, to: { led: 1 } },
+  { ch: 1, text: 'Se encienden la torre y el panel de la TV', dur: 1.2, to: { led: 1 } },
 
-  { ch: 2, text: 'Se abre el bar de la torre', dur: 1.3, to: { consolas: 0, bar: 1, barLuz: 1 } },
-  { ch: 2, text: 'Los pufs salen de la mesa', dur: 1.2, to: { pufs: 1 } },
+  { ch: 2, text: 'La consola se cierra y salen los pufs', dur: 1.3, to: { consolas: 0, pufs: 1 } },
   { ch: 2, text: 'La mesa sube a altura de servicio', dur: 1.2, to: { mesa: 1 } },
   { ch: 2, text: 'Luz cálida en la sala', dur: 1.1, to: { calidez: 1 } },
 
-  { ch: 3, text: 'El bar se cierra', dur: 1.1, to: { bar: 0, barLuz: 0 } },
   { ch: 3, text: 'Los pufs regresan y la mesa baja', dur: 1.3, to: { pufs: 0, mesa: 0 } },
   { ch: 3, text: 'Los listones ocultan la TV', dur: 1.4, to: { tv: 0, paneles: 0 } },
   { ch: 3, text: 'Las cortinas se abren a la noche', dur: 1.4, to: { cortinas: 0, luzDia: 0, noche: 1, calidez: 0.25 } },
-  { ch: 3, text: 'Sólo queda la tira LED', dur: 1.2, to: { led: 0.35, calidez: 0 } }
+  { ch: 3, text: 'Sólo queda encendida la luz del mueble', dur: 1.2, to: { led: 0.35, calidez: 0 } }
 ];
 
+/* ¿Qué luz trae el mueble? Repisas de las torres y/o halo detrás del panel de TV. */
+function lightOf(d) {
+  const towers = d.towersLit && d.towerCount > 0, panel = d.tvOn && d.tvPanel && d.tvPanelLit;
+  const text = towers && panel ? (d.towerCount > 1 ? 'Se encienden las torres y el panel de la TV' : 'Se encienden la torre y el panel de la TV')
+    : towers ? (d.towerCount > 1 ? 'Se encienden las repisas de las torres' : 'Se encienden las repisas de la torre')
+      : 'Se enciende la luz detrás de la TV';
+  return { lit: towers || panel, text };
+}
+
 /* Guion para un diseño del configurador: solo narra lo que ese diseño tiene
-   (sin listones ni bar; puertas/cajones y torres LED solo si existen). */
+   (sin listones; puertas/cajones y luz del mueble solo si existen). */
 export function buildSteps(d) {
   const doorTypes = d.doors.slice(0, d.cols);
   const hinged = doorTypes.some((x) => x === 1 || x === 2), drawers = doorTypes.includes(3);
-  const lit = d.towersLit && d.towerCount > 0;
+  const light = lightOf(d);
   const doorsText = hinged && drawers ? 'Se abren puertas y cajones' : drawers ? 'Se abren los cajones' : 'Se abren las puertas de la consola';
   const s = [
     { ch: 0, text: 'Entra la luz de la mañana', dur: 1.6, to: { luzDia: 1, noche: 0, led: 0 } },
@@ -52,7 +59,7 @@ export function buildSteps(d) {
   ];
   if (d.tvOn) s.push({ ch: 1, text: 'La pantalla se enciende', dur: 0.9, to: { tv: 1 } });
   if (hinged || drawers) s.push({ ch: 1, text: doorsText, dur: 1.4, to: { consolas: 1 } });
-  if (lit) s.push({ ch: 1, text: 'Las torres se encienden', dur: 1.0, to: { led: 1 } });
+  if (light.lit) s.push({ ch: 1, text: light.text, dur: 1.2, to: { led: 1 } });
   s.push(
     { ch: 2, text: hinged || drawers ? 'La consola se cierra y salen los pufs' : 'Los pufs salen de la mesa', dur: 1.3, to: { consolas: 0, pufs: 1 } },
     { ch: 2, text: 'La mesa sube a altura de servicio', dur: 1.2, to: { mesa: 1 } },
@@ -62,13 +69,13 @@ export function buildSteps(d) {
   if (d.tvOn) s.push({ ch: 3, text: 'La pantalla se apaga', dur: 1.0, to: { tv: 0 } });
   s.push(
     { ch: 3, text: 'Las cortinas se abren a la noche', dur: 1.4, to: { cortinas: 0, luzDia: 0, noche: 1, calidez: 0.25 } },
-    { ch: 3, text: lit ? 'Sólo queda la tira LED' : 'Se apagan las luces', dur: 1.2, to: { led: lit ? 0.35 : 0, calidez: 0 } }
+    { ch: 3, text: light.lit ? 'Sólo queda encendida la luz del mueble' : 'Se apagan las luces', dur: 1.2, to: { led: light.lit ? 0.35 : 0, calidez: 0 } }
   );
   return s;
 }
 
 export function initialFor(d) {
-  return { ...INITIAL, led: d.towersLit && d.towerCount > 0 ? 0.35 : 0 };
+  return { ...INITIAL, led: lightOf(d).lit ? 0.35 : 0 };
 }
 
 const EASE = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);

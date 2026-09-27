@@ -135,10 +135,22 @@ gtag('config', 'G-91L2N1S9T3');
   .swatch{ width:34px; height:34px; border-radius:50%; border:2px solid transparent; cursor:pointer; padding:0; box-shadow: inset 0 0 0 1px rgba(19,48,92,0.15); transition: box-shadow var(--dur-fast) var(--ease-out); }
   .swatch[aria-pressed="true"]{ border-color:var(--accent); box-shadow: 0 0 0 2px var(--bg-elev), 0 0 0 3px var(--accent); }
 
-  .wswatches{ display:flex; gap:10px; flex-wrap:wrap; }
-  .wswatch{ width:56px; height:40px; border-radius:var(--radius-2); border:2px solid transparent; cursor:pointer; padding:0; background-size:cover; box-shadow: inset 0 0 0 1px rgba(19,48,92,0.15); transition: box-shadow var(--dur-fast) var(--ease-out); }
-  .wswatch[aria-pressed="true"]{ border-color:var(--accent); box-shadow: 0 0 0 2px var(--bg-elev), 0 0 0 3px var(--accent); }
-  .wswatch-lbl{ font-family:var(--font-ui); font-size:9.5px; letter-spacing:0.06em; color:var(--fg-muted); text-align:center; margin-top:4px; }
+  .panels-list{ display:flex; flex-direction:column; gap:12px; }
+  .panels-list:empty{ display:none; }
+  .pnl{ border:var(--hairline); border-radius:var(--radius-2); padding:12px; display:flex; flex-direction:column; gap:12px; background:var(--linen-50); }
+  .pnl-head{ display:flex; justify-content:space-between; align-items:center; font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); }
+  .pnl-del{ width:28px; height:28px; border:1px solid var(--border-strong); border-radius:50%; background:var(--bg-elev); color:var(--fg-muted); font-size:16px; line-height:1; cursor:pointer; }
+  .pnl-del:hover{ color:var(--accent); border-color:var(--accent); }
+  .pnl .lbl{ gap:12px; }
+  .pnl .lbl b{ white-space:nowrap; }
+  .seg-sm .seg-btn{ padding:8px 4px; font-size:9.5px; letter-spacing:0.04em; }
+  .tones{ display:flex; gap:8px; }
+  .tone{ width:26px; height:26px; border-radius:50%; border:2px solid transparent; padding:0; cursor:pointer; box-shadow: inset 0 0 0 1px rgba(19,48,92,0.2); }
+  .tone[aria-pressed="true"]{ box-shadow: 0 0 0 2px var(--bg-elev), 0 0 0 3px var(--accent); }
+  .add-btn{ align-self:flex-start; margin-top:4px; padding:10px 14px; border:1px dashed var(--border-strong); border-radius:var(--radius-2); background:none; font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); cursor:pointer; }
+  .add-btn:hover:not(:disabled){ border-style:solid; background:var(--linen-100); }
+  .add-btn:disabled{ opacity:0.45; cursor:default; }
+  .mini-hint{ margin:0; font-family:var(--font-ui); font-size:11.5px; line-height:1.5; color:var(--fg-muted); }
 
   .seg{ display:flex; border:1px solid var(--border-strong); border-radius:var(--radius-2); overflow:hidden; }
   .seg-btn{ flex:1; padding:9px 8px; background:var(--bg-elev); border:none; border-right:1px solid var(--border-strong); font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--fg-muted); cursor:pointer; transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out); }
@@ -203,7 +215,7 @@ gtag('config', 'G-91L2N1S9T3');
   <div class="cfg-head">
     <div class="f33-eyebrow"><span class="f33-rule" style="display:inline-block;width:42px;margin-right:14px;"></span>Herramienta de diseño</div>
     <h1>Diseña tu <em>centro de entretenimiento</em>.</h1>
-    <p>Elige el acabado del muro, arma la consola de TV, agrega torres laterales iluminadas. El plano de frente y planta se dibuja al instante, acotado en centímetros — luego mándanoslo por WhatsApp y te damos una propuesta real.</p>
+    <p>Arma la consola de TV, agrega torres de repisas —al lado del mueble o sobre él— y acabados atrás como lambrín o mármol. El plano de frente y planta se dibuja al instante, acotado en centímetros — luego mándanoslo por WhatsApp y te damos una propuesta real.</p>
     <p class="to-3d"><a href="/centros-de-entretenimiento/maqueta/">¿Quieres verlo en movimiento? Mira la maqueta 3D →</a></p>
   </div>
 
@@ -212,9 +224,11 @@ gtag('config', 'G-91L2N1S9T3');
 
       <div class="fld-group">
         <div class="fld">
-          <div class="lbl"><span>Acabado de muro</span><b id="out-wallfinish">Pintura</b></div>
-          <div class="wswatches" id="wswatches" role="group" aria-label="Acabado de muro"></div>
+          <div class="lbl"><span>Acabados atrás</span><b id="out-panels">Solo pintura</b></div>
+          <div class="panels-list" id="panels-list"></div>
+          <button type="button" class="add-btn" id="btn-add-panel">+ Agregar acabado</button>
         </div>
+        <div class="hint">Lambrín, mármol, piedra o papel tapiz a todo lo alto: elige cuánto cubre y muévelo a donde quieras. Puedes combinar hasta tres.</div>
       </div>
 
       <div class="fld-group">
@@ -265,6 +279,22 @@ gtag('config', 'G-91L2N1S9T3');
             <div class="lbl"><span>Alto de pantalla</span><b id="out-tvh">70 cm</b></div>
             <input type="range" id="in-tvh" min="30" max="120" step="5" value="70">
           </div>
+          <div class="switch-row">
+            <div class="lbl" style="margin:0;"><span>Panel flotante detrás</span></div>
+            <label class="switch">
+              <input type="checkbox" id="in-tvpanel">
+              <span class="track"></span><span class="knob"></span>
+            </label>
+          </div>
+          <div class="tv-subfields" id="tvpanel-sub" style="display:none;">
+            <div class="switch-row">
+              <div class="lbl" style="margin:0;"><span>Luz detrás del panel</span></div>
+              <label class="switch">
+                <input type="checkbox" id="in-tvpanellit" checked>
+                <span class="track"></span><span class="knob"></span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -286,11 +316,16 @@ gtag('config', 'G-91L2N1S9T3');
             </div>
           </div>
           <div class="fld">
-            <div class="lbl"><span>Empieza desde</span></div>
-            <div class="seg" id="seg-towerstart">
-              <button type="button" class="seg-btn" data-val="piso">Piso</button>
-              <button type="button" class="seg-btn" data-val="consola">Sobre la consola</button>
+            <div class="lbl"><span>Colocación</span></div>
+            <div class="seg" id="seg-towermount">
+              <button type="button" class="seg-btn" data-val="lado">Al lado del mueble</button>
+              <button type="button" class="seg-btn" data-val="sobre">Sobre el mueble</button>
             </div>
+          </div>
+          <div class="fld">
+            <div class="lbl"><span>Mover torre</span><b id="out-toweroff">0 cm</b></div>
+            <input type="range" id="in-toweroff" min="0" max="120" step="5" value="0">
+            <p class="mini-hint" id="hint-toweroff">Separa la torre del mueble (en 0 queda pegada).</p>
           </div>
           <div class="fld">
             <div class="lbl"><span>Ancho de torre</span><b id="out-towerw">28 cm</b></div>
@@ -301,7 +336,7 @@ gtag('config', 'G-91L2N1S9T3');
             <input type="range" id="in-towerh" min="80" max="240" step="5" value="200">
           </div>
           <div class="switch-row">
-            <div class="lbl" style="margin:0;"><span>Iluminar torres</span></div>
+            <div class="lbl" style="margin:0;"><span>Luz en las repisas</span></div>
             <label class="switch">
               <input type="checkbox" id="in-towerslit" checked>
               <span class="track"></span><span class="knob"></span>

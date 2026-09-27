@@ -173,6 +173,34 @@ function screenTexture() {
   }));
 }
 
+/* Halo de luz detrás del panel de TV: mancha suave que asoma por las orillas del panel (el centro queda tapado). */
+export function haloTexture(panelW, panelH, margin) {
+  const px = 110;
+  const c = canvas(Math.round((panelW + 2 * margin) * px), Math.round((panelH + 2 * margin) * px), (g, w, h) => {
+    g.clearRect(0, 0, w, h);
+    g.filter = `blur(${Math.round(margin * px * 0.45)}px)`;
+    g.fillStyle = '#ffffff';
+    const inset = margin * px * 0.55;
+    g.fillRect(inset, inset, w - 2 * inset, h - 2 * inset);
+    g.filter = 'none';
+  });
+  return tex(c, { srgb: false });
+}
+
+/* Brillo en el fondo de cada entrepaño: fuerte bajo la repisa (donde va el LED) y se apaga hacia abajo. */
+export function shelfGlowTexture() {
+  return tex(canvas(8, 128, (g, w, h) => {
+    const grd = g.createLinearGradient(0, 0, 0, h);
+    grd.addColorStop(0, '#ffffff'); grd.addColorStop(0.18, '#c8c8c8'); grd.addColorStop(0.75, '#141414'); grd.addColorStop(1, '#000000');
+    g.fillStyle = grd; g.fillRect(0, 0, w, h);
+  }), { srgb: false });
+}
+
+/* Lambrín: listones por tono (roble, nogal, blanco, negro). */
+export function slatSet(M, tone) {
+  return { roble: M.slat, nogal: M.slatNogal, blanco: M.slatBlanco, negro: M.slatNegro }[tone] || M.slat;
+}
+
 export function contactShadowTexture() {
   return tex(canvas(256, 256, (g, w, h) => {
     const grd = g.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w / 2);
@@ -209,7 +237,11 @@ export function createMaterials() {
     whiteInner: std({ color: '#DDD6CA', roughness: 0.85 }),
     doorGlass: new THREE.MeshStandardMaterial({ color: '#D6E0E6', roughness: 0.15, transparent: true, opacity: 0.42, depthWrite: false }),
     slat: std({ map: slatMap, roughness: 0.6 }),
+    slatNogal: std({ map: walnutMap, roughness: 0.55 }),
+    slatBlanco: std({ color: '#ECE7DE', roughness: 0.75 }),
+    slatNegro: std({ color: '#2E2A27', roughness: 0.6 }),
     felt: std({ color: '#3B3430', roughness: 1 }),
+    tvPanel: std({ color: '#ECE6DC', roughness: 0.82 }),
     door: std({ map: doorMap, roughness: 0.6 }),
     marble: std({ color: '#ffffff', roughness: 0.28 }),
     fabric: std({ color: '#E3DACB', roughness: 1 }),
@@ -229,7 +261,6 @@ export function createMaterials() {
     pot: std({ color: '#CDBFAA', roughness: 0.9 }),
     art: std({ map: artTexture(), roughness: 0.9 }),
     led: std({ color: '#FFD9A3', emissive: '#FFB866', emissiveIntensity: 0, roughness: 0.4 }),
-    ledBar: std({ color: '#FFD9A3', emissive: '#FFC98A', emissiveIntensity: 0, roughness: 0.4 }),
     shade: std({ color: '#2B2A28', roughness: 0.5, metalness: 0.3 }),
     bulb: std({ color: '#FFF1D6', emissive: '#FFC27A', emissiveIntensity: 0 }),
     bottle: std({ color: '#5B7A4E', roughness: 0.15, metalness: 0.1, transparent: true, opacity: 0.85 }),

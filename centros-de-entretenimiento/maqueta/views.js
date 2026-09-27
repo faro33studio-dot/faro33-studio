@@ -3,8 +3,8 @@ import * as THREE from 'three';
 
 /* Estados de canales que muestra cada vista (lo abierto se lee mejor en Carpintería). */
 export const VIEW_STATES = {
-  carpinteria: { luzDia: 1, noche: 0, calidez: 0, lampara: 0, mesa: 0, cortinas: 0, paneles: 1, tv: 0, consolas: 1, led: 1, bar: 1, barLuz: 1, pufs: 0 },
-  planta: { luzDia: 1, noche: 0, calidez: 0, lampara: 0, mesa: 0, cortinas: 0, paneles: 0, tv: 0, consolas: 0, led: 0, bar: 0, barLuz: 0, pufs: 0 }
+  carpinteria: { luzDia: 1, noche: 0, calidez: 0, lampara: 0, mesa: 0, cortinas: 0, paneles: 1, tv: 0, consolas: 1, led: 1, pufs: 0 },
+  planta: { luzDia: 1, noche: 0, calidez: 0, lampara: 0, mesa: 0, cortinas: 0, paneles: 0, tv: 0, consolas: 0, led: 0, pufs: 0 }
 };
 
 export const VIEW_NOTES = {
@@ -68,7 +68,8 @@ export function createCotas(svg, layout, room) {
     { a: P(L.x0, front + 0.2), b: P(L.x0 + L.w, front + 0.2), text: `Muro TV ${cm(L.w)}` },
     { a: P(L.cx0, front + 0.5), b: P(L.cx0 + L.cl, front + 0.5), text: `Consola ${cm(L.cl)}` },
     { a: P(L.x0 - 0.2, L.z0), b: P(L.x0 - 0.2, front), text: `${cm(L.dep)}` },
-    { a: P(tx, front), b: P(tx, L.table.z), text: `Paso ${cm(L.table.z - front)}` }
+    { a: P(tx, front), b: P(tx, L.table.z), text: `Paso ${cm(L.table.z - front)}` },
+    ...L.towers.map((x) => ({ a: P(x, front + 0.85), b: P(x + L.tw, front + 0.85), text: `Torre ${cm(L.tw)}` }))
   ];
   const NS = 'http://www.w3.org/2000/svg';
   const mk = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
