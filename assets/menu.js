@@ -19,6 +19,7 @@
       ['Un rincón cerca del cielo', '/un-rincon-cerca-del-cielo/'],
       ['Casa en la colina', '/casa-en-la-colina/'],
       ['Casa Quintas', '/casa-quintas/'],
+      ['OSHIO · ejemplo comercial (oct. 2026)', '/caso-oshio/'],
       ['Un pedacito de cielo', '/un-pedacito-de-cielo/']
     ],
     estudio: [
