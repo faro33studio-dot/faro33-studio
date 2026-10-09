@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <script>document.documentElement.classList.add('js')</script>
-<title>OSHIO · Ejemplo comercial, oct. 2026 — Faro 33</title>
+<title>Cocina Oxford · Granito y Huanacaxtle — Faro 33</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#13305C">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -22,22 +22,22 @@ gtag('config', 'G-91L2N1S9T3');
 </script>
 <!-- /GA4 -->
 
-<meta name="description" content="Ejemplo de proyecto comercial (octubre 2026): cambio de imagen de un restaurante de 190 m² en Quilá, Sinaloa. Tapices, lambrín y luz. Faro 33 Studio.">
-<meta property="og:title" content="OSHIO · Ejemplo comercial, oct. 2026 — Faro 33">
-<meta property="og:description" content="Ejemplo de proyecto comercial (octubre 2026): cambio de imagen de un restaurante de 190 m² en Quilá, Sinaloa. Tapices, lambrín y luz. Faro 33 Studio.">
-<meta property="og:image" content="https://faro33studio.com/caso-oshio/og-image.jpg">
+<meta name="description" content="Cocina Oxford, de Un rincón cerca del cielo: barra longitudinal de granito brasileño, frente en Huanacaxtle y campana cilíndrica. Faro 33 Studio, Culiacán.">
+<meta property="og:title" content="Cocina Oxford · Granito y Huanacaxtle — Faro 33">
+<meta property="og:description" content="Cocina Oxford, de Un rincón cerca del cielo: barra longitudinal de granito brasileño, frente en Huanacaxtle y campana cilíndrica. Faro 33 Studio, Culiacán.">
+<meta property="og:image" content="https://faro33studio.com/cocina-oxford/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Comedor de OSHIO — ejemplo de proyecto comercial por Faro 33 Studio">
-<meta property="og:url" content="https://faro33studio.com/caso-oshio/">
+<meta property="og:image:alt" content="Cocina Oxford de Un rincón cerca del cielo — Faro 33 Studio">
+<meta property="og:url" content="https://faro33studio.com/cocina-oxford/">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Faro 33 Studio">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OSHIO · Ejemplo comercial, oct. 2026 — Faro 33">
-<meta name="twitter:description" content="Ejemplo de proyecto comercial (octubre 2026): cambio de imagen de un restaurante de 190 m² en Quilá, Sinaloa. Tapices, lambrín y luz. Faro 33 Studio.">
-<meta name="twitter:image" content="https://faro33studio.com/caso-oshio/og-image.jpg">
-<link rel="canonical" href="https://faro33studio.com/caso-oshio/">
+<meta name="twitter:title" content="Cocina Oxford · Granito y Huanacaxtle — Faro 33">
+<meta name="twitter:description" content="Cocina Oxford, de Un rincón cerca del cielo: barra longitudinal de granito brasileño, frente en Huanacaxtle y campana cilíndrica. Faro 33 Studio, Culiacán.">
+<meta name="twitter:image" content="https://faro33studio.com/cocina-oxford/og-image.jpg">
+<link rel="canonical" href="https://faro33studio.com/cocina-oxford/">
 <link rel="icon" href="assets/logo-faro33.png">
 <link rel="apple-touch-icon" href="assets/logo-faro33.png">
 
@@ -53,7 +53,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '883854600914341');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent', {content_name: 'OSHIO (ejemplo comercial)', content_category: 'Project'});
+fbq('track', 'ViewContent', {content_name: 'Cocina Oxford', content_category: 'Project'});
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none"
 src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
@@ -124,7 +124,39 @@ a{ color:inherit; }
 }
 .foot a{ color:inherit; text-decoration:none; }
 .foot a:hover{ color:var(--gold-300); }
-/* ---------- OSHIO ---------- */
+/* ---------- DELICIAS ---------- */
+.compare{ position:relative; aspect-ratio:16/10; overflow:hidden; margin-top:clamp(28px,4vw,48px); --pos:50%; }
+.compare .lay{ position:absolute; inset:0; background-size:cover; background-position:center; }
+.compare .lay.top{ clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.compare .bar{ position:absolute; top:0; bottom:0; left:var(--pos); width:2px; background:#fff; transform:translateX(-1px); box-shadow:0 0 14px rgba(0,0,0,0.4); pointer-events:none; }
+.compare .knob{
+  position:absolute; top:50%; left:var(--pos); transform:translate(-50%,-50%);
+  width:46px; height:46px; border-radius:50%; background:#fff; color:var(--navy-800);
+  display:flex; align-items:center; justify-content:center; gap:2px;
+  font-family:var(--font-ui); font-size:13px; letter-spacing:-1px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.4); pointer-events:none;
+}
+.compare input[type="range"]{ position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; -webkit-appearance:none; }
+.compare .chip{
+  position:absolute; top:16px; z-index:2; pointer-events:none;
+  font-family:var(--font-ui); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase;
+  padding:8px 14px; background:rgba(10,27,54,0.65); color:#fff;
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+}
+.compare .chip.l{ left:16px; } .compare .chip.r{ right:16px; }
+@media (max-width:640px){
+  .compare .chip{ font-size:9.5px; padding:6px 10px; }
+  .compare .chip.r{ top:auto; bottom:14px; }
+}
+.compare-note{ font-family:var(--font-ui); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.6); margin:14px 0 0; }
+.gal{ position:relative; overflow:hidden; }
+.gal-layer{ position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity .9s ease; }
+.gal-layer.is-on{ opacity:1; }
+.dos{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:clamp(28px,4vw,48px); }
+@media (max-width:840px){ .dos{ grid-template-columns:1fr; } }
+.dos figure{ margin:0; } .dos figcaption{ font-family:var(--font-ui); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-top:12px; }
+
+
 .ej-badge{ display:inline-flex; align-items:center; gap:12px; font-family:var(--font-ui); font-size:clamp(11px,1.2vw,13px); letter-spacing:.26em; text-transform:uppercase; font-weight:700; color:var(--navy-950); background:var(--gold-300); padding:12px 18px; border-radius:2px; max-width:100%; }
 .ej-badge::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--navy-800); flex:0 0 auto; }
 .hero{ position:relative; min-height:100vh; color:#fff; display:flex; flex-direction:column; justify-content:flex-end; padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px); background:var(--navy-800); overflow:hidden; }
@@ -175,15 +207,7 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 .mat{ display:flex; justify-content:space-between; gap:24px; padding:18px 0; border-bottom:1px solid var(--sand-300); }
 .mat .n{ font-family:var(--font-display); font-size:clamp(19px,2vw,24px); color:var(--navy-800); } .mat .n em{ font-style:italic; }
 .mat .d{ font-family:var(--font-body); font-size:15px; color:var(--stone-500); text-align:right; }
-.walk{ grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,5vw,72px); align-items:center; margin-top:clamp(40px,6vw,88px); }
-.walk.flip .vid{ order:2; }
-@media (max-width:840px){ .walk{ grid-template-columns:1fr; } .walk.flip .vid{ order:0; } }
-.walk .vid{ width:100%; max-width:560px; aspect-ratio:1/1; background:var(--navy-950); overflow:hidden; }
-.walk video{ width:100%; height:100%; object-fit:cover; display:block; }
-.walk .k{ font-family:var(--font-ui); font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--brass-500); margin:0 0 12px; }
-.walk h3{ font-family:var(--font-display); font-weight:400; font-size:clamp(26px,3vw,38px); line-height:1.1; margin:0 0 14px; color:var(--navy-800); text-wrap:balance; } .walk h3 em{ font-style:italic; }
-.walk .cap p:not(.k){ margin:0; font-family:var(--font-body); font-size:clamp(16px,1.4vw,18px); line-height:1.65; color:var(--stone-700); max-width:42ch; }
-.on-deep .walk .k{ color:var(--gold-300); } .on-deep .walk h3{ color:#fff; } .on-deep .walk h3 em{ color:var(--gold-300); } .on-deep .walk .cap p:not(.k){ color:rgba(255,255,255,.82); }
+.lnk2{ display:inline-block; margin-top:22px; font-family:var(--font-ui); font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:600; color:var(--navy-800); text-decoration:none; border-bottom:1px solid var(--sand-300); padding-bottom:6px; } .lnk2:hover{ color:var(--brass-500); border-color:var(--brass-500); }
 .cta-deep{ position:relative; overflow:hidden; background:var(--navy-800); color:#fff; text-align:center; }
 .cta-deep .bgp{ position:absolute; inset:0; background-size:cover; background-position:center; opacity:.28; }
 .cta-deep .in{ position:relative; max-width:900px; margin:0 auto; padding:clamp(80px,12vw,160px) clamp(24px,5vw,64px); display:flex; flex-direction:column; align-items:center; gap:22px; }
@@ -195,157 +219,92 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 @media (max-width:560px){ .nav .brand .lbl{ display:none; } .hero .top-meta .ej-badge{ letter-spacing:.16em; } }
 
 </style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://faro33studio.com/#business",
-  "name": "Faro 33 Studio",
-  "description": "Estudio de proyectos integrales de interiorismo en Culiac\u00e1n, Sinaloa.",
-  "url": "https://faro33studio.com/",
-  "logo": "https://faro33studio.com/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png",
-  "image": "https://faro33studio.com/og-image.jpg",
-  "telephone": "+52 667 540 2559",
-  "email": "faro33studio@gmail.com",
-  "priceRange": "$$$",
-  "address": { "@type": "PostalAddress", "streetAddress": "Blv. Pedro Mar\u00eda Anaya 1142-E, Col. Chapultepec", "addressLocality": "Culiac\u00e1n", "addressRegion": "Sinaloa", "postalCode": "80040", "addressCountry": "MX" },
-  "geo": { "@type": "GeoCoordinates", "latitude": 24.8172379, "longitude": -107.3883888 },
-  "hasMap": "https://maps.app.goo.gl/rKmEVVsoVKRVywR2A",
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
-  ],
-  "areaServed": { "@type": "City", "name": "Culiac\u00e1n" },
-  "sameAs": ["https://www.instagram.com/faro_33studio/", "https://www.facebook.com/faro33studio"]
-}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://faro33studio.com/"},{"@type":"ListItem","position":2,"name":"Proyectos","item":"https://faro33studio.com/proyectos/"},{"@type":"ListItem","position":3,"name":"OSHIO (ejemplo)","item":"https://faro33studio.com/caso-oshio/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "OSHIO · Ejemplo de proyecto comercial (octubre 2026)", "description": "Ejemplo de proyecto comercial (octubre 2026): cambio de imagen de un restaurante de 190 m² en Quilá, Sinaloa. Tapices, lambrín y luz. Faro 33 Studio.", "image": ["https://faro33studio.com/caso-oshio/og-image.jpg"], "datePublished": "2026-10-08", "dateModified": "2026-10-09", "inLanguage": "es-MX", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://faro33studio.com/caso-oshio/"}, "author": {"@type": "Organization", "name": "Faro 33 Studio", "url": "https://faro33studio.com/", "logo": {"@type": "ImageObject", "url": "https://faro33studio.com/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png"}}, "publisher": {"@type": "Organization", "name": "Faro 33 Studio", "url": "https://faro33studio.com/", "logo": {"@type": "ImageObject", "url": "https://faro33studio.com/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png"}}, "abstract": "Ejemplo de proyecto comercial de octubre de 2026."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://faro33studio.com/#business", "name": "Faro 33 Studio", "description": "Estudio de proyectos integrales de interiorismo en Culiacán, Sinaloa.", "url": "https://faro33studio.com/", "logo": "https://faro33studio.com/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png", "image": "https://faro33studio.com/og-image.jpg", "telephone": "+52 667 540 2559", "email": "faro33studio@gmail.com", "priceRange": "$$$", "address": {"@type": "PostalAddress", "streetAddress": "Blv. Pedro María Anaya 1142-E, Col. Chapultepec", "addressLocality": "Culiacán", "addressRegion": "Sinaloa", "postalCode": "80040", "addressCountry": "MX"}, "geo": {"@type": "GeoCoordinates", "latitude": 24.8172379, "longitude": -107.3883888}, "hasMap": "https://maps.app.goo.gl/rKmEVVsoVKRVywR2A", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00"}], "areaServed": {"@type": "City", "name": "Culiacán"}, "sameAs": ["https://www.instagram.com/faro_33studio/", "https://www.facebook.com/faro33studio"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://faro33studio.com/"}, {"@type": "ListItem", "position": 2, "name": "Proyectos", "item": "https://faro33studio.com/proyectos/"}, {"@type": "ListItem", "position": 3, "name": "Cocina Oxford", "item": "https://faro33studio.com/cocina-oxford/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Cocina Oxford · Un rincón cerca del cielo", "description": "Cocina Oxford, de Un rincón cerca del cielo: barra longitudinal de granito brasileño, frente en Huanacaxtle y campana cilíndrica. Faro 33 Studio, Culiacán.", "image": ["https://faro33studio.com/cocina-oxford/og-image.jpg"], "datePublished": "2024-05-31", "dateModified": "2026-10-09", "inLanguage": "es-MX", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://faro33studio.com/cocina-oxford/"}, "author": {"@type": "Organization", "name": "Faro 33 Studio", "url": "https://faro33studio.com/", "logo": {"@type": "ImageObject", "url": "https://faro33studio.com/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png"}}, "publisher": {"@type": "Organization", "name": "Faro 33 Studio", "url": "https://faro33studio.com/", "logo": {"@type": "ImageObject", "url": "https://faro33studio.com/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png"}}, "temporalCoverage": "2023-03/2024-05"}</script>
 <link rel="stylesheet" href="/assets/glass.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
 <nav class="nav">
   <a class="brand" href="/"><img src="assets/logo-faro33.png" alt="Faro 33"><span class="lbl">Faro 33 · Studio</span></a>
-  <a class="back" href="/proyectos/">← Proyectos</a>
+  <a class="back" href="/cocinas/">← Cocinas</a>
 </nav>
 
 <header class="hero" id="main">
-  <div class="bg" style="background-image:url('assets/oshio-hero.jpg');background-image:image-set(url('assets/oshio-hero.webp') type('image/webp'), url('assets/oshio-hero.jpg') type('image/jpeg'))"></div>
-  <div class="top-meta"><span class="ej-badge">Ejemplo de proyecto comercial · Octubre 2026</span></div>
-  <h1>OSHIO<em>.</em></h1>
-  <p class="sub">Restaurante de 190 m² en Quilá, Sinaloa — un cambio de imagen sencillo, contado en <em>tapiz, madera y luz.</em></p>
-  <p class="when">Cambio de imagen · Quilá, Sinaloa · Octubre 2026</p>
+  <div class="bg" style="background-position:center 60%;background-image:url('assets/oxford-2.jpg');background-image:image-set(url('assets/oxford-2.webp') type('image/webp'), url('assets/oxford-2.jpg') type('image/jpeg'))"></div>
+  <h1>Cocina <em>Oxford.</em></h1>
+  <p class="sub">Una pieza maestra de cara al río: una sola barra de <em>granito brasileño</em>, frente en Huanacaxtle y una campana cilíndrica como escultura.</p>
+  <p class="when">Cocinas a la medida · Un rincón cerca del cielo · Miletto · 4 Ríos</p>
 </header>
-
-<aside class="ej-band" aria-label="Aviso: proyecto de ejemplo">
-  <div class="wrap">
-    <strong>Ejemplo de proyecto comercial · octubre de 2026</strong>
-    <p>Esta página muestra cómo trabajamos un negocio: alcance, materiales y resultado de un cambio de imagen de restaurante en Quilá, Sinaloa. Es un caso de ejemplo del estudio; si quieres algo así para tu local, escríbenos.</p>
-  </div>
-</aside>
 
 <section class="block">
   <div class="wrap two">
-    <div><p class="eyebrow">El brief · 01</p><h2 class="t" style="margin:0">Poca obra, <em>mucho carácter.</em></h2></div>
+    <div><p class="eyebrow">El brief · 01</p><h2 class="t" style="margin:0">Un escenario, <em>no un lugar de servicio.</em></h2></div>
     <div>
-      <p class="body">OSHIO pidió un <strong>cambio de imagen</strong> sencillo, en Quilá, Sinaloa: transformar 190 m² de restaurante sin tocar la planta ni detener la operación por semanas.</p>
-      <p class="body">Faro 33 trabajó por la superficie — <strong>tapices, lambrines de madera, iluminación indirecta y decoración</strong>. Cada área recibió su propio tono: madera y bonsái en la recepción, verde y latón en los sanitarios, selva en rosa y en azul en los baños.</p>
+      <p class="body">El cliente llegó con una sola obsesión: <strong>la cocina</strong>. No como lugar de servicio, sino como escenario: un mueble desde el que pudiera ver el río al fondo mientras sus invitados lo miraran a él.</p>
+      <p class="body" style="font-style:italic">“Que la cocina sea el centro de todo — y que esperemos lo necesario para hacerla bien.” <span style="font-style:normal;color:var(--stone-500);font-size:15px">— El propietario, primera visita, marzo 2023</span></p>
     </div>
   </div>
 </section>
 
 <section class="block linen" style="padding:0;border-top:1px solid var(--sand-300);border-bottom:1px solid var(--sand-300)">
   <div class="wrap"><div class="specs">
-    <div class="spec"><div class="lbl">Tipología</div><div class="val">Restaurante</div></div>
-    <div class="spec"><div class="lbl">Superficie</div><div class="val">190 <em>m²</em></div></div>
-    <div class="spec"><div class="lbl">Alcance</div><div class="val">Cambio de imagen <em>·</em> acabados <em>·</em> luz</div></div>
-    <div class="spec"><div class="lbl">Ubicación</div><div class="val">Quilá <em>·</em> Sinaloa</div></div>
-    <div class="spec"><div class="lbl">Fecha</div><div class="val">Octubre <em>2026</em></div></div>
+    <div class="spec"><div class="lbl">Tipología</div><div class="val">Cocina <em>residencial</em></div></div>
+    <div class="spec"><div class="lbl">Barra</div><div class="val">Longitudinal <em>·</em> 5 asientos</div></div>
+    <div class="spec"><div class="lbl">Niveles</div><div class="val">90 <em>/</em> 75 <em>cm</em></div></div>
+    <div class="spec"><div class="lbl">Cubierta</div><div class="val">Granito <em>brasileño</em></div></div>
+    <div class="spec"><div class="lbl">Proyecto</div><div class="val">Mar. 2023 <em>→</em> may. 2024</div></div>
   </div></div>
 </section>
 
 <section class="block">
   <div class="wrap two">
-    <div class="ph p45" role="img" aria-label="Recepción de OSHIO con bonsái y sillas de latón" data-bg="background-image:url('assets/oshio-recepcion.jpg');background-image:image-set(url('assets/oshio-recepcion.webp') type('image/webp'), url('assets/oshio-recepcion.jpg') type('image/jpeg'))"></div>
+    <div class="ph gal p43" role="img" aria-label="Cocina Oxford: barra de granito, frente en Huanacaxtle y campana cilíndrica">
+      <div class="gal-layer is-on" data-bg="background-image:url('assets/oxford-1.jpg');background-image:image-set(url('assets/oxford-1.webp') type('image/webp'), url('assets/oxford-1.jpg') type('image/jpeg'))"></div>
+      <div class="gal-layer" data-bg="background-image:url('assets/oxford-2.jpg');background-image:image-set(url('assets/oxford-2.webp') type('image/webp'), url('assets/oxford-2.jpg') type('image/jpeg'))"></div>
+      <div class="gal-layer" data-bg="background-image:url('assets/oxford-3.jpg');background-image:image-set(url('assets/oxford-3.webp') type('image/webp'), url('assets/oxford-3.jpg') type('image/jpeg'))"></div>
+    </div>
     <div>
-      <p class="eyebrow">Recepción · 02</p>
-      <h2 class="t">El bonsái de la marca, <em>a escala de sala.</em></h2>
-      <p class="body">El logo de OSHIO es un bonsái; la recepción lo trae al espacio. Un ejemplar grande en maceta esférica negra, enmarcado por lambrín de madera y un panel de estuco claro. Sobre el lambrín corre una tira de luz cálida y una franja del mismo tapiz verde de los sanitarios, que anuncia lo que viene.</p>
+      <p class="eyebrow">La barra · 02</p>
+      <h2 class="t">Jerarquía, <em>en centímetros.</em></h2>
+      <p class="body">La barra es longitudinal, paralela al río, con la <strong>estufa al centro</strong>: quien cocina mira la ciudad; quien come, mira a quien cocina. Cinco asientos, y una <strong>campana cilíndrica Teka</strong> como escultura suspendida.</p>
+      <p class="body">El desnivel entre cubierta y barra no es estético: es <strong>jerarquía</strong>. El anfitrión queda visualmente más alto, y los invitados levantan la mirada para hablarle.</p>
       <div class="minis">
-        <div><div class="lbl">Muros</div><div class="val">Lambrín <em>de madera</em></div></div>
-        <div><div class="lbl">Luz</div><div class="val">Tira LED <em>cálida</em></div></div>
-        <div><div class="lbl">Mobiliario</div><div class="val">Terciopelo <em>y latón</em></div></div>
+        <div><div class="lbl">Cubierta de trabajo</div><div class="val">90 <em>cm · cocción</em></div></div>
+        <div><div class="lbl">Barra de invitados</div><div class="val">75 <em>cm · mesa</em></div></div>
+        <div><div class="lbl">Asientos</div><div class="val">5 <em>a la barra</em></div></div>
       </div>
-    </div>
-
-    <div class="walk">
-      <div class="vid"><video muted loop playsinline preload="none" data-autoplay poster="assets/oshio-recepcion-poster.jpg" aria-label="Recorrido en video por la recepción de OSHIO"><source src="assets/oshio-recepcion.mp4" type="video/mp4" data-hd="assets/oshio-recepcion-hd.mp4"></video></div>
-      <div class="cap"><p class="k">Recorrido · recepción</p><h3>El bonsái, el lambrín <em>y la luz.</em></h3><p>Un paseo por la entrada: el ejemplar en maceta negra, las lamas de madera con su tira de luz cálida y el tapiz verde asomando en lo alto del muro.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="block deep on-deep">
-  <div class="wrap">
-    <div class="two" style="align-items:end">
-      <div><p class="eyebrow">Sanitarios · 03</p><h2 class="t" style="margin:0">Verde, latón <em>y luz que abraza el espejo.</em></h2></div>
-      <p class="body" style="margin:0">La zona de mayor transformación. Tapiz de hojas en verde y crema, muros en textil verde con trama geométrica, lambrín negro con luz entre listones y espejos retroiluminados sobre lavabos de piedra.</p>
-    </div>
-    <div style="margin-top:clamp(32px,5vw,56px)"><div class="ph p169" role="img" aria-label="Lavabos de OSHIO con espejo retroiluminado y tapiz verde" data-bg="background-image:url('assets/oshio-lavabos.jpg');background-image:image-set(url('assets/oshio-lavabos.webp') type('image/webp'), url('assets/oshio-lavabos.jpg') type('image/jpeg'))"></div></div>
-    <div class="trio">
-      <div><div class="ph p45" role="img" aria-label="Flores de metal y consola de latón" data-bg="background-image:url('assets/oshio-antesala.jpg');background-image:image-set(url('assets/oshio-antesala.webp') type('image/webp'), url('assets/oshio-antesala.jpg') type('image/jpeg'))"></div><div class="k">03a · Antesala</div><h3>Flores de metal, <em>consola de latón</em></h3><p>Flores caladas en oro y plata sobre el tapiz, consola de cristal con aros de latón, jarrón metálico y pampas.</p></div>
-      <div><div class="ph p45" role="img" aria-label="Espejo ovalado retroiluminado sobre lambrín negro" data-bg="background-image:url('assets/oshio-espejo.jpg');background-image:image-set(url('assets/oshio-espejo.webp') type('image/webp'), url('assets/oshio-espejo.jpg') type('image/jpeg'))"></div><div class="k">03b · Lavabos</div><h3>Espejo ovalado, <em>lambrín negro</em></h3><p>Lavabos de sobreponer en piedra veteada, grifería negra y un espejo ovalado con luz perimetral.</p></div>
-      <div><div class="ph p45" role="img" aria-label="Textil verde con trama geométrica dorada" data-bg="background-image:url('assets/oshio-trama.jpg');background-image:image-set(url('assets/oshio-trama.webp') type('image/webp'), url('assets/oshio-trama.jpg') type('image/jpeg'))"></div><div class="k">03c · Detalle</div><h3>Trama <em>verde y oro</em></h3><p>El textil de los muros cambia de tono con la luz: verde profundo en sombra, oro donde pega el LED.</p></div>
-    </div>
-
-    <div class="walk flip">
-      <div class="vid"><video muted loop playsinline preload="none" data-autoplay poster="assets/oshio-sanitarios-poster.jpg" aria-label="Recorrido en video por los sanitarios de OSHIO"><source src="assets/oshio-sanitarios.mp4" type="video/mp4" data-hd="assets/oshio-sanitarios-hd.mp4"></video></div>
-      <div class="cap"><p class="k">Recorrido · sanitarios</p><h3>Del tapiz de hojas <em>a las flores de latón.</em></h3><p>El textil verde en detalle, el tapiz de hojas con sus flores caladas, el jarrón con pampas sobre la consola de cristal y, al fondo, el espejo con luz perimetral.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="block">
-  <div class="wrap">
-    <div class="two" style="align-items:end">
-      <div><p class="eyebrow">Baños · 04</p><h2 class="t" style="margin:0">Una misma selva, <em>en rosa y en azul.</em></h2></div>
-      <p class="body" style="margin:0">Dos baños con el mismo tapiz ilustrado — elefantes, jaguares, tucanes y palmas — en dos fondos distintos. Cada uno se acompaña de un muro liso que deja respirar al estampado.</p>
-    </div>
-    <div class="tres">
-      <figure><div class="ph p34" role="img" aria-label="Baño con tapiz de selva en palo de rosa" data-bg="background-image:url('assets/oshio-rosa.jpg');background-image:image-set(url('assets/oshio-rosa.webp') type('image/webp'), url('assets/oshio-rosa.jpg') type('image/jpeg'))"></div><figcaption>Baño rosa · selva sobre palo de rosa</figcaption></figure>
-      <figure><div class="ph p34" role="img" aria-label="Textil palo de rosa junto al tapiz de selva" data-bg="background-image:url('assets/oshio-liso.jpg');background-image:image-set(url('assets/oshio-liso.webp') type('image/webp'), url('assets/oshio-liso.jpg') type('image/jpeg'))"></div><figcaption>Muro liso · textil palo de rosa</figcaption></figure>
-      <figure><div class="ph p34" role="img" aria-label="Baño con tapiz de selva en azul y muro de hojas grises" data-bg="background-image:url('assets/oshio-azul.jpg');background-image:image-set(url('assets/oshio-azul.webp') type('image/webp'), url('assets/oshio-azul.jpg') type('image/jpeg'))"></div><figcaption>Baño azul · selva y hojas en gris</figcaption></figure>
-    </div>
-
-    <div class="walk">
-      <div class="vid"><video muted loop playsinline preload="none" data-autoplay poster="assets/oshio-banos-poster.jpg" aria-label="Recorrido en video por el baño azul de OSHIO"><source src="assets/oshio-banos.mp4" type="video/mp4" data-hd="assets/oshio-banos-hd.mp4"></video></div>
-      <div class="cap"><p class="k">Recorrido · baños</p><h3>La selva azul, <em>de cerca.</em></h3><p>El tapiz ilustrado sobre fondo azul con sus palmas y animales, y el muro liso de hojas grises que lo acompaña, junto a la puerta en madera oscura.</p></div>
     </div>
   </div>
 </section>
 
 <section class="block linen">
   <div class="wrap two" style="align-items:start">
-    <div><p class="eyebrow">Materiales · 05</p><h2 class="t">Lo que <em>cambió la lectura.</em></h2><div class="ph p43" role="img" aria-label="Barra de OSHIO con lambrín de madera y logo bonsái" data-bg="background-image:url('assets/oshio-barra.jpg');background-image:image-set(url('assets/oshio-barra.webp') type('image/webp'), url('assets/oshio-barra.jpg') type('image/jpeg'))"></div></div>
     <div>
-      <div class="mat"><span class="n">Tapiz de hojas</span><span class="d">Verde y crema · sanitarios, recepción</span></div>
-      <div class="mat"><span class="n">Tapiz <em>selva</em></span><span class="d">Rosa y azul · baños</span></div>
-      <div class="mat"><span class="n">Textil geométrico</span><span class="d">Verde y oro · sanitarios</span></div>
-      <div class="mat"><span class="n">Lambrín <em>de madera</em></span><span class="d">Recepción · barra</span></div>
-      <div class="mat"><span class="n">Lambrín negro <em>con LED</em></span><span class="d">Lavabos</span></div>
-      <div class="mat"><span class="n">Latón</span><span class="d">Consola · sillas · flores de metal</span></div>
-      <div class="mat"><span class="n">Mármol <em>negro</em></span><span class="d">Cubierta de barra · mesas</span></div>
+      <p class="eyebrow">Materiales · 03</p>
+      <h2 class="t">Una sola pieza, <em>de piedra y madera.</em></h2>
+      <p class="body">La pieza se dibujó como un mueble único de granito brasileño natural: vetas blancas, negras y doradas que cambian con la luz del día. El refrigerador y el área de servicio quedan <strong>ocultos</strong> dentro de la estructura, sin romper la línea.</p>
+      <a class="lnk2" href="/un-rincon-cerca-del-cielo/">Ver el proyecto completo →</a>
+    </div>
+    <div>
+      <div class="mat"><span class="n">Granito <em>brasileño</em></span><span class="d">Cubierta · barra</span></div>
+      <div class="mat"><span class="n">Huanacaxtle</span><span class="d">Frente en lamas</span></div>
+      <div class="mat"><span class="n">Melamina <em>alta brillantez</em></span><span class="d">Gabinetería · gris Oxford</span></div>
+      <div class="mat"><span class="n">Espejo <em>ahumado</em></span><span class="d">Backsplash · acentos</span></div>
+      <div class="mat"><span class="n">Campana <em>cilíndrica</em></span><span class="d">Teka · escultura suspendida</span></div>
+      <div class="mat"><span class="n">Servicio <em>oculto</em></span><span class="d">Refrigerador integrado</span></div>
     </div>
   </div>
 </section>
 
 <section class="cta-deep">
-  <div class="bgp" data-bg="background-image:url('assets/oshio-comedor.jpg');background-image:image-set(url('assets/oshio-comedor.webp') type('image/webp'), url('assets/oshio-comedor.jpg') type('image/jpeg'))" role="img" aria-label="Comedor de OSHIO"></div>
+  <div class="bgp" data-bg="background-image:url('assets/oxford-1.jpg');background-image:image-set(url('assets/oxford-1.webp') type('image/webp'), url('assets/oxford-1.jpg') type('image/jpeg'))" role="img" aria-label="Cocina Oxford"></div>
   <div class="in">
-    <span class="ej-badge">Ejemplo de proyecto comercial · Octubre 2026</span>
-    <p class="eyebrow" style="color:var(--gold-300);margin:0">¿Un proyecto así en tu negocio?</p>
-    <h2>Cambio de imagen · 190 m² — <em>cuéntanos el tuyo.</em></h2>
-    <p>Mándanos una foto del local y lo que te gustaría resolver. Respondemos por WhatsApp con los siguientes pasos y una primera cita en el estudio.</p>
-    <a class="go" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vi%20el%20ejemplo%20de%20proyecto%20comercial%20OSHIO%20y%20quiero%20un%20cambio%20de%20imagen%20para%20mi%20negocio.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">Quiero un proyecto así →</a>
+    <p class="eyebrow" style="color:var(--gold-300);margin:0">¿Una cocina así en tu casa?</p>
+    <h2>Una cocina como escenario — <em>cuéntanos la tuya.</em></h2>
+    <p>Mándanos una foto del espacio y lo que te gustaría resolver. Respondemos por WhatsApp con los siguientes pasos y una primera cita en el estudio.</p>
+    <a class="go" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vi%20la%20%E2%80%9CCocina%20Oxford%E2%80%9D%20de%20Un%20rinc%C3%B3n%20cerca%20del%20cielo%20y%20quiero%20una%20cocina%20as%C3%AD.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">Quiero una cocina así →</a>
   </div>
 </section>
 
@@ -353,7 +312,6 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
   <span>© 2026 Faro 33 Studio · Culiacán, Sin.</span>
   <span><a href="/aviso-de-privacidad/">Aviso de privacidad</a> · <a href="/aviso-de-privacidad/#cookies" data-cookie-prefs>Cookies</a></span>
 </footer>
-
 <style>
 .proj-next{ background:var(--linen-100); padding: clamp(64px,9vw,120px) 0; }
 .proj-next .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(24px,5vw,64px); }
@@ -379,15 +337,15 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 </style>
 <section class="proj-next" aria-label="Siguiente paso">
   <div class="wrap">
-    <nav class="pn-nav" aria-label="Más proyectos" style="padding-top:0">
-      <a class="prev" href="/un-pedacito-de-cielo/" rel="prev"><span class="lbl">← Proyecto anterior</span><span class="name">Un <em>pedacito</em> de cielo</span></a>
-      <a class="all" href="/proyectos/">Todos los proyectos</a>
-      <a class="next" href="/un-rincon-cerca-del-cielo/" rel="next"><span class="lbl">Siguiente proyecto →</span><span class="name">Un rincón <em>cerca del cielo</em></span></a>
+    <nav class="pn-nav" aria-label="Más cocinas" style="padding-top:0">
+      <a class="prev" href="/cocinas/" rel="prev"><span class="lbl">← Servicio</span><span class="name">Cocinas <em>a la medida</em></span></a>
+      <a class="all" href="/proyectos/?espacio=cocina">Todas las cocinas</a>
+      <a class="next" href="/un-rincon-cerca-del-cielo/" rel="next"><span class="lbl">Proyecto completo →</span><span class="name">Un rincón <em>cerca del cielo</em></span></a>
     </nav>
   </div>
 </section>
 <!-- OTROS PROYECTOS -->
-<div class="related-projects" data-current="oshio">
+<div class="related-projects" data-current="oxford">
 <div class="inner"><div class="head"><p class="eb">Otros proyectos</p><h2 class="t">Otros <em>proyectos</em> del estudio.</h2></div>
   <div class="grid">
     <a class="card" href="/un-pedacito-de-cielo/"><div class="img" data-bg="background-image:url('/assets/thumbs/pedacito-3-900.jpg');background-image:image-set(url('/assets/thumbs/pedacito-3-900.webp') type('image/webp'), url('/assets/thumbs/pedacito-3-900.jpg') type('image/jpeg'))" role="img" aria-label="Un pedacito de cielo"></div><span class="tag">Recámara · 2025</span><h3 class="name">Un <em>pedacito</em> de cielo</h3></a>
@@ -469,7 +427,7 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy-800);color:#fff;padding:12px 20px;font-family:var(--font-ui);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:0}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
-<a class="wa-fab" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vi%20el%20caso%20%E2%80%9COSHIO%E2%80%9D%20%28ejemplo%20comercial%29%20y%20me%20gustar%C3%ADa%20platicar." target="_blank" rel="noopener" aria-label="Hablemos por WhatsApp">
+<a class="wa-fab" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vi%20el%20caso%20%E2%80%9CCocina%20Oxford%E2%80%9D%20y%20me%20gustar%C3%ADa%20platicar." target="_blank" rel="noopener" aria-label="Hablemos por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zm-7.01 15.24h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.83c0 4.54-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.88 2.4 1 2.56c.12.17 1.74 2.66 4.22 3.73 1.45.62 2.01.68 2.74.57.44-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
   <span class="wa-fab-lbl">Hablemos</span>
 </a>
@@ -491,6 +449,16 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
     if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
   }, true);
   window.f33TrackWhatsApp = fire; // callable from form handlers
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.compare').forEach(function(c){ var r=c.querySelector('input'); r.addEventListener('input',function(){ c.style.setProperty('--pos',r.value+'%'); }); });
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.gal').forEach(function(g){
+    var L=g.querySelectorAll('.gal-layer'); if(L.length<2||reduce) return; var i=0;
+    setInterval(function(){ L[i].classList.remove('is-on'); i=(i+1)%L.length; L[i].classList.add('is-on'); },4600);
+  });
 })();
 </script>
 <script src="/assets/gallery.js" defer></script>
