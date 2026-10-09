@@ -18,6 +18,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 | `/nosotros/` | Acerca de + mapa (pin verificado 24.8172379,-107.3883888) |
 | `/casa-en-la-colina/` `/casa-quintas/` `/un-rincon-cerca-del-cielo/` `/un-pedacito-de-cielo/` | Proyectos (con bloque `.proj-next`: CTA WhatsApp específico + anterior/siguiente en ciclo rincón→colina→quintas→pedacito) |
 | `/caso-oshio/` | **Ejemplo de proyecto comercial (octubre 2026)**: restaurante de 190 m², diseñado en Claude Design. Debe verse siempre como EJEMPLO (insignia dorada en el hero, banda bajo el hero, insignia en el cierre, etiqueta en tarjetas del home, `/proyectos/` y `related`). Ciclo: pedacito → oshio → rincón |
+| `/rincon-de-delicias/` | Caso de cocina pequeña de costo contenido (render vs. entregada, galería, materiales). Fuera del ciclo anterior/siguiente; se enlaza desde `/cocinas/#delicias`, `/proyectos/` (filtro cocina), menú y `related` |
 | `/contacto/` | Puente a WhatsApp para ads (noindex) |
 | `/aviso-de-privacidad/` | Aviso de privacidad integral + cookies (enlazado desde pies, menú y barra de cookies) |
 

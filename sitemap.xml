@@ -73,6 +73,13 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://faro33studio.com/rincon-de-delicias/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://faro33studio.com/rincon-de-delicias/assets/delicias-1.jpg</image:loc><image:title>Rincón de delicias — cocina pequeña de costo contenido por Faro 33 Studio</image:title></image:image>
+  </url>
+  <url>
     <loc>https://faro33studio.com/caso-oshio/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
