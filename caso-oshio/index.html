@@ -174,6 +174,15 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 .mat{ display:flex; justify-content:space-between; gap:24px; padding:18px 0; border-bottom:1px solid var(--sand-300); }
 .mat .n{ font-family:var(--font-display); font-size:clamp(19px,2vw,24px); color:var(--navy-800); } .mat .n em{ font-style:italic; }
 .mat .d{ font-family:var(--font-body); font-size:15px; color:var(--stone-500); text-align:right; }
+.walk{ grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,5vw,72px); align-items:center; margin-top:clamp(40px,6vw,88px); }
+.walk.flip .vid{ order:2; }
+@media (max-width:840px){ .walk{ grid-template-columns:1fr; } .walk.flip .vid{ order:0; } }
+.walk .vid{ width:100%; max-width:560px; aspect-ratio:1/1; background:var(--navy-950); overflow:hidden; }
+.walk video{ width:100%; height:100%; object-fit:cover; display:block; }
+.walk .k{ font-family:var(--font-ui); font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--brass-500); margin:0 0 12px; }
+.walk h3{ font-family:var(--font-display); font-weight:400; font-size:clamp(26px,3vw,38px); line-height:1.1; margin:0 0 14px; color:var(--navy-800); text-wrap:balance; } .walk h3 em{ font-style:italic; }
+.walk .cap p:not(.k){ margin:0; font-family:var(--font-body); font-size:clamp(16px,1.4vw,18px); line-height:1.65; color:var(--stone-700); max-width:42ch; }
+.on-deep .walk .k{ color:var(--gold-300); } .on-deep .walk h3{ color:#fff; } .on-deep .walk h3 em{ color:var(--gold-300); } .on-deep .walk .cap p:not(.k){ color:rgba(255,255,255,.82); }
 .cta-deep{ position:relative; overflow:hidden; background:var(--navy-800); color:#fff; text-align:center; }
 .cta-deep .bgp{ position:absolute; inset:0; background-size:cover; background-position:center; opacity:.28; }
 .cta-deep .in{ position:relative; max-width:900px; margin:0 auto; padding:clamp(80px,12vw,160px) clamp(24px,5vw,64px); display:flex; flex-direction:column; align-items:center; gap:22px; }
@@ -265,6 +274,11 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
         <div><div class="lbl">Mobiliario</div><div class="val">Terciopelo <em>y latón</em></div></div>
       </div>
     </div>
+
+    <div class="walk">
+      <div class="vid"><video muted loop playsinline preload="none" data-autoplay poster="assets/oshio-recepcion-poster.jpg" aria-label="Recorrido en video por la recepción de OSHIO"><source src="assets/oshio-recepcion.mp4" type="video/mp4" data-hd="assets/oshio-recepcion-hd.mp4"></video></div>
+      <div class="cap"><p class="k">Recorrido · recepción</p><h3>El bonsái, el lambrín <em>y la luz.</em></h3><p>Un paseo por la entrada: el ejemplar en maceta negra, las lamas de madera con su tira de luz cálida y el tapiz verde asomando en lo alto del muro.</p></div>
+    </div>
   </div>
 </section>
 
@@ -280,6 +294,11 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
       <div><div class="ph p45" role="img" aria-label="Espejo ovalado retroiluminado sobre lambrín negro" data-bg="background-image:url('assets/oshio-espejo.jpg');background-image:image-set(url('assets/oshio-espejo.webp') type('image/webp'), url('assets/oshio-espejo.jpg') type('image/jpeg'))"></div><div class="k">03b · Lavabos</div><h3>Espejo ovalado, <em>lambrín negro</em></h3><p>Lavabos de sobreponer en piedra veteada, grifería negra y un espejo ovalado con luz perimetral.</p></div>
       <div><div class="ph p45" role="img" aria-label="Textil verde con trama geométrica dorada" data-bg="background-image:url('assets/oshio-trama.jpg');background-image:image-set(url('assets/oshio-trama.webp') type('image/webp'), url('assets/oshio-trama.jpg') type('image/jpeg'))"></div><div class="k">03c · Detalle</div><h3>Trama <em>verde y oro</em></h3><p>El textil de los muros cambia de tono con la luz: verde profundo en sombra, oro donde pega el LED.</p></div>
     </div>
+
+    <div class="walk flip">
+      <div class="vid"><video muted loop playsinline preload="none" data-autoplay poster="assets/oshio-sanitarios-poster.jpg" aria-label="Recorrido en video por los sanitarios de OSHIO"><source src="assets/oshio-sanitarios.mp4" type="video/mp4" data-hd="assets/oshio-sanitarios-hd.mp4"></video></div>
+      <div class="cap"><p class="k">Recorrido · sanitarios</p><h3>Del tapiz de hojas <em>a las flores de latón.</em></h3><p>El textil verde en detalle, el tapiz de hojas con sus flores caladas, el jarrón con pampas sobre la consola de cristal y, al fondo, el espejo con luz perimetral.</p></div>
+    </div>
   </div>
 </section>
 
@@ -293,6 +312,11 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
       <figure><div class="ph p34" role="img" aria-label="Baño con tapiz de selva en palo de rosa" data-bg="background-image:url('assets/oshio-rosa.jpg');background-image:image-set(url('assets/oshio-rosa.webp') type('image/webp'), url('assets/oshio-rosa.jpg') type('image/jpeg'))"></div><figcaption>Baño rosa · selva sobre palo de rosa</figcaption></figure>
       <figure><div class="ph p34" role="img" aria-label="Textil palo de rosa junto al tapiz de selva" data-bg="background-image:url('assets/oshio-liso.jpg');background-image:image-set(url('assets/oshio-liso.webp') type('image/webp'), url('assets/oshio-liso.jpg') type('image/jpeg'))"></div><figcaption>Muro liso · textil palo de rosa</figcaption></figure>
       <figure><div class="ph p34" role="img" aria-label="Baño con tapiz de selva en azul y muro de hojas grises" data-bg="background-image:url('assets/oshio-azul.jpg');background-image:image-set(url('assets/oshio-azul.webp') type('image/webp'), url('assets/oshio-azul.jpg') type('image/jpeg'))"></div><figcaption>Baño azul · selva y hojas en gris</figcaption></figure>
+    </div>
+
+    <div class="walk">
+      <div class="vid"><video muted loop playsinline preload="none" data-autoplay poster="assets/oshio-banos-poster.jpg" aria-label="Recorrido en video por el baño azul de OSHIO"><source src="assets/oshio-banos.mp4" type="video/mp4" data-hd="assets/oshio-banos-hd.mp4"></video></div>
+      <div class="cap"><p class="k">Recorrido · baños</p><h3>La selva azul, <em>de cerca.</em></h3><p>El tapiz ilustrado sobre fondo azul con sus palmas y animales, y el muro liso de hojas grises que lo acompaña, junto a la puerta en madera oscura.</p></div>
     </div>
   </div>
 </section>
