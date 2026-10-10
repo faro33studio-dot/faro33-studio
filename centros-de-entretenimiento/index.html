@@ -10,7 +10,7 @@
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.facebook.com">
 
-<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies, no se carga medición */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null');if(c&&c.c==='no'&&Date.now()-c.t<31536e6){window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
+<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies —o la página corre en local— no se carga el Pixel (ni GA4 si rechazó) */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);if(L||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){if(!L)window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
 <script>
@@ -828,6 +828,7 @@ gtag('config', 'G-91L2N1S9T3');
   function fire(label){
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
