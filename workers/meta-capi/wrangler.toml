@@ -1,0 +1,8 @@
+name = "faro33-meta-capi"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+# Secretos (no van en el repo):
+#   npx wrangler secret put META_TOKEN
+# Opcional, solo para pruebas en Events Manager → Test events:
+#   npx wrangler secret put TEST_EVENT_CODE

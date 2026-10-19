@@ -1026,9 +1026,9 @@ html:not(.js) .cierre .photo, .cierre.is-near .photo{ background-image: linear-g
 /* Meta Pixel — WhatsApp clicks are the conversion signal (user leaves to the app). */
 (function(){
   function fire(label){
-    if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
-      try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+    if (window.f33Track){
+      f33Track('Lead', { content_name: label || 'WhatsApp', source_url: location.pathname });
+      f33Track('Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname });
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
@@ -1047,5 +1047,6 @@ html:not(.js) .cierre .photo, .cierre.is-near .photo{ background-image: linear-g
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/glass.js" defer></script>
 <script src="/assets/consent.js" defer></script>
+<script src="/assets/capi.js" defer></script>
 </body>
 </html>
