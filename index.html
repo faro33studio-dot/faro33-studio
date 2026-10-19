@@ -10,7 +10,7 @@
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.facebook.com">
 
-<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies —o la página corre en local— no se carga el Pixel (ni GA4 si rechazó) */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);if(L||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){if(!L)window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
+<script>/* F33_CONSENT_EARLY: el Pixel y GA4 solo corren en faro33studio.com; también se desactivan si el visitante rechazó cookies */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=!/^(www\.)?faro33studio\.com$/.test(location.hostname);if(L||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
 <script>
@@ -1300,8 +1300,14 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
       var url = 'https://wa.me/526675402559?text=' + encodeURIComponent(parts.join('\n'));
       var btn = document.getElementById('cf-submit');
       if (btn){ btn.innerHTML = '¡Abriendo WhatsApp! <span class="arrow">→</span>'; }
-      if (window.f33TrackWhatsApp) window.f33TrackWhatsApp('Brief form');
-      window.open(url, '_blank', 'noopener');
+      // Se abre la ventana en el mismo gesto del clic (si no, el bloqueador de popups la cancela tras el await del hash)
+      var w = window.open('about:blank', '_blank');
+      if (w) w.opener = null;
+      var go = function(){
+        if (window.f33TrackWhatsApp) window.f33TrackWhatsApp('Brief form');
+        if (w) w.location.href = url; else window.location.href = url;
+      };
+      if (window.f33SetUserData) window.f33SetUserData(v('cf-email'), v('cf-phone')).then(go, go); else go();
     });
   }
 })();
@@ -1325,6 +1331,22 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
   }, true);
   window.f33TrackWhatsApp = fire; // callable from form handlers
+
+  // Advanced matching: correo y teléfono se hashean (SHA-256) en el navegador antes de enviarse a Meta.
+  async function sha256(text){
+    var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(buf), function(b){ return b.toString(16).padStart(2, '0'); }).join('');
+  }
+  window.f33SetUserData = async function(email, phone){
+    if (typeof fbq !== 'function' || !window.crypto || !crypto.subtle) return;
+    var um = {};
+    var e = (email || '').trim().toLowerCase();
+    if (e) um.em = await sha256(e);
+    var p = (phone || '').replace(/\D/g, '');
+    if (p.length === 10) p = '52' + p; // número nacional de México → con código de país
+    if (p) um.ph = await sha256(p);
+    if (um.em || um.ph) fbq('init', '883854600914341', um);
+  };
 })();
 </script>
 <script>

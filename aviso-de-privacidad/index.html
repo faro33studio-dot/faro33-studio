@@ -11,7 +11,7 @@
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.facebook.com">
 
-<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies —o la página corre en local— no se carga el Pixel (ni GA4 si rechazó) */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);if(L||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){if(!L)window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
+<script>/* F33_CONSENT_EARLY: el Pixel y GA4 solo corren en faro33studio.com; también se desactivan si el visitante rechazó cookies */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=!/^(www\.)?faro33studio\.com$/.test(location.hostname);if(L||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3"></script>
 <script>
@@ -408,7 +408,7 @@ html.js .rv.in{ opacity:1; transform:none; }
     <div class="tbl" role="table" aria-label="Cookies que usa el sitio">
       <div class="tr th" role="row"><span role="columnheader">Tecnología</span><span role="columnheader">Para qué</span><span role="columnheader">Quién la opera</span></div>
       <div class="tr" role="row"><span role="cell"><strong>Google Analytics 4</strong></span><span role="cell">Medir visitas, páginas vistas y uso del sitio.</span><span role="cell">Google LLC</span></div>
-      <div class="tr" role="row"><span role="cell"><strong>Meta Pixel</strong></span><span role="cell">Medir nuestros anuncios y mostrarte publicidad relevante de Faro 33.</span><span role="cell">Meta Platforms, Inc.</span></div>
+      <div class="tr" role="row"><span role="cell"><strong>Meta Pixel</strong></span><span role="cell">Medir nuestros anuncios y mostrarte publicidad relevante de Faro 33. Si envías el brief del home, el correo y el teléfono se envían a Meta cifrados (hash SHA-256) para medir mejor.</span><span role="cell">Meta Platforms, Inc.</span></div>
       <div class="tr" role="row"><span role="cell"><strong>Google Maps</strong></span><span role="cell">Mostrar el mapa del estudio (solo en “Sobre nosotros”).</span><span role="cell">Google LLC</span></div>
       <div class="tr" role="row"><span role="cell"><strong>Preferencia de cookies</strong></span><span role="cell">Recordar durante 12 meses si aceptaste o rechazaste (almacenamiento local, sin datos personales).</span><span role="cell">Faro 33</span></div>
     </div>
