@@ -498,7 +498,15 @@ img { display: block; max-width: 100%; }
 .hero h1 em { font-style: italic; font-weight: 400; }
 .hero h1 .ampersand { font-style: italic; color: var(--brass-400); padding: 0 0.05em; }
 .hero-sub { font-family: var(--font-body); font-size: 19px; line-height: 1.55; max-width: 520px; color: rgba(255,255,255,0.88); margin: 0 0 40px; }
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-actions { display: flex; align-items: center; gap: 16px 36px; flex-wrap: wrap; margin-bottom: 56px; }
+/* Jerarquía: WhatsApp = acción principal; "Mi casa / Mi negocio" = enlaces de texto que llevan a cada camino */
+.hero-paths { display: flex; align-items: center; gap: 0 24px; flex-wrap: wrap; font-family: var(--font-ui); }
+.hero-paths-lbl { font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.62); }
+.hero-path { position: relative; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; text-decoration: none; }
+.hero-path::after { content: ""; position: absolute; left: 0; right: 0; bottom: 11px; height: 1px; background: rgba(255,255,255,0.45); transition: background var(--dur-fast) var(--ease-out); }
+.hero-path:hover::after { background: var(--gold-300); }
+.hero-path .arrow { color: var(--gold-300); transition: transform var(--dur-fast) var(--ease-out); }
+.hero-path:hover .arrow { transform: translateY(3px); }
 
 .hero-meta { display: grid; grid-template-columns: repeat(4, auto) 1fr; gap: 40px; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.22); font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
 .hero-meta .right { text-align: right; justify-self: end; }
@@ -545,6 +553,7 @@ img { display: block; max-width: 100%; }
 .serv-card .serv-list li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid var(--sand-200); font-family: var(--font-body); font-size: 15px; color: var(--ink-900); }
 .serv-card .serv-list li:last-child { border-bottom: 1px solid var(--sand-200); }
 .serv-card .serv-list .meta { font-family: var(--font-ui); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone-500); }
+.serv-card .serv-list{ padding-left:0; list-style:none; }
 .serv-card .serv-foot { display: flex; justify-content: space-between; align-items: baseline; }
 .serv-card .serv-foot a { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy-800); border-bottom: 1px solid var(--navy-800); padding-bottom: 4px; transition: gap var(--dur-fast); display: inline-flex; gap: 8px; }
 .serv-card .serv-foot a:hover { gap: 12px; }
@@ -638,6 +647,7 @@ html:not(.js) .studio-portrait, #estudio.is-near .studio-portrait { background-i
 .ftr { background: var(--navy-900); color: #fff; padding: 96px 0 36px; border-top: 1px solid rgba(255,255,255,0.08); }
 .ftr-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 72px; }
 @media (max-width: 900px) { .ftr-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 900px) { .ftr-grid > * { min-width: 0; } .ftr-col { overflow-wrap: anywhere; } }
 .ftr-brand { display: flex; flex-direction: column; gap: 24px; max-width: 360px; }
 .ftr-brand .lockup { display: flex; align-items: center; gap: 16px; }
 .ftr-brand .lockup .plate { width: 64px; height: 64px; border-radius: 50%; background: #fff; padding: 4px; display: flex; align-items: center; justify-content: center; }
@@ -738,7 +748,7 @@ html.js .ls-slide--3d.is-active .ls-bg{ animation:none; }
 /* --- Static-build mobile refinements --- */
 @media (max-width: 900px){ .hero-scroll{ display:none; } .hero{ align-items:flex-start; } .hero-inner{ padding-top:116px; padding-bottom:56px; } .hero-tag{ margin-bottom:20px; } }
 @media (max-width: 640px){ .hdr-mark .markline small{ display:none; } .hdr-inner{ padding:14px 18px; } .hdr-cta{ padding:9px 16px; } }
-@media (max-width: 640px){ .hero h1{ font-size: clamp(44px, 12vw, 76px); } .hero-actions .btn{ flex:1 1 auto; justify-content:center; } }
+@media (max-width: 640px){ .hero h1{ font-size: clamp(44px, 12vw, 76px); } .hero-actions{ flex-direction:column; align-items:stretch; gap:6px; } .hero-actions .btn{ justify-content:center; } .hero-paths{ justify-content:center; gap:0 20px; } .hero-paths-lbl{ flex-basis:100%; text-align:center; padding-top:8px; } }
 /* Narrow phones (<390px): the 2-col footer needs 366px (brand lockup + 40px gap + unbreakable email) and widened the page; the header row didn't fit either */
 @media (max-width: 389px){ .hdr-mark{ gap:10px; } .hdr-nav .hdr-cta{ letter-spacing:0.14em; } .ftr-brand, .ftr-col:last-child{ grid-column:1 / -1; } }
 .pcard{ text-decoration:none; }
@@ -815,7 +825,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
       <span class="markline"><span>FARO 33</span><small>Interiorismo &amp; Diseño</small></span>
     </a>
     <nav class="hdr-nav">
-      <a href="#servicios">Servicios</a>
+      <a href="#comercial">Negocios</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#proceso">Proceso</a>
       <a href="#estudio">Estudio</a>
@@ -833,8 +843,12 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     <h1><span class="hero-line"><span style="transition-delay:120ms">Proyectos integrales</span></span><span class="hero-line"><span style="transition-delay:240ms"><em>de interiorismo</em></span></span><span class="hero-line"><span style="transition-delay:360ms">de <em>autor.</em></span></span></h1>
     <p class="hero-sub hero-fade" style="transition-delay:560ms">Diseñamos espacios completos — del primer plano a la última lámpara colocada. Cada proyecto responde a la luz, al material y al ritmo de quien lo habita.</p>
     <div class="hero-actions hero-fade" style="transition-delay:660ms">
-      <a class="btn btn--wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener">Escríbenos por WhatsApp <span class="arrow">→</span></a>
-      <a class="btn btn--on-deep-ghost" href="#proyectos">Ver proyectos</a>
+      <a class="btn btn--wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener" data-seg="general"><svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg> Escríbenos por WhatsApp <span class="arrow">→</span></a>
+      <div class="hero-paths" role="group" aria-label="Elige tu tipo de proyecto">
+        <span class="hero-paths-lbl">o elige tu camino</span>
+        <a class="hero-path" href="#residencial" data-seg-pick="residencial">Mi casa <span class="arrow" aria-hidden="true">↓</span></a>
+        <a class="hero-path" href="#comercial" data-seg-pick="comercial">Mi negocio <span class="arrow" aria-hidden="true">↓</span></a>
+      </div>
     </div>
     <div class="hero-meta hero-fade" style="transition-delay:780ms">
       <span>Residencial</span><span>Comercial</span><span>Remodelación</span><span>Dirección de obra</span>
@@ -843,10 +857,27 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   </div>
   <div class="hero-scroll"><span>Desliza</span><span class="tick"></span></div>
 </section>
-<!-- EXPLORA POR ESPACIO -->
+<!-- EMBUDO POR SEGMENTO: dos caminos con la misma estructura (marca · titular · bajada · contenido · CTA centrado) -->
 <style>
-.espacios{ padding: clamp(64px,8vw,104px) 0 0; }
-.espacios .sh{ margin-bottom: clamp(32px,4vw,48px); }
+.seg{ padding: clamp(88px,10vw,136px) 0; }
+.seg--casa{ background: var(--linen-50); }
+.seg--negocio{ background: var(--linen-100); }
+.seg-head{ display:flex; flex-direction:column; align-items:center; text-align:center; gap: 22px; max-width: 760px; margin: 0 auto clamp(44px,5vw,64px); }
+.seg-mark{ display:flex; align-items:center; gap:16px; font-family:var(--font-ui); font-size:11px; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; color:var(--stone-500); }
+.seg-mark::before, .seg-mark::after{ content:""; width:40px; height:1px; background:var(--sand-300); }
+.seg-mark b{ font-family:var(--font-display-condensed); font-style:italic; font-weight:400; font-size:17px; letter-spacing:0.04em; text-transform:none; color:var(--brass-500); }
+.seg-head h2{ font-family:var(--font-display); font-weight:400; font-size: clamp(38px,5.2vw,64px); line-height:1.04; letter-spacing:-0.015em; margin:0; color:var(--navy-800); text-wrap:balance; }
+.seg-head h2 em{ font-style:italic; }
+.seg-lede{ font-family:var(--font-body); font-size: clamp(16px,1.4vw,18px); line-height:1.6; color:var(--stone-700); margin:0; max-width:54ch; text-wrap:pretty; }
+.seg-more{ display:flex; justify-content:center; margin-top: clamp(24px,3vw,32px); }
+.seg-more a{ font-family:var(--font-ui); font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--navy-800); text-decoration:none; display:inline-flex; align-items:center; gap:10px; min-height:44px; border-bottom:1px solid transparent; transition: color var(--dur-fast) var(--ease-out); }
+.seg-more a:hover{ color:var(--brass-500); }
+.seg-foot{ display:flex; flex-direction:column; align-items:center; gap:14px; margin-top: clamp(28px,3.5vw,40px); padding-top: clamp(36px,4.5vw,48px); border-top:1px solid var(--sand-200); text-align:center; }
+.seg-foot .btn{ padding:18px 32px; }
+.seg-note{ margin:0; font-family:var(--font-ui); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--stone-500); }
+@media (max-width:560px){ .seg-foot .btn{ width:100%; justify-content:center; padding:18px 16px; font-size:11px; letter-spacing:0.1em; white-space:nowrap; } .seg-foot .btn .arrow{ display:none; } .seg-sep{ display:none; } .seg-hrs{ display:block; margin-top:6px; } .seg-mark::before, .seg-mark::after{ width:24px; } }
+
+/* Camino 01 · casa: espacios */
 .esp-grid{ display:grid; grid-template-columns: repeat(6,1fr); gap: clamp(12px,1.5vw,20px); }
 @media (max-width:1100px){ .esp-grid{ grid-template-columns: repeat(3,1fr); } }
 @media (max-width:560px){ .esp-grid{ grid-template-columns: repeat(2,1fr); gap:12px; } }
@@ -854,74 +885,86 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 .esp-img{ position:absolute; inset:0; background-size:cover; background-position:center; transition: transform 900ms var(--ease-out); }
 .esp-tile::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,27,54,.82) 0%, rgba(10,27,54,.15) 55%, rgba(10,27,54,0) 100%); }
 .esp-tile:hover .esp-img{ transform: scale(1.06); }
+.esp-img--muros{ background-position: 80% 70%; }
 .esp-lbl{ position:absolute; left:16px; right:12px; bottom:14px; z-index:2; font-family:var(--font-display); font-size: clamp(17px,1.5vw,21px); line-height:1.15; display:flex; justify-content:space-between; align-items:flex-end; gap:8px; }
 .esp-lbl .arrow{ font-family:var(--font-ui); font-size:14px; color:var(--gold-300); transition: transform 320ms var(--ease-out); }
 .esp-tile:hover .esp-lbl .arrow{ transform: translateX(4px); }
-.esp-tile:focus-visible{ outline:2px solid var(--brass-500); outline-offset:3px; }
-.esp-all{ margin-top: clamp(20px,2.5vw,28px); font-family:var(--font-ui); font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--navy-800); text-decoration:none; display:inline-flex; gap:10px; }
-.esp-all:hover{ color:var(--brass-500); }
+.esp-tile:focus-visible, .biz-card:focus-visible{ outline:2px solid var(--brass-500); outline-offset:3px; }
+
+/* Camino 02 · negocio: misma familia visual (foto + texto), dos tarjetas */
+.biz-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: clamp(16px,2vw,24px); }
+@media (max-width:760px){ .biz-grid{ grid-template-columns: 1fr; } }
+.biz-card{ display:flex; flex-direction:column; background:var(--linen-50); color:inherit; text-decoration:none; }
+.biz-img{ position:relative; aspect-ratio: 16/10; overflow:hidden; background:var(--navy-900); }
+.biz-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition: transform 900ms var(--ease-out); }
+.biz-card:hover .biz-img img{ transform: scale(1.04); }
+.biz-badge{ position:absolute; top:16px; left:16px; z-index:1; font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--navy-950); background:var(--gold-300); padding:7px 12px; }
+.biz-body{ display:flex; flex-direction:column; gap:14px; padding: clamp(24px,3vw,40px); flex:1; }
+.biz-kicker{ font-family:var(--font-display-condensed); font-style:italic; font-size:17px; letter-spacing:0.04em; color:var(--brass-500); }
+.biz-body h3{ font-family:var(--font-display); font-weight:400; font-size: clamp(28px,2.8vw,38px); line-height:1.08; letter-spacing:-0.01em; margin:0; color:var(--navy-800); text-wrap:balance; }
+.biz-body h3 em{ font-style:italic; }
+.biz-body p{ font-family:var(--font-body); font-size:16px; line-height:1.6; color:var(--stone-700); margin:0; max-width:46ch; }
+.biz-link{ margin-top:auto; padding-top:8px; font-family:var(--font-ui); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--navy-800); display:inline-flex; align-items:center; gap:8px; min-height:44px; }
+.biz-card:hover .biz-link{ color:var(--brass-500); }
 </style>
-<section class="espacios" id="espacios" style="background:var(--linen-50)">
+<section class="seg seg--casa" id="residencial" data-seg="residencial" aria-labelledby="seg-casa-t">
   <div class="f33-container">
-    <div class="sh">
-      <div class="sh-l">
-        <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">Explora por espacio</span></div>
-        <h2>¿Qué quieres <em>resolver</em>?</h2>
-      </div>
-      <div class="sh-r esp-sub">Elige el espacio y te llevamos directo a los proyectos donde ya lo resolvimos — con materiales, medidas y proceso.</div>
-    </div>
+    <header class="seg-head">
+      <span class="seg-mark"><b>01</b>Para tu casa</span>
+      <h2 id="seg-casa-t">Cada espacio de tu <em>casa</em>.</h2>
+      <p class="seg-lede">Elige el espacio y te llevamos directo a los proyectos donde ya lo resolvimos — con materiales, medidas y proceso.</p>
+    </header>
     <div class="esp-grid">
       <a class="esp-tile" href="/proyectos/?espacio=sala"><span class="esp-img" style="background-image:url('/assets/thumbs/quintas-1-sala-900.jpg');background-image:image-set(url('/assets/thumbs/quintas-1-sala-900.webp') type('image/webp'), url('/assets/thumbs/quintas-1-sala-900.jpg') type('image/jpeg'))" role="img" aria-label="Sala y comedor"></span><span class="esp-lbl">Sala y comedor <span class="arrow" aria-hidden="true">→</span></span></a>
       <a class="esp-tile" href="/proyectos/?espacio=cocina"><span class="esp-img" style="background-image:url('/assets/thumbs/cocina-curva-1-900.jpg');background-image:image-set(url('/assets/thumbs/cocina-curva-1-900.webp') type('image/webp'), url('/assets/thumbs/cocina-curva-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Cocina"></span><span class="esp-lbl">Cocina <span class="arrow" aria-hidden="true">→</span></span></a>
       <a class="esp-tile" href="/proyectos/?espacio=recamara"><span class="esp-img" style="background-image:url('/assets/thumbs/quintas-4-master-900.jpg');background-image:image-set(url('/assets/thumbs/quintas-4-master-900.webp') type('image/webp'), url('/assets/thumbs/quintas-4-master-900.jpg') type('image/jpeg'))" role="img" aria-label="Recámara"></span><span class="esp-lbl">Recámara <span class="arrow" aria-hidden="true">→</span></span></a>
       <a class="esp-tile" href="/proyectos/?espacio=bano"><span class="esp-img" style="background-image:url('/assets/thumbs/acabado-tapiz-900.jpg');background-image:image-set(url('/assets/thumbs/acabado-tapiz-900.webp') type('image/webp'), url('/assets/thumbs/acabado-tapiz-900.jpg') type('image/jpeg'))" role="img" aria-label="Baño"></span><span class="esp-lbl">Baño <span class="arrow" aria-hidden="true">→</span></span></a>
       <a class="esp-tile" href="/proyectos/?espacio=tv"><span class="esp-img" style="background-image:url('/assets/thumbs/centro-real-1-900.jpg');background-image:image-set(url('/assets/thumbs/centro-real-1-900.webp') type('image/webp'), url('/assets/thumbs/centro-real-1-900.jpg') type('image/jpeg'))" role="img" aria-label="Centro de TV"></span><span class="esp-lbl">Centro de TV <span class="arrow" aria-hidden="true">→</span></span></a>
-      <a class="esp-tile" href="/proyectos/?espacio=muros"><span class="esp-img" style="background-image:url('/assets/thumbs/acabado-comercial-900.jpg');background-image:image-set(url('/assets/thumbs/acabado-comercial-900.webp') type('image/webp'), url('/assets/thumbs/acabado-comercial-900.jpg') type('image/jpeg'))" role="img" aria-label="Muros y negocios"></span><span class="esp-lbl">Muros y negocios <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a class="esp-tile" href="/proyectos/?espacio=muros"><span class="esp-img esp-img--muros" style="background-image:url('/assets/thumbs/acabado-hero-900.jpg');background-image:image-set(url('/assets/thumbs/acabado-hero-900.webp') type('image/webp'), url('/assets/thumbs/acabado-hero-900.jpg') type('image/jpeg'))" role="img" aria-label="Muros y acabados"></span><span class="esp-lbl">Muros y acabados <span class="arrow" aria-hidden="true">→</span></span></a>
     </div>
-    <a class="esp-all" href="/proyectos/">Ver todos los proyectos <span aria-hidden="true">→</span></a>
+    <div class="seg-more"><a href="/proyectos/">Ver todos los proyectos <span aria-hidden="true">→</span></a></div>
+    <div class="seg-foot">
+      <a class="btn btn--wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20un%20proyecto%20residencial%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener" data-seg="residencial"><svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg> Tu espacio, resuelto a tu medida <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="seg-note">Por WhatsApp<span class="seg-sep"> · </span><span class="seg-hrs">Lun–Vie 10:00–17:00 · Sáb 10:00–14:00</span></p>
+    </div>
   </div>
 </section>
 
-<!-- SERVICIOS -->
-<section class="f33-section" id="servicios">
+<section class="seg seg--negocio" id="comercial" data-seg="comercial" aria-labelledby="seg-negocio-t">
   <div class="f33-container">
-    <div class="sh">
-      <div class="sh-l">
-        <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">01 · Lo que hacemos</span></div>
-        <h2>Diseño integral, <em>de principio a fin</em>.</h2>
-      </div>
-      <div class="sh-r">Faro 33 es un estudio de interiorismo. Acompañamos el proyecto desde el primer croquis hasta la última visita — y, cuando hace falta, fabricamos en taller las piezas que el espacio necesita.</div>
+    <header class="seg-head">
+      <span class="seg-mark"><b>02</b>Para tu negocio</span>
+      <h2 id="seg-negocio-t">Espacios que <em>trabajan</em> para tu marca.</h2>
+      <p class="seg-lede">Restaurantes, oficinas, showrooms y consultorios. Muros con la identidad de tu marca y una instalación que no detiene tu operación.</p>
+    </header>
+    <div class="biz-grid">
+      <a class="biz-card" href="/acabados-de-pared/#negocios">
+        <div class="biz-img"><picture><source type="image/webp" srcset="/assets/thumbs/acabado-comercial-900.webp"><img src="/assets/thumbs/acabado-comercial-900.jpg" alt="Muro con la marca integrada en la recepción de un estudio, acabado de pared por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
+        <div class="biz-body">
+          <span class="biz-kicker">— Muros para negocios</span>
+          <h3>Acabados de pared <em>con tu marca</em></h3>
+          <p>Estuco, madera, tapiz y piedra, integrados al muro de tu negocio. La mayoría de los muros se instalan en 2 a 5 días.</p>
+          <span class="biz-link">Ver muros para negocios <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="biz-card" href="/caso-oshio/">
+        <div class="biz-img"><span class="biz-badge">Ejemplo</span><picture><source type="image/webp" srcset="/assets/thumbs/oshio-hero-900.webp"><img src="/assets/thumbs/oshio-hero-900.jpg" alt="OSHIO, ejemplo de proyecto comercial de interiorismo por Faro 33 Studio" loading="lazy" decoding="async"></picture></div>
+        <div class="biz-body">
+          <span class="biz-kicker">— Proyecto de ejemplo · oct. 2026</span>
+          <h3>Restaurante <em>Oshio</em></h3>
+          <p>Un restaurante de 190 m² como ejemplo de cómo trabajamos para espacios comerciales: del plano al mobiliario.</p>
+          <span class="biz-link">Ver el ejemplo <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
     </div>
-    <div class="serv-grid">
-      <article class="serv-card">
-        <span class="num">— Servicio principal</span>
-        <h3>Proyectos integrales de interiorismo</h3>
-        <p>Diseño completo de espacios residenciales y comerciales: levantamiento, distribución, planos ejecutivos, paleta de materiales, iluminación, ebanistería de obra, dirección de obra y curaduría final. Un solo equipo, un solo responsable, del croquis a la entrega.</p>
-        <ul class="serv-list">
-          <li><span>Residencial</span><span class="meta">Casas · Departamentos · Recámaras</span></li>
-          <li><span>Comercial</span><span class="meta">Oficinas · Showrooms · Lobbys</span></li>
-          <li><span>Remodelación</span><span class="meta">Renovación total o por área</span></li>
-          <li><span>Dirección de obra</span><span class="meta">Visitas semanales · Bitácora</span></li>
-        </ul>
-        <div class="serv-foot" style="display:flex;gap:10px 28px;flex-wrap:wrap"><a href="/proyecto-integral/">Qué incluye <span>→</span></a><a href="#contacto">Iniciar un proyecto <span>→</span></a></div>
-      </article>
-      <article class="serv-card">
-        <span class="num">— Servicio complementario</span>
-        <h3>Mobiliario a la medida</h3>
-        <p>Cuando el espacio lo pide, fabricamos en taller propio. Carpintería, tapicería, herrería y acabados — coordinados por el mismo equipo que diseñó el proyecto. No es un servicio aparte; es la extensión natural del diseño.</p>
-        <ul class="serv-list">
-          <li><span>Sólo para clientes de interiorismo</span><span class="meta"></span></li>
-          <li><span>Ebanistería fija</span><span class="meta">Cocinas · Closets · Libreros</span></li>
-          <li><span>Mobiliario único</span><span class="meta">Recámaras · Salas · Cabeceros</span></li>
-          <li><span>Tapicería</span><span class="meta">Terciopelo · Lino · Piel</span></li>
-        </ul>
-        <div class="serv-foot"><a href="/cocinas/">Ver cocinas a la medida <span>→</span></a></div>
-      </article>
+    <div class="seg-more"><a href="/proyectos/?espacio=comercial">Ver proyectos comerciales <span aria-hidden="true">→</span></a></div>
+    <div class="seg-foot">
+      <a class="btn btn--wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20un%20proyecto%20para%20mi%20negocio.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener" data-seg="comercial"><svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg> Cotiza tu negocio por WhatsApp <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="seg-note">Por WhatsApp<span class="seg-sep"> · </span><span class="seg-hrs">Lun–Vie 10:00–17:00 · Sáb 10:00–14:00</span></p>
     </div>
   </div>
 </section>
 
-<!-- ESPECIALIDADES -->
 <section class="lineshow" id="especialidades" aria-roledescription="carrusel" aria-label="Nuestras especialidades">
   <div class="ls-count"><b class="ls-now">01</b> / 05</div>
   <article class="ls-slide is-active">
@@ -976,17 +1019,6 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   <div class="ls-dots" aria-label="Seleccionar especialidad"></div>
 </section>
 
-<!-- DIRECTORIO DE SERVICIOS -->
-<nav class="svc-index" aria-label="Todas las especialidades">
-  <div class="in">
-    <span class="lbl">Especialidades</span>
-    <a href="/proyecto-integral/">Interiorismo integral</a><span class="sep" aria-hidden="true">·</span>
-    <a href="/cocinas/">Cocinas a la medida</a><span class="sep" aria-hidden="true">·</span>
-    <a href="/centros-de-entretenimiento/">Centros de entretenimiento</a><span class="sep" aria-hidden="true">·</span>
-    <a href="/acabados-de-pared/">Acabados de pared</a><span class="sep" aria-hidden="true">·</span>
-    <a href="/acabados-de-pared/#negocios">Muros para negocios</a><span class="sep">·</span><a href="/proyectos/">Todos los proyectos →</a>
-  </div>
-</nav>
 
 <!-- PROYECTOS -->
 <section class="f33-section" id="proyectos" style="background:var(--linen-100)">
@@ -1033,10 +1065,6 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 </section>
 
 <!-- BANDA PARALLAX -->
-<section class="px-frame">
-  <div class="px-img" data-bg="background-image:url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg');background-image:image-set(url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp') type('image/webp'), url('assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg') type('image/jpeg'))" data-parallax="0.14" role="img" aria-label="Comedor de Casa Quintas en Culiacán — proyecto de interiorismo de Faro 33 Studio"></div>
-  <div class="px-shade" aria-hidden="true"></div>
-</section>
 
 <!-- MANIFIESTO -->
 <section class="f33-section manifesto">
@@ -1210,7 +1238,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 </footer>
 
 <!-- WhatsApp flotante -->
-<a class="wa-fab" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener" aria-label="Hablar con el estudio por WhatsApp">
+<a class="wa-fab" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F" data-seg="general" target="_blank" rel="noopener" aria-label="Hablar con el estudio por WhatsApp">
   <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
   <span class="wa-label">Hablemos</span>
 </a>
@@ -1271,19 +1299,20 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 <script>
 /* Meta Pixel — WhatsApp clicks are the conversion signal (user leaves to the app). */
 (function(){
-  function fire(label){
+  function fire(label, seg){
+    var segmento = seg || 'general';
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
-      try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
-      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp', segmento: segmento }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){
     var t = e.target;
     var a = t && t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]') : null;
-    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
+    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp', a.getAttribute('data-seg'));
   }, true);
   window.f33TrackWhatsApp = fire; // callable from form handlers
 })();
@@ -1356,13 +1385,14 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   }
 
   /* scroll reveals */
-  var sels=['.espacios .esp-sub','.espacios .esp-all','.esp-tile','.sh .eyebrow-row','.sh h2','.sh-r','.serv-card','.manifesto blockquote','.manifesto-attr','.manifesto-side','.proc-step','.studio-body .eyebrow-row','.studio-body p','.studio-stat','.faq-item','.contact h2','.contact-lede','.contact-detail .item','.cform'];
+  var sels=['.seg-mark','.seg-head h2','.seg-lede','.esp-tile','.biz-card','.seg-more','.seg-foot','.sh .eyebrow-row','.sh h2','.sh-r','.serv-card','.manifesto blockquote','.manifesto-attr','.manifesto-side','.proc-step','.studio-body .eyebrow-row','.studio-body p','.studio-stat','.faq-item','.contact h2','.contact-lede','.contact-detail .item','.cform'];
   var els=[];
   sels.forEach(function(q){ document.querySelectorAll(q).forEach(function(el){ els.push(el); }); });
   var pDelays=[0,120,60,180];
   document.querySelectorAll('.pgrid .pcard').forEach(function(el,i){ el.style.transitionDelay=pDelays[i%4]+'ms'; els.push(el); });
   document.querySelectorAll('.studio-stat').forEach(function(el,i){ el.style.transitionDelay=(i*120)+'ms'; });
   document.querySelectorAll('.esp-tile').forEach(function(el,i){ el.style.transitionDelay=(i*70)+'ms'; });
+  document.querySelectorAll('.biz-card').forEach(function(el,i){ el.style.transitionDelay=(i*120)+'ms'; });
   els.forEach(function(el){ el.classList.add('rv'); });
   function inView(el){ var r=el.getBoundingClientRect(); return r.top < (window.innerHeight||0)*0.92; }
   if (reduce || !('IntersectionObserver' in window)){
@@ -1429,6 +1459,33 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll);
   fx();
+})();
+</script>
+<script>
+/* Embudo por segmento: el botón flotante cambia su mensaje según el bloque que el visitante eligió o tiene en pantalla */
+(function(){
+  var fab = document.querySelector('.wa-fab');
+  var msgs = {
+    residencial: 'https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20un%20proyecto%20residencial%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F',
+    comercial: 'https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20un%20proyecto%20para%20mi%20negocio.%20%C2%BFPodemos%20platicar%3F',
+    general: 'https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F'
+  };
+  function setSeg(seg){
+    if (!fab || !msgs[seg] || fab.getAttribute('data-seg') === seg) return;
+    fab.setAttribute('href', msgs[seg]);
+    fab.setAttribute('data-seg', seg);
+  }
+  document.querySelectorAll('[data-seg-pick]').forEach(function(btn){
+    btn.addEventListener('click', function(){ setSeg(btn.getAttribute('data-seg-pick')); });
+  });
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) setSeg(en.target.id); });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    ['residencial','comercial'].forEach(function(id){
+      var el = document.getElementById(id); if (el) io.observe(el);
+    });
+  }
 })();
 </script>
 <script src="/assets/motion.js" defer></script>

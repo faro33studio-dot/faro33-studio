@@ -7,7 +7,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 
 | URL | Rol |
 |---|---|
-| `/` | Home: hero → **Explora por espacio** (6 tiles → `/proyectos/?espacio=…`) → Servicios (2 cards) → **slider Especialidades** → **directorio de servicios (strip)** → Proyectos → banda parallax → Manifiesto → Proceso (timeline) → Estudio (stats) → FAQ → Contacto → Footer |
+| `/` | Home (embudo por segmento): hero con WhatsApp general y selector **Mi casa / Mi negocio** → bloque `#residencial` (6 espacios → `/proyectos/?espacio=…`, CTA WhatsApp residencial) → bloque `#comercial` (muros para negocios + Oshio como EJEMPLO, CTA WhatsApp comercial) → slider **Especialidades** → Proyectos → Manifiesto → Proceso → Estudio → FAQ → Contacto (un solo botón WhatsApp) → Footer. El botón flotante cambia su mensaje según el segmento elegido o en pantalla (`#residencial` / `#comercial`). Se quitaron Servicios, el directorio de especialidades y la banda parallax |
 | `/proyecto-integral/` | Qué es un proyecto integral (del brochure): punto de partida, comparación, alcance, 7 pasos, rangos de inversión con IVA (sección `#inversion`, se puede quitar completa), FAQ + FAQPage. Destino de "Interiorismo integral" en menú, strip, footer, slide y serv-card |
 | `/cocinas/` `/centros-de-entretenimiento/` `/acabados-de-pared/` | Landings de servicio (SEO + Meta Ads) |
 | `/acabados-de-pared/#negocios` | Ángulo comercial (muros para negocios) |
