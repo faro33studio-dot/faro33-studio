@@ -554,6 +554,13 @@ img { display: block; max-width: 100%; }
 .serv-card .serv-list li:last-child { border-bottom: 1px solid var(--sand-200); }
 .serv-card .serv-list .meta { font-family: var(--font-ui); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone-500); }
 .serv-card .serv-list{ padding-left:0; list-style:none; }
+.visit{ display:grid; grid-template-columns: 1fr 1.4fr; gap: clamp(28px,4vw,56px); align-items: stretch; }
+.visit-info{ display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+.visit-addr{ font-family: var(--font-display); font-size: clamp(22px,2.4vw,30px); line-height:1.3; color: var(--navy-800); margin: 0 0 16px; }
+.visit-meta{ font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone-500); margin: 0 0 28px; line-height:1.8; }
+.visit-frame{ position:relative; min-height: 380px; border:1px solid var(--sand-200); overflow:hidden; }
+.visit-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
+@media (max-width: 820px){ .visit{ grid-template-columns: 1fr; } .visit-frame{ min-height: 300px; } }
 .serv-card .serv-foot { display: flex; justify-content: space-between; align-items: baseline; }
 .serv-card .serv-foot a { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy-800); border-bottom: 1px solid var(--navy-800); padding-bottom: 4px; transition: gap var(--dur-fast); display: inline-flex; gap: 8px; }
 .serv-card .serv-foot a:hover { gap: 12px; }
@@ -1190,6 +1197,29 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 </section>
 
 <!-- FOOTER -->
+<!-- VISÍTANOS -->
+<section class="f33-section" id="visita" style="background:var(--linen-50)">
+  <div class="f33-container">
+    <div class="sh">
+      <div class="sh-l">
+        <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">Dónde estamos</span></div>
+        <h2>Visítanos <em>en Culiacán</em>.</h2>
+      </div>
+      <div class="sh-r">Agenda una visita por WhatsApp para recorrer el estudio y revisar muestras de materiales con el equipo.</div>
+    </div>
+    <div class="visit">
+      <div class="visit-info">
+        <p class="visit-addr">Blv. Pedro María Anaya 1142-E<br>Col. Chapultepec · Culiacán, Sinaloa</p>
+        <p class="visit-meta">Lun–Vie 10:00–17:00 · Sáb 10:00–14:00</p>
+        <a class="btn btn--secondary" href="https://maps.apple/p/NPRG4QVIWWLcYZ" target="_blank" rel="noopener">Abrir en Apple Maps <span class="arrow">→</span></a>
+      </div>
+      <div class="visit-frame">
+        <iframe title="Ubicación de Faro 33 Studio en Culiacán" src="https://embed.maps.apple.com/?ll=24.8172379,-107.3883888&z=17&q=Faro%2033%20Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="ftr">
   <div class="f33-container">
     <div class="ftr-grid">
