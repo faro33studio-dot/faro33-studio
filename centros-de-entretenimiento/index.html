@@ -354,11 +354,28 @@ gtag('config', 'G-91L2N1S9T3');
     display: inline-flex; align-items: center; gap: 12px;
     transition: all var(--dur-fast) var(--ease-out); cursor: pointer;
   }
-  .btn .arrow { transition: transform var(--dur-fast) var(--ease-out); }
-  .btn:hover .arrow { transform: translateX(4px); }
-  .btn--wa { background: #25D366; color: #fff; border-color: #25D366; }
+  .btn .arrow { display:inline-block; transition: transform 200ms var(--ease-out); }
+  @media (hover:hover){ .btn:hover .arrow { transform: translateX(4px); } }
+  .btn--wa { background: #25D366; color: #fff; border-color: #25D366; max-width:100%; min-width:0; transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), scale 120ms var(--ease-out); }
   .btn--wa:hover { background: #1ebd58; border-color: #1ebd58; }
   .btn--wa svg { width: 18px; height: 18px; }
+  /* P2 · Slide Text: ancho fijo por la etiqueta más larga, sin CLS */
+  .btn-wa-txt { display:inline-grid; width:max-content; max-width:100%; min-width:0; overflow:hidden; vertical-align:middle; }
+  .btn-wa-lbl { grid-area:1 / 1; display:block; min-width:0; white-space:nowrap; overflow-wrap:break-word; transition:transform 250ms var(--ease-out); }
+  .btn-wa-lbl--next { transform:translateY(100%); }
+  /* <640px: sin nowrap; el ancho se adapta al contenedor para partir el texto en 2 líneas y no desbordar a 320px. */
+  @media (max-width:639.98px){
+    .btn-wa-txt { width:auto; }
+    .btn-wa-lbl { white-space:normal; }
+  }
+  @media (hover:hover){
+    .btn--wa:hover .btn-wa-lbl--cur { transform:translateY(-100%); }
+    .btn--wa:hover .btn-wa-lbl--next { transform:translateY(0); }
+  }
+  .btn--wa:focus-visible .btn-wa-lbl--cur { transform:translateY(-100%); }
+  .btn--wa:focus-visible .btn-wa-lbl--next { transform:translateY(0); }
+  @media (prefers-reduced-motion: no-preference){ .btn--wa:active { scale:.97; } }
+  .btn--wa:focus-visible { outline:2px solid #fff; outline-offset:3px; box-shadow:0 0 0 5px rgba(10,27,54,.55); }
   .btn--ghost { color: #ece5d6; border-color: rgba(236,229,214,0.4); background: transparent; }
   .btn--ghost:hover { border-color: #ece5d6; background: rgba(236,229,214,0.06); }
 
@@ -379,7 +396,7 @@ gtag('config', 'G-91L2N1S9T3');
 
   /* ===================== Floating WhatsApp ===================== */
   .wa-fab {
-    position: fixed; right: 28px; bottom: 28px; z-index: 60;
+    position: fixed; right: 28px; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); z-index: 60;
     display: inline-flex; align-items: center; gap: 12px;
     background: #25D366; color: #fff;
     border-radius: 999px;
@@ -390,7 +407,7 @@ gtag('config', 'G-91L2N1S9T3');
   }
   .wa-fab:hover { transform: translateY(-2px); box-shadow: 0 18px 44px -10px rgba(37,211,102,0.7), 0 8px 20px -6px rgba(0,0,0,0.6); }
   .wa-fab svg { width: 26px; height: 26px; flex: 0 0 26px; }
-  @media (max-width: 640px) { .wa-fab { right: 18px; bottom: 18px; padding: 14px; } .wa-fab .lbl { display: none; } }
+  @media (max-width: 640px) { .wa-fab { right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); padding: 14px; } .wa-fab .lbl { display: none; } }
 
   /* ===================== Reveal ===================== */
 
@@ -710,7 +727,7 @@ gtag('config', 'G-91L2N1S9T3');
       <a class="btn btn--ghost" href="/centros-de-entretenimiento/configurador/">Diseña el tuyo <span class="arrow">→</span></a>
       <a class="btn btn--wa" id="wa-cta" href="#" target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm5.84 16.183c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
-        Cotizar por WhatsApp <span class="arrow">→</span>
+        <span class="btn-wa-txt"><span class="btn-wa-lbl btn-wa-lbl--cur">Cotizar por WhatsApp</span><span class="btn-wa-lbl btn-wa-lbl--next" aria-hidden="true">Abrir WhatsApp</span></span> <span class="arrow">→</span>
       </a>
       <a class="btn btn--ghost" href="/#contacto" onclick="try{fbq('track','Lead')}catch(e){}">Enviar un brief <span class="arrow">→</span></a>
     </div>
@@ -759,6 +776,12 @@ gtag('config', 'G-91L2N1S9T3');
 .related-projects .card:hover .name{ color:var(--brass-500); }
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy-800);color:#fff;padding:12px 20px;font-family:var(--font-ui);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:0}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion: reduce){
+  .btn:hover .arrow,
+  .btn--wa:hover .btn-wa-lbl--cur, .btn--wa:hover .btn-wa-lbl--next,
+  .btn--wa:focus-visible .btn-wa-lbl--cur, .btn--wa:focus-visible .btn-wa-lbl--next{ transform:none; }
+  .btn-wa-lbl--next{ visibility:hidden; }
+}
 </style>
 <script>
 (function(){

@@ -442,7 +442,7 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 
 <style>
 .wa-fab{
-  position:fixed; right: clamp(16px,3vw,28px); bottom: clamp(16px,3vw,28px); z-index:60;
+  position:fixed; right: clamp(16px,3vw,28px); bottom: calc(clamp(16px,3vw,28px) + env(safe-area-inset-bottom, 0px)); z-index:60;
   display:inline-flex; align-items:center; gap:10px;
   padding: 12px 18px 12px 14px;
   background: var(--navy-800); color:#fff;
