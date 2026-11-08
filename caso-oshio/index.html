@@ -128,7 +128,15 @@ a{ color:inherit; }
 .ej-badge{ display:inline-flex; align-items:center; gap:12px; font-family:var(--font-ui); font-size:clamp(11px,1.2vw,13px); letter-spacing:.26em; text-transform:uppercase; font-weight:700; color:var(--navy-950); background:var(--gold-300); padding:12px 18px; border-radius:2px; max-width:100%; }
 .ej-badge::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--navy-800); flex:0 0 auto; }
 .hero{ position:relative; min-height:100vh; color:#fff; display:flex; flex-direction:column; justify-content:flex-end; padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px); background:var(--navy-800); overflow:hidden; }
-.hero .bg{ position:absolute; inset:0; background-size:cover; background-position:center 40%; }
+.hero .bg{ position:absolute; inset:0; background-size:cover; background-position:center 40%; transform:translate3d(0,0,0); }
+/* La holgura vertical sólo existe cuando el parallax puede correr:
+   con JS activo y sin prefers-reduced-motion. En reposo no hay scale. */
+@media (prefers-reduced-motion: no-preference){
+  html.js .hero .bg{ top:-32px; bottom:-32px; will-change:transform; }
+}
+@media (max-width:768px) and (prefers-reduced-motion: no-preference){
+  html.js .hero .bg{ top:-12px; bottom:-12px; }
+}
 .hero::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(10,27,54,.6) 0%,rgba(10,27,54,.1) 30%,rgba(10,27,54,.1) 45%,rgba(10,27,54,.85) 85%,rgba(10,27,54,.96) 100%); }
 .hero > *:not(.bg){ position:relative; z-index:2; }
 .hero .top-meta{ position:absolute; top:clamp(84px,12vh,120px); left:clamp(24px,5vw,80px); right:clamp(24px,5vw,80px); z-index:2; }
@@ -229,7 +237,7 @@ p.body strong{ font-weight:700; color:var(--navy-800); }
 </nav>
 
 <header class="hero" id="main">
-  <div class="bg" style="background-image:url('assets/oshio-hero.jpg');background-image:image-set(url('assets/oshio-hero.webp') type('image/webp'), url('assets/oshio-hero.jpg') type('image/jpeg'))"></div>
+  <div class="bg" data-parallax="0.14" style="background-image:url('assets/oshio-hero.jpg');background-image:image-set(url('assets/oshio-hero.webp') type('image/webp'), url('assets/oshio-hero.jpg') type('image/jpeg'))"></div>
   <div class="top-meta"><span class="ej-badge">Ejemplo de proyecto comercial · Octubre 2026</span></div>
   <h1>OSHIO<em>.</em></h1>
   <p class="sub">Restaurante de 190 m² en Quilá, Sinaloa — un cambio de imagen sencillo, contado en <em>tapiz, madera y luz.</em></p>

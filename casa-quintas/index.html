@@ -117,20 +117,33 @@ a{ color:inherit; }
 
 /* ---------- HERO ---------- */
 .hero{
-  position:relative; min-height:100vh; color:#fff;
-  background:
-    linear-gradient(180deg,
-      rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.15) 28%,
-      rgba(10,27,54,0.05) 48%, rgba(10,27,54,0.82) 84%,
-      rgba(10,27,54,0.96) 100%),
-    url("assets/quintas-1-sala.jpg") center 50% / cover no-repeat;
-  background-image: linear-gradient(180deg,
-      rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.15) 28%,
-      rgba(10,27,54,0.05) 48%, rgba(10,27,54,0.82) 84%,
-      rgba(10,27,54,0.96) 100%), image-set(url("assets/quintas-1-sala.webp") type('image/webp'), url("assets/quintas-1-sala.jpg") type('image/jpeg'));
+  position:relative; min-height:100vh; color:#fff; overflow:hidden;
+  background:var(--navy-800);
   display:flex; flex-direction:column; justify-content:flex-end;
   padding: clamp(80px,15vh,160px) clamp(24px,5vw,80px) clamp(56px,10vh,112px);
 }
+.hero-bg{
+  position:absolute; inset:0; z-index:0;
+  background:url("assets/quintas-1-sala.jpg") center 50% / cover no-repeat;
+  background-image:image-set(url("assets/quintas-1-sala.webp") type('image/webp'), url("assets/quintas-1-sala.jpg") type('image/jpeg'));
+  transform:translate3d(0,0,0);
+}
+/* La holgura vertical sólo existe cuando el parallax puede correr:
+   con JS activo y sin prefers-reduced-motion. En reposo no hay scale. */
+@media (prefers-reduced-motion: no-preference){
+  html.js .hero-bg{ top:-32px; bottom:-32px; will-change:transform; }
+}
+@media (max-width:768px) and (prefers-reduced-motion: no-preference){
+  html.js .hero-bg{ top:-12px; bottom:-12px; }
+}
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(180deg,
+      rgba(10,27,54,0.55) 0%, rgba(10,27,54,0.15) 28%,
+      rgba(10,27,54,0.05) 48%, rgba(10,27,54,0.82) 84%,
+      rgba(10,27,54,0.96) 100%);
+}
+.hero > *:not(.hero-bg){ position:relative; z-index:2; }
 .hero .top-meta{
   position:absolute; top: clamp(80px,12vh,120px); left: clamp(24px,5vw,80px);
   display:flex; flex-direction:column; gap:18px;
@@ -615,6 +628,7 @@ html:not(.js) .cierre .photo, .cierre.is-near .photo{ background-image: linear-g
 
 <!-- 1 · HERO -->
 <header class="hero" id="main">
+  <div class="hero-bg" data-parallax="0.14" aria-hidden="true"></div>
   <div class="top-meta">
     <span class="studio-mark">Faro 33 · Studio</span>
     <span class="eyebrow" style="color:rgba(255,255,255,0.85)">Portafolio · 2024</span>
