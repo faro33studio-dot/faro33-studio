@@ -299,12 +299,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
   --shadow-2:         0 4px 14px rgba(19, 48, 92, 0.08);
   --shadow-3:         0 24px 48px -16px rgba(19, 48, 92, 0.18);
 
-  /* --- Motion ------------------------------------------------------ */
-  --ease-out:         cubic-bezier(0.2, 0.7, 0.2, 1);
-  --ease-in-out:      cubic-bezier(0.6, 0, 0.2, 1);
-  --dur-fast:         140ms;
-  --dur-base:         260ms;
-  --dur-slow:         520ms;
+  /* --- Motion: tokens compartidos en /assets/motion.css ------------- */
 }
 
 /* =========================================================================
@@ -820,6 +815,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta un proyecto de interiorismo?", "acceptedAnswer": {"@type": "Answer", "text": "Cada proyecto se cotiza a la medida. Tras un primer brief sin costo entregamos un presupuesto realista según el alcance, los metros y los materiales. Trabajamos desde una sola área hasta una casa completa."}}, {"@type": "Question", "name": "¿Trabajan fuera de Culiacán?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Estamos en Culiacán y desarrollamos proyectos en todo Sinaloa y estados vecinos. Para proyectos foráneos coordinamos visitas y dirección de obra según cada caso."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma un proyecto?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del alcance. Como referencia: diseño de 6 a 10 semanas y obra de 12 a 20 semanas, más una semana de instalación. Tomamos un proyecto integral a la vez por founder para cuidar cada etapa."}}, {"@type": "Question", "name": "¿Qué incluye un proyecto integral?", "acceptedAnswer": {"@type": "Answer", "text": "Levantamiento, distribución, planos ejecutivos, paleta de materiales, iluminación, ebanistería de obra, dirección de obra y curaduría final. Un solo equipo, del croquis a la entrega."}}, {"@type": "Question", "name": "¿Fabrican el mobiliario a la medida?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, en taller propio: carpintería, tapicería, herrería y acabados. Es un servicio complementario para clientes de interiorismo, coordinado por el mismo equipo que diseña el proyecto."}}, {"@type": "Question", "name": "¿Cómo empezamos?", "acceptedAnswer": {"@type": "Answer", "text": "Escríbenos por WhatsApp con un brief corto de tu espacio. Respondemos en un día hábil; si no somos el estudio indicado, lo decimos rápido y te recomendamos quién sí."}}]}</script>
+<link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/glass.css">
 </head>
 <body class="f33-page">
@@ -1033,7 +1029,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     <div class="sh">
       <div class="sh-l">
         <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">02 · Proyectos seleccionados</span></div>
-        <h2>Interiorismo entregado <em>recientemente</em>.</h2>
+        <h2 data-line-reveal>Interiorismo entregado <em>recientemente</em>.</h2>
       </div>
       <div class="sh-r">Proyectos integrales acompañados directamente por uno de los founders — del primer brief a la última visita.</div>
     </div>
@@ -1093,7 +1089,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     <div class="sh">
       <div class="sh-l">
         <div class="eyebrow-row"><span class="f33-rule"></span><span class="f33-eyebrow">03 · Proceso</span></div>
-        <h2>Seis etapas, un proyecto a la vez.</h2>
+        <h2 data-line-reveal>Seis etapas, un proyecto a la vez.</h2>
       </div>
       <div class="sh-r">Trabajamos con un proyecto integral a la vez por founder. El proceso es el mismo para residencial, comercial o remodelación.</div>
     </div>

@@ -4,6 +4,7 @@
    2. Estado "scrolled" del header fijo (.nav.is-scrolled).
    3. Carga diferida: [data-bg] (estilo inline) y section.is-near (reglas CSS gateadas).
    4. Videos: solo se descargan y reproducen cuando están en pantalla ([data-autoplay]).
+   5. Reveal por línea de titulares marcados con [data-line-reveal].
    Respeta prefers-reduced-motion en todo. */
 (function () {
   'use strict';
@@ -151,7 +152,107 @@
     }, 2500);
   }
 
-  function init() { lazyBackgrounds(); lazyVideos(); reveals(); }
+  /* ---------- reveal por línea de titulares ---------- */
+  function lineReveals() {
+    var heads = [].slice.call(doc.querySelectorAll('[data-line-reveal]'));
+    if (!heads.length || reduce || !hasIO) return;
+    if (!doc.createTreeWalker || !doc.createRange) return;
+
+    var lineIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        lineIO.unobserve(e.target);
+        if (e.target.__lrShow) e.target.__lrShow();
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+
+    function setup(head) {
+      if (head.__lr) return;
+      head.__lr = true;
+      var original = head.innerHTML;
+
+      /* palabras en spans para medir los renglones reales */
+      var walker = doc.createTreeWalker(head, 4, null, false);
+      var texts = [];
+      while (walker.nextNode()) texts.push(walker.currentNode);
+      texts.forEach(function (node) {
+        if (!/\S/.test(node.nodeValue)) return;
+        var frag = doc.createDocumentFragment();
+        node.nodeValue.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(doc.createTextNode(part)); return; }
+          var w = doc.createElement('span');
+          w.className = 'lr-w';
+          w.textContent = part;
+          frag.appendChild(w);
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+
+      var words = [].slice.call(head.querySelectorAll('.lr-w'));
+      var lines = [], line = [], top = null;
+      words.forEach(function (w) {
+        var t = w.getBoundingClientRect().top;
+        if (top === null || Math.abs(t - top) > 2) {
+          if (line.length) lines.push(line);
+          line = [w];
+          top = t;
+        } else line.push(w);
+      });
+      if (line.length) lines.push(line);
+      if (!lines.length) { head.innerHTML = original; return; }
+
+      lines.forEach(function (group, i) {
+        var first = group[0], last = group[group.length - 1];
+        var topChild = first;
+        while (topChild.parentNode && topChild.parentNode !== head) topChild = topChild.parentNode;
+        var marker = doc.createComment('lr');
+        head.insertBefore(marker, topChild);
+        var range = doc.createRange();
+        range.setStartBefore(first);
+        range.setEndAfter(last);
+        var frag = range.extractContents();
+        var lineEl = doc.createElement('span');
+        lineEl.className = 'lr-line';
+        var inner = doc.createElement('span');
+        inner.className = 'lr-inner';
+        inner.style.transitionDelay = (i * 80) + 'ms';
+        inner.appendChild(frag);
+        lineEl.appendChild(inner);
+        head.insertBefore(lineEl, marker);
+        head.removeChild(marker);
+      });
+
+      head.classList.add('lr-ready');
+      var total = (lines.length - 1) * 80 + 760;
+      var shown = false;
+      function show() {
+        if (shown) return;
+        shown = true;
+        head.classList.add('lr-in');
+        /* devuelve el marcado original: la página queda igual que sin JS */
+        setTimeout(function () {
+          head.innerHTML = original;
+          head.classList.remove('lr-ready', 'lr-in');
+        }, total);
+      }
+      head.__lrShow = show;
+
+      var vh = window.innerHeight || root.clientHeight;
+      var r = head.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < vh * 0.92) {
+        requestAnimationFrame(function () { requestAnimationFrame(show); });
+      } else {
+        lineIO.observe(head);
+      }
+    }
+
+    function run() { heads.forEach(setup); }
+    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(run).catch(run);
+    else run();
+  }
+
+  function init() { lazyBackgrounds(); lazyVideos(); reveals(); lineReveals(); }
   if (doc.readyState === 'complete') init();
   else doc.addEventListener('DOMContentLoaded', init);
 })();

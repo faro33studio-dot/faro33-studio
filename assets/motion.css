@@ -1,0 +1,47 @@
+/* Faro 33 — tokens de movimiento compartidos.
+   Los valores viven aquí una sola vez; las páginas los consumen con var(). */
+:root{
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --ease-in-out:cubic-bezier(.6,0,.2,1);
+  --ease-spring:cubic-bezier(.3,1.35,.5,1);
+  --dur-fast:160ms;
+  --dur-base:280ms;
+  --dur-slow:560ms;
+  --dur-reveal:700ms;
+}
+
+/* Reveal por línea de titulares (H1/H2).
+   Solo se activa cuando motion.js ya partió el texto: sin JS no se oculta nada. */
+html.js .lr-ready .lr-line{
+  display:block;
+  overflow:hidden;
+  margin-bottom:-.18em;
+}
+html.js .lr-ready .lr-inner{
+  display:block;
+  padding-bottom:.18em;
+  transform:translateY(100%);
+  transition:transform var(--dur-reveal) var(--ease-out);
+  will-change:transform;
+}
+html.js .lr-ready.lr-in .lr-inner{
+  transform:translateY(0);
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.001ms!important;
+    scroll-behavior:auto!important;
+  }
+  html.js .lr-ready .lr-inner{
+    transform:none!important;
+    transition:none!important;
+  }
+  .mo{
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important;
+  }
+}
