@@ -181,10 +181,12 @@ gtag('config', 'G-91L2N1S9T3');
     background:#25D366; color:#fff; font-family:var(--font-ui); font-size:12px; font-weight:600;
     letter-spacing:0.18em; text-transform:uppercase; padding:16px 26px; border-radius:2px; border:none;
     box-shadow: 0 8px 28px -8px rgba(37,211,102,0.5);
-    transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+    transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), scale 120ms var(--ease-out);
   }
   .wa-btn:hover{ background:#1ebd58; transform:translateY(-2px); }
   .wa-btn svg{ width:18px; height:18px; flex:0 0 18px; }
+  @media (prefers-reduced-motion: no-preference){ .wa-btn:active{ scale:.97; } }
+  .wa-btn:focus-visible{ outline:2px solid #fff; outline-offset:3px; box-shadow:0 0 0 5px rgba(10,27,54,.55); }
   .cta-btns{ display:flex; gap:12px; flex-wrap:wrap; }
   .btn-3d{
     display:inline-flex; align-items:center; justify-content:center; gap:10px;

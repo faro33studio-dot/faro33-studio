@@ -67,6 +67,11 @@ html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost){
   html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost):hover{ scale:1.04; }
 }
 html :is(.lg-press, .wa-fab, .ls-arrow, .hero .btn--on-deep-ghost):active{ scale:.95; transition-duration:.12s; }
+/* P2: presión del FAB de WhatsApp a .97 (el :is de arriba comparte .95 con otros controles) */
+@media (prefers-reduced-motion: no-preference){
+  html body .wa-fab.wa-fab:active{ scale:.97; }
+}
+html body .wa-fab.wa-fab:focus-visible{ outline:2px solid #fff; outline-offset:3px; box-shadow:0 0 0 5px rgba(10,27,54,.55), var(--lg-shadow); }
 
 /* ---------- componentes ---------- */
 
