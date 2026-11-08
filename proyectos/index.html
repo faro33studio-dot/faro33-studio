@@ -312,6 +312,10 @@ html.js .rv.in{ opacity:1; transform:none; }
 .pc .im{ aspect-ratio:4/3; background-size:cover; background-position:center; position:relative; overflow:hidden; background-color:var(--sand-200); transition: transform .7s var(--ease-out); }
 .pc .im::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(19,48,92,.35), transparent 55%); pointer-events:none; }
 .pc:hover .im{ transform: translateY(-4px); }
+@media (hover:hover) and (pointer:fine){
+  .pc{ perspective:900px; }
+  .pc .im{ transition: transform 280ms var(--ease-out); }
+}
 .pc .im .tg{ position:absolute; top:14px; left:14px; z-index:2; font-family:var(--font-ui); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#fff; background:rgba(19,48,92,.6); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); padding:7px 12px; }
 .pc .meta{ font-family:var(--font-ui); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass-500); font-weight:600; }
 .pc .nm{ font-family:var(--font-display); font-weight:400; font-size: clamp(24px,2.2vw,28px); line-height:1.1; color:var(--navy-800); margin:0; }
@@ -443,6 +447,31 @@ html.js .rv.in{ opacity:1; transform:none; }
   chips.forEach(function(c){ c.addEventListener('click',function(){ apply(c.getAttribute('data-f'),true); }); });
   var q=(location.search.match(/[?&]espacio=([a-z]+)/)||[])[1];
   if(q&&chips.some(function(c){ return c.getAttribute('data-f')===q; })) apply(q,false);
+})();
+</script>
+<script>
+/* Tilt sutil de las tarjetas — solo puntero fino con hover */
+(function(){
+  var fine = window.matchMedia && matchMedia('(hover:hover) and (pointer:fine)').matches;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!fine || reduce) return;
+  var MAX = 3;
+  [].forEach.call(document.querySelectorAll('.pc .im'), function(el){
+    el.addEventListener('pointermove', function(e){
+      var r = el.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      var rx = -py * MAX * 2, ry = px * MAX * 2;
+      var mag = Math.sqrt(rx * rx + ry * ry);
+      if (mag > MAX){ rx = rx * MAX / mag; ry = ry * MAX / mag; }
+      el.style.transition = 'transform 110ms linear';
+      el.style.transform = 'translateY(-4px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
+    });
+    el.addEventListener('pointerleave', function(){
+      el.style.transition = 'transform 280ms cubic-bezier(.2,.7,.2,1)';
+      el.style.transform = '';
+    });
+  });
 })();
 </script>
 <script src="/assets/motion.js" defer></script>

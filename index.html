@@ -796,10 +796,6 @@ html.js .hero.ready .hero-fade{ opacity:1; transform:none; }
 .hdr-nav a:not(.hdr-cta){ position:relative; }
 .hdr-nav a:not(.hdr-cta)::after{ content:""; position:absolute; left:0; bottom:2px; height:1px; width:100%; background:currentColor; transform:scaleX(0); transform-origin:left; transition:transform 320ms var(--ease-out); }
 .hdr-nav a:not(.hdr-cta):hover::after{ transform:scaleX(1); }
-/* Full-bleed parallax band */
-.px-frame{ position:relative; overflow:hidden; height:clamp(320px,62vh,720px); }
-.px-frame .px-img{ position:absolute; inset:-16% 0; background-size:cover; background-position:center; will-change:transform; }
-.px-frame .px-shade{ position:absolute; inset:0; background:linear-gradient(to top, rgba(10,27,54,0.55), transparent 60%); }
 /* Proceso timeline (design #05) */
 .proc-wrap{ position:relative; max-width:780px; }
 .proc-line{ position:absolute; left:19px; top:8px; bottom:8px; width:1px; background:var(--sand-300); }
@@ -1491,11 +1487,10 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     }
   }
 
-  /* scroll fx: hero parallax, band parallax, proc line draw */
+  /* scroll fx: hero parallax, proc line draw */
   var fill=document.querySelector('[data-proc-fill]');
   if (reduce){ if(fill) fill.style.transform='scaleY(1)'; return; }
   var heroBg=document.getElementById('heroBg');
-  var bands=document.querySelectorAll('[data-parallax]');
   var proc=document.querySelector('[data-proc]');
   var ticking=false;
   function fx(){
@@ -1505,13 +1500,6 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
       var r=hero.getBoundingClientRect();
       if (r.bottom>0){ var shift=Math.min(0,r.top)*-0.18; heroBg.style.transform='translateY('+shift+'px) scale(1.06)'; }
     }
-    bands.forEach(function(el){
-      var f=el.parentElement, r=f.getBoundingClientRect();
-      if (r.bottom<0||r.top>vh) return;
-      var sp=parseFloat(el.getAttribute('data-parallax'))||0.14;
-      var off=(r.top + r.height/2 - vh/2)*sp;
-      el.style.transform='translateY('+(-off)+'px)';
-    });
     if (proc && fill){
       var r2=proc.getBoundingClientRect();
       var start=vh*0.72, end=vh*0.35;
