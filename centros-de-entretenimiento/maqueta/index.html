@@ -123,7 +123,8 @@ gtag('config', 'G-91L2N1S9T3');
   .ch{ background:none; border:0; padding:6px 0; text-align:left; cursor:pointer; color:var(--muted); font-family:var(--font-display); font-size:clamp(17px,1.7vw,25px); display:flex; align-items:baseline; gap:8px; transition:color .3s; }
   .ch .n{ font-style:italic; font-size:0.6em; }
   .ch.on, .ch:hover{ color:var(--ink); }
-  .ch.on .n{ color:var(--brass-500); }
+  .ch.on .n{ color:var(--brass-700); }
+  .stage.is-night .ch.on .n{ color:var(--brass-400); }
   .bar{ position:relative; height:26px; cursor:pointer; touch-action:none; outline:none; }
   .bar::before{ content:""; position:absolute; left:0; right:0; top:50%; height:1px; background:var(--line); }
   .bar:focus-visible{ outline:2px solid var(--brass-500); outline-offset:2px; border-radius:4px; }
@@ -192,7 +193,7 @@ gtag('config', 'G-91L2N1S9T3');
   .info h2 em{ font-style:italic; color:var(--accent); }
   .moments{ list-style:none; padding:0; margin:clamp(28px,4vw,44px) 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; border-top:var(--hairline); padding-top:28px; }
   .moments b{ display:block; font-family:var(--font-display); font-size:22px; font-weight:400; margin-bottom:8px; }
-  .moments b i{ font-size:0.62em; color:var(--brass-500); margin-right:6px; }
+  .moments b i{ font-size:0.62em; color:var(--brass-700); margin-right:6px; }
   .moments p{ margin:0; font-size:15.5px; line-height:1.65; color:var(--stone-700); }
   .info .note{ margin:32px 0 0; max-width:62ch; font-size:17px; line-height:1.65; color:var(--fg); }
   .design-note{ display:none; }
@@ -223,6 +224,11 @@ gtag('config', 'G-91L2N1S9T3');
 <script type="importmap">
 { "imports": { "three": "/assets/vendor/three/three.module.min.js", "three/addons/": "/assets/vendor/three/addons/" } }
 </script>
+<style>
+/* P3b: texto navy en boton verde */
+.cta-wa, .cta-wa:hover, .btn-wa, .btn-wa:hover { color:#0A1B36; }
+.cta-wa svg, .btn-wa svg { color:#fff; }
+</style>
 </head>
 <body>
 

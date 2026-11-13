@@ -252,6 +252,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 
   /* Metallic accents — picked from project photography (brass, gold leaf) */
   --brass-500:        #B8924A;   /* primary metallic accent                 */
+  --brass-700:        #856628;
   --brass-400:        #C9A968;   /* lighter brass                           */
   --gold-300:         #E2C99A;   /* warm gold tint                          */
   --champagne-100:    #F5EBD6;   /* very pale metallic, surface tone        */
@@ -498,7 +499,7 @@ img { display: block; max-width: 100%; }
   color: var(--stone-500);
 }
 .f33-eyebrow--white { color: rgba(255,255,255,0.78); }
-.f33-eyebrow--brass { color: var(--brass-500); }
+.f33-eyebrow--brass { color: var(--brass-400); }
 
 .eyebrow-row { display: flex; align-items: center; gap: 18px; }
 
@@ -590,7 +591,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 900px) { .serv-grid { grid-template-columns: 1fr; } }
 .serv-card { background: var(--linen-100); padding: 56px 48px; display: flex; flex-direction: column; gap: 28px; min-height: 540px; position: relative; overflow: hidden; transition: background var(--dur-base) var(--ease-out); }
 .serv-card:hover { background: var(--linen-50); }
-.serv-card .num { font-family: var(--font-display-condensed); font-style: italic; font-weight: 400; font-size: 18px; color: var(--brass-500); letter-spacing: 0.04em; }
+.serv-card .num { font-family: var(--font-display-condensed); font-style: italic; font-weight: 400; font-size: 18px; color: var(--brass-700); letter-spacing: 0.04em; }
 .serv-card h3 { font-family: var(--font-display); font-weight: 400; font-size: 44px; line-height: 1.05; letter-spacing: -0.015em; color: var(--navy-800); margin: 0; text-wrap: balance; }
 .serv-card h3 em { font-style: italic; }
 .serv-card p { font-family: var(--font-body); font-size: 17px; line-height: 1.6; color: var(--stone-700); margin: 0; max-width: 42ch; }
@@ -656,7 +657,7 @@ img { display: block; max-width: 100%; }
 .proc-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--sand-200); }
 .proc-row { display: grid; grid-template-columns: 80px 220px 1fr 140px; gap: 40px; padding: 36px 0; border-bottom: 1px solid var(--sand-200); align-items: baseline; transition: background var(--dur-fast); }
 .proc-row:hover { background: var(--linen-100); }
-.proc-row .n { font-family: var(--font-display-condensed); font-style: italic; font-size: 22px; color: var(--brass-500); }
+.proc-row .n { font-family: var(--font-display-condensed); font-style: italic; font-size: 22px; color: var(--brass-700); }
 .proc-row .t { font-family: var(--font-display); font-weight: 700; font-size: 30px; color: var(--navy-800); margin: 0; letter-spacing: -0.01em; }
 .proc-row .d { font-family: var(--font-body); font-size: 16px; color: var(--stone-700); line-height: 1.6; margin: 0; max-width: 56ch; }
 .proc-row .dur { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone-500); text-align: right; }
@@ -675,7 +676,7 @@ html:not(.js) .studio-portrait, #estudio.is-near .studio-portrait { background-i
 .studio-body p:first-of-type::first-letter { font-family: var(--font-display); font-weight: 700; font-size: 72px; line-height: 0.85; float: left; padding: 8px 16px 0 0; color: var(--navy-800); }
 .studio-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--sand-200); }
 .studio-stat .v { font-family: var(--font-display); font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -0.02em; color: var(--navy-800); }
-.studio-stat .v em { font-style: italic; color: var(--brass-500); }
+.studio-stat .v em { font-style: italic; color: var(--brass-700); }
 .studio-stat .l { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone-500); margin-top: 8px; }
 
 /* ============ Contact ============ */
@@ -759,7 +760,7 @@ html.js .ls-slide--3d.is-active .ls-bg{ animation:none; }
 @media (min-width:701px){ .lineshow.ls-on-light .ls-dots button::before{ background:rgba(19,48,92,0.3); } .lineshow.ls-on-light .ls-dots button.on::before{ background:var(--navy-800); } }
 @media (max-width:700px){
   .ls-slide--3d::after{ background:linear-gradient(0deg, rgba(10,27,54,0.94) 0%, rgba(10,27,54,0.72) 40%, rgba(10,27,54,0) 62%); }
-  .lineshow.ls-on-light .ls-count{ color:rgba(19,48,92,0.75); } .lineshow.ls-on-light .ls-count b{ color:var(--brass-500); }
+  .lineshow.ls-on-light .ls-count{ color:rgba(19,48,92,0.75); } .lineshow.ls-on-light .ls-count b{ color:var(--brass-700); }
   /* con 5 diapositivas los puntos chocarían con el botón: suben a la fila del contador */
   .ls-dots{ top:clamp(96px,12vh,128px); bottom:auto; right:clamp(12px,4vw,24px); margin-top:-7px; }
   .lineshow.ls-on-light .ls-dots button::before{ background:rgba(19,48,92,0.3); } .lineshow.ls-on-light .ls-dots button.on::before{ background:var(--navy-800); }
@@ -879,10 +880,10 @@ html.js .hero.ready .hero-fade{ opacity:1; transform:none; }
 .proc-line i{ position:absolute; inset:0; background:var(--brass-500); transform:scaleY(0); transform-origin:top; }
 .proc-step{ display:grid; grid-template-columns:40px 1fr; gap:28px; align-items:start; padding:26px 0; }
 .proc-num{ font-family:var(--font-display); font-weight:700; font-size:20px; color:var(--navy-800); width:40px; height:40px; border:1px solid var(--sand-300); display:flex; align-items:center; justify-content:center; background:var(--linen-50); position:relative; z-index:1; transition:border-color .5s var(--ease-out) .2s, color .5s var(--ease-out) .2s; }
-html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--brass-500); }
+html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--brass-700); }
 .proc-h{ font-family:var(--font-display); font-weight:700; font-size:24px; color:var(--navy-800); margin:4px 0 8px; }
 .proc-b{ font-family:var(--font-body); font-size:16px; line-height:1.55; color:var(--stone-700); max-width:52ch; margin:0; }
-.proc-dur{ margin-top:10px; font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass-500); }
+.proc-dur{ margin-top:10px; font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass-700); }
 @media (prefers-reduced-motion: reduce){
   html.js .rv, html.js .hero-fade, html.js .hero-line>span{ opacity:1 !important; transform:none !important; transition:none !important; }
   .beam{ display:none; }
@@ -899,6 +900,11 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta un proyecto de interiorismo?", "acceptedAnswer": {"@type": "Answer", "text": "Cada proyecto se cotiza a la medida. Tras un primer brief sin costo entregamos un presupuesto realista según el alcance, los metros y los materiales. Trabajamos desde una sola área hasta una casa completa."}}, {"@type": "Question", "name": "¿Trabajan fuera de Culiacán?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Estamos en Culiacán y desarrollamos proyectos en todo Sinaloa y estados vecinos. Para proyectos foráneos coordinamos visitas y dirección de obra según cada caso."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma un proyecto?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del alcance. Como referencia: diseño de 6 a 10 semanas y obra de 12 a 20 semanas, más una semana de instalación. Tomamos un proyecto integral a la vez por founder para cuidar cada etapa."}}, {"@type": "Question", "name": "¿Qué incluye un proyecto integral?", "acceptedAnswer": {"@type": "Answer", "text": "Levantamiento, distribución, planos ejecutivos, paleta de materiales, iluminación, ebanistería de obra, dirección de obra y curaduría final. Un solo equipo, del croquis a la entrega."}}, {"@type": "Question", "name": "¿Fabrican el mobiliario a la medida?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, en taller propio: carpintería, tapicería, herrería y acabados. Es un servicio complementario para clientes de interiorismo, coordinado por el mismo equipo que diseña el proyecto."}}, {"@type": "Question", "name": "¿Cómo empezamos?", "acceptedAnswer": {"@type": "Answer", "text": "Escríbenos por WhatsApp con un brief corto de tu espacio. Respondemos en un día hábil; si no somos el estudio indicado, lo decimos rápido y te recomendamos quién sí."}}]}</script>
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/glass.css">
+<style>
+/* P3b: texto navy en boton verde */
+.btn--wa, .btn--wa:hover { color:#0A1B36; }
+.btn--wa svg { color:#fff; }
+</style>
 </head>
 <body class="f33-page">
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -956,13 +962,13 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 .seg-head{ display:flex; flex-direction:column; align-items:center; text-align:center; gap: 22px; max-width: 760px; margin: 0 auto clamp(44px,5vw,64px); }
 .seg-mark{ display:flex; align-items:center; gap:16px; font-family:var(--font-ui); font-size:11px; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; color:var(--stone-500); }
 .seg-mark::before, .seg-mark::after{ content:""; width:40px; height:1px; background:var(--sand-300); }
-.seg-mark b{ font-family:var(--font-display-condensed); font-style:italic; font-weight:400; font-size:17px; letter-spacing:0.04em; text-transform:none; color:var(--brass-500); }
+.seg-mark b{ font-family:var(--font-display-condensed); font-style:italic; font-weight:400; font-size:17px; letter-spacing:0.04em; text-transform:none; color:var(--brass-700); }
 .seg-head h2{ font-family:var(--font-display); font-weight:400; font-size: clamp(38px,5.2vw,64px); line-height:1.04; letter-spacing:-0.015em; margin:0; color:var(--navy-800); text-wrap:balance; }
 .seg-head h2 em{ font-style:italic; }
 .seg-lede{ font-family:var(--font-body); font-size: clamp(16px,1.4vw,18px); line-height:1.6; color:var(--stone-700); margin:0; max-width:54ch; text-wrap:pretty; }
 .seg-more{ display:flex; justify-content:center; margin-top: clamp(24px,3vw,32px); }
 .seg-more a{ font-family:var(--font-ui); font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--navy-800); text-decoration:none; display:inline-flex; align-items:center; gap:10px; min-height:44px; border-bottom:1px solid transparent; transition: color var(--dur-fast) var(--ease-out); }
-.seg-more a:hover{ color:var(--brass-500); }
+.seg-more a:hover{ color:var(--brass-700); }
 .seg-foot{ display:flex; flex-direction:column; align-items:center; gap:14px; margin-top: clamp(28px,3.5vw,40px); padding-top: clamp(36px,4.5vw,48px); border-top:1px solid var(--sand-200); text-align:center; }
 .seg-foot .btn{ padding:18px 32px; }
 .seg-note{ margin:0; font-family:var(--font-ui); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--stone-500); }
@@ -991,12 +997,12 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 .biz-card:hover .biz-img img{ transform: scale(1.04); }
 .biz-badge{ position:absolute; top:16px; left:16px; z-index:1; font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--navy-950); background:var(--gold-300); padding:7px 12px; }
 .biz-body{ display:flex; flex-direction:column; gap:14px; padding: clamp(24px,3vw,40px); flex:1; }
-.biz-kicker{ font-family:var(--font-display-condensed); font-style:italic; font-size:17px; letter-spacing:0.04em; color:var(--brass-500); }
+.biz-kicker{ font-family:var(--font-display-condensed); font-style:italic; font-size:17px; letter-spacing:0.04em; color:var(--brass-700); }
 .biz-body h3{ font-family:var(--font-display); font-weight:400; font-size: clamp(28px,2.8vw,38px); line-height:1.08; letter-spacing:-0.01em; margin:0; color:var(--navy-800); text-wrap:balance; }
 .biz-body h3 em{ font-style:italic; }
 .biz-body p{ font-family:var(--font-body); font-size:16px; line-height:1.6; color:var(--stone-700); margin:0; max-width:46ch; }
 .biz-link{ margin-top:auto; padding-top:8px; font-family:var(--font-ui); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--navy-800); display:inline-flex; align-items:center; gap:8px; min-height:44px; }
-.biz-card:hover .biz-link{ color:var(--brass-500); }
+.biz-card:hover .biz-link{ color:var(--brass-700); }
 </style>
 <section class="seg seg--casa" id="residencial" data-seg="residencial" aria-labelledby="seg-casa-t">
   <div class="f33-container">

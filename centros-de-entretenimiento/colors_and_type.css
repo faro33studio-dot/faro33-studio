@@ -107,6 +107,7 @@
 
   /* Metallic accents — picked from project photography (brass, gold leaf) */
   --brass-500:        #B8924A;   /* primary metallic accent                 */
+  --brass-700:        #856628;
   --brass-400:        #C9A968;   /* lighter brass                           */
   --gold-300:         #E2C99A;   /* warm gold tint                          */
   --champagne-100:    #F5EBD6;   /* very pale metallic, surface tone        */
