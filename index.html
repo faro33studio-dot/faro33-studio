@@ -25,9 +25,10 @@ gtag('config', 'G-91L2N1S9T3');
 <title>Diseño de interiores en Culiacán — Faro 33 Studio</title>
 <meta name="description" content="Estudio de proyectos integrales de interiorismo en Culiacán, Sinaloa. Espacios que guían — como un faro al final de la bahía.">
 <link rel="canonical" href="https://faro33studio.com/">
-<link rel="icon" href="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png">
+<link rel="icon" type="image/png" href="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b-32.png">
 <link rel="apple-touch-icon" href="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png">
-<link rel="preload" as="image" type="image/webp" href="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp" imagesrcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp" imagesrcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-1200.webp 1200w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/home/4d967a70-ae78-49e6-9bf6-d7663052c2e6-latin.woff2" crossorigin>
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://faro33studio.com/">
@@ -111,6 +112,14 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 }
 @font-face {
   font-family: "Bodoni MT";
+  src: url("assets/home/4d967a70-ae78-49e6-9bf6-d7663052c2e6-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A1, U+00A9-00AA, U+00B0, U+00B2, U+00B7, U+00BA, U+00BF-00FF, U+2013-2014, U+2018-2019, U+201C-201D, U+2026, U+2039-203A, U+20AC, U+2122, U+2264-2265;
+}
+@font-face {
+  font-family: "Bodoni MT";
   src: url("assets/home/c76eb239-ac22-4440-bb11-60ee5c0f0bb4.woff2") format("woff2"), url("assets/home/c76eb239-ac22-4440-bb11-60ee5c0f0bb4.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -118,10 +127,26 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 }
 @font-face {
   font-family: "Bodoni MT";
+  src: url("assets/home/c76eb239-ac22-4440-bb11-60ee5c0f0bb4-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A1, U+00A9-00AA, U+00B0, U+00B2, U+00B7, U+00BA, U+00BF-00FF, U+2013-2014, U+2018-2019, U+201C-201D, U+2026, U+2039-203A, U+20AC, U+2122, U+2264-2265;
+}
+@font-face {
+  font-family: "Bodoni MT";
   src: url("assets/home/a49ac2bd-e1a8-4d3e-9750-ba7039325c3c.woff2") format("woff2"), url("assets/home/a49ac2bd-e1a8-4d3e-9750-ba7039325c3c.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "Bodoni MT";
+  src: url("assets/home/a49ac2bd-e1a8-4d3e-9750-ba7039325c3c-latin.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A1, U+00A9-00AA, U+00B0, U+00B2, U+00B7, U+00BA, U+00BF-00FF, U+2013-2014, U+2018-2019, U+201C-201D, U+2026, U+2039-203A, U+20AC, U+2122, U+2264-2265;
 }
 @font-face {
   font-family: "Bodoni MT";
@@ -171,6 +196,28 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
   font-weight: 900;
   font-style: italic;
   font-display: swap;
+}
+
+/* Reserva métrica: evita que el H1 cambie de línea durante el swap */
+@font-face {
+  font-family: "Bodoni Fallback";
+  src: local("Times New Roman"), local("Liberation Serif"), local("Nimbus Roman"), local("Tinos");
+  font-weight: 400;
+  font-style: normal;
+  size-adjust: 104.5%;
+  ascent-override: 91.7%;
+  descent-override: 28.22%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Bodoni Fallback";
+  src: local("Times New Roman Italic"), local("Liberation Serif Italic"), local("Nimbus Roman Italic");
+  font-weight: 400;
+  font-style: italic;
+  size-adjust: 97.2%;
+  ascent-override: 91.7%;
+  descent-override: 28.22%;
+  line-gap-override: 0%;
 }
 
 /* =========================================================================
@@ -491,7 +538,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 900px) { .hero-inner { padding: 0 24px 72px; } }
 
 .hero-tag { font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.78); margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
-.hero h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(56px, min(9.5vw, 12.5vh), 140px); line-height: 0.97; letter-spacing: -0.025em; margin: 0 0 32px; max-width: 16ch; text-wrap: balance; }
+.hero h1 { font-family: "Bodoni MT", "Bodoni Fallback", "Bodoni Moda", "Bodoni 72", "Didot", serif; font-weight: 400; font-size: clamp(56px, min(9.5vw, 12.5vh), 140px); line-height: 0.97; letter-spacing: -0.025em; margin: 0 0 32px; max-width: 16ch; text-wrap: balance; }
 @media (min-width: 901px) { .hero h1 { max-width: none; } .hero h1 .hero-line > span { white-space: nowrap; } }
 .hero h1 em { font-style: italic; font-weight: 400; }
 .hero h1 .ampersand { font-style: italic; color: var(--brass-400); padding: 0 0.05em; }
@@ -859,7 +906,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 <header class="hdr hdr--top" id="hdr">
   <div class="hdr-inner">
     <a class="hdr-mark" href="#top">
-      <span class="logo-plate"><img src="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt="Faro 33 Studio"></span>
+      <span class="logo-plate"><img src="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b-96.webp" alt="Faro 33 Studio" width="96" height="96"></span>
       <span class="markline"><span>FARO 33</span><small>Interiorismo &amp; Diseño</small></span>
     </a>
     <nav class="hdr-nav">
@@ -876,8 +923,8 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 <section class="hero" id="top"><span id="main"></span>
   <div class="hero-bg" id="heroBg">
     <picture>
-      <source id="heroSource" type="image/webp" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp 1800w" sizes="100vw">
-      <img class="hero-img" id="heroImg" src="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.jpg" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.jpg 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg 1800w" sizes="100vw" width="1800" height="1350" alt="" fetchpriority="high">
+      <source id="heroSource" type="image/webp" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.webp 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-1200.webp 1200w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.webp 1800w" sizes="100vw">
+      <img class="hero-img" id="heroImg" src="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.jpg" srcset="assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-900.jpg 900w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0-1200.jpg 1200w, assets/home/a84fa904-891f-4d7b-9d41-b147669c33d0.jpg 1800w" sizes="100vw" width="1800" height="1350" alt="" fetchpriority="high">
     </picture>
     <img class="hero-bg-next" id="heroBgNext" alt="" aria-hidden="true" decoding="async">
   </div>
@@ -1114,7 +1161,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 <section class="f33-section manifesto">
   <div class="manifesto-inner">
     <div class="manifesto-side">
-      <div class="manifesto-mark"><img src="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt=""></div>
+      <div class="manifesto-mark"><img src="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt="" loading="lazy" decoding="async"></div>
       <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Manifiesto</span></div>
     </div>
     <div>
@@ -1274,7 +1321,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     <div class="ftr-grid">
       <div class="ftr-brand">
         <div class="lockup">
-          <div class="plate"><img src="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt=""></div>
+          <div class="plate"><img src="assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b.png" alt="" loading="lazy" decoding="async"></div>
           <div class="name">FARO 33<small>Interiorismo &amp; Diseño</small></div>
         </div>
         <div class="ftr-brand-text">Estudio de proyectos integrales de interiorismo en Culiacán, Sinaloa. Espacios que guían — como un faro al final de la bahía.</div>
