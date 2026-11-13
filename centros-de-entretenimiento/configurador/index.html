@@ -203,6 +203,47 @@ gtag('config', 'G-91L2N1S9T3');
     .wa-btn{ justify-content:center; text-align:center; }
   }
 
+  /* ---------- móvil (<=640): una columna, vista arriba y barra de acciones ---------- */
+  @media (max-width:640px){
+    /* header: logo sin wordmark + breadcrumb en una línea (elipsis si no cabe) */
+    .top{ padding:12px 14px; gap:10px; }
+    .top > div{ min-width:0; }
+    .top .mark{ flex:0 0 auto; gap:0; font-size:0; }
+    .top .mark img{ width:34px; height:34px; }
+    .top .back{
+      display:block; flex:0 1 auto; min-width:0; max-width:calc(100vw - 112px);
+      padding:9px 14px; font-size:10.5px; letter-spacing:0.14em; line-height:1.2;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    /* una columna: dibujo primero, controles después */
+    .cfg-head{ padding-bottom:20px; }
+    .cfg-wrap{ flex-direction:column; align-items:stretch; gap:20px; }
+    .cfg-canvas{ order:1; width:100%; flex:none; gap:18px; }
+    .cfg-panel{ order:2; width:100%; max-width:none; flex:none; padding:18px; gap:22px; }
+    .fld-row{ grid-template-columns:1fr; }
+    .fld .lbl{ flex-wrap:wrap; column-gap:10px; row-gap:2px; }
+    .fld .lbl b{ white-space:nowrap; }
+    .fld input[type="range"]{ min-width:0; }
+
+    /* barra inferior con los dos CTA, siempre visible y por encima de la barra de cookies */
+    .cfg-cta{
+      position:sticky; bottom:0; z-index:60;
+      flex-direction:column; align-items:stretch;
+      margin:0; border-radius:0; gap:8px;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+      box-shadow:0 -14px 30px -18px rgba(10,27,54,0.65);
+    }
+    .cfg-cta .summary{ display:none; }
+    .cta-btns{ flex-direction:column; gap:8px; }
+    .btn-3d, .wa-btn{
+      min-height:44px; justify-content:center; text-align:center;
+      padding:11px 14px; font-size:10.5px; letter-spacing:0.12em; line-height:1.25;
+    }
+    .wa-btn{ min-height:46px; }
+    body:has(.f33c.on) .cfg-cta{ bottom:calc(128px + env(safe-area-inset-bottom, 0px)); }
+  }
+
   footer.pg-foot{ text-align:center; padding:28px; font-family:var(--font-ui); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--fg-muted); border-top:var(--hairline); }
   footer.pg-foot a{ color:var(--accent); }
 </style>
