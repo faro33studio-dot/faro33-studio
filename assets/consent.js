@@ -38,6 +38,7 @@
     + '.f33c button:focus-visible,.f33c a:focus-visible{outline:2px solid #E2C99A;outline-offset:2px}'
     + '@media (max-width:640px){.f33c{left:10px;right:84px;bottom:12px;width:auto;flex-direction:column;align-items:stretch;gap:8px;padding:10px 12px;border-radius:14px;font-size:11.5px}'
     + '.f33c .bt button{flex:1}}'
+    + '@media (min-width:900px){.f33c{left:auto;right:28px;bottom:calc(94px + env(safe-area-inset-bottom,0px));width:min(470px,calc(100vw - 56px))}}'
     + (reduce ? '.f33c{transition:none;transform:none}' : '');
 
   var bar = null;

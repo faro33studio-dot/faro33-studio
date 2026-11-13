@@ -470,7 +470,7 @@ img { display: block; max-width: 100%; }
 .hdr-nav { display: flex; gap: 36px; align-items: center; }
 .hdr-nav a { font-family: var(--font-ui); font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; position: relative; padding: 8px 0; transition: opacity var(--dur-fast) var(--ease-out); }
 .hdr-nav a:hover { opacity: 0.7; }
-.hdr-cta { padding: 10px 22px; border: 1px solid currentColor; border-radius: 2px; font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; transition: all var(--dur-fast) var(--ease-out); }
+.hdr-nav a.hdr-cta { padding: 10px 22px; border: 1px solid currentColor; border-radius: 2px; font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; transition: all var(--dur-fast) var(--ease-out); }
 .hdr-cta:hover { background: #fff; color: var(--navy-800) !important; opacity: 1 !important; }
 
 .lang-toggle { display: inline-flex; gap: 6px; font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -492,6 +492,7 @@ img { display: block; max-width: 100%; }
 
 .hero-tag { font-family: var(--font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.78); margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
 .hero h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(56px, min(9.5vw, 12.5vh), 140px); line-height: 0.97; letter-spacing: -0.025em; margin: 0 0 32px; max-width: 16ch; text-wrap: balance; }
+@media (min-width: 901px) { .hero h1 { max-width: none; } .hero h1 .hero-line > span { white-space: nowrap; } }
 .hero h1 em { font-style: italic; font-weight: 400; }
 .hero h1 .ampersand { font-style: italic; color: var(--brass-400); padding: 0 0.05em; }
 .hero-sub { font-family: var(--font-body); font-size: 19px; line-height: 1.55; max-width: 520px; color: rgba(255,255,255,0.88); margin: 0 0 40px; }
@@ -780,10 +781,10 @@ html.js .ls-slide--3d.is-active .ls-bg{ animation:none; }
 
 /* --- Static-build mobile refinements --- */
 @media (max-width: 900px){ .hero-scroll{ display:none; } .hero{ align-items:flex-start; } .hero-inner{ padding-top:116px; padding-bottom:56px; } .hero-tag{ margin-bottom:20px; } }
-@media (max-width: 640px){ .hdr-mark .markline small{ display:none; } .hdr-inner{ padding:14px 18px; } .hdr-cta{ padding:9px 16px; } }
+@media (max-width: 640px){ .hdr-mark .markline small{ display:none; } .hdr-inner{ padding:14px 18px; } html body .hdr-nav{ gap:20px; } .hdr-nav a.hdr-cta{ padding:10px 18px; font-size:10.5px; letter-spacing:.01em; } }
 @media (max-width: 640px){ .hero h1{ font-size: clamp(44px, 12vw, 76px); } .hero-actions{ flex-direction:column; align-items:stretch; gap:6px; } .hero-actions .btn{ justify-content:center; } .hero-paths{ justify-content:center; gap:0 20px; } .hero-paths-lbl{ flex-basis:100%; text-align:center; padding-top:8px; } }
 /* Narrow phones (<390px): the 2-col footer needs 366px (brand lockup + 40px gap + unbreakable email) and widened the page; the header row didn't fit either */
-@media (max-width: 389px){ .hdr-mark{ gap:10px; } .hdr-nav .hdr-cta{ letter-spacing:0.14em; } .ftr-brand, .ftr-col:last-child{ grid-column:1 / -1; } }
+@media (max-width: 389px){ .hdr-mark{ gap:10px; } .hdr-nav a.hdr-cta{ letter-spacing:0; padding:10px 14px; } .ftr-brand, .ftr-col:last-child{ grid-column:1 / -1; } }
 .pcard{ text-decoration:none; }
 
 /* FAQ */
