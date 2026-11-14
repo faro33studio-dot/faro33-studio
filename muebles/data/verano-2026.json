@@ -1,0 +1,8064 @@
+[
+ {
+  "id": "bono",
+  "nombre": "Bono",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 150 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Pedestal",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol galaxy / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol galaxy",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bono-1000.webp"
+ },
+ {
+  "id": "bow",
+  "nombre": "Bow",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bow-1000.webp"
+ },
+ {
+  "id": "angulo",
+  "nombre": "Ángulo",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 150 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Pedestal",
+    "v": "MDF enchapado / Acero inox."
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal / Iron"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/angulo-1000.webp"
+ },
+ {
+  "id": "candy",
+  "nombre": "Candy",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Pedestal",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/candy-1000.webp"
+ },
+ {
+  "id": "conos",
+  "nombre": "Conos",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "140 × 250 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Fibra de vidrio chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/conos-1000.webp"
+ },
+ {
+  "id": "cuore",
+  "nombre": "Cuore",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 150 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/cuore-1000.webp"
+ },
+ {
+  "id": "diamante",
+  "nombre": "Diamante",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Granito natural"
+   },
+   {
+    "k": "Pedestal",
+    "v": "Acero inoxidable chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/diamante-1000.webp"
+ },
+ {
+  "id": "europa",
+  "nombre": "Europa",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "135 × 135 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado / Acero inox."
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/europa-1000.webp"
+ },
+ {
+  "id": "irregular",
+  "nombre": "Irregular",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Granito natural"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol viscount white / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol viscount white",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/irregular-1000.webp"
+ },
+ {
+  "id": "herley",
+  "nombre": "Herley",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "90 × 160 × 75 cm / 90 × 200 × 75 cm con extensión",
+  "variantes": [
+   "90 × 160 × 75 cm",
+   "90 × 200 × 75 cm con extensión"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Laminado de alta presión"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "herley-2",
+    "color": "Mármol negro / Negro",
+    "img": "/muebles/img/verano-2026/herley-2-1000.webp"
+   }
+  ],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/herley-1000.webp"
+ },
+ {
+  "id": "kota-2",
+  "nombre": "Kota",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "90 × 180 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica / MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/kota-2-1000.webp"
+ },
+ {
+  "id": "multi-2",
+  "nombre": "Multi",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 150 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol panda / Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Mármol panda",
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/multi-2-1000.webp"
+ },
+ {
+  "id": "ovo-2",
+  "nombre": "Ovo",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "90 × 180 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/ovo-2-1000.webp"
+ },
+ {
+  "id": "peak",
+  "nombre": "Peak",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol panda / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol panda",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/peak-1000.webp"
+ },
+ {
+  "id": "porte",
+  "nombre": "Porte",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol titanium gold / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol titanium gold",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/porte-1000.webp"
+ },
+ {
+  "id": "tavolo",
+  "nombre": "Tavolo",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "90 × 160 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado melamina"
+   },
+   {
+    "k": "Base",
+    "v": "Metal chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol black & white / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol black & white",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/tavolo-1000.webp"
+ },
+ {
+  "id": "snail",
+  "nombre": "Snail",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "110 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Fibra de vidrio chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol river / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol river",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/snail-1000.webp"
+ },
+ {
+  "id": "tossa",
+  "nombre": "Tossa",
+  "categoria": "Mesa alta",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "100 × 180 × 99 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol nebulosa / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol nebulosa",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/tossa-1000.webp"
+ },
+ {
+  "id": "twist",
+  "nombre": "Twist",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/twist-1000.webp"
+ },
+ {
+  "id": "crack",
+  "nombre": "Crack",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "160 × 160 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado / Acero inox."
+   },
+   {
+    "k": "Color",
+    "v": "Transparente / Nogal"
+   }
+  ],
+  "colores": [
+   "Transparente",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/crack-1000.webp"
+ },
+ {
+  "id": "veran",
+  "nombre": "Veran",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 150 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado / Piedra sinterizada"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol gris",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/veran-1000.webp"
+ },
+ {
+  "id": "wave-2",
+  "nombre": "Wave",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "140 × 250 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/wave-2-1000.webp"
+ },
+ {
+  "id": "jewel",
+  "nombre": "Jewel",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "100 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal / Dorado"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/jewel-1000.webp"
+ },
+ {
+  "id": "paw-2",
+  "nombre": "Paw",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 150 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/paw-2-1000.webp"
+ },
+ {
+  "id": "rizo-nogal",
+  "nombre": "Rizo Nogal",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 120 × 74 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inox chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/rizo-nogal-1000.webp"
+ },
+ {
+  "id": "aster",
+  "nombre": "Aster",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "150 × 80 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/aster-1000.webp"
+ },
+ {
+  "id": "cross",
+  "nombre": "Cross",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "140 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado fresno"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/cross-1000.webp"
+ },
+ {
+  "id": "madrid",
+  "nombre": "Madrid",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "140 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Base color parota"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Base color parota"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/madrid-1000.webp"
+ },
+ {
+  "id": "palax",
+  "nombre": "Palax",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "140 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Base color parota"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Base color parota"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/palax-1000.webp"
+ },
+ {
+  "id": "rotonda",
+  "nombre": "Rotonda",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 120 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado papel nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado papel nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Base color parota"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Base color parota"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/rotonda-1000.webp"
+ },
+ {
+  "id": "slide",
+  "nombre": "Slide",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "Fibra de vidrio chapa parota"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/slide-1000.webp"
+ },
+ {
+  "id": "cielo-2",
+  "nombre": "Cielo",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "90 × 165 × 76 cm / 90 × 240 × 76 cm con extensión",
+  "variantes": [
+   "90 × 165 × 76 cm",
+   "90 × 240 × 76 cm con extensión"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Piedra sinterizada"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/cielo-2-1000.webp"
+ },
+ {
+  "id": "giro",
+  "nombre": "Giro",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 240 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/giro-1000.webp"
+ },
+ {
+  "id": "unique",
+  "nombre": "Unique",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "100 × 200 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol viscount white / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol viscount white",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/unique-1000.webp"
+ },
+ {
+  "id": "snow-2",
+  "nombre": "Snow",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol cashimire / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol cashimire",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/snow-2-1000.webp"
+ },
+ {
+  "id": "malta",
+  "nombre": "Malta",
+  "categoria": "Mesa alta",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "60 × 120 × 96 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol light grey / Iron"
+   }
+  ],
+  "colores": [
+   "Mármol light grey",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/malta-1000.webp"
+ },
+ {
+  "id": "rizo-dorado",
+  "nombre": "Rizo Dorado",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "120 × 120 × 74 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Transparente / Dorado"
+   }
+  ],
+  "colores": [
+   "Transparente",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/rizo-dorado-1000.webp"
+ },
+ {
+  "id": "water",
+  "nombre": "Water",
+  "categoria": "Mesa",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "180 × 180 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Negro"
+   }
+  ],
+  "colores": [
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/water-1000.webp"
+ },
+ {
+  "id": "porte-nazare",
+  "nombre": "Porte Nazaré",
+  "categoria": "Mesa + Silla",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "porte",
+    "nombre": "Porte"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/porte-nazare-1000.webp"
+ },
+ {
+  "id": "tavolo-sedia",
+  "nombre": "Tavolo Sedia",
+  "categoria": "Mesa + Silla",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "tavolo",
+    "nombre": "Tavolo"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/tavolo-sedia-1000.webp"
+ },
+ {
+  "id": "snow-ego",
+  "nombre": "Snow Ego",
+  "categoria": "Mesa + Silla",
+  "linea": "Mesas",
+  "linea_slug": "mesas",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "snow-2",
+    "nombre": "Snow"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/snow-ego-1000.webp"
+ },
+ {
+  "id": "andromeda",
+  "nombre": "Andrómeda",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "68 × 59 × 88 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/andromeda-1000.webp"
+ },
+ {
+  "id": "arms",
+  "nombre": "Arms",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "53 × 58 × 77 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/arms-1000.webp"
+ },
+ {
+  "id": "bucarest",
+  "nombre": "Bucarest",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "46 × 59 × 79 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bucarest-1000.webp"
+ },
+ {
+  "id": "bosco-2",
+  "nombre": "Bosco",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "55 × 47 × 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida roble"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bosco-2-1000.webp"
+ },
+ {
+  "id": "bulgary-2",
+  "nombre": "Bulgary",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "54 × 59 × 80 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bulgary-2-1000.webp"
+ },
+ {
+  "id": "cup-cake",
+  "nombre": "Cup Cake",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "62 × 57 × 81 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/cup-cake-1000.webp"
+ },
+ {
+  "id": "derren",
+  "nombre": "Derren",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "51 × 59 × 83 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/derren-1000.webp"
+ },
+ {
+  "id": "duo",
+  "nombre": "Dúo",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "53 × 59 × 77 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/duo-1000.webp"
+ },
+ {
+  "id": "escalona",
+  "nombre": "Escalona",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "56 × 54 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/escalona-1000.webp"
+ },
+ {
+  "id": "fly",
+  "nombre": "Fly",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "60 × 59 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris claro"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris claro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "fly-2",
+    "color": "Nogal / Gris oscuro",
+    "img": "/muebles/img/verano-2026/fly-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/fly-1000.webp"
+ },
+ {
+  "id": "fold",
+  "nombre": "Fold",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "53 × 58 × 78 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/fold-1000.webp"
+ },
+ {
+  "id": "green",
+  "nombre": "Green",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "57 × 56 × 87 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/green-1000.webp"
+ },
+ {
+  "id": "holanda",
+  "nombre": "Holanda",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "45 × 52 × 89 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/holanda-1000.webp"
+ },
+ {
+  "id": "krista",
+  "nombre": "Krista",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "55 × 53.5 × 81 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/krista-1000.webp"
+ },
+ {
+  "id": "linen",
+  "nombre": "Linen",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "56.5 × 53 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/linen-1000.webp"
+ },
+ {
+  "id": "noruega",
+  "nombre": "Noruega",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "47 × 56 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/noruega-1000.webp"
+ },
+ {
+  "id": "prisma",
+  "nombre": "Prisma",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "56 × 55 × 77 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/prisma-1000.webp"
+ },
+ {
+  "id": "bristol-2",
+  "nombre": "Bristol",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "54 × 56 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bristol-2-1000.webp"
+ },
+ {
+  "id": "sedia",
+  "nombre": "Sedia",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "53 × 42 × 81 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/sedia-1000.webp"
+ },
+ {
+  "id": "tess",
+  "nombre": "Tess",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "58.5 × 52 × 77 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/tess-1000.webp"
+ },
+ {
+  "id": "vio",
+  "nombre": "Vio",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "58.5 × 57 × 72 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/vio-1000.webp"
+ },
+ {
+  "id": "clara",
+  "nombre": "Clara",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "60 × 55 × 89 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "clara-2",
+    "color": "Dorado / Beige",
+    "img": "/muebles/img/verano-2026/clara-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/clara-1000.webp"
+ },
+ {
+  "id": "grossa",
+  "nombre": "Grossa",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "65 × 66 × 79 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "grossa-2",
+    "color": "Nogal / Verde",
+    "img": "/muebles/img/verano-2026/grossa-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/grossa-1000.webp"
+ },
+ {
+  "id": "lux",
+  "nombre": "Lux",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "47 × 58 × 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/lux-1000.webp"
+ },
+ {
+  "id": "marry",
+  "nombre": "Marry",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "61 × 43 × 83 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "marry-2",
+    "color": "Dorado / Beige",
+    "img": "/muebles/img/verano-2026/marry-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/marry-1000.webp"
+ },
+ {
+  "id": "palermo-2",
+  "nombre": "Palermo",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "60 × 50 × 78 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/palermo-2-1000.webp"
+ },
+ {
+  "id": "piana-2",
+  "nombre": "Piana",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "56 × 46 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/piana-2-1000.webp"
+ },
+ {
+  "id": "ali",
+  "nombre": "Alí",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "43 × 45 × 88 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro / Tacón dorado"
+   },
+   {
+    "k": "Color",
+    "v": "Negro"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Tacón dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/ali-1000.webp"
+ },
+ {
+  "id": "bold",
+  "nombre": "Bold",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "49 × 49 × 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Terciopelo"
+   },
+   {
+    "k": "Patas",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color patas",
+    "v": "Dorado"
+   },
+   {
+    "k": "Color",
+    "v": "Negro"
+   }
+  ],
+  "colores": [
+   "Dorado",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bold-1000.webp"
+ },
+ {
+  "id": "plain-2",
+  "nombre": "Plain",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "52 × 51 × 83 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Camel"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Camel"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/plain-2-1000.webp"
+ },
+ {
+  "id": "cat",
+  "nombre": "Cat",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "39 × 46 × 90 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Terciopelo"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Dorado"
+   },
+   {
+    "k": "Color",
+    "v": "Verde"
+   }
+  ],
+  "colores": [
+   "Dorado",
+   "Verde"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/cat-1000.webp"
+ },
+ {
+  "id": "light-2",
+  "nombre": "Light",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "63 × 58 × 92 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Beige"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/light-2-1000.webp"
+ },
+ {
+  "id": "ego",
+  "nombre": "Ego",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "52 × 55 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color patas",
+    "v": "Dorado"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Dorado",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/ego-1000.webp"
+ },
+ {
+  "id": "nube-2",
+  "nombre": "Nube",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "58 × 46 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Beige"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nube-2-1000.webp"
+ },
+ {
+  "id": "corona",
+  "nombre": "Corona",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "56 × 54 × 72 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Polipropileno"
+   },
+   {
+    "k": "Color patas",
+    "v": "Blanco"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/corona-1000.webp"
+ },
+ {
+  "id": "negroni",
+  "nombre": "Negroni",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "65 × 56 × 95 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color patas",
+    "v": "Iron"
+   },
+   {
+    "k": "Color",
+    "v": "Negro"
+   }
+  ],
+  "colores": [
+   "Iron",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/negroni-1000.webp"
+ },
+ {
+  "id": "zeus",
+  "nombre": "Zeus",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas",
+  "medidas": "50 × 50 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Acero inox. / Madera"
+   },
+   {
+    "k": "Color patas",
+    "v": "Gris / Iron"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/zeus-1000.webp"
+ },
+ {
+  "id": "argentina",
+  "nombre": "Argentina",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "59 × 60 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Dole silver"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "argentina-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/argentina-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/argentina-1000.webp"
+ },
+ {
+  "id": "austin",
+  "nombre": "Austin",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "61 × 60 × 81 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Moxie grey"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "austin-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/austin-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/austin-1000.webp"
+ },
+ {
+  "id": "cairo",
+  "nombre": "Cairo",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "59 × 53 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Bliss olive"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "cairo-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/cairo-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/cairo-1000.webp"
+ },
+ {
+  "id": "dali",
+  "nombre": "Dalí",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "66 × 62 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Dole silver"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "dali-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/dali-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/dali-1000.webp"
+ },
+ {
+  "id": "dinamarca",
+  "nombre": "Dinamarca",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "60 × 61 × 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Moxie champagne"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "dinamarca-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/dinamarca-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/dinamarca-1000.webp"
+ },
+ {
+  "id": "dubai",
+  "nombre": "Dubai",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "55 × 57 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Gellar marble"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "dubai-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/dubai-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/dubai-1000.webp"
+ },
+ {
+  "id": "infiniti",
+  "nombre": "Infiniti",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "62 × 55 × 80 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Kashimire snow"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "infiniti-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/infiniti-2-1000.webp"
+   },
+   {
+    "id": "infiniti-3",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/infiniti-3-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/infiniti-1000.webp"
+ },
+ {
+  "id": "modern-2",
+  "nombre": "Modern",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "59 × 53 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Dole silver"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/modern-2-1000.webp"
+ },
+ {
+  "id": "modern-3",
+  "nombre": "Modern",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "59 × 53 × 82 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Rivoli beige"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/modern-3-1000.webp"
+ },
+ {
+  "id": "nazare",
+  "nombre": "Nazaré",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "57 × 60 × 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Gellar marble"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "nazare-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/nazare-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nazare-1000.webp"
+ },
+ {
+  "id": "paris",
+  "nombre": "París",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "62 × 56 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Gellar marble"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/paris-1000.webp"
+ },
+ {
+  "id": "texas-2",
+  "nombre": "Texas",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "58 × 62 × 78 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Confort zinc"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/texas-2-1000.webp"
+ },
+ {
+  "id": "van-gogh-2",
+  "nombre": "Van Gogh",
+  "categoria": "Silla",
+  "linea": "Sillas",
+  "linea_slug": "sillas-fabricacion-nacional",
+  "medidas": "66 × 62 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Gellar marble"
+   },
+   {
+    "k": "Laca",
+    "v": "Fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/van-gogh-2-1000.webp"
+ },
+ {
+  "id": "albero",
+  "nombre": "Albero",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "80 × 120 × 75 cm / 80 × 160 × 75 cm con extensión",
+  "variantes": [
+   "80 × 120 × 75 cm",
+   "80 × 160 × 75 cm con extensión"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida roble"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/albero-1000.webp"
+ },
+ {
+  "id": "bosco",
+  "nombre": "Bosco",
+  "categoria": "Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "55 × 47 × 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Madera sólida roble"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bosco-1000.webp"
+ },
+ {
+  "id": "bridge",
+  "nombre": "Bridge",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "80 × 140 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Nogal"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bridge-1000.webp"
+ },
+ {
+  "id": "bristol",
+  "nombre": "Bristol",
+  "categoria": "Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "54 × 56 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bristol-1000.webp"
+ },
+ {
+  "id": "chip",
+  "nombre": "Chip",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "80 × 140 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/chip-1000.webp"
+ },
+ {
+  "id": "piana",
+  "nombre": "Piana",
+  "categoria": "Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "56 × 46 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/piana-1000.webp"
+ },
+ {
+  "id": "coffee",
+  "nombre": "Coffee",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "90 × 160 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol coffee"
+   }
+  ],
+  "colores": [
+   "Mármol coffee"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/coffee-1000.webp"
+ },
+ {
+  "id": "plain",
+  "nombre": "Plain",
+  "categoria": "Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "52 × 51 × 83 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Camel"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Camel"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/plain-1000.webp"
+ },
+ {
+  "id": "palermo",
+  "nombre": "Palermo",
+  "categoria": "Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "60 × 50 × 78 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/palermo-1000.webp"
+ },
+ {
+  "id": "terna",
+  "nombre": "Terna",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "80 × 140 × 76 cm / 80 × 200 × 76 cm con extensión",
+  "variantes": [
+   "80 × 140 × 76 cm",
+   "80 × 200 × 76 cm con extensión"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/terna-1000.webp"
+ },
+ {
+  "id": "mussolini-2",
+  "nombre": "Mussolini",
+  "categoria": "Buffet",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "45 × 160 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mussolini-2-1000.webp"
+ },
+ {
+  "id": "mussolini-3",
+  "nombre": "Mussolini",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "120 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mussolini-3-1000.webp"
+ },
+ {
+  "id": "sparta-2",
+  "nombre": "Sparta",
+  "categoria": "Buffet",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "45 × 160 × 86 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Iron"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/sparta-2-1000.webp"
+ },
+ {
+  "id": "sparta-3",
+  "nombre": "Sparta",
+  "categoria": "Mesa",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "120 × 220 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Iron"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/sparta-3-1000.webp"
+ },
+ {
+  "id": "albero-bosco",
+  "nombre": "Albero Bosco",
+  "categoria": "Mesa + Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "albero",
+    "nombre": "Albero"
+   },
+   {
+    "id": "bosco",
+    "nombre": "Bosco"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/albero-bosco-1000.webp"
+ },
+ {
+  "id": "bridge-bristol",
+  "nombre": "Bridge Bristol",
+  "categoria": "Mesa + Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "bridge",
+    "nombre": "Bridge"
+   },
+   {
+    "id": "bristol",
+    "nombre": "Bristol"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/bridge-bristol-1000.webp"
+ },
+ {
+  "id": "chip-piana",
+  "nombre": "Chip Piana",
+  "categoria": "Mesa + Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "chip",
+    "nombre": "Chip"
+   },
+   {
+    "id": "piana",
+    "nombre": "Piana"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/chip-piana-1000.webp"
+ },
+ {
+  "id": "coffee-plain",
+  "nombre": "Coffee Plain",
+  "categoria": "Mesa + Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "coffee",
+    "nombre": "Coffee"
+   },
+   {
+    "id": "plain",
+    "nombre": "Plain"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/coffee-plain-1000.webp"
+ },
+ {
+  "id": "terna-palermo",
+  "nombre": "Terna Palermo",
+  "categoria": "Mesa + Silla",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "palermo",
+    "nombre": "Palermo"
+   },
+   {
+    "id": "terna",
+    "nombre": "Terna"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/terna-palermo-1000.webp"
+ },
+ {
+  "id": "mussolini",
+  "nombre": "Mussolini",
+  "categoria": "Mesa y buffet",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "mussolini-2",
+    "nombre": "Mussolini"
+   },
+   {
+    "id": "mussolini-3",
+    "nombre": "Mussolini"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/mussolini-1000.webp"
+ },
+ {
+  "id": "sparta",
+  "nombre": "Sparta",
+  "categoria": "Mesa y buffet",
+  "linea": "Comedores",
+  "linea_slug": "set-mesas-comedor",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "sparta-2",
+    "nombre": "Sparta"
+   },
+   {
+    "id": "sparta-3",
+    "nombre": "Sparta"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/sparta-1000.webp"
+ },
+ {
+  "id": "aspen",
+  "nombre": "Aspen",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "40 × 160 × 80 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/aspen-1000.webp"
+ },
+ {
+  "id": "bear",
+  "nombre": "Bear",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "40 × 170 × 80 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bear-1000.webp"
+ },
+ {
+  "id": "canyon",
+  "nombre": "Canyon",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "40 × 150 × 90 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Madera sólida de fresno"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida de fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/canyon-1000.webp"
+ },
+ {
+  "id": "hoja",
+  "nombre": "Hoja",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "40 × 150 × 90 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/hoja-1000.webp"
+ },
+ {
+  "id": "kota",
+  "nombre": "Kota",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "44 × 140 × 78 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica / MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/kota-1000.webp"
+ },
+ {
+  "id": "multi",
+  "nombre": "Multi",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "50 × 180 × 90 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol panda / Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Mármol panda",
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/multi-1000.webp"
+ },
+ {
+  "id": "paw",
+  "nombre": "Paw",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "35 × 140 × 90 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal 12 mm templado"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/paw-1000.webp"
+ },
+ {
+  "id": "snow",
+  "nombre": "Snow",
+  "categoria": "Buffet",
+  "linea": "Buffets",
+  "linea_slug": "buffets",
+  "medidas": "46 × 196 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol cashimire / Beige / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol cashimire",
+   "Beige",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/snow-1000.webp"
+ },
+ {
+  "id": "bed",
+  "nombre": "Bed",
+  "categoria": "Sofá cama",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "108 × 208 × 85 cm sofá / 158 × 208 × 80 cm cama",
+  "variantes": [
+   "108 × 208 × 85 cm sofá",
+   "158 × 208 × 80 cm cama"
+  ],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bed-1000.webp"
+ },
+ {
+  "id": "bone",
+  "nombre": "Bone",
+  "categoria": "Sillón",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "82 × 74 × 79 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bone-1000.webp"
+ },
+ {
+  "id": "keops",
+  "nombre": "Keops",
+  "categoria": "Sillón",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "88 × 75 × 65 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color base",
+    "v": "Dorado"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Dorado",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/keops-1000.webp"
+ },
+ {
+  "id": "nina",
+  "nombre": "Nina",
+  "categoria": "Sillón",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "77 × 74 × 74 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nina-1000.webp"
+ },
+ {
+  "id": "paris-2",
+  "nombre": "París",
+  "categoria": "Sillón",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "71 × 75 × 74 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/paris-2-1000.webp"
+ },
+ {
+  "id": "vuelta",
+  "nombre": "Vuelta",
+  "categoria": "Sillón",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "78 × 59 × 78 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "vuelta-2",
+    "color": "Gris",
+    "img": "/muebles/img/verano-2026/vuelta-2-1000.webp"
+   }
+  ],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/vuelta-1000.webp"
+ },
+ {
+  "id": "nudo",
+  "nombre": "Nudo",
+  "categoria": "Taburete",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "50 × 50 × 41 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color",
+    "v": "Camel"
+   }
+  ],
+  "colores": [
+   "Camel"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "nudo-2",
+    "color": "Gris",
+    "img": "/muebles/img/verano-2026/nudo-2-1000.webp"
+   }
+  ],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nudo-1000.webp"
+ },
+ {
+  "id": "old",
+  "nombre": "Old",
+  "categoria": "Sillón",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "84 × 69 × 99 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/old-1000.webp"
+ },
+ {
+  "id": "stripes",
+  "nombre": "Stripes",
+  "categoria": "Taburete",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "40 × 40 × 42 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/stripes-1000.webp"
+ },
+ {
+  "id": "nido",
+  "nombre": "Nido",
+  "categoria": "Banca",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "44 × 126 × 47 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Base",
+    "v": "Triplay"
+   },
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color base",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nido-1000.webp"
+ },
+ {
+  "id": "nido-2",
+  "nombre": "Nido",
+  "categoria": "Taburete",
+  "linea": "Sillones y taburetes",
+  "linea_slug": "sillones-y-taburetes",
+  "medidas": "47 × 47 × 44 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Base",
+    "v": "Triplay"
+   },
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Color base",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nido-2-1000.webp"
+ },
+ {
+  "id": "ankara",
+  "nombre": "Ankara",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "55 × 52 × 94 / 115 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/ankara-1000.webp"
+ },
+ {
+  "id": "chubby",
+  "nombre": "Chubby",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "53 × 53 × 89 / 111 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Greich / Nogal"
+   }
+  ],
+  "colores": [
+   "Greich",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/chubby-1000.webp"
+ },
+ {
+  "id": "clam",
+  "nombre": "Clam",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "52 × 52 × 99 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/clam-1000.webp"
+ },
+ {
+  "id": "croacia",
+  "nombre": "Croacia",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "50 × 48 × 63 / 93 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/croacia-1000.webp"
+ },
+ {
+  "id": "estocolmo",
+  "nombre": "Estocolmo",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "50 × 54 × 91 / 111 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/estocolmo-1000.webp"
+ },
+ {
+  "id": "gala",
+  "nombre": "Gala",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "38 × 48 × 63 / 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/gala-1000.webp"
+ },
+ {
+  "id": "maca",
+  "nombre": "Maca",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "50 × 53.5 × 85 / 110 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "maca-2",
+    "color": "Negro / Nogal",
+    "img": "/muebles/img/verano-2026/maca-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/maca-1000.webp"
+ },
+ {
+  "id": "mafalda",
+  "nombre": "Mafalda",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "54 × 53 × 88 / 109 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige / Nogal"
+   }
+  ],
+  "colores": [
+   "Beige",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mafalda-1000.webp"
+ },
+ {
+  "id": "peru",
+  "nombre": "Perú",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "52 × 52 × 63 / 103 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/peru-1000.webp"
+ },
+ {
+  "id": "raya",
+  "nombre": "Raya",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "54 × 53 × 94 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige / Nogal"
+   }
+  ],
+  "colores": [
+   "Beige",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/raya-1000.webp"
+ },
+ {
+  "id": "uruguay",
+  "nombre": "Uruguay",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "38 × 48 × 63 / 84 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "uruguay-2",
+    "color": "Negro / Nogal",
+    "img": "/muebles/img/verano-2026/uruguay-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/uruguay-1000.webp"
+ },
+ {
+  "id": "venezuela",
+  "nombre": "Venezuela",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "50.5 × 54 × 63 / 103 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige / Nogal"
+   }
+  ],
+  "colores": [
+   "Beige",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/venezuela-1000.webp"
+ },
+ {
+  "id": "wing",
+  "nombre": "Wing",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "53 × 56 × 93 / 114 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Pistón",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Verde / Nogal"
+   }
+  ],
+  "colores": [
+   "Verde",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/wing-1000.webp"
+ },
+ {
+  "id": "clara-3",
+  "nombre": "Clara",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "60 × 58 × 104 / 66 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/clara-3-1000.webp"
+ },
+ {
+  "id": "mich",
+  "nombre": "Mich",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "55 × 58 × 87 / 65 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mich-1000.webp"
+ },
+ {
+  "id": "simple",
+  "nombre": "Simple",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "50 × 49 × 98 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/simple-1000.webp"
+ },
+ {
+  "id": "testa",
+  "nombre": "Testa",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "50 × 60 × 100 / 66 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/testa-1000.webp"
+ },
+ {
+  "id": "bracket",
+  "nombre": "Bracket",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "54 × 52 × 98 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/bracket-1000.webp"
+ },
+ {
+  "id": "dona",
+  "nombre": "Dona",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "52 × 54 × 92 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Camel / Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Camel"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/dona-1000.webp"
+ },
+ {
+  "id": "hug",
+  "nombre": "Hug",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "52 × 56 × 92 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/hug-1000.webp"
+ },
+ {
+  "id": "meal",
+  "nombre": "Meal",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "52 × 48 × 92 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/meal-1000.webp"
+ },
+ {
+  "id": "nova",
+  "nombre": "Nova",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "53.5 × 49.5 × 68 / 97 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nova-1000.webp"
+ },
+ {
+  "id": "rattan",
+  "nombre": "Rattán",
+  "categoria": "Banco",
+  "linea": "Bancos",
+  "linea_slug": "bancos",
+  "medidas": "53 × 50 × 67 / 94 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tela / Rattán"
+   },
+   {
+    "k": "Patas",
+    "v": "Triplay"
+   },
+   {
+    "k": "Color patas",
+    "v": "Nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/rattan-1000.webp"
+ },
+ {
+  "id": "atenea",
+  "nombre": "Atenea",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 40 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Pedestal",
+    "v": "MDF / Cenefa acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal / Negro / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal",
+   "Negro",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/atenea-1000.webp"
+ },
+ {
+  "id": "dorito",
+  "nombre": "Dorito",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "84 × 90 × 35 cm / 55 × 55 × 42 cm",
+  "variantes": [
+   "84 × 90 × 35 cm",
+   "55 × 55 × 42 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica / Cristal temp. 10 mm"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/dorito-1000.webp"
+ },
+ {
+  "id": "love",
+  "nombre": "Love",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "70 × 70 × 45 cm / 50 × 50 × 55 cm",
+  "variantes": [
+   "70 × 70 × 45 cm",
+   "50 × 50 × 55 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Piedra sinterizada"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/love-1000.webp"
+ },
+ {
+  "id": "chat",
+  "nombre": "Chat",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 35 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/chat-1000.webp"
+ },
+ {
+  "id": "finlandia",
+  "nombre": "Finlandia",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 30 cm / 60 × 60 × 40 cm",
+  "variantes": [
+   "80 × 80 × 30 cm",
+   "60 × 60 × 40 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm / MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/finlandia-1000.webp"
+ },
+ {
+  "id": "turin",
+  "nombre": "Turín",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 35 cm / 40 × 40 × 42 cm",
+  "variantes": [
+   "80 × 80 × 35 cm",
+   "40 × 40 × 42 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol vía láctea / Nogal"
+   }
+  ],
+  "colores": [
+   "Mármol vía láctea",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/turin-1000.webp"
+ },
+ {
+  "id": "geometrix",
+  "nombre": "Geometrix",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 45 cm / 50 × 50 × 50 cm",
+  "variantes": [
+   "80 × 80 × 45 cm",
+   "50 × 50 × 50 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado con papel"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado con papel"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/geometrix-1000.webp"
+ },
+ {
+  "id": "helsinki",
+  "nombre": "Helsinki",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "70 × 130 × 43 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Base",
+    "v": "Madera"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/helsinki-1000.webp"
+ },
+ {
+  "id": "iceland-2",
+  "nombre": "Iceland",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "100 × 100 × 37 cm / 58 × 58 × 45 cm",
+  "variantes": [
+   "100 × 100 × 37 cm",
+   "58 × 58 × 45 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm / MDF enchapado papel"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Color",
+    "v": "Transparente / Nogal"
+   }
+  ],
+  "colores": [
+   "Transparente",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/iceland-2-1000.webp"
+ },
+ {
+  "id": "round",
+  "nombre": "Round",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "60 × 60 × 40 cm / 40 × 40 × 42 cm",
+  "variantes": [
+   "60 × 60 × 40 cm",
+   "40 × 40 × 42 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado con papel"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado con papel"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/round-1000.webp"
+ },
+ {
+  "id": "sandy",
+  "nombre": "Sandy",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "70 × 70 × 45 cm / 45 × 45 × 50 cm",
+  "variantes": [
+   "70 × 70 × 45 cm",
+   "45 × 45 × 50 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/sandy-1000.webp"
+ },
+ {
+  "id": "venezia",
+  "nombre": "Venezia",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "70 × 70 × 38 cm / 50 × 50 × 50 cm",
+  "variantes": [
+   "70 × 70 × 38 cm",
+   "50 × 50 × 50 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/venezia-1000.webp"
+ },
+ {
+  "id": "flor-2",
+  "nombre": "Flor",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "100 × 100 × 39 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/flor-2-1000.webp"
+ },
+ {
+  "id": "nero",
+  "nombre": "Nero",
+  "categoria": "Juego de mesas",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "120 × 120 × 34 cm mesa centro / 60 × 60 × 42 cm mesa lateral",
+  "variantes": [
+   "120 × 120 × 34 cm mesa centro",
+   "60 × 60 × 42 cm mesa lateral"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida rubber"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/nero-1000.webp"
+ },
+ {
+  "id": "trebol",
+  "nombre": "Trébol",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "90 × 90 × 31 cm / 50 × 50 × 40 cm",
+  "variantes": [
+   "90 × 90 × 31 cm",
+   "50 × 50 × 40 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado con papel"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Beige"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/trebol-1000.webp"
+ },
+ {
+  "id": "brasil",
+  "nombre": "Brasil",
+  "categoria": "Juego de mesas",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "60 × 100 × 42 cm mesa centro / 45 × 65 × 44 cm mesa lateral",
+  "variantes": [
+   "60 × 100 × 42 cm mesa centro",
+   "45 × 65 × 44 cm mesa lateral"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado con papel"
+   },
+   {
+    "k": "Color",
+    "v": "Transparente / Nogal"
+   }
+  ],
+  "colores": [
+   "Transparente",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/brasil-1000.webp"
+ },
+ {
+  "id": "paw-3",
+  "nombre": "Paw",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "100 × 100 × 42 cm / 50 × 50 × 53 cm",
+  "variantes": [
+   "100 × 100 × 42 cm",
+   "50 × 50 × 53 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 12 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida de fresno"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/paw-3-1000.webp"
+ },
+ {
+  "id": "puentes",
+  "nombre": "Puentes",
+  "categoria": "Juego de mesas",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "60 × 110 × 45 cm mesa centro / 50 × 60 × 46 cm mesa lateral",
+  "variantes": [
+   "60 × 110 × 45 cm mesa centro",
+   "50 × 60 × 46 cm mesa lateral"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 8 mm"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/puentes-1000.webp"
+ },
+ {
+  "id": "harry",
+  "nombre": "Harry",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "70 × 70 × 42 cm / 60 × 60 × 52 cm",
+  "variantes": [
+   "70 × 70 × 42 cm",
+   "60 × 60 × 52 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Base",
+    "v": "Cristal"
+   },
+   {
+    "k": "Color",
+    "v": "Dorado / Humo / Verde"
+   }
+  ],
+  "colores": [
+   "Dorado",
+   "Humo",
+   "Verde"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/harry-1000.webp"
+ },
+ {
+  "id": "poseidon",
+  "nombre": "Poseidón",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "45 × 45 × 38 cm / 45 × 45 × 50 cm",
+  "variantes": [
+   "45 × 45 × 38 cm",
+   "45 × 45 × 50 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Mármol industrializado"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol platino / Iron / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol platino",
+   "Iron",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/poseidon-1000.webp"
+ },
+ {
+  "id": "twins",
+  "nombre": "Twins",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 30 cm / 60 × 60 × 43 cm",
+  "variantes": [
+   "80 × 80 × 30 cm",
+   "60 × 60 × 43 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm"
+   },
+   {
+    "k": "Base",
+    "v": "MDF enchapado papel"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Nogal"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/twins-1000.webp"
+ },
+ {
+  "id": "forever",
+  "nombre": "Forever",
+  "categoria": "Mesa lateral",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "60 × 60 × 50 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm"
+   },
+   {
+    "k": "Pedestal",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Transparente / Plateado"
+   }
+  ],
+  "colores": [
+   "Transparente",
+   "Plateado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/forever-1000.webp"
+ },
+ {
+  "id": "remus",
+  "nombre": "Remus",
+  "categoria": "Mesa lateral",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "60 × 60 × 50 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Transparente / Dorado"
+   }
+  ],
+  "colores": [
+   "Transparente",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/remus-1000.webp"
+ },
+ {
+  "id": "snake",
+  "nombre": "Snake",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "80 × 80 × 36 cm / 40 × 40 × 50 cm",
+  "variantes": [
+   "80 × 80 × 36 cm",
+   "40 × 40 × 50 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm / Cerámica"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Humo / Negro"
+   }
+  ],
+  "colores": [
+   "Humo",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/snake-1000.webp"
+ },
+ {
+  "id": "shine",
+  "nombre": "Shine",
+  "categoria": "Mesa lateral",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "46 × 46 × 55 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 8 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Tornasol / Bronce"
+   }
+  ],
+  "colores": [
+   "Tornasol",
+   "Bronce"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/shine-1000.webp"
+ },
+ {
+  "id": "sparta-4",
+  "nombre": "Sparta",
+  "categoria": "Juego de mesas",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "70 × 130 × 45 cm mesa centro / 60 × 60 × 50 cm mesa lateral",
+  "variantes": [
+   "70 × 130 × 45 cm mesa centro",
+   "60 × 60 × 50 cm mesa lateral"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 10 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Acero inoxidable"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Iron"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/sparta-4-1000.webp"
+ },
+ {
+  "id": "spot",
+  "nombre": "Spot",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "55 × 80 × 45 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF"
+   },
+   {
+    "k": "Pedestal",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Negro"
+   }
+  ],
+  "colores": [
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/spot-1000.webp"
+ },
+ {
+  "id": "iceland",
+  "nombre": "Iceland",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/iceland-1000.webp"
+ },
+ {
+  "id": "flor",
+  "nombre": "Flor",
+  "categoria": "Mesa de centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/flor-1000.webp"
+ },
+ {
+  "id": "poseidon-2",
+  "nombre": "Poseidón",
+  "categoria": "Set mesas centro",
+  "linea": "Mesas de centro",
+  "linea_slug": "juegos-de-mesa",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "h",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/poseidon-2-1000.webp"
+ },
+ {
+  "id": "beso",
+  "nombre": "Beso",
+  "categoria": "Mesa ocasional",
+  "linea": "Mesas ocasionales",
+  "linea_slug": "mesas-ocasionales",
+  "medidas": "50 × 50 × 53 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Piedra sinterizada"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol carrara",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "beso-2",
+    "color": "Mármol vía láctea / Nogal / Dorado",
+    "img": "/muebles/img/verano-2026/beso-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/beso-1000.webp"
+ },
+ {
+  "id": "kiss",
+  "nombre": "Kiss",
+  "categoria": "Mesa ocasional",
+  "linea": "Mesas ocasionales",
+  "linea_slug": "mesas-ocasionales",
+  "medidas": "50 × 50 × 57 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Piedra sinterizada"
+   },
+   {
+    "k": "Base",
+    "v": "Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol monterrey / Negro / Dorado"
+   }
+  ],
+  "colores": [
+   "Mármol monterrey",
+   "Negro",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/kiss-1000.webp"
+ },
+ {
+  "id": "ovni",
+  "nombre": "Ovni",
+  "categoria": "Mesa ocasional",
+  "linea": "Mesas ocasionales",
+  "linea_slug": "mesas-ocasionales",
+  "medidas": "45 × 45 × 56 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Metal"
+   },
+   {
+    "k": "Base",
+    "v": "Madera sólida"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Nogal"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/ovni-1000.webp"
+ },
+ {
+  "id": "spark",
+  "nombre": "Spark",
+  "categoria": "Mesa ocasional",
+  "linea": "Mesas ocasionales",
+  "linea_slug": "mesas-ocasionales",
+  "medidas": "45 × 45 × 40 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Cristal templado 5 mm"
+   },
+   {
+    "k": "Base",
+    "v": "Cristal templado 5 mm"
+   },
+   {
+    "k": "Color",
+    "v": "Tornasol"
+   }
+  ],
+  "colores": [
+   "Tornasol"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/spark-1000.webp"
+ },
+ {
+  "id": "boss",
+  "nombre": "Boss",
+  "categoria": "Silla de oficina",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "61 × 60 × 115 / 125 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro"
+   },
+   {
+    "k": "Respaldo",
+    "v": "Multiply"
+   },
+   {
+    "k": "Color",
+    "v": "Greich / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Greich",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "boss-2",
+    "color": "Negro / Nogal",
+    "img": "/muebles/img/verano-2026/boss-2-1000.webp"
+   }
+  ],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/boss-1000.webp"
+ },
+ {
+  "id": "chief",
+  "nombre": "Chief",
+  "categoria": "Silla de oficina",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "75 × 84 × 107 / 114 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro"
+   },
+   {
+    "k": "Respaldo",
+    "v": "Multiply"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/chief-1000.webp"
+ },
+ {
+  "id": "labor",
+  "nombre": "Labor",
+  "categoria": "Silla de oficina",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "55 × 51 × 81 / 90 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro"
+   },
+   {
+    "k": "Respaldo",
+    "v": "Multiply"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/labor-1000.webp"
+ },
+ {
+  "id": "office",
+  "nombre": "Office",
+  "categoria": "Silla de oficina",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "66 × 60 × 89 / 98 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro"
+   },
+   {
+    "k": "Respaldo",
+    "v": "Multiply"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Gris",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/office-1000.webp"
+ },
+ {
+  "id": "smart",
+  "nombre": "Smart",
+  "categoria": "Silla de oficina",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "51.5 × 52 × 78 / 87 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro"
+   },
+   {
+    "k": "Respaldo",
+    "v": "Multiply"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Gris",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/smart-1000.webp"
+ },
+ {
+  "id": "work",
+  "nombre": "Work",
+  "categoria": "Silla de oficina",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "69.5 × 60.5 × 115 / 125 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Tapiz",
+    "v": "Tacto piel"
+   },
+   {
+    "k": "Patas",
+    "v": "Metal"
+   },
+   {
+    "k": "Color patas",
+    "v": "Negro"
+   },
+   {
+    "k": "Respaldo",
+    "v": "Multiply"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "work-2",
+    "color": "Negro / Beige / Nogal",
+    "img": "/muebles/img/verano-2026/work-2-1000.webp"
+   }
+  ],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/work-1000.webp"
+ },
+ {
+  "id": "arizona-2",
+  "nombre": "Arizona",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "80 × 200 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF / Pata lateral metal"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Beige"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/arizona-2-1000.webp"
+ },
+ {
+  "id": "arizona-3",
+  "nombre": "Arizona",
+  "categoria": "Librero",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "40 × 150 × 200 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Beige"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/arizona-3-1000.webp"
+ },
+ {
+  "id": "australia",
+  "nombre": "Australia",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "100 × 230 × 75 cm / 68 × 171 × 65 cm",
+  "variantes": [
+   "100 × 230 × 75 cm",
+   "68 × 171 × 65 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Gris"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/australia-1000.webp"
+ },
+ {
+  "id": "copenhague",
+  "nombre": "Copenhague",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "102 × 304 × 76 cm / 83 × 180 × 65 cm / 83 × 89 × 65",
+  "variantes": [
+   "102 × 304 × 76 cm",
+   "83 × 180 × 65 cm",
+   "83 × 89 × 65"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Greich"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Greich"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/copenhague-1000.webp"
+ },
+ {
+  "id": "copenhague-2",
+  "nombre": "Copenhague",
+  "categoria": "Librero",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "40 × 300 × 200 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Greich"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Greich"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/copenhague-2-1000.webp"
+ },
+ {
+  "id": "denmark-2",
+  "nombre": "Denmark",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "80 × 200 × 76 cm / 50 × 180 × 65 cm",
+  "variantes": [
+   "80 × 200 × 76 cm",
+   "50 × 180 × 65 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF / Pata lateral metal"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Greich"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Greich"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/denmark-2-1000.webp"
+ },
+ {
+  "id": "denmark-3",
+  "nombre": "Denmark",
+  "categoria": "Librero",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "40 × 300 × 200 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Greich"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Greich"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/denmark-3-1000.webp"
+ },
+ {
+  "id": "essex-2",
+  "nombre": "Essex",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "80 × 160 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/essex-2-1000.webp"
+ },
+ {
+  "id": "essex-3",
+  "nombre": "Essex",
+  "categoria": "Cajonera",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "40 × 100 × 68 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/essex-3-1000.webp"
+ },
+ {
+  "id": "manchester",
+  "nombre": "Manchester",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "80 × 160 / 180 × 75 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Greich"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Greich"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/manchester-1000.webp"
+ },
+ {
+  "id": "york",
+  "nombre": "York",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "80 × 160 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Greich"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Greich"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/york-1000.webp"
+ },
+ {
+  "id": "oxford-2",
+  "nombre": "Oxford",
+  "categoria": "Escritorio",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "80 × 160 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/oxford-2-1000.webp"
+ },
+ {
+  "id": "oxford-3",
+  "nombre": "Oxford",
+  "categoria": "Cajonera",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "40 × 100 × 68 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Cubierta",
+    "v": "Melamina enchapada nogal"
+   },
+   {
+    "k": "Base",
+    "v": "MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal / Negro"
+   }
+  ],
+  "colores": [
+   "Nogal",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/oxford-3-1000.webp"
+ },
+ {
+  "id": "arizona",
+  "nombre": "Arizona",
+  "categoria": "Escritorio y librero",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "arizona-2",
+    "nombre": "Arizona"
+   },
+   {
+    "id": "arizona-3",
+    "nombre": "Arizona"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/arizona-1000.webp"
+ },
+ {
+  "id": "denmark",
+  "nombre": "Denmark",
+  "categoria": "Escritorio y librero",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "denmark-2",
+    "nombre": "Denmark"
+   },
+   {
+    "id": "denmark-3",
+    "nombre": "Denmark"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/denmark-1000.webp"
+ },
+ {
+  "id": "essex",
+  "nombre": "Essex",
+  "categoria": "Escritorio y cajonera",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "essex-2",
+    "nombre": "Essex"
+   },
+   {
+    "id": "essex-3",
+    "nombre": "Essex"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/essex-1000.webp"
+ },
+ {
+  "id": "oxford",
+  "nombre": "Oxford",
+  "categoria": "Escritorio y cajonera",
+  "linea": "Oficina",
+  "linea_slug": "oficina",
+  "medidas": "",
+  "variantes": [],
+  "materiales": [],
+  "colores": [],
+  "incluye": [
+   {
+    "id": "oxford-2",
+    "nombre": "Oxford"
+   },
+   {
+    "id": "oxford-3",
+    "nombre": "Oxford"
+   }
+  ],
+  "variantes_acabado": [],
+  "clase": "q",
+  "ambiente": true,
+  "img": "/muebles/img/verano-2026/oxford-1000.webp"
+ },
+ {
+  "id": "esferas",
+  "nombre": "Esferas",
+  "categoria": "Vanity",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "40 × 100 × 76 cm / 40 × 60 × 76 cm",
+  "variantes": [
+   "40 × 100 × 76 cm",
+   "40 × 60 × 76 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Espejo / MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/esferas-1000.webp"
+ },
+ {
+  "id": "one",
+  "nombre": "One",
+  "categoria": "Cajonera",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "45 × 60 × 80 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Espejo / MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/one-1000.webp"
+ },
+ {
+  "id": "pekin",
+  "nombre": "Pekín",
+  "categoria": "Espejo",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "5 × 60 × 160 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Espejo"
+   },
+   {
+    "k": "Color",
+    "v": "Negro"
+   }
+  ],
+  "colores": [
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/pekin-1000.webp"
+ },
+ {
+  "id": "star",
+  "nombre": "Star",
+  "categoria": "Vanity",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "40 × 100 × 76 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Espejo / MDF"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "star-2",
+    "color": "Nogal",
+    "img": "/muebles/img/verano-2026/star-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/star-1000.webp"
+ },
+ {
+  "id": "edge",
+  "nombre": "Edge",
+  "categoria": "Cajonera",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "40 × 80 × 105 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/edge-1000.webp"
+ },
+ {
+  "id": "lego",
+  "nombre": "Lego",
+  "categoria": "Cajonera",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "40 × 80 × 105 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [
+   {
+    "id": "lego-2",
+    "color": "Rosa",
+    "img": "/muebles/img/verano-2026/lego-2-1000.webp"
+   }
+  ],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/lego-1000.webp"
+ },
+ {
+  "id": "levels",
+  "nombre": "Levels",
+  "categoria": "Cajonera",
+  "linea": "Espejos y vanities",
+  "linea_slug": "espejos-y-vanities",
+  "medidas": "40 × 120 × 89 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "MDF enchapado nogal"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/levels-1000.webp"
+ },
+ {
+  "id": "age",
+  "nombre": "Age",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "21 × 21 × 34 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/age-640.webp"
+ },
+ {
+  "id": "black-white",
+  "nombre": "Black & White",
+  "categoria": "Set bandeja",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "33 × 33 × 4 cm chico / 35 × 35 × 4 cm grande",
+  "variantes": [
+   "33 × 33 × 4 cm chico",
+   "35 × 35 × 4 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Plástico"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Negro"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/black-white-640.webp"
+ },
+ {
+  "id": "brownie",
+  "nombre": "Brownie",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "19 × 19 × 31 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Café"
+   }
+  ],
+  "colores": [
+   "Café"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/brownie-640.webp"
+ },
+ {
+  "id": "caballos",
+  "nombre": "Caballos",
+  "categoria": "Sujetalibros",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "10 × 13 × 27 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Poliestireno"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/caballos-640.webp"
+ },
+ {
+  "id": "caracol",
+  "nombre": "Caracol",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "14 × 23 × 15 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Arena / Cemento"
+   },
+   {
+    "k": "Color",
+    "v": "Arena"
+   }
+  ],
+  "colores": [
+   "Arena"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/caracol-640.webp"
+ },
+ {
+  "id": "elefante",
+  "nombre": "Elefante",
+  "categoria": "Sujetalibros",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "13 × 22 × 19 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Piedra / Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Bronce"
+   }
+  ],
+  "colores": [
+   "Bronce"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/elefante-640.webp"
+ },
+ {
+  "id": "flor-3",
+  "nombre": "Flor",
+  "categoria": "Set figuras",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "12 × 32 × 58 cm / 9 × 32 × 48 cm",
+  "variantes": [
+   "12 × 32 × 58 cm",
+   "9 × 32 × 48 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Metal / Pino"
+   },
+   {
+    "k": "Color",
+    "v": "Negro / Nogal"
+   }
+  ],
+  "colores": [
+   "Negro",
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/flor-3-640.webp"
+ },
+ {
+  "id": "girasol",
+  "nombre": "Girasol",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "13 × 42 × 67 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Madera / Metal"
+   },
+   {
+    "k": "Color",
+    "v": "Nogal"
+   }
+  ],
+  "colores": [
+   "Nogal"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/girasol-640.webp"
+ },
+ {
+  "id": "grecia",
+  "nombre": "Grecia",
+  "categoria": "Set florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "15 × 15 × 21 cm chico / 18 × 18 × 25 cm grande",
+  "variantes": [
+   "15 × 15 × 21 cm chico",
+   "18 × 18 × 25 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Dorado"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/grecia-640.webp"
+ },
+ {
+  "id": "guia",
+  "nombre": "Guía",
+  "categoria": "Jarrón",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "15 × 15 × 32 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Dorado"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/guia-640.webp"
+ },
+ {
+  "id": "hole",
+  "nombre": "Hole",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "12 × 17 × 45 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cristal"
+   },
+   {
+    "k": "Color",
+    "v": "Humo"
+   }
+  ],
+  "colores": [
+   "Humo"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/hole-640.webp"
+ },
+ {
+  "id": "iron",
+  "nombre": "Iron",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "20 × 20 × 38 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Terracota"
+   },
+   {
+    "k": "Color",
+    "v": "Iron / Gris"
+   }
+  ],
+  "colores": [
+   "Iron",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/iron-640.webp"
+ },
+ {
+  "id": "lineas",
+  "nombre": "Líneas",
+  "categoria": "Set florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "15 × 21 × 20 cm chico / 17 × 25 × 33 cm grande",
+  "variantes": [
+   "15 × 21 × 20 cm chico",
+   "17 × 25 × 33 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cristal"
+   },
+   {
+    "k": "Color",
+    "v": "Café / Beige"
+   }
+  ],
+  "colores": [
+   "Café",
+   "Beige"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/lineas-640.webp"
+ },
+ {
+  "id": "mar",
+  "nombre": "Mar",
+  "categoria": "Set figuras",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "12 × 18 × 38 cm chico / 17 × 21 × 32 cm grande",
+  "variantes": [
+   "12 × 18 × 38 cm chico",
+   "17 × 21 × 32 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Resina"
+   },
+   {
+    "k": "Color",
+    "v": "Beige / Dorado"
+   }
+  ],
+  "colores": [
+   "Beige",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mar-640.webp"
+ },
+ {
+  "id": "marble",
+  "nombre": "Marble",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "21 × 21 × 23 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cristal"
+   },
+   {
+    "k": "Color",
+    "v": "Mármol carrara"
+   }
+  ],
+  "colores": [
+   "Mármol carrara"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/marble-640.webp"
+ },
+ {
+  "id": "mikonos",
+  "nombre": "Mikonos",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "19 × 19 × 29 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco"
+   }
+  ],
+  "colores": [
+   "Blanco"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mikonos-640.webp"
+ },
+ {
+  "id": "mono",
+  "nombre": "Moño",
+  "categoria": "Set florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "16 × 16 × 31 cm chico / 17 × 17 × 38 cm grande",
+  "variantes": [
+   "16 × 16 × 31 cm chico",
+   "17 × 17 × 38 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Dorado"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/mono-640.webp"
+ },
+ {
+  "id": "natura",
+  "nombre": "Natura",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "21 × 21 × 35 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Gris"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/natura-640.webp"
+ },
+ {
+  "id": "olimpo",
+  "nombre": "Olimpo",
+  "categoria": "Set florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "18 × 18 × 24 cm chico / 14 × 14 × 28 cm grande",
+  "variantes": [
+   "18 × 18 × 24 cm chico",
+   "14 × 14 × 28 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Terracota"
+   },
+   {
+    "k": "Color",
+    "v": "Gris / Iron"
+   }
+  ],
+  "colores": [
+   "Gris",
+   "Iron"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/olimpo-640.webp"
+ },
+ {
+  "id": "orejas",
+  "nombre": "Orejas",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "14 × 20 × 19 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Resina"
+   },
+   {
+    "k": "Color",
+    "v": "Arena / Dorado"
+   }
+  ],
+  "colores": [
+   "Arena",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/orejas-640.webp"
+ },
+ {
+  "id": "piedra",
+  "nombre": "Piedra",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "23 × 23 × 28 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/piedra-640.webp"
+ },
+ {
+  "id": "pony",
+  "nombre": "Pony",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "10 × 24 × 36 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Aluminio"
+   },
+   {
+    "k": "Color",
+    "v": "Dorado / Negro"
+   }
+  ],
+  "colores": [
+   "Dorado",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/pony-640.webp"
+ },
+ {
+  "id": "punta",
+  "nombre": "Punta",
+  "categoria": "Set figuras",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "8 × 31 × 33 cm chico / 8 × 18 × 53 cm grande",
+  "variantes": [
+   "8 × 31 × 33 cm chico",
+   "8 × 18 × 53 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Resina"
+   },
+   {
+    "k": "Color",
+    "v": "Blanco / Dorado"
+   }
+  ],
+  "colores": [
+   "Blanco",
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/punta-640.webp"
+ },
+ {
+  "id": "rupestre",
+  "nombre": "Rupestre",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "25 × 25 × 21 cm grande",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Terracota"
+   },
+   {
+    "k": "Color",
+    "v": "Gris"
+   }
+  ],
+  "colores": [
+   "Gris"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/rupestre-640.webp"
+ },
+ {
+  "id": "silver",
+  "nombre": "Silver",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "7 × 27 × 32 cm / 7 × 28 × 32 cm",
+  "variantes": [
+   "7 × 27 × 32 cm",
+   "7 × 28 × 32 cm"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Plata"
+   }
+  ],
+  "colores": [
+   "Plata"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/silver-640.webp"
+ },
+ {
+  "id": "stripes-2",
+  "nombre": "Stripes",
+  "categoria": "Florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "20 × 20 × 45 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cerámica"
+   },
+   {
+    "k": "Color",
+    "v": "Beige / Negro"
+   }
+  ],
+  "colores": [
+   "Beige",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/stripes-2-640.webp"
+ },
+ {
+  "id": "torso",
+  "nombre": "Torso",
+  "categoria": "Figura",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "12 × 13 × 25 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Resina"
+   },
+   {
+    "k": "Color",
+    "v": "Plata / Negro"
+   }
+  ],
+  "colores": [
+   "Plata",
+   "Negro"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/torso-640.webp"
+ },
+ {
+  "id": "twist-2",
+  "nombre": "Twist",
+  "categoria": "Set florero",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "25 × 27 × 15 cm chico / 23 × 25 × 24 cm grande",
+  "variantes": [
+   "25 × 27 × 15 cm chico",
+   "23 × 25 × 24 cm grande"
+  ],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cristal"
+   },
+   {
+    "k": "Color",
+    "v": "Ámbar"
+   }
+  ],
+  "colores": [
+   "Ámbar"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/twist-2-640.webp"
+ },
+ {
+  "id": "wax",
+  "nombre": "Wax",
+  "categoria": "Vela",
+  "linea": "Decoración",
+  "linea_slug": "decoracion",
+  "medidas": "8 × 8 × 11 cm",
+  "variantes": [],
+  "materiales": [
+   {
+    "k": "Material",
+    "v": "Cristal / Cera"
+   },
+   {
+    "k": "Color",
+    "v": "Dorado"
+   }
+  ],
+  "colores": [
+   "Dorado"
+  ],
+  "incluye": [],
+  "variantes_acabado": [],
+  "clase": "v",
+  "ambiente": false,
+  "img": "/muebles/img/verano-2026/wax-640.webp"
+ }
+]

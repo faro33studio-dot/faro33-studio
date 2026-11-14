@@ -1,0 +1,242 @@
+/* Faro 33 — /muebles/ · Colección Verano 2026
+   Vitrina de muebles, no tienda: sin precios, sin códigos, sin botón por tarjeta.
+   Todo el CSS específico de la página vive aquí; muebles/index.html se genera. */
+
+@font-face { font-family:"Bodoni MT"; src:url("/assets/home/4d967a70-ae78-49e6-9bf6-d7663052c2e6.woff2") format("woff2"), url("/assets/home/4d967a70-ae78-49e6-9bf6-d7663052c2e6.ttf") format("truetype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Bodoni MT"; src:url("/assets/home/c76eb239-ac22-4440-bb11-60ee5c0f0bb4.woff2") format("woff2"), url("/assets/home/c76eb239-ac22-4440-bb11-60ee5c0f0bb4.ttf") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"Bodoni MT"; src:url("/assets/home/a49ac2bd-e1a8-4d3e-9750-ba7039325c3c.woff2") format("woff2"), url("/assets/home/a49ac2bd-e1a8-4d3e-9750-ba7039325c3c.ttf") format("truetype"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"Bodoni MT"; src:url("/assets/home/5346560a-9fe3-4bfb-a9f3-4ecee796adda.woff2") format("woff2"), url("/assets/home/5346560a-9fe3-4bfb-a9f3-4ecee796adda.ttf") format("truetype"); font-weight:700; font-style:italic; font-display:swap; }
+
+:root{
+  --navy-800:#13305C; --navy-700:#1E4276; --navy-900:#0E2547; --navy-950:#0A1B36;
+  --navy-200:#C2D2E4;
+  --linen-50:#FBF8F2; --linen-100:#F4EFE5;
+  --sand-200:#E6DDCB; --sand-300:#C9BCA1;
+  --stone-500:#766C59; --stone-700:#54493A;
+  --ink-900:#1B1612;
+  --brass-400:#C9A968; --brass-500:#B8924A; --brass-700:#856628;
+  --font-display:"Bodoni MT","Bodoni Moda","Didot",serif;
+  --font-body:"Bodoni MT","Bodoni Moda",Georgia,serif;
+  --font-ui: ui-sans-serif,-apple-system,"Inter","Helvetica Neue",Arial,sans-serif;
+  --ease-out: cubic-bezier(0.2,0.7,0.2,1);
+  --wrap:1180px;
+  --gutter:16px;
+  --nav-h:64px;
+  --mb-v:4/5; --mb-h:3/2; --mb-q:1/1;
+  --drawer-w:480px;
+  --wa:#25D366; --wa-ink:#0A1B36;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ margin:0; padding-top:var(--nav-h); background:var(--linen-50); color:var(--ink-900); font-family:var(--font-body); font-size:17px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+img{ display:block; max-width:100%; }
+a{ color:inherit; }
+button{ font:inherit; color:inherit; cursor:pointer; }
+.wrap{ width:100%; max-width:calc(var(--wrap) + 2*var(--gutter)); margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); }
+.skip-link{ position:absolute; left:-9999px; top:0; z-index:200; background:var(--navy-800); color:#fff; padding:12px 20px; font-family:var(--font-ui); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; }
+.skip-link:focus{ left:0; }
+
+/* Header fijo; glass.css lo convierte en cápsula al hacer scroll. */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  height:var(--nav-h);
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:0 var(--gutter);
+  background:rgba(10,27,54,0.97);
+  color:#fff;
+}
+.nav .brand{ display:inline-flex; align-items:center; gap:10px; min-height:44px; color:#fff; text-decoration:none; }
+.nav .brand img{ width:28px; height:28px; border-radius:50%; }
+.nav .brand .lbl{ font-family:var(--font-ui); font-size:11px; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; white-space:nowrap; }
+.nav .back{ display:inline-flex; align-items:center; min-height:44px; color:#fff; text-decoration:none; opacity:0.82; font-family:var(--font-ui); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; white-space:nowrap; }
+.nav .back:hover{ opacity:1; }
+@media (max-width:560px){ .nav .brand .lbl{ display:none; } }
+
+/* Cabecera de texto, sin foto. */
+.mb-intro{ padding-top:14px; padding-bottom:6px; }
+.mb-eyebrow{
+  display:flex; align-items:center; gap:12px; margin:0 0 6px;
+  font-family:var(--font-ui); font-size:11px; font-weight:500; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--stone-700);
+}
+.mb-eyebrow::before{ content:""; flex:none; width:30px; height:1px; background:var(--brass-500); }
+.mb-eyebrow--light{ color:var(--navy-200); }
+.mb-eyebrow--light::before{ background:var(--brass-400); }
+.mb-h1{
+  margin:0 0 6px; font-family:var(--font-display); font-weight:400;
+  font-size:clamp(36px,10vw,64px); line-height:1.02; letter-spacing:-0.01em; color:var(--navy-800);
+}
+.mb-h1 em{ font-style:italic; color:var(--brass-700); }
+.mb-lede{ margin:0 0 6px; max-width:46ch; font-family:var(--font-body); font-size:14px; line-height:1.38; color:var(--stone-700); }
+.mb-link{
+  display:inline-flex; align-items:center; gap:8px; min-height:22px; padding-bottom:3px;
+  font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--navy-800); text-decoration:none;
+  border-bottom:1px solid var(--brass-500);
+}
+.mb-link:hover{ color:var(--brass-700); }
+
+/* Barra de chips estática (M2 la activa). Vidrio solo aquí, nunca en tarjetas. */
+.mb-bar{
+  position:sticky; top:calc(var(--nav-h) + 10px); z-index:30;
+  padding:0 var(--gutter);
+}
+.mb-bar-in{
+  max-width:var(--wrap); margin:0 auto; padding:2px;
+  border-radius:999px; border:1px solid var(--sand-200);
+  background:rgba(251,248,242,0.88);
+}
+.mb-chips{
+  display:flex; align-items:center; gap:6px; overflow-x:auto; overscroll-behavior-x:contain;
+  scroll-snap-type:x proximity; scrollbar-width:none; padding:0; position:relative; z-index:1;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+}
+.mb-chips::-webkit-scrollbar{ display:none; }
+.chip{
+  flex:none; scroll-snap-align:start; min-height:44px; padding:0 14px; border-radius:999px;
+  border:1px solid var(--sand-300); background:transparent;
+  font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.12em;
+  text-transform:uppercase; color:var(--navy-800);
+  transition:background .28s var(--ease-out), color .28s var(--ease-out), border-color .28s var(--ease-out);
+}
+.chip:hover{ border-color:var(--navy-800); }
+.chip[aria-pressed="true"]{ background:var(--navy-800); border-color:var(--navy-800); color:#fff; }
+.chip:focus-visible{ outline:2px solid var(--brass-700); outline-offset:2px; }
+.mb-count{
+  max-width:calc(var(--wrap) + 2*var(--gutter)); margin:6px auto 0; padding:0 var(--gutter);
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--stone-500); text-align:left;
+}
+
+/* Secciones por línea. content-visibility acota el coste de 247 tarjetas. */
+.mb-sec{ content-visibility:auto; contain-intrinsic-size:auto var(--mb-size,1200px); scroll-margin-top:calc(var(--nav-h) + 84px); }
+.mb-h2{
+  display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+  margin:12px 0 6px; font-family:var(--font-display); font-weight:400;
+  font-size:22px; line-height:1.05; color:var(--navy-800);
+}
+.mb-h2 span{
+  font-family:var(--font-ui); font-size:11px; font-weight:500; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--stone-500); white-space:nowrap;
+}
+.mb-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.mb-sub{
+  grid-column:1/-1; display:flex; align-items:center; gap:12px;
+  margin:6px 0 0; font-family:var(--font-ui); font-size:11px; font-weight:600;
+  letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-700);
+}
+.mb-sub::after{ content:""; flex:1; height:1px; background:var(--sand-200); }
+
+/* Tarjeta: toda la superficie abre la ficha. Sin botón, sin vidrio, sin precio. */
+.mb{ display:block; min-width:0; color:inherit; text-decoration:none; }
+.mb:focus-visible{ outline:2px solid var(--brass-700); outline-offset:4px; }
+.mb-ph{ position:relative; overflow:hidden; background:var(--linen-50); }
+.mb--v .mb-ph{ aspect-ratio:var(--mb-v); }
+.mb--h .mb-ph{ aspect-ratio:var(--mb-h); }
+.mb--q .mb-ph{ aspect-ratio:var(--mb-q); }
+.mb-ph img{
+  display:block; width:100%; height:100%;
+  object-fit:contain; object-position:center bottom; padding:8%;
+  transition:transform .7s var(--ease-out);
+}
+.mb[data-amb] .mb-ph img{ object-fit:cover; object-position:center; padding:0; }
+.mb-set{
+  position:absolute; left:8px; top:8px; z-index:1; padding:5px 7px;
+  background:var(--navy-800); color:#fff;
+  font-family:var(--font-ui); font-size:10px; font-weight:600; letter-spacing:0.12em;
+  text-transform:uppercase; line-height:1;
+}
+.mb-t{ height:60px; padding-top:4px; overflow:hidden; }
+.mb-c{
+  margin:0 0 2px; font-family:var(--font-ui); font-size:12px; font-weight:600;
+  line-height:1; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-700);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.mb-n{
+  margin:0; font-family:var(--font-display); font-weight:400;
+  font-size:20px; line-height:1.05; color:var(--navy-800);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.mb-m{
+  margin:2px 0 0; font-family:var(--font-ui); font-size:12px; line-height:1.3;
+  color:var(--stone-500); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+@media (hover:hover) and (pointer:fine){ .mb:hover .mb-ph img{ transform:scale(1.03); } }
+
+/* Cierre navy único de la página. */
+.mb-close{
+  margin-top:48px; padding:48px 0 calc(48px + env(safe-area-inset-bottom,0px));
+  background:var(--navy-950); color:#fff;
+}
+.mb-close-h2{
+  margin:0 0 14px; font-family:var(--font-display); font-weight:400;
+  font-size:clamp(30px,7vw,48px); line-height:1.05; color:#fff;
+}
+.mb-close-h2 em{ font-style:italic; color:var(--brass-400); }
+.mb-close-p{ margin:0 0 20px; max-width:44ch; color:var(--navy-200); font-size:16px; line-height:1.5; }
+.mb-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  min-height:48px; padding:0 22px; border-radius:2px; border:1px solid transparent;
+  font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:0.14em;
+  text-transform:uppercase; text-decoration:none;
+  transition:filter .2s var(--ease-out), scale .12s var(--ease-out);
+}
+.mb-btn:active{ scale:0.97; }
+.mb-btn--wa{ background:var(--wa); color:var(--wa-ink); }
+.mb-btn--wa:hover{ filter:brightness(1.04); }
+.mb-close-small{
+  display:block; margin-top:24px;
+  font-family:var(--font-ui); font-size:12px; line-height:1.5; color:rgba(255,255,255,0.6);
+}
+
+.foot{
+  display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  padding:24px var(--gutter); padding-right:calc(var(--gutter) + 64px); background:var(--navy-950); color:rgba(255,255,255,0.55);
+  border-top:1px solid rgba(255,255,255,0.12);
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.24em; text-transform:uppercase;
+}
+.foot a{ color:rgba(255,255,255,0.8); text-decoration:none; }
+.foot a:hover{ color:#fff; }
+@media (min-width:641px){ .foot{ padding-right:300px; } }
+
+/* WhatsApp flotante (el material lo pone glass.css). */
+.wa-fab{
+  position:fixed; right:24px; bottom:calc(24px + env(safe-area-inset-bottom,0px)); z-index:80;
+  display:flex; align-items:center; gap:12px;
+  background:#25D366; color:#fff; text-decoration:none;
+  padding:16px 22px; border-radius:999px;
+  font-family:var(--font-ui); font-size:12px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase;
+  box-shadow:0 12px 32px -8px rgba(37,211,102,0.55);
+  transition:transform .15s ease;
+}
+.wa-fab:hover{ transform:translateY(-2px); }
+@media (max-width:640px){ .wa-fab .wa-fab-lbl{ display:none; } .wa-fab{ padding:16px; } }
+
+@media (min-width:768px){
+  :root{ --gutter:24px; }
+  .mb-intro{ padding-top:28px; padding-bottom:14px; }
+  .mb-eyebrow{ font-size:12px; margin-bottom:12px; }
+  .mb-h1{ font-size:clamp(44px,6vw,64px); margin-bottom:12px; }
+  .mb-lede{ max-width:52ch; font-size:17px; line-height:1.5; margin-bottom:12px; }
+  .mb-count{ text-align:right; margin-top:10px; }
+  .mb-h2{ font-size:clamp(26px,3vw,32px); margin:24px 0 14px; }
+  .mb-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 16px; }
+  .mb-t{ height:64px; padding-top:6px; }
+  .mb-close{ margin-top:56px; padding:64px 0 calc(64px + env(safe-area-inset-bottom,0px)); }
+}
+@media (min-width:1100px){
+  :root{ --gutter:max(32px,calc((100vw - 1180px)/2)); }
+  .mb-intro{ padding-top:34px; padding-bottom:18px; }
+  .mb-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:32px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  .mb:hover .mb-ph img{ transform:none; }
+}
+
+/* El drawer de menu.js pide Bodoni 700 solo para su marca. En esta página la dejamos
+   en 400 para no descargar la 700 en el primer pliegue (el resto del sitio no cambia). */
+html .f33m-head .mark{ font-weight:400; }
