@@ -242,7 +242,7 @@ def main() -> int:
     for i, p in enumerate(sel):
         sel_cards.append(tarjeta(p, dims=dims, slugs=slugs, force_q=True, eager=i < 4, first=i == 0))
     seleccion_html = (
-        f'  <section class="mb-sec" id="seleccion" style="--mb-size:{estimar_alto(len(sel), "seleccion", "q")}px">\n'
+        f'  <section class="mb-sec" id="seleccion" data-n="{len(sel)}" style="--mb-size:{estimar_alto(len(sel), "seleccion", "q")}px">\n'
         f'    <div class="wrap">\n'
         f'      <h2 class="mb-h2">Selección del estudio <span>{len(sel)} piezas</span></h2>\n'
         f'      <div class="mb-grid">\n' + "\n".join(sel_cards) + "\n"
@@ -278,7 +278,7 @@ def main() -> int:
         celdas.extend(tarjeta(p, dims=dims, slugs=slugs) for p in ambiente)
         ordered.extend(normales + nacionales + ambiente)
         secciones_html.append(
-            f'  <section class="mb-sec" id="linea-{slug}" data-linea="{slug}" style="--mb-size:{estimar_alto(len(piezas), slug, linea["clase"])}px">\n'
+            f'  <section class="mb-sec" id="linea-{slug}" data-linea="{slug}" data-n="{len(piezas)}" style="--mb-size:{estimar_alto(len(piezas), slug, linea["clase"])}px">\n'
             f'    <div class="wrap">\n'
             f'      <h2 class="mb-h2">{esc(linea["nombre"])} <span>{len(piezas)} piezas</span></h2>\n'
             f'      <div class="mb-grid">\n' + "\n".join(celdas) + "\n"
@@ -341,7 +341,7 @@ def main() -> int:
     wa_url = f"https://wa.me/{WA_NUMERO}?text={quote(WA_CATALOGO, safe='')}"
     replacements = {
         "{{TOTAL}}": str(EXPECTED_TOTAL),
-        "{{COUNT}}": f"{EXPECTED_TOTAL} piezas",
+        "{{COUNT}}": f"{EXPECTED_TOTAL} piezas · Colección Verano 2026",
         "{{CHIPS}}": "\n        ".join(chips),
         "{{SELECCION}}": seleccion_html,
         "{{SECCIONES}}": "\n\n".join(secciones_html),

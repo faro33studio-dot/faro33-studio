@@ -30,7 +30,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 - **Fuentes de solo lectura**: `catalogo/web/v1/data.final.json` + `lineas.final.json` y fotos `catalogo/web/v3/img/<id>-{360,640,1000}.webp`. Se publican las 247 sin `oculta`/`oculta_por_agrupacion`; las 23 `variantes_acabado` viajan con su pieza base. Salida: `muebles/img/verano-2026/` y `muebles/data/verano-2026.json`.
 - **Fotos**: tarjeta `-360`/`-640`; ficha `-1000`; solo WebP con transparencia; nunca ampliar por encima del origen (118–900 px); la regla 1800 **no aplica** a esta sección.
 - **Excepción a "solo trabajo real del estudio"**: `muebles/img/` son fotos de proveedor con permiso; no salen de `/muebles/` ni de la franja del home.
-- **Pendiente**: M2 (filtro, contador, `?linea=`) y M3 (ficha lateral, `#pieza=`). El HTML ya trae chips y tarjetas sin JS.
+- **Pendiente**: M3 (ficha lateral, `#pieza=`). M2 (filtro, contador, `?linea=`) hecho en `assets/muebles.js`.
 
 ## ⚠️ Checklist: agregar un NUEVO SERVICIO (seguir en orden, sin excepciones)
 

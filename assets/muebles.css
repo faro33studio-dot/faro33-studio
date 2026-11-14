@@ -88,11 +88,12 @@ button{ font:inherit; color:inherit; cursor:pointer; }
 }
 .mb-chips{
   display:flex; align-items:center; gap:6px; overflow-x:auto; overscroll-behavior-x:contain;
-  scroll-snap-type:x proximity; scrollbar-width:none; padding:0; position:relative; z-index:1;
+  scroll-snap-type:x proximity; scrollbar-width:none; padding:4px 0 4px 4px; position:relative; z-index:1;
   -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
           mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
 }
 .mb-chips::-webkit-scrollbar{ display:none; }
+.mb-chips.is-end{ -webkit-mask-image:none; mask-image:none; }
 .chip{
   flex:none; scroll-snap-align:start; min-height:44px; padding:0 14px; border-radius:999px;
   border:1px solid var(--sand-300); background:transparent;
@@ -127,6 +128,22 @@ button{ font:inherit; color:inherit; cursor:pointer; }
   letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-700);
 }
 .mb-sub::after{ content:""; flex:1; height:1px; background:var(--sand-200); }
+
+/* Celda de cierre de una línea filtrada (la crea muebles.js; sin JS no existe). */
+.mb-end{
+  grid-column:1/-1; display:flex; flex-direction:column; align-items:flex-start; gap:14px;
+  margin-top:4px; padding:22px 20px; background:var(--navy-950); color:#fff;
+}
+.mb-end-h{
+  margin:0; max-width:26ch; font-family:var(--font-display); font-weight:400;
+  font-size:22px; line-height:1.1; color:#fff;
+}
+.mb-end .mb-btn{ min-height:44px; }
+.mb-btn:focus-visible{ outline:2px solid var(--brass-400); outline-offset:3px; }
+@media (min-width:768px){
+  .mb-end{ flex-direction:row; align-items:center; justify-content:space-between; gap:24px; padding:26px 28px; }
+  .mb-end-h{ font-size:26px; max-width:34ch; }
+}
 
 /* Tarjeta: toda la superficie abre la ficha. Sin botón, sin vidrio, sin precio. */
 .mb{ display:block; min-width:0; color:inherit; text-decoration:none; }
@@ -229,6 +246,9 @@ button{ font:inherit; color:inherit; cursor:pointer; }
   :root{ --gutter:max(32px,calc((100vw - 1180px)/2)); }
   .mb-intro{ padding-top:34px; padding-bottom:18px; }
   .mb-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:32px 24px; }
+  /* En escritorio los 12 chips caben en dos filas: nada de scroll interno. */
+  .mb-chips{ flex-wrap:wrap; overflow-x:visible; scroll-snap-type:none; -webkit-mask-image:none; mask-image:none; }
+  .mb-sec{ scroll-margin-top:calc(var(--nav-h) + 126px); }
 }
 
 @media (prefers-reduced-motion: reduce){
