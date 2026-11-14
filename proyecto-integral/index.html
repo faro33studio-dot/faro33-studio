@@ -590,7 +590,7 @@ html.js .rv.in{ opacity:1; transform:none; }
 (function(){
   function fire(label){
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
       try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
@@ -665,6 +665,7 @@ html.js .rv.in{ opacity:1; transform:none; }
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/glass.js" defer></script>
+<script src="/assets/origen.js" defer></script>
 <script src="/assets/consent.js" defer></script>
 </body>
 </html>

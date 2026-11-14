@@ -31,6 +31,30 @@
   function label(chip) {
     return chip ? chip.textContent.replace(/\s+/g, ' ').trim() : '';
   }
+  function lineName(value) {
+    var chip = chipFor(value);
+    return chip ? label(chip) : String(value || '');
+  }
+  function trackView(info) {
+    if (typeof fbq !== 'function') return;
+    try {
+      fbq('track', 'ViewContent', {
+        content_type: 'product',
+        content_ids: [info.id],
+        content_name: info.nombre,
+        content_category: lineName(info.linea)
+      });
+    } catch (e) {}
+  }
+  function trackFilter(chip, slug) {
+    if (typeof fbq !== 'function') return;
+    try {
+      fbq('trackCustom', 'FiltrarLinea', {
+        content_category: slug === 'todas' ? 'Todas' : label(chip),
+        linea: slug
+      });
+    } catch (e) {}
+  }
   function toggle(section, show) {
     if (!section) return;
     if (show) section.removeAttribute('hidden');
@@ -58,6 +82,9 @@
     );
     a.target = '_blank';
     a.rel = 'noopener';
+    a.setAttribute('data-wa-label', 'Muebles: ' + name);
+    a.setAttribute('data-wa-cat', name);
+    a.setAttribute('data-wa-name', name);
     a.textContent = 'Escríbenos por WhatsApp';
     end.appendChild(p);
     end.appendChild(a);
@@ -161,7 +188,10 @@
 
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
-      apply(chip.getAttribute('data-slug'), { scroll: true });
+      var slug = chip.getAttribute('data-slug');
+      apply(slug, { scroll: true });
+      /* Solo la acción del usuario: la carga con ?linea= y popstate no pasan por aquí. */
+      trackFilter(chip, slug);
     });
   });
   bar.addEventListener('scroll', updateMask, false);
@@ -261,6 +291,11 @@
   }
   function setWa(p) {
     waBtn.href = 'https://wa.me/526675402559?text=' + encodeURIComponent(waText(p));
+    var nom = p.nombre || '';
+    waBtn.setAttribute('data-wa-label', 'Muebles: ' + nom);
+    waBtn.setAttribute('data-wa-ids', p.id || '');
+    waBtn.setAttribute('data-wa-cat', lineName(p.linea));
+    waBtn.setAttribute('data-wa-name', nom);
   }
   function updatePos() {
     var ids = orderIds();
@@ -484,6 +519,8 @@
     var info = cardInfo(card);
     var d = dataById && dataById[id];
     shell(d || info);
+    /* Una sola vez por apertura; el early-return de arriba evita repetir la misma. */
+    trackView(d || info);
     if (d) {
       renderDetail(d);
     } else {

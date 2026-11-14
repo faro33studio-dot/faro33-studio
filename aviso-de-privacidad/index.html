@@ -348,7 +348,7 @@ html.js .rv.in{ opacity:1; transform:none; }
   <div class="wrap">
     <p class="eyebrow" style="color:rgba(255,255,255,0.8)">Faro 33 Studio · Legal</p>
     <h1>Aviso de <em>privacidad</em></h1>
-    <p class="upd">Última actualización: 22 de octubre de 2026</p>
+    <p class="upd">Última actualización: <time datetime="2026-11-15">15 de noviembre de 2026</time></p>
   </div>
 </header>
 
@@ -413,6 +413,7 @@ html.js .rv.in{ opacity:1; transform:none; }
       <div class="tr" role="row"><span role="cell"><strong>Google Maps</strong></span><span role="cell">Mostrar el mapa del estudio (solo en “Sobre nosotros”).</span><span role="cell">Google LLC</span></div>
       <div class="tr" role="row"><span role="cell"><strong>Apple Maps</strong></span><span role="cell">Mostrar el mapa del estudio en la página principal.</span><span role="cell">Apple Inc.</span></div>
       <div class="tr" role="row"><span role="cell"><strong>Preferencia de cookies</strong></span><span role="cell">Recordar durante 12 meses si aceptaste o rechazaste (almacenamiento local, sin datos personales).</span><span role="cell">Faro 33</span></div>
+      <div class="tr" role="row"><span role="cell"><strong>origen (sessionStorage, propia)</strong></span><span role="cell">Guarda el canal/campaña de anuncio de la visita para etiquetar el mensaje de WhatsApp; se borra al cerrar la pestaña; solo si aceptas medición.</span><span role="cell">Faro 33</span></div>
     </div>
     <p><strong>Cómo desactivarlas:</strong></p>
     <ul>
@@ -460,7 +461,7 @@ html.js .rv.in{ opacity:1; transform:none; }
 (function(){
   function fire(label){
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
       try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
@@ -480,6 +481,7 @@ html.js .rv.in{ opacity:1; transform:none; }
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/glass.js" defer></script>
+<script src="/assets/origen.js" defer></script>
 <script src="/assets/consent.js" defer></script>
 </body>
 </html>

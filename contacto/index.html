@@ -46,7 +46,7 @@ gtag('config', 'G-91L2N1S9T3');
 
     fbq('init', '883854600914341');
     fbq('track', 'PageView');
-    fbq('track', 'Lead');          // ← evento clave para optimización de anuncios
+    fbq('track', 'Lead', { value: 2667, currency: 'MXN' });          // ← evento clave para optimización de anuncios (valor estimado por lead: 240 mil / 90 leads)
   </script>
   <noscript>
     <img height="1" width="1" alt="" style="display:none"
@@ -322,6 +322,7 @@ gtag('config', 'G-91L2N1S9T3');
   }, 1000);
 </script>
 
+<script src="/assets/origen.js" defer></script>
 <script src="/assets/consent.js" defer></script>
 </body>
 </html>

@@ -78,7 +78,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
     <p class="mb-eyebrow">Colección Verano 2026</p>
     <h1 class="mb-h1">Muebles para <em>habitar.</em></h1>
     <p class="mb-lede">{{TOTAL}} piezas elegidas por el estudio. No publicamos precios: dinos cuál te gusta y te respondemos por WhatsApp.</p>
-    <a class="mb-link" href="{{WA_CATALOGO}}" target="_blank" rel="noopener">Solicitar catálogo <span aria-hidden="true">→</span></a>
+    <a class="mb-link" href="{{WA_CATALOGO}}" target="_blank" rel="noopener" data-wa-label="Catalogo muebles" data-wa-name="Catalogo muebles">Solicitar catálogo <span aria-hidden="true">→</span></a>
   </header>
 
   <nav class="mb-bar" aria-label="Filtrar por línea">
@@ -96,7 +96,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
       <p class="mb-eyebrow mb-eyebrow--light">Hablemos</p>
       <h2 class="mb-close-h2">¿No encontraste <em>lo que buscas?</em></h2>
       <p class="mb-close-p">Cuéntanos tu espacio y te mandamos el catálogo completo de la colección por WhatsApp.</p>
-      <a class="mb-btn mb-btn--wa" href="{{WA_CATALOGO}}" target="_blank" rel="noopener">Solicitar catálogo</a>
+      <a class="mb-btn mb-btn--wa" href="{{WA_CATALOGO}}" target="_blank" rel="noopener" data-wa-label="Catalogo muebles" data-wa-name="Catalogo muebles">Solicitar catálogo</a>
       <small class="mb-close-small">Las fotos de ambiente son ilustrativas.</small>
     </div>
   </section>
@@ -136,7 +136,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 </footer>
 
 <!-- WhatsApp flotante -->
-<a class="wa-fab" href="{{WA_CATALOGO}}" target="_blank" rel="noopener" aria-label="Solicitar catálogo por WhatsApp">
+<a class="wa-fab" href="{{WA_CATALOGO}}" target="_blank" rel="noopener" aria-label="Solicitar catálogo por WhatsApp" data-wa-label="Catalogo muebles" data-wa-name="Catalogo muebles">
   <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
   <span class="wa-fab-lbl">Solicitar catálogo</span>
 </a>
@@ -144,10 +144,16 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 <script>
 /* Meta Pixel + GA4 — WhatsApp clicks are the conversion signal */
 (function(){
-  function fire(label){
+  function fire(label, ids, cat, name){
+    var contentName = name || label || 'WhatsApp';
+    var lead = { value: 2667, currency: 'MXN', content_name: contentName, source_url: location.pathname };
+    if (ids && ids.length) lead.content_ids = ids;
+    if (cat) lead.content_category = cat;
+    var contact = { content_category: cat || 'whatsapp', content_name: contentName, source_url: location.pathname };
+    if (ids && ids.length) contact.content_ids = ids;
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
-      try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', lead); } catch(e){}
+      try { fbq('track', 'Contact', contact); } catch(e){}
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
@@ -156,7 +162,13 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
   document.addEventListener('click', function(e){
     var t = e.target;
     var a = t && t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]') : null;
-    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp');
+    if (!a) return;
+    var ids = a.getAttribute('data-wa-ids');
+    ids = ids ? ids.split(',').map(function(s){ return s.trim(); }).filter(Boolean) : null;
+    var cat = a.getAttribute('data-wa-cat') || '';
+    var name = a.getAttribute('data-wa-name') || '';
+    var label = a.getAttribute('data-wa-label') || a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp';
+    fire(label, ids, cat, name);
   }, true);
   window.f33TrackWhatsApp = fire;
 })();
@@ -166,6 +178,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/glass.js" defer></script>
+<script src="/assets/origen.js" defer></script>
 <script src="/assets/consent.js" defer></script>
 </body>
 </html>
