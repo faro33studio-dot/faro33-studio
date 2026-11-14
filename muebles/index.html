@@ -2780,6 +2780,34 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
   </section>
 </main>
 
+<!-- Ficha lateral (M3): se rellena desde /muebles/data/verano-2026.json al abrir la primera pieza.
+     Con JS desactivado queda hidden y las tarjetas son enlaces #pieza= sin efecto. -->
+<div class="mb-veil" id="mb-veil" hidden></div>
+<aside class="mb-sheet" id="mb-sheet" role="dialog" aria-modal="true" aria-labelledby="mb-sheet-title" hidden>
+  <div class="mb-sheet-top">
+    <button class="mb-sheet-btn lg lg-light" type="button" id="mb-close" aria-label="Cerrar ficha">✕</button>
+    <span class="mb-sheet-pos" id="mb-pos" aria-live="polite"></span>
+    <span class="mb-sheet-nav">
+      <button class="mb-sheet-btn lg lg-light" type="button" id="mb-prev" aria-label="Pieza anterior">←</button>
+      <button class="mb-sheet-btn lg lg-light" type="button" id="mb-next" aria-label="Pieza siguiente">→</button>
+    </span>
+  </div>
+  <div class="mb-sheet-body" id="mb-body">
+    <div class="mb-sheet-ph" id="mb-ph">
+      <img id="mb-main-img" alt="" decoding="async">
+    </div>
+    <p class="mb-sheet-cat" id="mb-cat"></p>
+    <h2 class="mb-sheet-title" id="mb-sheet-title"></h2>
+    <div class="mb-sheet-rule" aria-hidden="true"></div>
+    <div class="mb-sheet-detail" id="mb-detail" aria-busy="true"></div>
+  </div>
+  <div class="mb-sheet-cta">
+    <a class="mb-btn mb-btn--wa" id="mb-wa" href="#" target="_blank" rel="noopener">Quiero algo así</a>
+    <button class="mb-btn mb-sheet-copy" type="button" id="mb-copy">Copiar enlace</button>
+  </div>
+  <div class="mb-toast" id="mb-toast" role="status" aria-live="polite"></div>
+</aside>
+
 <footer class="foot">
   <span>© 2026 Faro 33 Studio · Culiacán, Sin.</span>
   <span><a href="/aviso-de-privacidad/">Aviso de privacidad</a> · <a href="/aviso-de-privacidad/#cookies" data-cookie-prefs>Cookies</a></span>
