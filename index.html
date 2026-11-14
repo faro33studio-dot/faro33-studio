@@ -1527,7 +1527,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   document.addEventListener('click', function(e){
     var t = e.target;
     var a = t && t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]') : null;
-    if (a) fire(a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp', a.getAttribute('data-seg'));
+    if (a) fire(a.getAttribute('aria-label') || (function(n){var c=n.cloneNode(true);[].forEach.call(c.querySelectorAll('[aria-hidden="true"]'),function(x){x.parentNode&&x.parentNode.removeChild(x)});return c.textContent.replace(/\s+/g,' ').trim().slice(0,40)})(a) || 'WhatsApp', a.getAttribute('data-seg'));
   }, true);
   window.f33TrackWhatsApp = fire; // callable from form handlers
 })();

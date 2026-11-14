@@ -167,7 +167,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
     ids = ids ? ids.split(',').map(function(s){ return s.trim(); }).filter(Boolean) : null;
     var cat = a.getAttribute('data-wa-cat') || '';
     var name = a.getAttribute('data-wa-name') || '';
-    var label = a.getAttribute('data-wa-label') || a.getAttribute('aria-label') || a.textContent.trim().slice(0,40) || 'WhatsApp';
+    var label = a.getAttribute('data-wa-label') || a.getAttribute('aria-label') || (function(n){var c=n.cloneNode(true);[].forEach.call(c.querySelectorAll('[aria-hidden="true"]'),function(x){x.parentNode&&x.parentNode.removeChild(x)});return c.textContent.replace(/\s+/g,' ').trim().slice(0,40)})(a) || 'WhatsApp';
     fire(label, ids, cat, name);
   }, true);
   window.f33TrackWhatsApp = fire;
