@@ -91,6 +91,8 @@ html header.hdr--scrolled .hdr-inner{ padding:12px 22px; }
 /* con el menú lateral disponible, el header del home no necesita los enlaces de texto en pantallas medianas */
 html .hdr-cta{ white-space:nowrap; }
 @media (max-width:1180px){ html .hdr-nav a:not(.hdr-cta){ display:none; } html .hdr-nav{ gap:14px; } }
+/* Con «Muebles» en la navegación, entre 1181 y 1300 px el primer enlace tocaba la marca: gap más corto */
+@media (min-width:1181px) and (max-width:1300px){ html .hdr-nav{ gap:26px; } }
 @media (max-width:640px){
   html :is(header.hdr--scrolled, nav.nav.is-scrolled, header.top.is-scrolled){ top:8px; left:8px; right:8px; border-radius:18px; }
 }
