@@ -1,5 +1,6 @@
 /* Faro 33 — /muebles/ · M2: filtro por línea, contador y ?linea=.
-   M3: ficha lateral con #pieza=, datos por fetch (una sola vez), historial y foco. */
+   M3: ficha lateral con #pieza=, datos por fetch (una sola vez), historial y foco.
+   M4: precio en la ficha desde /muebles/data/precios.json (público, opcional). */
 (function () {
   'use strict';
   var bar = document.querySelector('.mb-chips');
@@ -35,16 +36,20 @@
     var chip = chipFor(value);
     return chip ? label(chip) : String(value || '');
   }
-  function trackView(info) {
+  function trackView(info, value) {
     if (typeof fbq !== 'function') return;
-    try {
-      fbq('track', 'ViewContent', {
-        content_type: 'product',
-        content_ids: [info.id],
-        content_name: info.nombre,
-        content_category: lineName(info.linea)
-      });
-    } catch (e) {}
+    var data = {
+      content_type: 'product',
+      content_ids: [info.id],
+      content_name: info.nombre,
+      content_category: lineName(info.linea)
+    };
+    /* value/currency SOLO cuando la pieza tiene precio; si no, evento igual que antes. */
+    if (value !== null && value !== undefined) {
+      data.value = value;
+      data.currency = 'MXN';
+    }
+    try { fbq('track', 'ViewContent', data); } catch (e) {}
   }
   function trackFilter(chip, slug) {
     if (typeof fbq !== 'function') return;
@@ -144,7 +149,7 @@
     bar.classList.toggle('is-end', max <= 1 || bar.scrollLeft >= max - 1);
   }
 
-  var state = { slug: 'todas', open: null };
+  var state = { slug: 'todas', open: null, variantId: null };
 
   function apply(slug, opts) {
     opts = opts || {};
@@ -230,6 +235,7 @@
   var posEl = document.getElementById('mb-pos');
   var bodyEl = document.getElementById('mb-body');
   var detailEl = document.getElementById('mb-detail');
+  var priceEl = document.getElementById('mb-precio');
   var phEl = document.getElementById('mb-ph');
   var mainImg = document.getElementById('mb-main-img');
   var catEl = document.getElementById('mb-cat');
@@ -239,6 +245,9 @@
 
   var dataById = null;
   var dataPromise = null;
+  var pricesById = null;
+  var pricesPromise = null;
+  var pricesDone = false;
   var hideTimer = null;
   var toastTimer = null;
   var backCard = null;
@@ -357,15 +366,130 @@
     return dataPromise;
   }
 
+  /* ---------------------------------------------------------------------
+     Precios públicos (opcional). Se pide UNA vez, en paralelo al detalle,
+     y cualquier fallo deja la ficha como si ninguna pieza tuviera precio.
+     --------------------------------------------------------------------- */
+  var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+  function entero(v) {
+    return typeof v === 'number' && isFinite(v) && Math.floor(v) === v && v >= 0;
+  }
+  function finDeFecha(h) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(h || ''));
+    if (!m) return null;
+    var y = +m[1], mo = +m[2] - 1, d = +m[3];
+    var dt = new Date(y, mo, d, 23, 59, 59, 999);
+    if (dt.getFullYear() !== y || dt.getMonth() !== mo || dt.getDate() !== d) return null;
+    return dt;
+  }
+  function promoVigente(e) {
+    if (!e || !entero(e.d)) return false;
+    var fin = finDeFecha(e.h);
+    return !!fin && new Date().getTime() <= fin.getTime();
+  }
+  function limpiarPrecios(json) {
+    var out = {};
+    if (!json || typeof json !== 'object' || !json.items || typeof json.items !== 'object') return out;
+    Object.keys(json.items).forEach(function (id) {
+      var it = json.items[id];
+      if (!it || typeof it !== 'object' || !entero(it.p)) return;
+      var e = { p: it.p };
+      /* d/h solo cuentan si son válidos; una promo sin fecha no se muestra. */
+      if (entero(it.d) && finDeFecha(it.h)) { e.d = it.d; e.h = it.h; }
+      out[id] = e;
+    });
+    return out;
+  }
+  function ensurePrices() {
+    if (pricesPromise) return pricesPromise;
+    pricesPromise = fetch('/muebles/data/precios.json', { credentials: 'same-origin' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (json) {
+        pricesById = limpiarPrecios(json);
+      })
+      .catch(function () {
+        pricesById = {};
+      })
+      .then(function () {
+        pricesDone = true;
+        if (state.open !== null) renderPrice();
+      });
+    return pricesPromise;
+  }
+  function precioDe(id, baseId) {
+    var byId = pricesById || {};
+    if (byId[id]) return byId[id];
+    if (baseId && byId[baseId]) return byId[baseId];
+    return null;
+  }
+  function precioPrincipal(e) {
+    return promoVigente(e) ? e.d : e.p;
+  }
+  function dinero(n) {
+    return '$' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function leyendaPromo(h) {
+    var dt = finDeFecha(h);
+    return dt ? 'Promoción hasta el ' + dt.getDate() + ' de ' + MESES[dt.getMonth()] : '';
+  }
+  function renderPrice() {
+    if (!priceEl) return;
+    var baseId = state.open;
+    if (baseId === null || !pricesDone) {
+      priceEl.innerHTML = '';
+      priceEl.hidden = true;
+      return;
+    }
+    var e = precioDe(state.variantId || baseId, baseId);
+    if (!e) {
+      priceEl.innerHTML = '<p class="mb-precio-wa">Precio por WhatsApp</p>';
+      priceEl.hidden = false;
+      return;
+    }
+    var promo = promoVigente(e);
+    var h = '<p class="mb-precio-line">';
+    if (promo) {
+      h += '<s class="mb-precio-old"><span class="mb-vh">Precio normal: </span>' + dinero(e.p) + '</s> ';
+    }
+    h += '<span class="mb-precio-main">' + dinero(promo ? e.d : e.p) + '</span> ' +
+      '<span class="mb-precio-cur">MXN</span></p>' +
+      '<p class="mb-precio-vat">IVA incluido</p>';
+    if (promo) h += '<p class="mb-precio-promo">' + leyendaPromo(e.h) + '</p>';
+    priceEl.innerHTML = h;
+    priceEl.hidden = false;
+  }
+  /* Un solo ViewContent por apertura. Espera a que los precios resuelvan
+     (éxito o fallo) con tope de 1500 ms; cerrar no dispara nada. */
+  function scheduleView(info) {
+    var fired = false;
+    var timer = setTimeout(fire, 1500);
+    function fire() {
+      if (fired) return;
+      fired = true;
+      clearTimeout(timer);
+      var e = pricesDone ? precioDe(info.id, info.id) : null;
+      trackView(info, e ? precioPrincipal(e) : null);
+    }
+    if (pricesDone) fire();
+    else ensurePrices().then(fire, fire);
+  }
+
   function shell(p) {
     phEl.className = 'mb-sheet-ph' + (p.linea === 'decoracion' || p.linea === 'Decoración' ? ' mb-sheet-ph--deco' : '');
     if (p.img) mainImg.src = p.img;
     mainImg.alt = p.nombre;
     catEl.textContent = p.categoria;
     titleEl.textContent = p.nombre;
+    state.variantId = p.id;
     detailEl.innerHTML = '';
     detailEl.className = 'mb-sheet-detail';
     detailEl.setAttribute('aria-busy', 'true');
+    renderPrice();
     bodyEl.scrollTop = 0;
     setWa(p);
   }
@@ -406,11 +530,13 @@
     if (vars.length) {
       h += '<section class="mb-sheet-block"><h3>Otros acabados</h3>' +
         '<div class="mb-sheet-sw" role="group" aria-label="Otros acabados">' +
-        '<button type="button" class="mb-sheet-sw-b" aria-pressed="true" data-img="' + esc(p.img) +
+        '<button type="button" class="mb-sheet-sw-b" aria-pressed="true" data-vid="' + esc(p.id) +
+        '" data-img="' + esc(p.img) +
         '" data-color="' + esc(colors.join(' / ')) + '" aria-label="Acabado base"><img src="' +
         esc(p.thumb || p.img) + '" alt="" loading="lazy" decoding="async"></button>' +
         vars.map(function (v) {
-          return '<button type="button" class="mb-sheet-sw-b" aria-pressed="false" data-img="' +
+          return '<button type="button" class="mb-sheet-sw-b" aria-pressed="false" data-vid="' +
+            esc(v.id) + '" data-img="' +
             esc(v.img) + '" data-color="' + esc(v.color || '') + '" aria-label="' +
             esc(v.color || v.id) + '"><img src="' + esc(v.thumb || v.img) +
             '" alt="" loading="lazy" decoding="async"></button>';
@@ -519,8 +645,11 @@
     var info = cardInfo(card);
     var d = dataById && dataById[id];
     shell(d || info);
-    /* Una sola vez por apertura; el early-return de arriba evita repetir la misma. */
-    trackView(d || info);
+    /* Precios y detalle en paralelo desde la primera apertura. */
+    ensurePrices();
+    /* Una sola vez por apertura; el early-return de arriba evita repetir la misma.
+       El disparo espera a los precios (máx. 1500 ms) para poder añadir value. */
+    scheduleView(d || info);
     if (d) {
       renderDetail(d);
     } else {
@@ -624,6 +753,9 @@
       var col = sw.getAttribute('data-color');
       var colEl = document.getElementById('mb-colors');
       if (colEl && col !== null) colEl.textContent = col;
+      /* El precio de la variante manda si existe; si no, queda el de la pieza base. */
+      state.variantId = sw.getAttribute('data-vid') || state.open;
+      renderPrice();
       return;
     }
     var inc = e.target.closest ? e.target.closest('a[href^="#pieza="]') : null;

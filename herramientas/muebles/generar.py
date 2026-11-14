@@ -6,6 +6,9 @@ No es un build de despliegue: se corre a mano, se revisa el diff y se versiona
 el resultado. Es idempotente: volver a correrlo produce los mismos bytes y solo
 copia fotos que falten o hayan cambiado.
 
+NUNCA toca muebles/data/precios.json: es un archivo público que mantiene y
+copia el flujo privado de inventario (nunca costos ni precios de proveedor).
+
 Uso:
     python3 herramientas/muebles/generar.py
     python3 herramientas/muebles/generar.py --data ... --lineas ... --img-src ... --out-dir ...
@@ -176,6 +179,9 @@ def main() -> int:
     out_img = out_dir / "img" / COLECCION
     out_data = out_dir / "data" / f"{COLECCION}.json"
     out_html = out_dir / "index.html"
+    # Solo se escribe out_data; precios.json queda intacto (ver docstring).
+    if out_data.name == "precios.json" or out_html.name == "precios.json":
+        raise ValueError("El generador no puede escribir muebles/data/precios.json")
 
     for path in (data_path, lineas_path, template_path):
         if not path.exists():
