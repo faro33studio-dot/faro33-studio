@@ -335,6 +335,10 @@
     setWa(p);
   }
 
+  function norm(t) {
+    return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+
   function detailHtml(p) {
     var mat = p.materiales || [];
     var meds = (p.variantes && p.variantes.length) ? p.variantes : (p.medidas ? [p.medidas] : []);
@@ -342,8 +346,13 @@
     var vars = p.variantes_acabado || [];
     var inc = p.incluye || [];
     var h = '';
-    if (mat.length) {
-      h += '<dl class="mb-sheet-dl">' + mat.map(function (x) {
+    /* Si hay bloque «Colores», la fila «Color» de materiales lo duplica (y se
+       contradice al cambiar de acabado): solo se conserva cuando no hay colores. */
+    var matRows = colors.length ? mat.filter(function (x) {
+      return norm(x.k) !== 'color';
+    }) : mat;
+    if (matRows.length) {
+      h += '<dl class="mb-sheet-dl">' + matRows.map(function (x) {
         return '<dt>' + esc(x.k) + '</dt><dd>' + esc(x.v) + '</dd>';
       }).join('') + '</dl>';
     }
@@ -364,11 +373,11 @@
         '<div class="mb-sheet-sw" role="group" aria-label="Otros acabados">' +
         '<button type="button" class="mb-sheet-sw-b" aria-pressed="true" data-img="' + esc(p.img) +
         '" data-color="' + esc(colors.join(' / ')) + '" aria-label="Acabado base"><img src="' +
-        esc(p.img) + '" alt="" loading="lazy" decoding="async"></button>' +
+        esc(p.thumb || p.img) + '" alt="" loading="lazy" decoding="async"></button>' +
         vars.map(function (v) {
           return '<button type="button" class="mb-sheet-sw-b" aria-pressed="false" data-img="' +
             esc(v.img) + '" data-color="' + esc(v.color || '') + '" aria-label="' +
-            esc(v.color || v.id) + '"><img src="' + esc(v.img) +
+            esc(v.color || v.id) + '"><img src="' + esc(v.thumb || v.img) +
             '" alt="" loading="lazy" decoding="async"></button>';
         }).join('') + '</div></section>';
     }

@@ -29,7 +29,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bono-1000.webp"
+  "img": "/muebles/img/verano-2026/bono-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bono-360.webp"
  },
  {
   "id": "bow",
@@ -61,7 +62,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bow-1000.webp"
+  "img": "/muebles/img/verano-2026/bow-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bow-360.webp"
  },
  {
   "id": "angulo",
@@ -94,7 +96,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/angulo-1000.webp"
+  "img": "/muebles/img/verano-2026/angulo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/angulo-360.webp"
  },
  {
   "id": "candy",
@@ -126,7 +129,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/candy-1000.webp"
+  "img": "/muebles/img/verano-2026/candy-1000.webp",
+  "thumb": "/muebles/img/verano-2026/candy-360.webp"
  },
  {
   "id": "conos",
@@ -158,7 +162,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/conos-1000.webp"
+  "img": "/muebles/img/verano-2026/conos-1000.webp",
+  "thumb": "/muebles/img/verano-2026/conos-360.webp"
  },
  {
   "id": "cuore",
@@ -191,7 +196,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/cuore-1000.webp"
+  "img": "/muebles/img/verano-2026/cuore-1000.webp",
+  "thumb": "/muebles/img/verano-2026/cuore-360.webp"
  },
  {
   "id": "diamante",
@@ -224,7 +230,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/diamante-1000.webp"
+  "img": "/muebles/img/verano-2026/diamante-1000.webp",
+  "thumb": "/muebles/img/verano-2026/diamante-360.webp"
  },
  {
   "id": "europa",
@@ -256,7 +263,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/europa-1000.webp"
+  "img": "/muebles/img/verano-2026/europa-1000.webp",
+  "thumb": "/muebles/img/verano-2026/europa-360.webp"
  },
  {
   "id": "irregular",
@@ -288,7 +296,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/irregular-1000.webp"
+  "img": "/muebles/img/verano-2026/irregular-1000.webp",
+  "thumb": "/muebles/img/verano-2026/irregular-360.webp"
  },
  {
   "id": "herley",
@@ -324,12 +333,14 @@
    {
     "id": "herley-2",
     "color": "Mármol negro / Negro",
-    "img": "/muebles/img/verano-2026/herley-2-1000.webp"
+    "img": "/muebles/img/verano-2026/herley-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/herley-2-360.webp"
    }
   ],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/herley-1000.webp"
+  "img": "/muebles/img/verano-2026/herley-1000.webp",
+  "thumb": "/muebles/img/verano-2026/herley-360.webp"
  },
  {
   "id": "kota-2",
@@ -361,7 +372,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/kota-2-1000.webp"
+  "img": "/muebles/img/verano-2026/kota-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/kota-2-360.webp"
  },
  {
   "id": "multi-2",
@@ -394,7 +406,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/multi-2-1000.webp"
+  "img": "/muebles/img/verano-2026/multi-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/multi-2-360.webp"
  },
  {
   "id": "ovo-2",
@@ -425,7 +438,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/ovo-2-1000.webp"
+  "img": "/muebles/img/verano-2026/ovo-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/ovo-2-360.webp"
  },
  {
   "id": "peak",
@@ -457,7 +471,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/peak-1000.webp"
+  "img": "/muebles/img/verano-2026/peak-1000.webp",
+  "thumb": "/muebles/img/verano-2026/peak-360.webp"
  },
  {
   "id": "porte",
@@ -489,7 +504,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/porte-1000.webp"
+  "img": "/muebles/img/verano-2026/porte-1000.webp",
+  "thumb": "/muebles/img/verano-2026/porte-360.webp"
  },
  {
   "id": "tavolo",
@@ -521,7 +537,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/tavolo-1000.webp"
+  "img": "/muebles/img/verano-2026/tavolo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/tavolo-360.webp"
  },
  {
   "id": "snail",
@@ -553,7 +570,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/snail-1000.webp"
+  "img": "/muebles/img/verano-2026/snail-1000.webp",
+  "thumb": "/muebles/img/verano-2026/snail-360.webp"
  },
  {
   "id": "tossa",
@@ -585,7 +603,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/tossa-1000.webp"
+  "img": "/muebles/img/verano-2026/tossa-1000.webp",
+  "thumb": "/muebles/img/verano-2026/tossa-360.webp"
  },
  {
   "id": "twist",
@@ -617,7 +636,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/twist-1000.webp"
+  "img": "/muebles/img/verano-2026/twist-1000.webp",
+  "thumb": "/muebles/img/verano-2026/twist-360.webp"
  },
  {
   "id": "crack",
@@ -649,7 +669,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/crack-1000.webp"
+  "img": "/muebles/img/verano-2026/crack-1000.webp",
+  "thumb": "/muebles/img/verano-2026/crack-360.webp"
  },
  {
   "id": "veran",
@@ -681,7 +702,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/veran-1000.webp"
+  "img": "/muebles/img/verano-2026/veran-1000.webp",
+  "thumb": "/muebles/img/verano-2026/veran-360.webp"
  },
  {
   "id": "wave-2",
@@ -713,7 +735,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/wave-2-1000.webp"
+  "img": "/muebles/img/verano-2026/wave-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/wave-2-360.webp"
  },
  {
   "id": "jewel",
@@ -746,7 +769,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/jewel-1000.webp"
+  "img": "/muebles/img/verano-2026/jewel-1000.webp",
+  "thumb": "/muebles/img/verano-2026/jewel-360.webp"
  },
  {
   "id": "paw-2",
@@ -778,7 +802,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/paw-2-1000.webp"
+  "img": "/muebles/img/verano-2026/paw-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/paw-2-360.webp"
  },
  {
   "id": "rizo-nogal",
@@ -810,7 +835,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/rizo-nogal-1000.webp"
+  "img": "/muebles/img/verano-2026/rizo-nogal-1000.webp",
+  "thumb": "/muebles/img/verano-2026/rizo-nogal-360.webp"
  },
  {
   "id": "aster",
@@ -841,7 +867,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/aster-1000.webp"
+  "img": "/muebles/img/verano-2026/aster-1000.webp",
+  "thumb": "/muebles/img/verano-2026/aster-360.webp"
  },
  {
   "id": "cross",
@@ -872,7 +899,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/cross-1000.webp"
+  "img": "/muebles/img/verano-2026/cross-1000.webp",
+  "thumb": "/muebles/img/verano-2026/cross-360.webp"
  },
  {
   "id": "madrid",
@@ -904,7 +932,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/madrid-1000.webp"
+  "img": "/muebles/img/verano-2026/madrid-1000.webp",
+  "thumb": "/muebles/img/verano-2026/madrid-360.webp"
  },
  {
   "id": "palax",
@@ -936,7 +965,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/palax-1000.webp"
+  "img": "/muebles/img/verano-2026/palax-1000.webp",
+  "thumb": "/muebles/img/verano-2026/palax-360.webp"
  },
  {
   "id": "rotonda",
@@ -968,7 +998,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/rotonda-1000.webp"
+  "img": "/muebles/img/verano-2026/rotonda-1000.webp",
+  "thumb": "/muebles/img/verano-2026/rotonda-360.webp"
  },
  {
   "id": "slide",
@@ -999,7 +1030,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/slide-1000.webp"
+  "img": "/muebles/img/verano-2026/slide-1000.webp",
+  "thumb": "/muebles/img/verano-2026/slide-360.webp"
  },
  {
   "id": "cielo-2",
@@ -1033,7 +1065,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/cielo-2-1000.webp"
+  "img": "/muebles/img/verano-2026/cielo-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/cielo-2-360.webp"
  },
  {
   "id": "giro",
@@ -1065,7 +1098,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/giro-1000.webp"
+  "img": "/muebles/img/verano-2026/giro-1000.webp",
+  "thumb": "/muebles/img/verano-2026/giro-360.webp"
  },
  {
   "id": "unique",
@@ -1097,7 +1131,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/unique-1000.webp"
+  "img": "/muebles/img/verano-2026/unique-1000.webp",
+  "thumb": "/muebles/img/verano-2026/unique-360.webp"
  },
  {
   "id": "snow-2",
@@ -1129,7 +1164,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/snow-2-1000.webp"
+  "img": "/muebles/img/verano-2026/snow-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/snow-2-360.webp"
  },
  {
   "id": "malta",
@@ -1161,7 +1197,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/malta-1000.webp"
+  "img": "/muebles/img/verano-2026/malta-1000.webp",
+  "thumb": "/muebles/img/verano-2026/malta-360.webp"
  },
  {
   "id": "rizo-dorado",
@@ -1193,7 +1230,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/rizo-dorado-1000.webp"
+  "img": "/muebles/img/verano-2026/rizo-dorado-1000.webp",
+  "thumb": "/muebles/img/verano-2026/rizo-dorado-360.webp"
  },
  {
   "id": "water",
@@ -1224,7 +1262,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/water-1000.webp"
+  "img": "/muebles/img/verano-2026/water-1000.webp",
+  "thumb": "/muebles/img/verano-2026/water-360.webp"
  },
  {
   "id": "porte-nazare",
@@ -1245,7 +1284,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/porte-nazare-1000.webp"
+  "img": "/muebles/img/verano-2026/porte-nazare-1000.webp",
+  "thumb": "/muebles/img/verano-2026/porte-nazare-360.webp"
  },
  {
   "id": "tavolo-sedia",
@@ -1266,7 +1306,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/tavolo-sedia-1000.webp"
+  "img": "/muebles/img/verano-2026/tavolo-sedia-1000.webp",
+  "thumb": "/muebles/img/verano-2026/tavolo-sedia-360.webp"
  },
  {
   "id": "snow-ego",
@@ -1287,7 +1328,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/snow-ego-1000.webp"
+  "img": "/muebles/img/verano-2026/snow-ego-1000.webp",
+  "thumb": "/muebles/img/verano-2026/snow-ego-360.webp"
  },
  {
   "id": "andromeda",
@@ -1323,7 +1365,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/andromeda-1000.webp"
+  "img": "/muebles/img/verano-2026/andromeda-1000.webp",
+  "thumb": "/muebles/img/verano-2026/andromeda-360.webp"
  },
  {
   "id": "arms",
@@ -1359,7 +1402,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/arms-1000.webp"
+  "img": "/muebles/img/verano-2026/arms-1000.webp",
+  "thumb": "/muebles/img/verano-2026/arms-360.webp"
  },
  {
   "id": "bucarest",
@@ -1395,7 +1439,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bucarest-1000.webp"
+  "img": "/muebles/img/verano-2026/bucarest-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bucarest-360.webp"
  },
  {
   "id": "bosco-2",
@@ -1431,7 +1476,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bosco-2-1000.webp"
+  "img": "/muebles/img/verano-2026/bosco-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bosco-2-360.webp"
  },
  {
   "id": "bulgary-2",
@@ -1467,7 +1513,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bulgary-2-1000.webp"
+  "img": "/muebles/img/verano-2026/bulgary-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bulgary-2-360.webp"
  },
  {
   "id": "cup-cake",
@@ -1503,7 +1550,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/cup-cake-1000.webp"
+  "img": "/muebles/img/verano-2026/cup-cake-1000.webp",
+  "thumb": "/muebles/img/verano-2026/cup-cake-360.webp"
  },
  {
   "id": "derren",
@@ -1539,7 +1587,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/derren-1000.webp"
+  "img": "/muebles/img/verano-2026/derren-1000.webp",
+  "thumb": "/muebles/img/verano-2026/derren-360.webp"
  },
  {
   "id": "duo",
@@ -1575,7 +1624,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/duo-1000.webp"
+  "img": "/muebles/img/verano-2026/duo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/duo-360.webp"
  },
  {
   "id": "escalona",
@@ -1611,7 +1661,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/escalona-1000.webp"
+  "img": "/muebles/img/verano-2026/escalona-1000.webp",
+  "thumb": "/muebles/img/verano-2026/escalona-360.webp"
  },
  {
   "id": "fly",
@@ -1648,12 +1699,14 @@
    {
     "id": "fly-2",
     "color": "Nogal / Gris oscuro",
-    "img": "/muebles/img/verano-2026/fly-2-1000.webp"
+    "img": "/muebles/img/verano-2026/fly-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/fly-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/fly-1000.webp"
+  "img": "/muebles/img/verano-2026/fly-1000.webp",
+  "thumb": "/muebles/img/verano-2026/fly-360.webp"
  },
  {
   "id": "fold",
@@ -1689,7 +1742,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/fold-1000.webp"
+  "img": "/muebles/img/verano-2026/fold-1000.webp",
+  "thumb": "/muebles/img/verano-2026/fold-360.webp"
  },
  {
   "id": "green",
@@ -1725,7 +1779,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/green-1000.webp"
+  "img": "/muebles/img/verano-2026/green-1000.webp",
+  "thumb": "/muebles/img/verano-2026/green-360.webp"
  },
  {
   "id": "holanda",
@@ -1761,7 +1816,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/holanda-1000.webp"
+  "img": "/muebles/img/verano-2026/holanda-1000.webp",
+  "thumb": "/muebles/img/verano-2026/holanda-360.webp"
  },
  {
   "id": "krista",
@@ -1797,7 +1853,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/krista-1000.webp"
+  "img": "/muebles/img/verano-2026/krista-1000.webp",
+  "thumb": "/muebles/img/verano-2026/krista-360.webp"
  },
  {
   "id": "linen",
@@ -1833,7 +1890,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/linen-1000.webp"
+  "img": "/muebles/img/verano-2026/linen-1000.webp",
+  "thumb": "/muebles/img/verano-2026/linen-360.webp"
  },
  {
   "id": "noruega",
@@ -1869,7 +1927,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/noruega-1000.webp"
+  "img": "/muebles/img/verano-2026/noruega-1000.webp",
+  "thumb": "/muebles/img/verano-2026/noruega-360.webp"
  },
  {
   "id": "prisma",
@@ -1905,7 +1964,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/prisma-1000.webp"
+  "img": "/muebles/img/verano-2026/prisma-1000.webp",
+  "thumb": "/muebles/img/verano-2026/prisma-360.webp"
  },
  {
   "id": "bristol-2",
@@ -1941,7 +2001,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bristol-2-1000.webp"
+  "img": "/muebles/img/verano-2026/bristol-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bristol-2-360.webp"
  },
  {
   "id": "sedia",
@@ -1977,7 +2038,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/sedia-1000.webp"
+  "img": "/muebles/img/verano-2026/sedia-1000.webp",
+  "thumb": "/muebles/img/verano-2026/sedia-360.webp"
  },
  {
   "id": "tess",
@@ -2013,7 +2075,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/tess-1000.webp"
+  "img": "/muebles/img/verano-2026/tess-1000.webp",
+  "thumb": "/muebles/img/verano-2026/tess-360.webp"
  },
  {
   "id": "vio",
@@ -2049,7 +2112,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/vio-1000.webp"
+  "img": "/muebles/img/verano-2026/vio-1000.webp",
+  "thumb": "/muebles/img/verano-2026/vio-360.webp"
  },
  {
   "id": "clara",
@@ -2086,12 +2150,14 @@
    {
     "id": "clara-2",
     "color": "Dorado / Beige",
-    "img": "/muebles/img/verano-2026/clara-2-1000.webp"
+    "img": "/muebles/img/verano-2026/clara-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/clara-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/clara-1000.webp"
+  "img": "/muebles/img/verano-2026/clara-1000.webp",
+  "thumb": "/muebles/img/verano-2026/clara-360.webp"
  },
  {
   "id": "grossa",
@@ -2128,12 +2194,14 @@
    {
     "id": "grossa-2",
     "color": "Nogal / Verde",
-    "img": "/muebles/img/verano-2026/grossa-2-1000.webp"
+    "img": "/muebles/img/verano-2026/grossa-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/grossa-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/grossa-1000.webp"
+  "img": "/muebles/img/verano-2026/grossa-1000.webp",
+  "thumb": "/muebles/img/verano-2026/grossa-360.webp"
  },
  {
   "id": "lux",
@@ -2169,7 +2237,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/lux-1000.webp"
+  "img": "/muebles/img/verano-2026/lux-1000.webp",
+  "thumb": "/muebles/img/verano-2026/lux-360.webp"
  },
  {
   "id": "marry",
@@ -2206,12 +2275,14 @@
    {
     "id": "marry-2",
     "color": "Dorado / Beige",
-    "img": "/muebles/img/verano-2026/marry-2-1000.webp"
+    "img": "/muebles/img/verano-2026/marry-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/marry-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/marry-1000.webp"
+  "img": "/muebles/img/verano-2026/marry-1000.webp",
+  "thumb": "/muebles/img/verano-2026/marry-360.webp"
  },
  {
   "id": "palermo-2",
@@ -2247,7 +2318,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/palermo-2-1000.webp"
+  "img": "/muebles/img/verano-2026/palermo-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/palermo-2-360.webp"
  },
  {
   "id": "piana-2",
@@ -2283,7 +2355,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/piana-2-1000.webp"
+  "img": "/muebles/img/verano-2026/piana-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/piana-2-360.webp"
  },
  {
   "id": "ali",
@@ -2319,7 +2392,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/ali-1000.webp"
+  "img": "/muebles/img/verano-2026/ali-1000.webp",
+  "thumb": "/muebles/img/verano-2026/ali-360.webp"
  },
  {
   "id": "bold",
@@ -2355,7 +2429,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bold-1000.webp"
+  "img": "/muebles/img/verano-2026/bold-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bold-360.webp"
  },
  {
   "id": "plain-2",
@@ -2391,7 +2466,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/plain-2-1000.webp"
+  "img": "/muebles/img/verano-2026/plain-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/plain-2-360.webp"
  },
  {
   "id": "cat",
@@ -2427,7 +2503,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/cat-1000.webp"
+  "img": "/muebles/img/verano-2026/cat-1000.webp",
+  "thumb": "/muebles/img/verano-2026/cat-360.webp"
  },
  {
   "id": "light-2",
@@ -2462,7 +2539,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/light-2-1000.webp"
+  "img": "/muebles/img/verano-2026/light-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/light-2-360.webp"
  },
  {
   "id": "ego",
@@ -2498,7 +2576,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/ego-1000.webp"
+  "img": "/muebles/img/verano-2026/ego-1000.webp",
+  "thumb": "/muebles/img/verano-2026/ego-360.webp"
  },
  {
   "id": "nube-2",
@@ -2533,7 +2612,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nube-2-1000.webp"
+  "img": "/muebles/img/verano-2026/nube-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nube-2-360.webp"
  },
  {
   "id": "corona",
@@ -2564,7 +2644,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/corona-1000.webp"
+  "img": "/muebles/img/verano-2026/corona-1000.webp",
+  "thumb": "/muebles/img/verano-2026/corona-360.webp"
  },
  {
   "id": "negroni",
@@ -2600,7 +2681,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/negroni-1000.webp"
+  "img": "/muebles/img/verano-2026/negroni-1000.webp",
+  "thumb": "/muebles/img/verano-2026/negroni-360.webp"
  },
  {
   "id": "zeus",
@@ -2636,7 +2718,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/zeus-1000.webp"
+  "img": "/muebles/img/verano-2026/zeus-1000.webp",
+  "thumb": "/muebles/img/verano-2026/zeus-360.webp"
  },
  {
   "id": "argentina",
@@ -2668,12 +2751,14 @@
    {
     "id": "argentina-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/argentina-2-1000.webp"
+    "img": "/muebles/img/verano-2026/argentina-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/argentina-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/argentina-1000.webp"
+  "img": "/muebles/img/verano-2026/argentina-1000.webp",
+  "thumb": "/muebles/img/verano-2026/argentina-360.webp"
  },
  {
   "id": "austin",
@@ -2705,12 +2790,14 @@
    {
     "id": "austin-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/austin-2-1000.webp"
+    "img": "/muebles/img/verano-2026/austin-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/austin-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/austin-1000.webp"
+  "img": "/muebles/img/verano-2026/austin-1000.webp",
+  "thumb": "/muebles/img/verano-2026/austin-360.webp"
  },
  {
   "id": "cairo",
@@ -2742,12 +2829,14 @@
    {
     "id": "cairo-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/cairo-2-1000.webp"
+    "img": "/muebles/img/verano-2026/cairo-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/cairo-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/cairo-1000.webp"
+  "img": "/muebles/img/verano-2026/cairo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/cairo-360.webp"
  },
  {
   "id": "dali",
@@ -2779,12 +2868,14 @@
    {
     "id": "dali-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/dali-2-1000.webp"
+    "img": "/muebles/img/verano-2026/dali-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/dali-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/dali-1000.webp"
+  "img": "/muebles/img/verano-2026/dali-1000.webp",
+  "thumb": "/muebles/img/verano-2026/dali-360.webp"
  },
  {
   "id": "dinamarca",
@@ -2816,12 +2907,14 @@
    {
     "id": "dinamarca-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/dinamarca-2-1000.webp"
+    "img": "/muebles/img/verano-2026/dinamarca-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/dinamarca-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/dinamarca-1000.webp"
+  "img": "/muebles/img/verano-2026/dinamarca-1000.webp",
+  "thumb": "/muebles/img/verano-2026/dinamarca-360.webp"
  },
  {
   "id": "dubai",
@@ -2853,12 +2946,14 @@
    {
     "id": "dubai-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/dubai-2-1000.webp"
+    "img": "/muebles/img/verano-2026/dubai-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/dubai-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/dubai-1000.webp"
+  "img": "/muebles/img/verano-2026/dubai-1000.webp",
+  "thumb": "/muebles/img/verano-2026/dubai-360.webp"
  },
  {
   "id": "infiniti",
@@ -2890,17 +2985,20 @@
    {
     "id": "infiniti-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/infiniti-2-1000.webp"
+    "img": "/muebles/img/verano-2026/infiniti-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/infiniti-2-360.webp"
    },
    {
     "id": "infiniti-3",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/infiniti-3-1000.webp"
+    "img": "/muebles/img/verano-2026/infiniti-3-1000.webp",
+    "thumb": "/muebles/img/verano-2026/infiniti-3-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/infiniti-1000.webp"
+  "img": "/muebles/img/verano-2026/infiniti-1000.webp",
+  "thumb": "/muebles/img/verano-2026/infiniti-360.webp"
  },
  {
   "id": "modern-2",
@@ -2931,7 +3029,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/modern-2-1000.webp"
+  "img": "/muebles/img/verano-2026/modern-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/modern-2-360.webp"
  },
  {
   "id": "modern-3",
@@ -2962,7 +3061,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/modern-3-1000.webp"
+  "img": "/muebles/img/verano-2026/modern-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/modern-3-360.webp"
  },
  {
   "id": "nazare",
@@ -2994,12 +3094,14 @@
    {
     "id": "nazare-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/nazare-2-1000.webp"
+    "img": "/muebles/img/verano-2026/nazare-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/nazare-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nazare-1000.webp"
+  "img": "/muebles/img/verano-2026/nazare-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nazare-360.webp"
  },
  {
   "id": "paris",
@@ -3030,7 +3132,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/paris-1000.webp"
+  "img": "/muebles/img/verano-2026/paris-1000.webp",
+  "thumb": "/muebles/img/verano-2026/paris-360.webp"
  },
  {
   "id": "texas-2",
@@ -3061,7 +3164,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/texas-2-1000.webp"
+  "img": "/muebles/img/verano-2026/texas-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/texas-2-360.webp"
  },
  {
   "id": "van-gogh-2",
@@ -3092,7 +3196,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/van-gogh-2-1000.webp"
+  "img": "/muebles/img/verano-2026/van-gogh-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/van-gogh-2-360.webp"
  },
  {
   "id": "albero",
@@ -3126,7 +3231,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/albero-1000.webp"
+  "img": "/muebles/img/verano-2026/albero-1000.webp",
+  "thumb": "/muebles/img/verano-2026/albero-360.webp"
  },
  {
   "id": "bosco",
@@ -3162,7 +3268,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bosco-1000.webp"
+  "img": "/muebles/img/verano-2026/bosco-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bosco-360.webp"
  },
  {
   "id": "bridge",
@@ -3194,7 +3301,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bridge-1000.webp"
+  "img": "/muebles/img/verano-2026/bridge-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bridge-360.webp"
  },
  {
   "id": "bristol",
@@ -3230,7 +3338,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bristol-1000.webp"
+  "img": "/muebles/img/verano-2026/bristol-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bristol-360.webp"
  },
  {
   "id": "chip",
@@ -3262,7 +3371,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/chip-1000.webp"
+  "img": "/muebles/img/verano-2026/chip-1000.webp",
+  "thumb": "/muebles/img/verano-2026/chip-360.webp"
  },
  {
   "id": "piana",
@@ -3298,7 +3408,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/piana-1000.webp"
+  "img": "/muebles/img/verano-2026/piana-1000.webp",
+  "thumb": "/muebles/img/verano-2026/piana-360.webp"
  },
  {
   "id": "coffee",
@@ -3329,7 +3440,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/coffee-1000.webp"
+  "img": "/muebles/img/verano-2026/coffee-1000.webp",
+  "thumb": "/muebles/img/verano-2026/coffee-360.webp"
  },
  {
   "id": "plain",
@@ -3365,7 +3477,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/plain-1000.webp"
+  "img": "/muebles/img/verano-2026/plain-1000.webp",
+  "thumb": "/muebles/img/verano-2026/plain-360.webp"
  },
  {
   "id": "palermo",
@@ -3401,7 +3514,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/palermo-1000.webp"
+  "img": "/muebles/img/verano-2026/palermo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/palermo-360.webp"
  },
  {
   "id": "terna",
@@ -3436,7 +3550,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/terna-1000.webp"
+  "img": "/muebles/img/verano-2026/terna-1000.webp",
+  "thumb": "/muebles/img/verano-2026/terna-360.webp"
  },
  {
   "id": "mussolini-2",
@@ -3468,7 +3583,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mussolini-2-1000.webp"
+  "img": "/muebles/img/verano-2026/mussolini-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/mussolini-2-360.webp"
  },
  {
   "id": "mussolini-3",
@@ -3500,7 +3616,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mussolini-3-1000.webp"
+  "img": "/muebles/img/verano-2026/mussolini-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/mussolini-3-360.webp"
  },
  {
   "id": "sparta-2",
@@ -3532,7 +3649,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/sparta-2-1000.webp"
+  "img": "/muebles/img/verano-2026/sparta-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/sparta-2-360.webp"
  },
  {
   "id": "sparta-3",
@@ -3564,7 +3682,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/sparta-3-1000.webp"
+  "img": "/muebles/img/verano-2026/sparta-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/sparta-3-360.webp"
  },
  {
   "id": "albero-bosco",
@@ -3589,7 +3708,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/albero-bosco-1000.webp"
+  "img": "/muebles/img/verano-2026/albero-bosco-1000.webp",
+  "thumb": "/muebles/img/verano-2026/albero-bosco-360.webp"
  },
  {
   "id": "bridge-bristol",
@@ -3614,7 +3734,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/bridge-bristol-1000.webp"
+  "img": "/muebles/img/verano-2026/bridge-bristol-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bridge-bristol-360.webp"
  },
  {
   "id": "chip-piana",
@@ -3639,7 +3760,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/chip-piana-1000.webp"
+  "img": "/muebles/img/verano-2026/chip-piana-1000.webp",
+  "thumb": "/muebles/img/verano-2026/chip-piana-360.webp"
  },
  {
   "id": "coffee-plain",
@@ -3664,7 +3786,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/coffee-plain-1000.webp"
+  "img": "/muebles/img/verano-2026/coffee-plain-1000.webp",
+  "thumb": "/muebles/img/verano-2026/coffee-plain-360.webp"
  },
  {
   "id": "terna-palermo",
@@ -3689,7 +3812,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/terna-palermo-1000.webp"
+  "img": "/muebles/img/verano-2026/terna-palermo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/terna-palermo-360.webp"
  },
  {
   "id": "mussolini",
@@ -3714,7 +3838,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/mussolini-1000.webp"
+  "img": "/muebles/img/verano-2026/mussolini-1000.webp",
+  "thumb": "/muebles/img/verano-2026/mussolini-360.webp"
  },
  {
   "id": "sparta",
@@ -3739,7 +3864,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/sparta-1000.webp"
+  "img": "/muebles/img/verano-2026/sparta-1000.webp",
+  "thumb": "/muebles/img/verano-2026/sparta-360.webp"
  },
  {
   "id": "aspen",
@@ -3770,7 +3896,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/aspen-1000.webp"
+  "img": "/muebles/img/verano-2026/aspen-1000.webp",
+  "thumb": "/muebles/img/verano-2026/aspen-360.webp"
  },
  {
   "id": "bear",
@@ -3802,7 +3929,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bear-1000.webp"
+  "img": "/muebles/img/verano-2026/bear-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bear-360.webp"
  },
  {
   "id": "canyon",
@@ -3833,7 +3961,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/canyon-1000.webp"
+  "img": "/muebles/img/verano-2026/canyon-1000.webp",
+  "thumb": "/muebles/img/verano-2026/canyon-360.webp"
  },
  {
   "id": "hoja",
@@ -3864,7 +3993,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/hoja-1000.webp"
+  "img": "/muebles/img/verano-2026/hoja-1000.webp",
+  "thumb": "/muebles/img/verano-2026/hoja-360.webp"
  },
  {
   "id": "kota",
@@ -3896,7 +4026,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/kota-1000.webp"
+  "img": "/muebles/img/verano-2026/kota-1000.webp",
+  "thumb": "/muebles/img/verano-2026/kota-360.webp"
  },
  {
   "id": "multi",
@@ -3929,7 +4060,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/multi-1000.webp"
+  "img": "/muebles/img/verano-2026/multi-1000.webp",
+  "thumb": "/muebles/img/verano-2026/multi-360.webp"
  },
  {
   "id": "paw",
@@ -3961,7 +4093,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/paw-1000.webp"
+  "img": "/muebles/img/verano-2026/paw-1000.webp",
+  "thumb": "/muebles/img/verano-2026/paw-360.webp"
  },
  {
   "id": "snow",
@@ -3994,7 +4127,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/snow-1000.webp"
+  "img": "/muebles/img/verano-2026/snow-1000.webp",
+  "thumb": "/muebles/img/verano-2026/snow-360.webp"
  },
  {
   "id": "bed",
@@ -4024,7 +4158,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bed-1000.webp"
+  "img": "/muebles/img/verano-2026/bed-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bed-360.webp"
  },
  {
   "id": "bone",
@@ -4060,7 +4195,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bone-1000.webp"
+  "img": "/muebles/img/verano-2026/bone-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bone-360.webp"
  },
  {
   "id": "keops",
@@ -4096,7 +4232,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/keops-1000.webp"
+  "img": "/muebles/img/verano-2026/keops-1000.webp",
+  "thumb": "/muebles/img/verano-2026/keops-360.webp"
  },
  {
   "id": "nina",
@@ -4132,7 +4269,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nina-1000.webp"
+  "img": "/muebles/img/verano-2026/nina-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nina-360.webp"
  },
  {
   "id": "paris-2",
@@ -4168,7 +4306,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/paris-2-1000.webp"
+  "img": "/muebles/img/verano-2026/paris-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/paris-2-360.webp"
  },
  {
   "id": "vuelta",
@@ -4196,12 +4335,14 @@
    {
     "id": "vuelta-2",
     "color": "Gris",
-    "img": "/muebles/img/verano-2026/vuelta-2-1000.webp"
+    "img": "/muebles/img/verano-2026/vuelta-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/vuelta-2-360.webp"
    }
   ],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/vuelta-1000.webp"
+  "img": "/muebles/img/verano-2026/vuelta-1000.webp",
+  "thumb": "/muebles/img/verano-2026/vuelta-360.webp"
  },
  {
   "id": "nudo",
@@ -4229,12 +4370,14 @@
    {
     "id": "nudo-2",
     "color": "Gris",
-    "img": "/muebles/img/verano-2026/nudo-2-1000.webp"
+    "img": "/muebles/img/verano-2026/nudo-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/nudo-2-360.webp"
    }
   ],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nudo-1000.webp"
+  "img": "/muebles/img/verano-2026/nudo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nudo-360.webp"
  },
  {
   "id": "old",
@@ -4261,7 +4404,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/old-1000.webp"
+  "img": "/muebles/img/verano-2026/old-1000.webp",
+  "thumb": "/muebles/img/verano-2026/old-360.webp"
  },
  {
   "id": "stripes",
@@ -4288,7 +4432,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/stripes-1000.webp"
+  "img": "/muebles/img/verano-2026/stripes-1000.webp",
+  "thumb": "/muebles/img/verano-2026/stripes-360.webp"
  },
  {
   "id": "nido",
@@ -4324,7 +4469,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nido-1000.webp"
+  "img": "/muebles/img/verano-2026/nido-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nido-360.webp"
  },
  {
   "id": "nido-2",
@@ -4360,7 +4506,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nido-2-1000.webp"
+  "img": "/muebles/img/verano-2026/nido-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nido-2-360.webp"
  },
  {
   "id": "ankara",
@@ -4392,7 +4539,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/ankara-1000.webp"
+  "img": "/muebles/img/verano-2026/ankara-1000.webp",
+  "thumb": "/muebles/img/verano-2026/ankara-360.webp"
  },
  {
   "id": "chubby",
@@ -4424,7 +4572,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/chubby-1000.webp"
+  "img": "/muebles/img/verano-2026/chubby-1000.webp",
+  "thumb": "/muebles/img/verano-2026/chubby-360.webp"
  },
  {
   "id": "clam",
@@ -4455,7 +4604,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/clam-1000.webp"
+  "img": "/muebles/img/verano-2026/clam-1000.webp",
+  "thumb": "/muebles/img/verano-2026/clam-360.webp"
  },
  {
   "id": "croacia",
@@ -4487,7 +4637,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/croacia-1000.webp"
+  "img": "/muebles/img/verano-2026/croacia-1000.webp",
+  "thumb": "/muebles/img/verano-2026/croacia-360.webp"
  },
  {
   "id": "estocolmo",
@@ -4519,7 +4670,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/estocolmo-1000.webp"
+  "img": "/muebles/img/verano-2026/estocolmo-1000.webp",
+  "thumb": "/muebles/img/verano-2026/estocolmo-360.webp"
  },
  {
   "id": "gala",
@@ -4550,7 +4702,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/gala-1000.webp"
+  "img": "/muebles/img/verano-2026/gala-1000.webp",
+  "thumb": "/muebles/img/verano-2026/gala-360.webp"
  },
  {
   "id": "maca",
@@ -4583,12 +4736,14 @@
    {
     "id": "maca-2",
     "color": "Negro / Nogal",
-    "img": "/muebles/img/verano-2026/maca-2-1000.webp"
+    "img": "/muebles/img/verano-2026/maca-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/maca-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/maca-1000.webp"
+  "img": "/muebles/img/verano-2026/maca-1000.webp",
+  "thumb": "/muebles/img/verano-2026/maca-360.webp"
  },
  {
   "id": "mafalda",
@@ -4620,7 +4775,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mafalda-1000.webp"
+  "img": "/muebles/img/verano-2026/mafalda-1000.webp",
+  "thumb": "/muebles/img/verano-2026/mafalda-360.webp"
  },
  {
   "id": "peru",
@@ -4652,7 +4808,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/peru-1000.webp"
+  "img": "/muebles/img/verano-2026/peru-1000.webp",
+  "thumb": "/muebles/img/verano-2026/peru-360.webp"
  },
  {
   "id": "raya",
@@ -4684,7 +4841,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/raya-1000.webp"
+  "img": "/muebles/img/verano-2026/raya-1000.webp",
+  "thumb": "/muebles/img/verano-2026/raya-360.webp"
  },
  {
   "id": "uruguay",
@@ -4717,12 +4875,14 @@
    {
     "id": "uruguay-2",
     "color": "Negro / Nogal",
-    "img": "/muebles/img/verano-2026/uruguay-2-1000.webp"
+    "img": "/muebles/img/verano-2026/uruguay-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/uruguay-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/uruguay-1000.webp"
+  "img": "/muebles/img/verano-2026/uruguay-1000.webp",
+  "thumb": "/muebles/img/verano-2026/uruguay-360.webp"
  },
  {
   "id": "venezuela",
@@ -4754,7 +4914,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/venezuela-1000.webp"
+  "img": "/muebles/img/verano-2026/venezuela-1000.webp",
+  "thumb": "/muebles/img/verano-2026/venezuela-360.webp"
  },
  {
   "id": "wing",
@@ -4786,7 +4947,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/wing-1000.webp"
+  "img": "/muebles/img/verano-2026/wing-1000.webp",
+  "thumb": "/muebles/img/verano-2026/wing-360.webp"
  },
  {
   "id": "clara-3",
@@ -4822,7 +4984,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/clara-3-1000.webp"
+  "img": "/muebles/img/verano-2026/clara-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/clara-3-360.webp"
  },
  {
   "id": "mich",
@@ -4858,7 +5021,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mich-1000.webp"
+  "img": "/muebles/img/verano-2026/mich-1000.webp",
+  "thumb": "/muebles/img/verano-2026/mich-360.webp"
  },
  {
   "id": "simple",
@@ -4894,7 +5058,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/simple-1000.webp"
+  "img": "/muebles/img/verano-2026/simple-1000.webp",
+  "thumb": "/muebles/img/verano-2026/simple-360.webp"
  },
  {
   "id": "testa",
@@ -4930,7 +5095,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/testa-1000.webp"
+  "img": "/muebles/img/verano-2026/testa-1000.webp",
+  "thumb": "/muebles/img/verano-2026/testa-360.webp"
  },
  {
   "id": "bracket",
@@ -4966,7 +5132,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/bracket-1000.webp"
+  "img": "/muebles/img/verano-2026/bracket-1000.webp",
+  "thumb": "/muebles/img/verano-2026/bracket-360.webp"
  },
  {
   "id": "dona",
@@ -5002,7 +5169,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/dona-1000.webp"
+  "img": "/muebles/img/verano-2026/dona-1000.webp",
+  "thumb": "/muebles/img/verano-2026/dona-360.webp"
  },
  {
   "id": "hug",
@@ -5038,7 +5206,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/hug-1000.webp"
+  "img": "/muebles/img/verano-2026/hug-1000.webp",
+  "thumb": "/muebles/img/verano-2026/hug-360.webp"
  },
  {
   "id": "meal",
@@ -5074,7 +5243,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/meal-1000.webp"
+  "img": "/muebles/img/verano-2026/meal-1000.webp",
+  "thumb": "/muebles/img/verano-2026/meal-360.webp"
  },
  {
   "id": "nova",
@@ -5110,7 +5280,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nova-1000.webp"
+  "img": "/muebles/img/verano-2026/nova-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nova-360.webp"
  },
  {
   "id": "rattan",
@@ -5146,7 +5317,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/rattan-1000.webp"
+  "img": "/muebles/img/verano-2026/rattan-1000.webp",
+  "thumb": "/muebles/img/verano-2026/rattan-360.webp"
  },
  {
   "id": "atenea",
@@ -5180,7 +5352,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/atenea-1000.webp"
+  "img": "/muebles/img/verano-2026/atenea-1000.webp",
+  "thumb": "/muebles/img/verano-2026/atenea-360.webp"
  },
  {
   "id": "dorito",
@@ -5216,7 +5389,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/dorito-1000.webp"
+  "img": "/muebles/img/verano-2026/dorito-1000.webp",
+  "thumb": "/muebles/img/verano-2026/dorito-360.webp"
  },
  {
   "id": "love",
@@ -5251,7 +5425,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/love-1000.webp"
+  "img": "/muebles/img/verano-2026/love-1000.webp",
+  "thumb": "/muebles/img/verano-2026/love-360.webp"
  },
  {
   "id": "chat",
@@ -5283,7 +5458,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/chat-1000.webp"
+  "img": "/muebles/img/verano-2026/chat-1000.webp",
+  "thumb": "/muebles/img/verano-2026/chat-360.webp"
  },
  {
   "id": "finlandia",
@@ -5318,7 +5494,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/finlandia-1000.webp"
+  "img": "/muebles/img/verano-2026/finlandia-1000.webp",
+  "thumb": "/muebles/img/verano-2026/finlandia-360.webp"
  },
  {
   "id": "turin",
@@ -5353,7 +5530,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/turin-1000.webp"
+  "img": "/muebles/img/verano-2026/turin-1000.webp",
+  "thumb": "/muebles/img/verano-2026/turin-360.webp"
  },
  {
   "id": "geometrix",
@@ -5387,7 +5565,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/geometrix-1000.webp"
+  "img": "/muebles/img/verano-2026/geometrix-1000.webp",
+  "thumb": "/muebles/img/verano-2026/geometrix-360.webp"
  },
  {
   "id": "helsinki",
@@ -5419,7 +5598,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/helsinki-1000.webp"
+  "img": "/muebles/img/verano-2026/helsinki-1000.webp",
+  "thumb": "/muebles/img/verano-2026/helsinki-360.webp"
  },
  {
   "id": "iceland-2",
@@ -5454,7 +5634,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/iceland-2-1000.webp"
+  "img": "/muebles/img/verano-2026/iceland-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/iceland-2-360.webp"
  },
  {
   "id": "round",
@@ -5488,7 +5669,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/round-1000.webp"
+  "img": "/muebles/img/verano-2026/round-1000.webp",
+  "thumb": "/muebles/img/verano-2026/round-360.webp"
  },
  {
   "id": "sandy",
@@ -5522,7 +5704,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/sandy-1000.webp"
+  "img": "/muebles/img/verano-2026/sandy-1000.webp",
+  "thumb": "/muebles/img/verano-2026/sandy-360.webp"
  },
  {
   "id": "venezia",
@@ -5556,7 +5739,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/venezia-1000.webp"
+  "img": "/muebles/img/verano-2026/venezia-1000.webp",
+  "thumb": "/muebles/img/verano-2026/venezia-360.webp"
  },
  {
   "id": "flor-2",
@@ -5588,7 +5772,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/flor-2-1000.webp"
+  "img": "/muebles/img/verano-2026/flor-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/flor-2-360.webp"
  },
  {
   "id": "nero",
@@ -5622,7 +5807,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/nero-1000.webp"
+  "img": "/muebles/img/verano-2026/nero-1000.webp",
+  "thumb": "/muebles/img/verano-2026/nero-360.webp"
  },
  {
   "id": "trebol",
@@ -5657,7 +5843,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/trebol-1000.webp"
+  "img": "/muebles/img/verano-2026/trebol-1000.webp",
+  "thumb": "/muebles/img/verano-2026/trebol-360.webp"
  },
  {
   "id": "brasil",
@@ -5692,7 +5879,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/brasil-1000.webp"
+  "img": "/muebles/img/verano-2026/brasil-1000.webp",
+  "thumb": "/muebles/img/verano-2026/brasil-360.webp"
  },
  {
   "id": "paw-3",
@@ -5727,7 +5915,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/paw-3-1000.webp"
+  "img": "/muebles/img/verano-2026/paw-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/paw-3-360.webp"
  },
  {
   "id": "puentes",
@@ -5761,7 +5950,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/puentes-1000.webp"
+  "img": "/muebles/img/verano-2026/puentes-1000.webp",
+  "thumb": "/muebles/img/verano-2026/puentes-360.webp"
  },
  {
   "id": "harry",
@@ -5797,7 +5987,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/harry-1000.webp"
+  "img": "/muebles/img/verano-2026/harry-1000.webp",
+  "thumb": "/muebles/img/verano-2026/harry-360.webp"
  },
  {
   "id": "poseidon",
@@ -5833,7 +6024,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/poseidon-1000.webp"
+  "img": "/muebles/img/verano-2026/poseidon-1000.webp",
+  "thumb": "/muebles/img/verano-2026/poseidon-360.webp"
  },
  {
   "id": "twins",
@@ -5868,7 +6060,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/twins-1000.webp"
+  "img": "/muebles/img/verano-2026/twins-1000.webp",
+  "thumb": "/muebles/img/verano-2026/twins-360.webp"
  },
  {
   "id": "forever",
@@ -5900,7 +6093,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/forever-1000.webp"
+  "img": "/muebles/img/verano-2026/forever-1000.webp",
+  "thumb": "/muebles/img/verano-2026/forever-360.webp"
  },
  {
   "id": "remus",
@@ -5932,7 +6126,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/remus-1000.webp"
+  "img": "/muebles/img/verano-2026/remus-1000.webp",
+  "thumb": "/muebles/img/verano-2026/remus-360.webp"
  },
  {
   "id": "snake",
@@ -5967,7 +6162,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/snake-1000.webp"
+  "img": "/muebles/img/verano-2026/snake-1000.webp",
+  "thumb": "/muebles/img/verano-2026/snake-360.webp"
  },
  {
   "id": "shine",
@@ -5999,7 +6195,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/shine-1000.webp"
+  "img": "/muebles/img/verano-2026/shine-1000.webp",
+  "thumb": "/muebles/img/verano-2026/shine-360.webp"
  },
  {
   "id": "sparta-4",
@@ -6034,7 +6231,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/sparta-4-1000.webp"
+  "img": "/muebles/img/verano-2026/sparta-4-1000.webp",
+  "thumb": "/muebles/img/verano-2026/sparta-4-360.webp"
  },
  {
   "id": "spot",
@@ -6065,7 +6263,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/spot-1000.webp"
+  "img": "/muebles/img/verano-2026/spot-1000.webp",
+  "thumb": "/muebles/img/verano-2026/spot-360.webp"
  },
  {
   "id": "iceland",
@@ -6081,7 +6280,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/iceland-1000.webp"
+  "img": "/muebles/img/verano-2026/iceland-1000.webp",
+  "thumb": "/muebles/img/verano-2026/iceland-360.webp"
  },
  {
   "id": "flor",
@@ -6097,7 +6297,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/flor-1000.webp"
+  "img": "/muebles/img/verano-2026/flor-1000.webp",
+  "thumb": "/muebles/img/verano-2026/flor-360.webp"
  },
  {
   "id": "poseidon-2",
@@ -6113,7 +6314,8 @@
   "variantes_acabado": [],
   "clase": "h",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/poseidon-2-1000.webp"
+  "img": "/muebles/img/verano-2026/poseidon-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/poseidon-2-360.webp"
  },
  {
   "id": "beso",
@@ -6146,12 +6348,14 @@
    {
     "id": "beso-2",
     "color": "Mármol vía láctea / Nogal / Dorado",
-    "img": "/muebles/img/verano-2026/beso-2-1000.webp"
+    "img": "/muebles/img/verano-2026/beso-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/beso-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/beso-1000.webp"
+  "img": "/muebles/img/verano-2026/beso-1000.webp",
+  "thumb": "/muebles/img/verano-2026/beso-360.webp"
  },
  {
   "id": "kiss",
@@ -6184,7 +6388,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/kiss-1000.webp"
+  "img": "/muebles/img/verano-2026/kiss-1000.webp",
+  "thumb": "/muebles/img/verano-2026/kiss-360.webp"
  },
  {
   "id": "ovni",
@@ -6216,7 +6421,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/ovni-1000.webp"
+  "img": "/muebles/img/verano-2026/ovni-1000.webp",
+  "thumb": "/muebles/img/verano-2026/ovni-360.webp"
  },
  {
   "id": "spark",
@@ -6247,7 +6453,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/spark-1000.webp"
+  "img": "/muebles/img/verano-2026/spark-1000.webp",
+  "thumb": "/muebles/img/verano-2026/spark-360.webp"
  },
  {
   "id": "boss",
@@ -6289,12 +6496,14 @@
    {
     "id": "boss-2",
     "color": "Negro / Nogal",
-    "img": "/muebles/img/verano-2026/boss-2-1000.webp"
+    "img": "/muebles/img/verano-2026/boss-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/boss-2-360.webp"
    }
   ],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/boss-1000.webp"
+  "img": "/muebles/img/verano-2026/boss-1000.webp",
+  "thumb": "/muebles/img/verano-2026/boss-360.webp"
  },
  {
   "id": "chief",
@@ -6334,7 +6543,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/chief-1000.webp"
+  "img": "/muebles/img/verano-2026/chief-1000.webp",
+  "thumb": "/muebles/img/verano-2026/chief-360.webp"
  },
  {
   "id": "labor",
@@ -6374,7 +6584,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/labor-1000.webp"
+  "img": "/muebles/img/verano-2026/labor-1000.webp",
+  "thumb": "/muebles/img/verano-2026/labor-360.webp"
  },
  {
   "id": "office",
@@ -6415,7 +6626,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/office-1000.webp"
+  "img": "/muebles/img/verano-2026/office-1000.webp",
+  "thumb": "/muebles/img/verano-2026/office-360.webp"
  },
  {
   "id": "smart",
@@ -6456,7 +6668,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/smart-1000.webp"
+  "img": "/muebles/img/verano-2026/smart-1000.webp",
+  "thumb": "/muebles/img/verano-2026/smart-360.webp"
  },
  {
   "id": "work",
@@ -6497,12 +6710,14 @@
    {
     "id": "work-2",
     "color": "Negro / Beige / Nogal",
-    "img": "/muebles/img/verano-2026/work-2-1000.webp"
+    "img": "/muebles/img/verano-2026/work-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/work-2-360.webp"
    }
   ],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/work-1000.webp"
+  "img": "/muebles/img/verano-2026/work-1000.webp",
+  "thumb": "/muebles/img/verano-2026/work-360.webp"
  },
  {
   "id": "arizona-2",
@@ -6534,7 +6749,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/arizona-2-1000.webp"
+  "img": "/muebles/img/verano-2026/arizona-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/arizona-2-360.webp"
  },
  {
   "id": "arizona-3",
@@ -6566,7 +6782,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/arizona-3-1000.webp"
+  "img": "/muebles/img/verano-2026/arizona-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/arizona-3-360.webp"
  },
  {
   "id": "australia",
@@ -6601,7 +6818,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/australia-1000.webp"
+  "img": "/muebles/img/verano-2026/australia-1000.webp",
+  "thumb": "/muebles/img/verano-2026/australia-360.webp"
  },
  {
   "id": "copenhague",
@@ -6637,7 +6855,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/copenhague-1000.webp"
+  "img": "/muebles/img/verano-2026/copenhague-1000.webp",
+  "thumb": "/muebles/img/verano-2026/copenhague-360.webp"
  },
  {
   "id": "copenhague-2",
@@ -6669,7 +6888,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/copenhague-2-1000.webp"
+  "img": "/muebles/img/verano-2026/copenhague-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/copenhague-2-360.webp"
  },
  {
   "id": "denmark-2",
@@ -6704,7 +6924,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/denmark-2-1000.webp"
+  "img": "/muebles/img/verano-2026/denmark-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/denmark-2-360.webp"
  },
  {
   "id": "denmark-3",
@@ -6736,7 +6957,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/denmark-3-1000.webp"
+  "img": "/muebles/img/verano-2026/denmark-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/denmark-3-360.webp"
  },
  {
   "id": "essex-2",
@@ -6768,7 +6990,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/essex-2-1000.webp"
+  "img": "/muebles/img/verano-2026/essex-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/essex-2-360.webp"
  },
  {
   "id": "essex-3",
@@ -6800,7 +7023,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/essex-3-1000.webp"
+  "img": "/muebles/img/verano-2026/essex-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/essex-3-360.webp"
  },
  {
   "id": "manchester",
@@ -6832,7 +7056,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/manchester-1000.webp"
+  "img": "/muebles/img/verano-2026/manchester-1000.webp",
+  "thumb": "/muebles/img/verano-2026/manchester-360.webp"
  },
  {
   "id": "york",
@@ -6864,7 +7089,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/york-1000.webp"
+  "img": "/muebles/img/verano-2026/york-1000.webp",
+  "thumb": "/muebles/img/verano-2026/york-360.webp"
  },
  {
   "id": "oxford-2",
@@ -6895,7 +7121,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/oxford-2-1000.webp"
+  "img": "/muebles/img/verano-2026/oxford-2-1000.webp",
+  "thumb": "/muebles/img/verano-2026/oxford-2-360.webp"
  },
  {
   "id": "oxford-3",
@@ -6927,7 +7154,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/oxford-3-1000.webp"
+  "img": "/muebles/img/verano-2026/oxford-3-1000.webp",
+  "thumb": "/muebles/img/verano-2026/oxford-3-360.webp"
  },
  {
   "id": "arizona",
@@ -6952,7 +7180,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/arizona-1000.webp"
+  "img": "/muebles/img/verano-2026/arizona-1000.webp",
+  "thumb": "/muebles/img/verano-2026/arizona-360.webp"
  },
  {
   "id": "denmark",
@@ -6977,7 +7206,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/denmark-1000.webp"
+  "img": "/muebles/img/verano-2026/denmark-1000.webp",
+  "thumb": "/muebles/img/verano-2026/denmark-360.webp"
  },
  {
   "id": "essex",
@@ -7002,7 +7232,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/essex-1000.webp"
+  "img": "/muebles/img/verano-2026/essex-1000.webp",
+  "thumb": "/muebles/img/verano-2026/essex-360.webp"
  },
  {
   "id": "oxford",
@@ -7027,7 +7258,8 @@
   "variantes_acabado": [],
   "clase": "q",
   "ambiente": true,
-  "img": "/muebles/img/verano-2026/oxford-1000.webp"
+  "img": "/muebles/img/verano-2026/oxford-1000.webp",
+  "thumb": "/muebles/img/verano-2026/oxford-360.webp"
  },
  {
   "id": "esferas",
@@ -7057,7 +7289,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/esferas-1000.webp"
+  "img": "/muebles/img/verano-2026/esferas-1000.webp",
+  "thumb": "/muebles/img/verano-2026/esferas-360.webp"
  },
  {
   "id": "one",
@@ -7084,7 +7317,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/one-1000.webp"
+  "img": "/muebles/img/verano-2026/one-1000.webp",
+  "thumb": "/muebles/img/verano-2026/one-360.webp"
  },
  {
   "id": "pekin",
@@ -7111,7 +7345,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/pekin-1000.webp"
+  "img": "/muebles/img/verano-2026/pekin-1000.webp",
+  "thumb": "/muebles/img/verano-2026/pekin-360.webp"
  },
  {
   "id": "star",
@@ -7139,12 +7374,14 @@
    {
     "id": "star-2",
     "color": "Nogal",
-    "img": "/muebles/img/verano-2026/star-2-1000.webp"
+    "img": "/muebles/img/verano-2026/star-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/star-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/star-1000.webp"
+  "img": "/muebles/img/verano-2026/star-1000.webp",
+  "thumb": "/muebles/img/verano-2026/star-360.webp"
  },
  {
   "id": "edge",
@@ -7171,7 +7408,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/edge-1000.webp"
+  "img": "/muebles/img/verano-2026/edge-1000.webp",
+  "thumb": "/muebles/img/verano-2026/edge-360.webp"
  },
  {
   "id": "lego",
@@ -7199,12 +7437,14 @@
    {
     "id": "lego-2",
     "color": "Rosa",
-    "img": "/muebles/img/verano-2026/lego-2-1000.webp"
+    "img": "/muebles/img/verano-2026/lego-2-1000.webp",
+    "thumb": "/muebles/img/verano-2026/lego-2-360.webp"
    }
   ],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/lego-1000.webp"
+  "img": "/muebles/img/verano-2026/lego-1000.webp",
+  "thumb": "/muebles/img/verano-2026/lego-360.webp"
  },
  {
   "id": "levels",
@@ -7231,7 +7471,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/levels-1000.webp"
+  "img": "/muebles/img/verano-2026/levels-1000.webp",
+  "thumb": "/muebles/img/verano-2026/levels-360.webp"
  },
  {
   "id": "age",
@@ -7258,7 +7499,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/age-640.webp"
+  "img": "/muebles/img/verano-2026/age-640.webp",
+  "thumb": "/muebles/img/verano-2026/age-360.webp"
  },
  {
   "id": "black-white",
@@ -7289,7 +7531,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/black-white-640.webp"
+  "img": "/muebles/img/verano-2026/black-white-640.webp",
+  "thumb": "/muebles/img/verano-2026/black-white-360.webp"
  },
  {
   "id": "brownie",
@@ -7316,7 +7559,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/brownie-640.webp"
+  "img": "/muebles/img/verano-2026/brownie-640.webp",
+  "thumb": "/muebles/img/verano-2026/brownie-360.webp"
  },
  {
   "id": "caballos",
@@ -7343,7 +7587,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/caballos-640.webp"
+  "img": "/muebles/img/verano-2026/caballos-640.webp",
+  "thumb": "/muebles/img/verano-2026/caballos-360.webp"
  },
  {
   "id": "caracol",
@@ -7370,7 +7615,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/caracol-640.webp"
+  "img": "/muebles/img/verano-2026/caracol-640.webp",
+  "thumb": "/muebles/img/verano-2026/caracol-360.webp"
  },
  {
   "id": "elefante",
@@ -7397,7 +7643,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/elefante-640.webp"
+  "img": "/muebles/img/verano-2026/elefante-640.webp",
+  "thumb": "/muebles/img/verano-2026/elefante-360.webp"
  },
  {
   "id": "flor-3",
@@ -7428,7 +7675,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/flor-3-640.webp"
+  "img": "/muebles/img/verano-2026/flor-3-640.webp",
+  "thumb": "/muebles/img/verano-2026/flor-3-360.webp"
  },
  {
   "id": "girasol",
@@ -7455,7 +7703,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/girasol-640.webp"
+  "img": "/muebles/img/verano-2026/girasol-640.webp",
+  "thumb": "/muebles/img/verano-2026/girasol-360.webp"
  },
  {
   "id": "grecia",
@@ -7486,7 +7735,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/grecia-640.webp"
+  "img": "/muebles/img/verano-2026/grecia-640.webp",
+  "thumb": "/muebles/img/verano-2026/grecia-360.webp"
  },
  {
   "id": "guia",
@@ -7514,7 +7764,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/guia-640.webp"
+  "img": "/muebles/img/verano-2026/guia-640.webp",
+  "thumb": "/muebles/img/verano-2026/guia-360.webp"
  },
  {
   "id": "hole",
@@ -7541,7 +7792,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/hole-640.webp"
+  "img": "/muebles/img/verano-2026/hole-640.webp",
+  "thumb": "/muebles/img/verano-2026/hole-360.webp"
  },
  {
   "id": "iron",
@@ -7569,7 +7821,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/iron-640.webp"
+  "img": "/muebles/img/verano-2026/iron-640.webp",
+  "thumb": "/muebles/img/verano-2026/iron-360.webp"
  },
  {
   "id": "lineas",
@@ -7600,7 +7853,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/lineas-640.webp"
+  "img": "/muebles/img/verano-2026/lineas-640.webp",
+  "thumb": "/muebles/img/verano-2026/lineas-360.webp"
  },
  {
   "id": "mar",
@@ -7631,7 +7885,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mar-640.webp"
+  "img": "/muebles/img/verano-2026/mar-640.webp",
+  "thumb": "/muebles/img/verano-2026/mar-360.webp"
  },
  {
   "id": "marble",
@@ -7658,7 +7913,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/marble-640.webp"
+  "img": "/muebles/img/verano-2026/marble-640.webp",
+  "thumb": "/muebles/img/verano-2026/marble-360.webp"
  },
  {
   "id": "mikonos",
@@ -7685,7 +7941,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mikonos-640.webp"
+  "img": "/muebles/img/verano-2026/mikonos-640.webp",
+  "thumb": "/muebles/img/verano-2026/mikonos-360.webp"
  },
  {
   "id": "mono",
@@ -7716,7 +7973,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/mono-640.webp"
+  "img": "/muebles/img/verano-2026/mono-640.webp",
+  "thumb": "/muebles/img/verano-2026/mono-360.webp"
  },
  {
   "id": "natura",
@@ -7744,7 +8002,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/natura-640.webp"
+  "img": "/muebles/img/verano-2026/natura-640.webp",
+  "thumb": "/muebles/img/verano-2026/natura-360.webp"
  },
  {
   "id": "olimpo",
@@ -7775,7 +8034,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/olimpo-640.webp"
+  "img": "/muebles/img/verano-2026/olimpo-640.webp",
+  "thumb": "/muebles/img/verano-2026/olimpo-360.webp"
  },
  {
   "id": "orejas",
@@ -7803,7 +8063,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/orejas-640.webp"
+  "img": "/muebles/img/verano-2026/orejas-640.webp",
+  "thumb": "/muebles/img/verano-2026/orejas-360.webp"
  },
  {
   "id": "piedra",
@@ -7830,7 +8091,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/piedra-640.webp"
+  "img": "/muebles/img/verano-2026/piedra-640.webp",
+  "thumb": "/muebles/img/verano-2026/piedra-360.webp"
  },
  {
   "id": "pony",
@@ -7858,7 +8120,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/pony-640.webp"
+  "img": "/muebles/img/verano-2026/pony-640.webp",
+  "thumb": "/muebles/img/verano-2026/pony-360.webp"
  },
  {
   "id": "punta",
@@ -7889,7 +8152,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/punta-640.webp"
+  "img": "/muebles/img/verano-2026/punta-640.webp",
+  "thumb": "/muebles/img/verano-2026/punta-360.webp"
  },
  {
   "id": "rupestre",
@@ -7916,7 +8180,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/rupestre-640.webp"
+  "img": "/muebles/img/verano-2026/rupestre-640.webp",
+  "thumb": "/muebles/img/verano-2026/rupestre-360.webp"
  },
  {
   "id": "silver",
@@ -7946,7 +8211,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/silver-640.webp"
+  "img": "/muebles/img/verano-2026/silver-640.webp",
+  "thumb": "/muebles/img/verano-2026/silver-360.webp"
  },
  {
   "id": "stripes-2",
@@ -7974,7 +8240,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/stripes-2-640.webp"
+  "img": "/muebles/img/verano-2026/stripes-2-640.webp",
+  "thumb": "/muebles/img/verano-2026/stripes-2-360.webp"
  },
  {
   "id": "torso",
@@ -8002,7 +8269,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/torso-640.webp"
+  "img": "/muebles/img/verano-2026/torso-640.webp",
+  "thumb": "/muebles/img/verano-2026/torso-360.webp"
  },
  {
   "id": "twist-2",
@@ -8032,7 +8300,8 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/twist-2-640.webp"
+  "img": "/muebles/img/verano-2026/twist-2-640.webp",
+  "thumb": "/muebles/img/verano-2026/twist-2-360.webp"
  },
  {
   "id": "wax",
@@ -8059,6 +8328,7 @@
   "variantes_acabado": [],
   "clase": "v",
   "ambiente": false,
-  "img": "/muebles/img/verano-2026/wax-640.webp"
+  "img": "/muebles/img/verano-2026/wax-640.webp",
+  "thumb": "/muebles/img/verano-2026/wax-360.webp"
  }
 ]

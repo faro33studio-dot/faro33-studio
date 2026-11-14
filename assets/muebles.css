@@ -266,6 +266,10 @@ button{ font:inherit; color:inherit; cursor:pointer; }
   margin:0 auto 18px; background:transparent;
 }
 .mb-sheet-ph img{ display:block; width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; }
+/* Móvil corto: la foto deja sitio a título y materiales bajo la barra de cookies. */
+@media (max-width:600px){
+  .mb-sheet-ph{ height:36vh; height:36svh; max-height:36svh; }
+}
 /* Decoración no tiene -1000: -640 a un máximo de 320 px CSS y nunca ampliada. */
 .mb-sheet-ph--deco{ width:100%; max-width:320px; }
 .mb-sheet-ph--deco img{ max-width:320px; }

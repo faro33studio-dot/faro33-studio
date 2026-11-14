@@ -303,6 +303,10 @@ def main() -> int:
     def detail_img(pid: str) -> str:
         return f"{IMG_WEB}/{pid}-1000.webp" if (img_src / f"{pid}-1000.webp").exists() else f"{IMG_WEB}/{pid}-640.webp"
 
+    def thumb_img(pid: str) -> str:
+        # Miniaturas de acabado: la -360 existe para cada id (ver copia de fotos arriba).
+        return f"{IMG_WEB}/{pid}-360.webp"
+
     detalle = []
     for p in ordered:
         incluye = []
@@ -316,6 +320,7 @@ def main() -> int:
                 "id": v["id"],
                 "color": v.get("color") or v["id"],
                 "img": detail_img(v["id"]),
+                "thumb": thumb_img(v["id"]),
             })
         detalle.append({
             "id": p["id"],
@@ -332,6 +337,7 @@ def main() -> int:
             "clase": p.get("clase", ""),
             "ambiente": bool(p.get("ambiente")),
             "img": detail_img(p["id"]),
+            "thumb": thumb_img(p["id"]),
         })
     if len(detalle) != EXPECTED_TOTAL:
         raise ValueError(f"El JSON de detalle debe tener {EXPECTED_TOTAL} piezas, tiene {len(detalle)}")
