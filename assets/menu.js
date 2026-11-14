@@ -5,6 +5,13 @@
   'use strict';
 
   var MENU = {
+    muebles: [
+      ['Colección Verano 2026', '/muebles/'],
+      ['Mesas', '/muebles/?linea=mesas'],
+      ['Sillas', '/muebles/?linea=sillas'],
+      ['Comedores', '/muebles/?linea=set-mesas-comedor'],
+      ['Ver todo', '/muebles/']
+    ],
     especialidades: [
       ['Interiorismo integral', '/proyecto-integral/'],
       ['Cocinas a la medida', '/cocinas/'],
@@ -86,6 +93,7 @@
     + '<div class="f33m-head"><a class="mark" href="/"><img src="/assets/home/862c0a89-3f54-4e63-bcd4-bb3571cd906b-96.webp" alt="" width="96" height="96">FARO 33</a>'
     + '<button class="f33m-close" data-f33m-close aria-label="Cerrar menú">×</button></div>'
     + '<div class="f33m-body">'
+    + sec('Muebles', MENU.muebles)
     + sec('Especialidades', MENU.especialidades)
     + sec('Proyectos', MENU.proyectos)
     + sec('Estudio', MENU.estudio)

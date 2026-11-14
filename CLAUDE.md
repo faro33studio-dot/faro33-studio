@@ -8,6 +8,7 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 | URL | Rol |
 |---|---|
 | `/` | Home (embudo por segmento): hero con WhatsApp general y selector **Mi casa / Mi negocio** → bloque `#residencial` (6 espacios → `/proyectos/?espacio=…`, CTA WhatsApp residencial) → bloque `#comercial` (muros para negocios + Oshio como EJEMPLO, CTA WhatsApp comercial) → slider **Especialidades** → Proyectos → Manifiesto → Proceso → Estudio → FAQ → Contacto (un solo botón WhatsApp) → Footer. El botón flotante cambia su mensaje según el segmento elegido o en pantalla (`#residencial` / `#comercial`). Se quitaron Servicios, el directorio de especialidades y la banda parallax |
+| `/muebles/` | Vitrina de la Colección Verano 2026 (247 piezas), sin precios; página generada, ver sección "Catálogo de muebles" |
 | `/proyecto-integral/` | Qué es un proyecto integral (del brochure): punto de partida, comparación, alcance, 7 pasos, rangos de inversión con IVA (sección `#inversion`, se puede quitar completa), FAQ + FAQPage. Destino de "Interiorismo integral" en menú, strip, footer, slide y serv-card |
 | `/cocinas/` `/centros-de-entretenimiento/` `/acabados-de-pared/` | Landings de servicio (SEO + Meta Ads) |
 | `/acabados-de-pared/#negocios` | Ángulo comercial (muros para negocios) |
@@ -30,6 +31,8 @@ Interiorismo en Culiacán. Objetivo comercial: leads por WhatsApp y ticket prome
 - **Fuentes de solo lectura**: `catalogo/web/v1/data.final.json` + `lineas.final.json` y fotos `catalogo/web/v3/img/<id>-{360,640,1000}.webp`. Se publican las 247 sin `oculta`/`oculta_por_agrupacion`; las 23 `variantes_acabado` viajan con su pieza base. Salida: `muebles/img/verano-2026/` y `muebles/data/verano-2026.json`.
 - **Fotos**: tarjeta `-360`/`-640`; ficha `-1000`; solo WebP con transparencia; nunca ampliar por encima del origen (118–900 px); la regla 1800 **no aplica** a esta sección.
 - **Excepción a "solo trabajo real del estudio"**: `muebles/img/` son fotos de proveedor con permiso; no salen de `/muebles/` ni de la franja del home.
+- **Entradas**: menú (primera sección), franja del home después de Proyectos, footer del home, sitemap.
+- **Franja del home** (`.mbs-*` en `index.html`): fotos `-360`/`-640` y enlaces a `/muebles/#pieza=<id>`; sin precios ni botón verde.
 - **Pendiente**: M2 (filtro, contador, `?linea=`) y M3 (ficha lateral, `#pieza=`). El HTML ya trae chips y tarjetas sin JS.
 
 ## ⚠️ Checklist: agregar un NUEVO SERVICIO (seguir en orden, sin excepciones)

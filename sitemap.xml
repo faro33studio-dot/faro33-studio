@@ -30,6 +30,17 @@
     <image:image><image:loc>https://faro33studio.com/cocinas/assets/cocina-oxford-2.jpg</image:loc><image:title>Cocina a la medida con barra alta — Faro 33 Studio, Culiacán</image:title></image:image>
   </url>
   <url>
+    <loc>https://faro33studio.com/muebles/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://faro33studio.com/muebles/img/verano-2026/bono-640.webp</image:loc><image:title>Bono — mesa, Colección Verano 2026, Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/muebles/img/verano-2026/cuore-640.webp</image:loc><image:title>Cuore — mesa, Colección Verano 2026, Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/muebles/img/verano-2026/tossa-640.webp</image:loc><image:title>Tossa — mesa alta, Colección Verano 2026, Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/muebles/img/verano-2026/aspen-640.webp</image:loc><image:title>Aspen — buffet, Colección Verano 2026, Faro 33 Studio</image:title></image:image>
+    <image:image><image:loc>https://faro33studio.com/muebles/img/verano-2026/bear-640.webp</image:loc><image:title>Bear — buffet, Colección Verano 2026, Faro 33 Studio</image:title></image:image>
+  </url>
+  <url>
     <loc>https://faro33studio.com/acabados-de-pared/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
