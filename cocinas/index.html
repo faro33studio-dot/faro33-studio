@@ -293,6 +293,10 @@ p.lead{
 .foot a:hover{ color:var(--gold-300); }
 
 @media (max-width:560px){ .nav .brand .lbl{ display:none; } }
+/* Áreas táctiles ≥ 44 px sin mover el diseño (auditoría 2026-11-15) */
+.back,.mbs-more a,.mb-link,.ls-dots button,.row a.val,a[href^="/aviso-de-privacidad/"]{position:relative}
+.back::after,.mbs-more a::after,.mb-link::after,.row a.val::after,a[href^="/aviso-de-privacidad/"]::after{content:"";position:absolute;inset:-14px -8px}
+.ls-dots button::after{content:"";position:absolute;inset:-9px}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -662,13 +666,13 @@ p.lead{
 .compare input[type="range"]{ position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; -webkit-appearance:none; }
 .compare .chip{
   position:absolute; top:16px; z-index:2; pointer-events:none;
-  font-family:var(--font-ui); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase;
+  font-family:var(--font-ui); font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
   padding:8px 14px; background:rgba(10,27,54,0.65); color:#fff;
   -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
 }
 .compare .chip.l{ left:16px; } .compare .chip.r{ right:16px; }
 @media (max-width:640px){
-  .compare .chip{ font-size:9.5px; padding:6px 10px; }
+  .compare .chip{ font-size:11px; padding:6px 10px; }
   .compare .chip.r{ top:auto; bottom:14px; }
 }
 .compare-note{ font-family:var(--font-ui); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin:14px 0 0; }
@@ -684,7 +688,7 @@ p.lead{
 .qv-card{ text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:8px; transition:transform .26s cubic-bezier(.2,.7,.2,1); }
 .qv-card:hover{ transform:translateY(-3px); }
 .qv-img{ aspect-ratio:4/5; background-size:cover; background-position:center; background-color:var(--sand-200); }
-.qv-tag{ font-family:var(--font-ui); font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass-700); font-weight:600; margin-top:6px; }
+.qv-tag{ font-family:var(--font-ui); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass-700); font-weight:600; margin-top:6px; }
 .qv-name{ font-family:var(--font-display); font-weight:400; font-size:clamp(18px,1.7vw,22px); line-height:1.15; color:var(--navy-800); margin:0; }
 .qv-d{ font-family:var(--font-body); font-size:15px; color:var(--stone-700); margin:0; }
 .qv-card:hover .qv-name{ color:var(--brass-700); }

@@ -20,7 +20,7 @@
     + '.lb img{max-width:min(92vw,1600px);max-height:82vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:scale(.96);transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .3s ease;opacity:0}'
     + '.lb.on img.ok{transform:none;opacity:1}'
     + '.lb-cap{position:absolute;left:clamp(16px,4vw,48px);right:clamp(16px,4vw,48px);bottom:clamp(14px,3vh,28px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;color:#fff;font-family:"Bodoni MT","Bodoni Moda",Georgia,serif;font-size:clamp(15px,1.6vw,20px);line-height:1.3}'
-    + '.lb-cap .n{font-family:ui-sans-serif,-apple-system,"Inter",Arial,sans-serif;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#E2C99A;white-space:nowrap}'
+    + '.lb-cap .n{font-family:ui-sans-serif,-apple-system,"Inter",Arial,sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#E2C99A;white-space:nowrap}'
     + '.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;--lg-alpha:.22}'
     + '.lb-btn svg{width:22px;height:22px;display:block;position:relative;z-index:1}'
     + '.lb-x{top:clamp(10px,2vh,22px);right:clamp(10px,2vw,22px)}'

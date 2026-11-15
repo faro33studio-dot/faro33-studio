@@ -289,6 +289,10 @@ p.lead{
 .foot a:hover{ color:var(--gold-300); }
 
 @media (max-width:560px){ .nav .brand .lbl{ display:none; } }
+/* Áreas táctiles ≥ 44 px sin mover el diseño (auditoría 2026-11-15) */
+.back,.mbs-more a,.mb-link,.ls-dots button,.row a.val,a[href^="/aviso-de-privacidad/"]{position:relative}
+.back::after,.mbs-more a::after,.mb-link::after,.row a.val::after,a[href^="/aviso-de-privacidad/"]::after{content:"";position:absolute;inset:-14px -8px}
+.ls-dots button::after{content:"";position:absolute;inset:-9px}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",

@@ -117,7 +117,7 @@ gtag('config', 'G-91L2N1S9T3');
     }
 
     .headline em {
-      color: var(--brass);
+      color: var(--brass-700, #856628);
       font-style: normal;
     }
 
@@ -135,7 +135,7 @@ gtag('config', 'G-91L2N1S9T3');
       align-items: center;
       gap: 12px;
       background: #25D366;
-      color: #fff;
+      color: #0A1B36;
       font-family: inherit;
       font-size: 17px;
       font-style: italic;
@@ -206,6 +206,10 @@ gtag('config', 'G-91L2N1S9T3');
     }
     .back:hover { color: rgba(255,255,255,0.6); }
   @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+/* Áreas táctiles ≥ 44 px sin mover el diseño (auditoría 2026-11-15) */
+.back,.mbs-more a,.mb-link,.ls-dots button,.row a.val,a[href^="/aviso-de-privacidad/"]{position:relative}
+.back::after,.mbs-more a::after,.mb-link::after,.row a.val::after,a[href^="/aviso-de-privacidad/"]::after{content:"";position:absolute;inset:-14px -8px}
+.ls-dots button::after{content:"";position:absolute;inset:-9px}
 </style>
 <style>
 /* P3b: texto navy en boton verde */

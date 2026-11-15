@@ -61,7 +61,7 @@
     + '.f33m-close:hover{color:#fff}'
     + '.f33m-body{padding:clamp(20px,4vh,34px) clamp(24px,6vw,40px) 28px;flex:1}'
     + '.f33m-sec{margin-bottom:clamp(22px,4vh,34px)}'
-    + '.f33m-lbl{font-family:var(--font-ui,sans-serif);font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#E2C99A;display:flex;align-items:center;gap:14px;margin-bottom:14px}'
+    + '.f33m-lbl{font-family:var(--font-ui,sans-serif);font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#E2C99A;display:flex;align-items:center;gap:14px;margin-bottom:14px}'
     + '.f33m-lbl::after{content:"";flex:1;height:1px;background:rgba(226,201,154,0.25)}'
     + '.f33m-sec a{display:block;font-family:var(--font-display,serif);font-weight:400;font-size:clamp(20px,2.6vh,24px);line-height:1.25;color:rgba(255,255,255,0.92);text-decoration:none;padding:7px 0;transition:color .15s ease,transform .25s cubic-bezier(.2,.7,.2,1)}'
     + '.f33m-sec a:hover{color:#E2C99A;transform:translateX(6px)}'
@@ -69,7 +69,7 @@
     + '.f33m-foot{padding:22px clamp(24px,6vw,40px) 30px;border-top:1px solid rgba(255,255,255,0.12)}'
     + '.f33m-wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#E2C99A;color:#0E2547;text-decoration:none;font-family:var(--font-ui,sans-serif);font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;padding:15px 20px;border-radius:2px;margin-bottom:18px;transition:background .15s}'
     + '.f33m-wa:hover{background:#fff}'
-    + '.f33m-meta{font-family:var(--font-ui,sans-serif);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.5);line-height:2}'
+    + '.f33m-meta{font-family:var(--font-ui,sans-serif);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.5);line-height:2}'
     + '.f33m-meta a{color:rgba(255,255,255,0.75);text-decoration:none;display:inline-block;padding:7px 2px;margin:-7px 0}'
     + '.f33m-meta a:hover{color:#fff}'
     + (reduce ? '.f33m-panel,.f33m-backdrop,.f33m-sec a{transition:none !important}' : '');
