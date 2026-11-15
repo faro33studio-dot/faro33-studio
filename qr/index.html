@@ -19,7 +19,7 @@
 (function(){
   var raw='';try{raw=new URLSearchParams(location.search).get('o')||''}catch(e){}
   var valid=/^(local|plaza|ofi|aliado|prueba)-[a-z0-9-]{1,15}$/.test(raw)&&raw.length<=22;
-  var origen=valid?raw:'qr',tipo=valid?origen.split('-')[0]:'qr',zona=valid?(origen.split('-')[1]||''):'';
+  var origen=valid?raw:'qr',tipo=valid?origen.split('-')[0]:'qr';
   var frase=/^local-/.test(origen)?'en un local en renta':/^plaza-/.test(origen)?'en un local de plaza':/^ofi-/.test(origen)?'en una oficina en renta':'';
   var mensaje=(frase?'Hola Faro 33, vi su etiqueta '+frase+' y quiero cotizar el diseño de mi negocio.':'Hola Faro 33, escaneé su código y quiero cotizar el diseño de mi negocio.')+' (ref: '+origen+')';
   var url='https://wa.me/526675402559?text='+encodeURIComponent(mensaje);
@@ -28,7 +28,7 @@
   var local=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
   var prueba=/^prueba-/.test(origen);
   var medir=!local&&!no&&!prueba;
-  window.F33Q={origen:origen,tipo:tipo,zona:zona,mensaje:mensaje,url:url,medir:medir,no:no,local:local,prueba:prueba};
+  window.F33Q={origen:origen,tipo:tipo,mensaje:mensaje,url:url,medir:medir,no:no,local:local,prueba:prueba};
   if(!medir)return;
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init','883854600914341');
@@ -40,7 +40,7 @@
   gtag('event','page_view',{page_location:location.href,page_title:document.title});
   var gs=document.createElement('script');gs.async=true;gs.src='https://www.googletagmanager.com/gtag/js?id=G-91L2N1S9T3';document.head.appendChild(gs);
   var K='f33-qr-escaneo',first=false;try{first=!sessionStorage.getItem(K);if(first)sessionStorage.setItem(K,'1')}catch(e){first=true}
-  if(first){fbq('trackCustom','EscaneoQR',{origen:origen,tipo:tipo,zona:zona,canal:'qr',content_category:'QR Locales'});gtag('event','escaneo_qr',{origen:origen,tipo:tipo,transport_type:'beacon'})}
+  if(first){fbq('trackCustom','EscaneoQR',{origen:origen,tipo:tipo});gtag('event','escaneo_qr',{origen:origen,tipo:tipo,transport_type:'beacon'})}
 })();
 </script>
 <style>
@@ -91,10 +91,11 @@ a{color:inherit}
 .poster{background:var(--navy-900);color:#fff;position:relative;isolation:isolate}
 .poster-left{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;padding:calc(22px + env(safe-area-inset-top)) var(--gutter) calc(22px + env(safe-area-inset-bottom))}
 .mast{display:flex;align-items:center;gap:12px;flex:0 0 auto}
-.mark{width:30px;height:30px;flex:0 0 auto;color:var(--brass-400)}
-.wordmark{font-size:15px;line-height:1;letter-spacing:.22em;color:#fff}
+.logo-plate{display:inline-flex;flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:#fff;padding:2px;box-shadow:0 2px 14px rgba(10,27,54,.45)}
+.logo-plate img{width:100%;height:100%;display:block}
+.wordmark{text-shadow:0 1px 8px rgba(10,27,54,.7);font-size:15px;line-height:1;letter-spacing:.22em;color:#fff}
 .wordmark span{display:block;margin-top:5px;font-family:var(--font-ui);font-size:8.5px;line-height:1.2;letter-spacing:.32em;color:var(--brass-400)}
-.poster-body{width:100%;max-width:560px;margin-top:auto;margin-bottom:auto;padding-block:clamp(36px,6vh,64px)}
+.poster-body{width:100%;max-width:560px;margin-top:auto;margin-bottom:0;padding-block:clamp(220px,34vh,320px) 28px}
 .poster h1{margin-top:16px;font-size:clamp(44px,12vw,76px);line-height:1.02;letter-spacing:-.02em;color:#fff}
 .poster h1 em{color:var(--brass-400);font-style:italic}
 .hl{display:block;overflow:hidden;padding:0 .06em .1em 0;margin-bottom:-.1em}
@@ -115,21 +116,26 @@ a{color:inherit}
 .poster-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--font-ui);font-size:10.5px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58)}
 .poster-foot a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:1px}
 .poster-foot a:hover{color:#fff;border-color:var(--brass-400)}
-.poster-photo{display:none}
+.poster-photo{display:block;position:absolute;inset:0;z-index:-1;overflow:hidden;background:var(--navy-950)}
+.poster-photo picture,.poster-photo img{display:block;width:100%;height:100%}
+.poster-photo img{position:absolute;inset:0;object-fit:cover;object-position:center 30%}
+.poster-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,27,54,.42) 0%,rgba(10,27,54,.3) 24%,rgba(10,27,54,.9) 46%,rgba(10,27,54,.97) 74%,var(--navy-900) 100%)}
+.poster-photo .badge{position:absolute;top:calc(30px + env(safe-area-inset-top));right:var(--gutter);z-index:1}
+.poster-photo .photo-cap{display:none}
 
 @media (min-width:900px){
   .poster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:100vh;min-height:100svh}
   .poster-left{min-height:100svh;padding:clamp(32px,4vw,56px) clamp(32px,5vw,72px) clamp(28px,4vw,48px)}
-  .poster-body{margin-top:auto;margin-bottom:auto;max-width:520px}
+  .poster-body{margin-top:auto;margin-bottom:auto;max-width:520px;padding-block:0}
   .poster h1{font-size:clamp(58px,6.4vw,96px);line-height:.98}
   .btn--wa{padding-inline:22px;font-size:12px;letter-spacing:.12em}
   .poster-foot{margin-top:32px}
-  .poster-photo{display:block;position:relative;overflow:hidden;border-left:1px solid rgba(201,169,104,.38);background:var(--navy-950)}
+  .poster-photo{display:block;position:relative;inset:auto;z-index:auto;overflow:hidden;border-left:1px solid rgba(201,169,104,.38);background:var(--navy-950)}
   .poster-photo picture,.poster-photo img{width:100%;height:100%}
   .poster-photo img{position:absolute;inset:0;object-fit:cover}
-  .poster-photo .badge{position:absolute;top:24px;left:24px}
-  .poster-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 70%,rgba(10,27,54,.55));pointer-events:none}
-  .poster-photo .photo-cap{z-index:1}
+  .poster-photo::after{background:linear-gradient(transparent 70%,rgba(10,27,54,.55))}
+  .poster-photo .badge{top:24px;left:24px;right:auto}
+  .poster-photo .photo-cap{display:flex;z-index:1}
   .poster-photo .photo-cap{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:center;gap:10px;font-family:var(--font-ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(10,27,54,.65)}
   .poster-photo .photo-cap::before{content:"";width:24px;height:1px;background:var(--brass-400);flex:0 0 auto}
 }
@@ -211,9 +217,7 @@ a{color:inherit}
 @media (min-width:900px){
   .sec-head{grid-template-columns:1.15fr .85fr;align-items:end;gap:48px}
   .sec-head .intro{padding-bottom:4px}
-  .split{grid-template-columns:1fr;gap:clamp(40px,6vw,80px);align-items:center}
-  .split>.frame{display:none}
-  .split-copy{max-width:640px}
+  .split{grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center}
   .cierre-grid{grid-template-columns:1.15fr .85fr;gap:80px;align-items:end}
 }
 @media (max-width:360px){.btn--wa{padding-inline:10px;gap:8px;font-size:10px;letter-spacing:.08em}.btn--wa svg{display:none}}
@@ -234,7 +238,7 @@ a{color:inherit}
   <section class="poster" aria-labelledby="titulo">
     <div class="poster-left">
       <div class="mast">
-        <svg class="mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke-opacity=".45"/><path d="M12 26h8M13.5 26l-2-11h9l-2 11M11 15h10M14 11h4M16 4v7M7 9l5 3M25 9l-5 3" stroke-width="1"/></svg>
+        <span class="logo-plate"><img src="assets/logo-faro33-96.webp" alt="Faro 33 Studio" width="96" height="96"></span>
         <div class="wordmark">FARO 33<span>STUDIO · INTERIORISMO</span></div>
       </div>
       <div class="poster-body">
@@ -304,7 +308,7 @@ a{color:inherit}
       <div class="sec-head rv">
         <div class="rv-i">
           <p class="eyebrow">EL TRABAJO</p>
-          <h2>Lo que cuidamos.</h2>
+          <h2>Tres hechos.</h2>
         </div>
       </div>
       <div class="facts rv">
@@ -334,7 +338,7 @@ a{color:inherit}
           <p class="eyebrow">ROTULACIÓN</p>
           <h2>Tu nombre <em>en el muro.</em></h2>
         </div>
-        <p class="intro rv-i">Así se ve una marca sobre el muro, con su propia línea de luz.</p>
+        <p class="intro rv-i">Rotulación sobre piedra, madera o estuco, con la luz calibrada para verse bien en persona y en cámara.</p>
       </div>
       <div class="duo rv">
         <figure class="frame rv-i">
@@ -402,7 +406,7 @@ a{color:inherit}
   }
   function trackContact(estado){
     if(!Q.medir||contact)return;contact=true;
-    try{fbq('trackCustom','ContactoQR',{origen:Q.origen,tipo:Q.tipo,zona:Q.zona,canal:'qr',content_category:'QR Locales',estado:estado})}catch(e){}
+    try{fbq('trackCustom','ContactoQR',{origen:Q.origen,tipo:Q.tipo,estado:estado})}catch(e){}
     try{gtag('event','generate_lead',{event_category:'WhatsApp',event_label:'QR: '+Q.origen,origen:Q.origen})}catch(e){}
   }
   function go(){
@@ -467,7 +471,7 @@ a{color:inherit}
     if(i){if(i.getAttribute('data-srcset'))i.srcset=i.getAttribute('data-srcset');i.src=i.getAttribute('data-src')}
   }
   var pics=[].slice.call(document.querySelectorAll('picture.lazy')),hero=document.querySelector('picture.eager');
-  if(hero&&window.matchMedia('(min-width:900px)').matches)load(hero);
+  if(hero)load(hero);
   if(!('IntersectionObserver'in window)){pics.forEach(load)}
   else{
     var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){load(en.target);io2.unobserve(en.target)}})},{threshold:.01});
