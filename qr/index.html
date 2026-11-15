@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E2547">
+<title>Faro 33 Studio</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;background:#0E2547;color:#fff;font:17px/1.5 Georgia,"Times New Roman",serif;display:flex;flex-direction:column;padding:28px 22px calc(28px + env(safe-area-inset-bottom))}
+.t{font:11px/1 ui-sans-serif,-apple-system,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C9A968;margin:0 0 14px}
+h1{font-weight:400;font-size:clamp(34px,10vw,52px);line-height:1.04;margin:0 0 14px}
+h1 em{color:#C9A968}
+p{margin:0 0 14px;color:rgba(255,255,255,.86)}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;font:600 13px/1 ui-sans-serif,-apple-system,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:20px 16px;margin:0 0 12px;border:0;border-radius:2px;background:#25D366;color:#0A1B36}
+.btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.btn.sm{padding:14px 12px;font-size:11px}
+pre{margin:14px 0 0;padding:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);font:12px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:break-word;color:#fff}
+small{color:rgba(255,255,255,.6);font:12px/1.5 ui-sans-serif,-apple-system,Arial,sans-serif}
+</style>
+</head>
+<body>
+<p class="t">Faro 33 · Studio · prueba de salto</p>
+<h1>Prueba del <em>salto</em> a WhatsApp</h1>
+<p>Solo para probar con teléfonos (no imprimir). Variante: <b id="vv">—</b> · Código: <b id="cc">—</b></p>
+<a id="ba" class="btn" href="#">Abrir WhatsApp · A (wa.me)</a>
+<a id="bb" class="btn alt" href="#">Abrir WhatsApp · B (whatsapp://)</a>
+<a id="br" class="btn alt sm" href="#">Reiniciar prueba (borrar candado)</a>
+<a id="bc" class="btn alt sm" href="#">Copiar bitácora</a>
+<pre id="log">cargando…</pre>
+<small>Sin medición, sin cookies, sin enlaces al sitio. Esta página no se indexa.</small>
+<noscript><p><a class="btn" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20escane%C3%A9%20su%20c%C3%B3digo%20y%20quiero%20cotizar%20el%20dise%C3%B1o%20de%20mi%20negocio.%20(ref%3A%20qr)">Escribir por WhatsApp</a></p></noscript>
+<script>
+(function(){
+  var t0=performance.now(), L=[], KEY='f33-qr-salto', NUM='526675402559';
+  function ms(){return Math.round(performance.now()-t0)}
+  function log(m){L.push('+'+ms()+' ms  '+m); document.getElementById('log').textContent=L.join('\n')}
+  var q=new URLSearchParams(location.search);
+  var v=(q.get('v')||'m').toLowerCase(); if(['a','b','m'].indexOf(v)<0) v='m';
+  var o=(q.get('o')||'').toLowerCase();
+  if(!/^(local|plaza|ofi|aliado|prueba)-[a-z0-9-]{1,15}$/.test(o)||o.length>22) o='qr';
+  var frase=/^local-/.test(o)?'en un local en renta':/^plaza-/.test(o)?'en un local de plaza':/^ofi-/.test(o)?'en una oficina en renta':'';
+  var texto=(frase?'Hola Faro 33, vi su etiqueta '+frase+' y quiero cotizar el diseño de mi negocio.':'Hola Faro 33, escaneé su código y quiero cotizar el diseño de mi negocio.')+' (ref: '+o+')';
+  var A='https://wa.me/'+NUM+'?text='+encodeURIComponent(texto);
+  var B='whatsapp://send?phone='+NUM+'&text='+encodeURIComponent(texto);
+  document.getElementById('vv').textContent=v.toUpperCase(); document.getElementById('cc').textContent=o;
+  document.getElementById('ba').href=A; document.getElementById('bb').href=B;
+  var ua=navigator.userAgent; log('carga · v='+v+' · o='+o); log('UA: '+ua.slice(0,110));
+  log('visibilidad: '+document.visibilityState);
+  var locked=false; try{locked=!!sessionStorage.getItem(KEY)}catch(e){}
+  document.addEventListener('visibilitychange',function(){log('visibilitychange → '+document.visibilityState)});
+  window.addEventListener('pagehide',function(e){log('pagehide persisted='+e.persisted)});
+  window.addEventListener('pageshow',function(e){log('pageshow persisted='+e.persisted+' · bfcache; candado='+(function(){try{return !!sessionStorage.getItem(KEY)}catch(x){return '?'}})())});
+  window.addEventListener('focus',function(){log('focus')}); window.addEventListener('blur',function(){log('blur')});
+  document.getElementById('ba').addEventListener('click',function(){log('TOQUE manual en A')});
+  document.getElementById('bb').addEventListener('click',function(){log('TOQUE manual en B')});
+  document.getElementById('br').addEventListener('click',function(e){e.preventDefault();try{sessionStorage.removeItem(KEY)}catch(x){} log('candado borrado; recarga la página para repetir el salto')});
+  document.getElementById('bc').addEventListener('click',function(e){e.preventDefault();var s=L.join('\n');try{navigator.clipboard.writeText(s).then(function(){log('bitácora copiada')},function(){log('no se pudo copiar: selecciona el texto')})}catch(x){log('no se pudo copiar: selecciona el texto')}});
+  if(v==='m'){log('modo manual: sin salto automático'); return}
+  if(locked){log('ESTADO REGRESO: ya hubo salto en esta sesión; no salto otra vez (candado)'); return}
+  setTimeout(function(){
+    try{sessionStorage.setItem(KEY,String(Date.now()))}catch(e){}
+    if(v==='a'){log('SALTO A: location.href = wa.me'); location.href=A}
+    else{
+      log('SALTO B: location.href = whatsapp://');
+      location.href=B;
+      setTimeout(function(){ if(document.visibilityState==='visible'){log('B no sacó la página en 1200 ms → caída a A'); location.href=A} else {log('B funcionó (la página ya no está visible)')} },1200);
+    }
+  },600);
+})();
+</script>
+</body>
+</html>
