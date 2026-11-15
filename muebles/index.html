@@ -2832,7 +2832,6 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
     if (ids && ids.length) contact.content_ids = ids;
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', lead); } catch(e){}
-      try { fbq('track', 'Contact', contact); } catch(e){}
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}

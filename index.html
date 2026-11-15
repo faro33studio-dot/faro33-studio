@@ -89,7 +89,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '883854600914341');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent', {content_name: 'Home', content_category: 'Landing'});
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none"
 src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></noscript>
@@ -1522,7 +1521,6 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     var segmento = seg || 'general';
     if (typeof fbq === 'function'){
       try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
-      try { fbq('track', 'Contact', { content_category: 'whatsapp', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp', segmento: segmento }); } catch(e){}

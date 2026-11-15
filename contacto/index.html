@@ -46,11 +46,11 @@ gtag('config', 'G-91L2N1S9T3');
 
     fbq('init', '883854600914341');
     fbq('track', 'PageView');
-    fbq('track', 'Lead', { value: 2667, currency: 'MXN' });          // ← evento clave para optimización de anuncios (valor estimado por lead: 240 mil / 90 leads)
+    /* Lead ya no se dispara al cargar: solo cuando la persona va a WhatsApp (ver sendLead). */
   </script>
   <noscript>
     <img height="1" width="1" alt="" style="display:none"
-      src="https://www.facebook.com/tr?id=883854600914341&ev=Lead&noscript=1"/>
+      src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/>
   </noscript>
   <!-- ════════════════════════════════════════════════════════════════════ -->
 
@@ -291,10 +291,13 @@ gtag('config', 'G-91L2N1S9T3');
   })();
 
   // ── Función que se llama al hacer click manual en WhatsApp ────────────────
+  var leadSent = false;
+  function sendLead() {   // un solo Lead por visita, al salir hacia WhatsApp (valor estimado: 240 mil / 90 leads)
+    if (leadSent) return; leadSent = true;
+    try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: 'Contacto bridge' }); } catch(e) {}
+  }
   function trackWA() {
-    try {
-      fbq('track', 'Contact');   // evento adicional en click manual
-    } catch(e) {}
+    sendLead();
     try { if (typeof gtag==='function') gtag('event','generate_lead',{event_category:'WhatsApp',event_label:'Contacto bridge'}); } catch(e){}
   }
 
@@ -308,7 +311,7 @@ gtag('config', 'G-91L2N1S9T3');
 
     if (remaining <= 0) {
       clearInterval(timer);
-      try { fbq('track', 'Contact'); } catch(e) {}   // pixel antes de salir
+      sendLead();   // pixel antes de salir
       window.location.href = WA_URL;
     }
   }, 1000);
