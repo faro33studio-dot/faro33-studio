@@ -147,7 +147,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
 (function(){
   function fire(label, ids, cat, name){
     var contentName = name || label || 'WhatsApp';
-    var lead = { value: 1660, currency: 'MXN', content_name: contentName, source_url: location.pathname };
+    var lead = { value: 1660, currency: 'MXN', cta: window.__f33cta || '', content_name: contentName, source_url: location.pathname };
     if (ids && ids.length) lead.content_ids = ids;
     if (cat) lead.content_category = cat;
     var contact = { content_category: cat || 'whatsapp', content_name: contentName, source_url: location.pathname };
@@ -157,7 +157,7 @@ src="https://www.facebook.com/tr?id=883854600914341&ev=PageView&noscript=1"/></n
       try { fbq('track', 'Contact', contact); } catch(e){}
     }
     if (typeof gtag === 'function'){
-      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp', cta: window.__f33cta || '' }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){

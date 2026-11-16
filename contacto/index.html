@@ -270,7 +270,7 @@ gtag('config', 'G-91L2N1S9T3');
 <script>
   // ── Constantes ────────────────────────────────────────────────────────────
   const DELAY   = 4;       // segundos antes de redirigir
-  const WA_URL  = 'https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F';
+  const WA_URL  = 'https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F%20(ref%3A%20contacto)';
 
   // ── Leer parámetros UTM de la URL y pasarlos a fbq ───────────────────────
   (function trackUTM() {
@@ -294,11 +294,11 @@ gtag('config', 'G-91L2N1S9T3');
   var leadSent = false;
   function sendLead() {   // un solo Lead por visita, al salir hacia WhatsApp (valor estimado: 240 mil / 90 leads)
     if (leadSent) return; leadSent = true;
-    try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', content_name: 'Contacto bridge' }); } catch(e) {}
+    try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', cta: window.__f33cta || 'contacto', content_name: 'Contacto bridge' }); } catch(e) {}
   }
   function trackWA() {
     sendLead();
-    try { if (typeof gtag==='function') gtag('event','generate_lead',{event_category:'WhatsApp',event_label:'Contacto bridge'}); } catch(e){}
+    try { if (typeof gtag==='function') gtag('event','generate_lead',{event_category:'WhatsApp',event_label:'Contacto bridge', cta: window.__f33cta || 'contacto'}); } catch(e){}
   }
 
   // ── Cuenta regresiva y redirección automática ─────────────────────────────

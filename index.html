@@ -1533,10 +1533,10 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   function fire(label, seg){
     var segmento = seg || 'general';
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', cta: window.__f33cta || '', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
-      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp', segmento: segmento }); } catch(e){}
+      try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp', segmento: segmento, cta: window.__f33cta || '' }); } catch(e){}
     }
   }
   document.addEventListener('click', function(e){
