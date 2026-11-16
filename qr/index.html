@@ -14,7 +14,7 @@
 <link rel="preload" as="font" type="font/woff2" href="/assets/home/4d967a70-ae78-49e6-9bf6-d7663052c2e6-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/home/c76eb239-ac22-4440-bb11-60ee5c0f0bb4-latin.woff2" crossorigin>
 <script>document.documentElement.className+=' js';</script>
-<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies —o la página corre en local— no se carga el Pixel (ni GA4 si rechazó) */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);if(L||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){if(!L)window['ga-disable-G-91L2N1S9T3']=true;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
+<script>/* F33_CONSENT_EARLY: si el visitante rechazó cookies, la página corre en local o el cliente parece un bot/automatizado (UA de rastreador, headless, webdriver) no se carga el Pixel ni GA4 */try{var c=JSON.parse(localStorage.getItem('f33-consent')||'null'),L=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname),B=/bot|crawl|spider|slurp|mediapartners|inspectiontool|facebookexternalhit|headless|lighthouse|pagespeed|gtmetrix/i.test(navigator.userAgent)||navigator.webdriver===!0;window.__f33bot=B;if(L||B||(c&&c.c==='no'&&Date.now()-c.t<31536e6)){window['ga-disable-G-91L2N1S9T3']=!0;window.fbq=function(){};window.fbq.loaded=!0;}}catch(e){}</script>
 <script>
 (function(){
   var raw='';try{raw=new URLSearchParams(location.search).get('o')||''}catch(e){}
@@ -27,7 +27,8 @@
   var no=!!(c&&c.c==='no'&&Date.now()-c.t<31536e6);
   var local=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
   var prueba=/^prueba-/.test(origen);
-  var medir=!local&&!no&&!prueba;
+  var bot=/bot|crawl|spider|slurp|mediapartners|inspectiontool|facebookexternalhit|headless|lighthouse|pagespeed|gtmetrix/i.test(navigator.userAgent)||navigator.webdriver===true;
+  var medir=!local&&!no&&!prueba&&!bot;
   window.F33Q={origen:origen,tipo:tipo,mensaje:mensaje,url:url,medir:medir,no:no,local:local,prueba:prueba};
   if(!medir)return;
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
