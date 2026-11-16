@@ -542,6 +542,7 @@ img { display: block; max-width: 100%; }
 @media (min-width: 901px) { .hero h1 { max-width: none; } .hero h1 .hero-line > span { white-space: nowrap; } }
 .hero h1 em { font-style: italic; font-weight: 400; }
 .hero h1 .ampersand { font-style: italic; color: var(--brass-400); padding: 0 0.05em; }
+@media (max-width: 640px){ .hero-sub-2{ display:none; } .hero-sub{ margin-bottom:28px; } }
 .hero-sub { font-family: var(--font-body); font-size: 19px; line-height: 1.55; max-width: 520px; color: rgba(255,255,255,0.88); margin: 0 0 40px; }
 .hero-actions { display: flex; align-items: center; gap: 16px 36px; flex-wrap: wrap; margin-bottom: 56px; }
 /* Jerarquía: WhatsApp = acción principal; "Mi casa / Mi negocio" = enlaces de texto que llevan a cada camino */
@@ -789,6 +790,8 @@ html.js .ls-slide--3d.is-active .ls-bg{ animation:none; }
   transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
   cursor: pointer;
 }
+.wa-fab{ transition: opacity .35s var(--ease-out, ease), transform .35s var(--ease-out, ease); }
+.wa-fab.is-away{ opacity:0; transform:translateY(10px); pointer-events:none; }
 .wa-fab:hover { transform: translateY(-2px); box-shadow: 0 18px 44px -10px rgba(37,211,102,0.7), 0 8px 20px -6px rgba(10,27,54,0.4); }
 .wa-fab svg { width: 26px; height: 26px; flex: 0 0 26px; }
 .wa-fab .wa-label { white-space: nowrap; }
@@ -942,7 +945,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   <div class="hero-inner">
     <div class="hero-tag hero-fade" style="transition-delay:700ms"><span style="display:inline-block;width:56px;height:1px;background:rgba(255,255,255,0.6)"></span>Faro 33 Studio · Culiacán, Sinaloa · Desde 2020</div>
     <h1><span class="hero-line"><span style="transition-delay:0ms">Proyectos integrales</span></span><span class="hero-line"><span style="transition-delay:60ms"><em>de interiorismo</em></span></span><span class="hero-line"><span style="transition-delay:120ms">de <em>autor.</em></span></span></h1>
-    <p class="hero-sub hero-fade" style="transition-delay:560ms">Diseñamos espacios completos — del primer plano a la última lámpara colocada. Cada proyecto responde a la luz, al material y al ritmo de quien lo habita.</p>
+    <p class="hero-sub hero-fade" style="transition-delay:560ms">Diseñamos espacios completos — del primer plano a la última lámpara colocada.<span class="hero-sub-2"> Cada proyecto responde a la luz, al material y al ritmo de quien lo habita.</span></p>
     <div class="hero-actions hero-fade" style="transition-delay:660ms">
       <a class="btn btn--wa" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20me%20interesa%20comenzar%20un%20proyecto%20integral%20de%20interiorismo.%20%C2%BFPodemos%20platicar%3F" target="_blank" rel="noopener" data-seg="general"><svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg> <span class="btn-wa-txt"><span class="btn-wa-lbl btn-wa-lbl--cur">Escríbenos por WhatsApp</span><span class="btn-wa-lbl btn-wa-lbl--next" aria-hidden="true">Abrir WhatsApp</span></span> <span class="arrow">→</span></a>
       <div class="hero-paths" role="group" aria-label="Elige tu tipo de proyecto">
@@ -1691,6 +1694,14 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     if (!fab || !msgs[seg] || fab.getAttribute('data-seg') === seg) return;
     fab.setAttribute('href', msgs[seg]);
     fab.setAttribute('data-seg', seg);
+  }
+  /* mientras el hero (con su propio botón de WhatsApp) está a la vista, el flotante se esconde */
+  var heroEl = document.querySelector('.hero');
+  if (fab && heroEl && 'IntersectionObserver' in window){
+    fab.classList.add('is-away');
+    new IntersectionObserver(function(es){
+      es.forEach(function(en){ fab.classList.toggle('is-away', en.intersectionRatio > 0.3); });
+    }, { threshold: [0, 0.3, 0.6, 1] }).observe(heroEl);
   }
   document.querySelectorAll('[data-seg-pick]').forEach(function(btn){
     btn.addEventListener('click', function(){ setSeg(btn.getAttribute('data-seg-pick')); });

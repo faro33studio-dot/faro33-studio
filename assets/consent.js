@@ -36,7 +36,7 @@
     + '.f33c .ok{background:#E2C99A;border:1px solid #E2C99A;color:#0E2547}'
     + '.f33c .ok:hover{background:#fff;border-color:#fff}'
     + '.f33c button:focus-visible,.f33c a:focus-visible{outline:2px solid #E2C99A;outline-offset:2px}'
-    + '@media (max-width:640px){.f33c{left:10px;right:84px;bottom:12px;width:auto;flex-direction:column;align-items:stretch;gap:8px;padding:10px 12px;border-radius:14px;font-size:11.5px}'
+    + '@media (max-width:640px){.f33c{left:10px;right:84px;bottom:12px;width:auto;flex-direction:column;align-items:stretch;gap:6px;padding:8px 10px;border-radius:14px;font-size:11px;line-height:1.35}'
     + '.f33c .bt button{flex:1}}'
     + '@media (min-width:900px){.f33c{left:auto;right:28px;bottom:calc(94px + env(safe-area-inset-bottom,0px));width:min(470px,calc(100vw - 56px))}}'
     + (reduce ? '.f33c{transition:none;transform:none}' : '');
@@ -80,7 +80,7 @@
       var t = e.target.closest && e.target.closest('[data-cookie-prefs]');
       if (t) { e.preventDefault(); show(0); }
     });
-    if (!read()) show(1200); /* después de la entrada del hero; nunca bloquea */
+    if (!read()) show(4000); /* deja ver el hero primero (4 s); nunca bloquea */
   }
   window.f33Consent = { open: function () { show(0); } };
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', init); else init();
