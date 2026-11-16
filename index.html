@@ -760,6 +760,7 @@ html.js .ls-slide.is-active .ls-bg{ animation:ls-kb 9s var(--ease-out) both; }
 .ls-count{ position:absolute; left:clamp(28px,5vw,72px); top:clamp(96px,12vh,128px); z-index:3; font-family:var(--font-ui); font-size:12px; letter-spacing:0.22em; color:rgba(255,255,255,0.7); }
 .ls-count b{ color:var(--gold-300); font-weight:500; }
 /* diapositiva 02: maqueta 3D en vivo (iframe diferido, controlado por el carrusel) */
+.ls-sub{ display:block; margin:-4px 0 18px; font-family:var(--font-ui); font-size:12px; font-weight:500; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold-300); }
 .ls-slide--3d .ls-bg{ background-color:#E7E2DB; }
 html.js .ls-slide--3d.is-active .ls-bg{ animation:none; }
 .ls-3d{ position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none; background:transparent; }
@@ -1138,24 +1139,25 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
 
 <section class="lineshow" id="especialidades" aria-roledescription="carrusel" aria-label="Nuestras especialidades">
   <div class="ls-count"><b class="ls-now">01</b> / 05</div>
-  <article class="ls-slide is-active">
+  <article class="ls-slide ls-slide--3d is-active" data-dur="9500">
+    <div class="ls-bg">
+      <iframe class="ls-3d" data-src="/centros-de-entretenimiento/maqueta/teaser.html" title="Maqueta 3D animada de un centro de entretenimiento" tabindex="-1" aria-hidden="true"></iframe>
+    </div>
+    <div class="ls-content">
+      <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Configurador 3D</span></div>
+      <h2>Diseña tu <em>centro de entretenimiento</em></h2>
+      <span class="ls-sub">– Mueble de TV –</span>
+      <p>Elige medidas, acabados y torres con luz LED — y míralo en 3D antes de que lo fabriquemos.</p>
+      <a class="ls-cta" href="/centros-de-entretenimiento/configurador/">Diseñar el mío <span>→</span></a>
+    </div>
+  </article>
+  <article class="ls-slide">
     <div class="ls-bg" style="background-image:url('centros-de-entretenimiento/assets/campaign/centro-warm.jpg');background-image:image-set(url('centros-de-entretenimiento/assets/campaign/centro-warm.webp') type('image/webp'), url('centros-de-entretenimiento/assets/campaign/centro-warm.jpg') type('image/jpeg'))" role="img" aria-label="Centro de entretenimiento a la medida en muro de listones de madera"></div>
     <div class="ls-content">
       <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Especialidad 01</span></div>
       <h2>Centros de <em>entretenimiento</em></h2>
       <p>El muro que reúne a la casa. Listones de madera, luz de cornisa y piedra natural — diseñado, fabricado e instalado por el estudio.</p>
       <a class="ls-cta" href="/centros-de-entretenimiento/">Ver centros <span>→</span></a>
-    </div>
-  </article>
-  <article class="ls-slide ls-slide--3d" data-dur="9500">
-    <div class="ls-bg">
-      <iframe class="ls-3d" data-src="/centros-de-entretenimiento/maqueta/teaser.html" title="Maqueta 3D animada de un centro de entretenimiento" tabindex="-1" aria-hidden="true"></iframe>
-    </div>
-    <div class="ls-content">
-      <div class="eyebrow-row"><span class="f33-rule f33-rule--brass"></span><span class="f33-eyebrow f33-eyebrow--brass">Configurador 3D</span></div>
-      <h2>Diseña tu <em>centro</em></h2>
-      <p>Elige medidas, acabados y torres con luz LED — y míralo en 3D antes de que lo fabriquemos.</p>
-      <a class="ls-cta" href="/centros-de-entretenimiento/configurador/">Diseñar el mío <span>→</span></a>
     </div>
   </article>
   <article class="ls-slide">
