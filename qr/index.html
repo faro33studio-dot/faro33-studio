@@ -79,7 +79,7 @@ a{color:inherit}
 .btn .arrow{display:inline-block;flex:0 0 auto;transition:transform .18s var(--ease)}
 @media (hover:hover){.btn:hover .arrow{transform:translateX(4px)}}
 @media (prefers-reduced-motion:no-preference){.btn:active{scale:.97}}
-.btn--wa{width:100%;min-height:56px;padding-inline:16px;background:var(--green);border-color:var(--green);color:var(--navy-950);font-size:11px;letter-spacing:.1em}
+.btn--wa{width:100%;min-height:56px;padding-inline:16px;background:var(--green);border-color:var(--green);color:var(--navy-950);font-size:12px;letter-spacing:.1em}
 .btn--wa:hover{background:var(--green-h);border-color:var(--green-h);color:var(--navy-950)}
 .btn--wa:active{background:var(--green-a)}
 .btn--wa svg{width:18px;height:18px;flex:0 0 auto}
@@ -94,7 +94,7 @@ a{color:inherit}
 .logo-plate{display:inline-flex;flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:#fff;padding:2px;box-shadow:0 2px 14px rgba(10,27,54,.45)}
 .logo-plate img{width:100%;height:100%;display:block}
 .wordmark{text-shadow:0 1px 8px rgba(10,27,54,.7);font-size:15px;line-height:1;letter-spacing:.22em;color:#fff}
-.wordmark span{display:block;margin-top:5px;font-family:var(--font-ui);font-size:8.5px;line-height:1.2;letter-spacing:.32em;color:var(--brass-400)}
+.wordmark span{display:block;margin-top:5px;font-family:var(--font-ui);font-size:11px;line-height:1.2;letter-spacing:.28em;color:var(--brass-400)}
 .poster-body{width:100%;max-width:560px;margin-top:auto;margin-bottom:0;padding-block:clamp(220px,34vh,320px) 28px}
 .poster h1{margin-top:16px;font-size:clamp(44px,12vw,76px);line-height:1.02;letter-spacing:-.02em;color:#fff}
 .poster h1 em{color:var(--brass-400);font-style:italic}
@@ -110,10 +110,10 @@ a{color:inherit}
 .state{font-family:var(--font-ui);font-size:12px;line-height:1.45;letter-spacing:.02em;color:rgba(255,255,255,.66)}
 .fallback{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:7px;font-family:var(--font-ui);font-size:12px;line-height:1.45;color:rgba(255,255,255,.7)}
 .fallback[hidden]{display:none}
-.link{appearance:none;background:none;border:0;padding:0;font:inherit;color:var(--brass-400);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.link{appearance:none;background:none;border:0;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:inherit;color:var(--brass-400);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .link:hover{color:#fff}
-.phone{color:rgba(255,255,255,.84);white-space:nowrap;font-variant-numeric:tabular-nums}
-.poster-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--font-ui);font-size:10.5px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+.phone{color:rgba(255,255,255,.84);white-space:nowrap;font-variant-numeric:tabular-nums;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28)}
+.poster-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--font-ui);font-size:11px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58)}
 .poster-foot a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:1px}
 .poster-foot a:hover{color:#fff;border-color:var(--brass-400)}
 .poster-photo{display:block;position:absolute;inset:0;z-index:-1;overflow:hidden;background:var(--navy-950)}
@@ -193,9 +193,12 @@ a{color:inherit}
 .info-block p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.82)}
 .info-block a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:2px}
 .info-block a:hover{border-color:var(--brass-400)}
-.cierre-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:56px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-family:var(--font-ui);font-size:10.5px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+.cierre-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:56px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-family:var(--font-ui);font-size:11px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58)}
 .cierre-foot a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28)}
 .cierre-foot a:hover{color:#fff}
+/* áreas táctiles ≥ 44 px sin mover el diseño */
+.poster-foot a,.cierre-foot a,.info-block a,.text-link,.phone{position:relative}
+.poster-foot a::after,.cierre-foot a::after,.info-block a::after,.text-link::after,.phone::after{content:"";position:absolute;inset:-14px -6px}
 
 /* ── Reveals ────────────────────────────────────────────────────── */
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
@@ -220,7 +223,9 @@ a{color:inherit}
   .split{grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center}
   .cierre-grid{grid-template-columns:1.15fr .85fr;gap:80px;align-items:end}
 }
-@media (max-width:360px){.btn--wa{padding-inline:10px;gap:8px;font-size:10px;letter-spacing:.08em}.btn--wa svg{display:none}}
+@media (max-width:430px){.wordmark span{letter-spacing:.14em}}
+@media (max-width:380px){.wordmark span{letter-spacing:.08em}}
+@media (max-width:360px){.btn--wa{padding-inline:10px;gap:8px;font-size:11px;letter-spacing:.08em}.btn--wa svg{display:none}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -243,7 +248,7 @@ a{color:inherit}
       </div>
       <div class="poster-body">
         <p class="eyebrow eyebrow--on-deep">ESTE LOCAL · TU NEGOCIO</p>
-        <h1 id="titulo" aria-label="Este local puede ser tu marca."><span class="hl"><span>Este local</span></span><span class="hl"><span>puede ser</span></span><span class="hl"><span><em>tu marca.</em></span></span></h1>
+        <h1 id="titulo"><span class="hl"><span>Este local</span></span> <span class="hl"><span>puede ser</span></span> <span class="hl"><span><em>tu marca.</em></span></span></h1>
         <span class="light" aria-hidden="true"></span>
         <p class="lede">Diseñamos el interior de tu negocio: muros con tu identidad, iluminación y mobiliario. En Culiacán.</p>
         <a class="btn btn--wa" data-wa href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20escane%C3%A9%20su%20c%C3%B3digo%20y%20quiero%20cotizar%20el%20dise%C3%B1o%20de%20mi%20negocio.%20(ref%3A%20qr)">
@@ -252,7 +257,7 @@ a{color:inherit}
         </a>
         <div class="state-wrap">
           <p class="state" aria-live="polite"><span id="stateTxt">Abriendo WhatsApp…</span></p>
-          <p class="fallback" id="fallback" hidden><button type="button" class="link" id="copy">Copiar mensaje</button> <span class="phone">667 540 2559</span></p>
+          <p class="fallback" id="fallback" hidden><button type="button" class="link" id="copy">Copiar mensaje</button> <a class="phone" href="tel:+526675402559">667 540 2559</a></p>
           <noscript><style>#stateTxt{display:none}</style><p class="state">Toca el botón para escribirnos.</p></noscript>
         </div>
       </div>
@@ -263,8 +268,8 @@ a{color:inherit}
     </div>
     <div class="poster-photo">
       <picture class="eager">
-        <source type="image/webp" data-srcset="assets/oshio-recepcion-780.webp">
-        <img data-src="assets/oshio-recepcion-780.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="780" height="1040" alt="Recepción de Oshio: bonsái, lambrín de madera y luz cálida. Ejemplo del estudio." loading="lazy" decoding="async">
+        <source type="image/webp" srcset="assets/oshio-recepcion-780.webp">
+        <img src="assets/oshio-recepcion-780.jpg" width="780" height="1040" alt="Recepción de Oshio: bonsái, lambrín de madera y luz cálida. Ejemplo del estudio." decoding="async">
       </picture>
       <span class="badge">EJEMPLO</span>
       <span class="photo-cap">OSHIO · RECEPCIÓN</span>
@@ -338,7 +343,7 @@ a{color:inherit}
           <p class="eyebrow">ROTULACIÓN</p>
           <h2>Tu nombre <em>en el muro.</em></h2>
         </div>
-        <p class="intro rv-i">Rotulación sobre piedra, madera o estuco, con la luz calibrada para verse bien en persona y en cámara.</p>
+        <p class="intro rv-i">Tu nombre y tu logotipo, en el primer muro que ve quien entra.</p>
       </div>
       <div class="duo rv">
         <figure class="frame rv-i">
@@ -399,7 +404,7 @@ a{color:inherit}
   var reduce=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
   function label(t){wa.forEach(function(a){var l=a.querySelector('.lbl');if(l)l.textContent=t})}
   function setState(s){
-    if(s==='regreso'){stateTxt.textContent='Tu mensaje está listo en WhatsApp. Mientras, mira lo que hacemos con un local ↓';fallback.hidden=true;label('Volver al chat')}
+    if(s==='regreso'){stateTxt.innerHTML='Tu mensaje está listo en WhatsApp. Mientras, <a class="link" href="#trabajo">mira lo que hacemos con un local ↓</a>';fallback.hidden=true;label('Volver al chat')}
     else if(s==='escritorio'){stateTxt.textContent='Escanéalo con tu teléfono o escríbenos desde aquí.';fallback.hidden=true;label('Abrir WhatsApp Web')}
     else if(s==='respaldo'){stateTxt.textContent='¿No se abrió? Toca el botón.';fallback.hidden=false;label('Cotizar mi negocio por WhatsApp')}
     else{stateTxt.textContent='Abriendo WhatsApp…';fallback.hidden=true;label('Cotizar mi negocio por WhatsApp')}
