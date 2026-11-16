@@ -9,7 +9,7 @@
   // [mín, máx, por defecto] — deben coincidir con los <input type="range"> del configurador
   var NUM = {
     w: [180, 450, 280], h: [150, 280, 220], d: [30, 60, 40],
-    consoleLen: [120, 240, 200], consoleH: [20, 45, 35], cols: [2, 6, 4],
+    consoleLen: [120, 320, 200], consoleH: [20, 45, 35], cols: [2, 6, 4],
     tvW: [40, 260, 130], tvH: [30, 120, 70],
     towerCount: [0, 2, 0], towerW: [20, 35, 28], towerH: [80, 240, 200], towerOffset: [0, 120, 0]
   };
@@ -80,7 +80,33 @@
     }
   }
 
+  /* Modelos predefinidos: el visitante los abre desde el configurador (chips «Modelos») o con #m=<id>
+     (también en la maqueta 3D: /maqueta/#m=nogal-marmol). Cada uno es un diseño completo que pasa por sanitize(). */
+  var MODELOS = [
+    {
+      id: 'nogal-marmol',
+      name: 'Nogal y mármol',
+      desc: 'Lambrín nogal a los lados, mármol blanco al centro y consola larga de cuatro puertas y un nicho abierto.',
+      state: {
+        w: 320, h: 280, d: 40, consoleLen: 300, consoleH: 40, cols: 5, doors: [1, 1, 0, 1, 1],
+        tvOn: true, tvW: 140, tvH: 80, towerCount: 0, towersLit: true, tvPanel: false, tvPanelLit: true,
+        finish: 'nogal',
+        panels: [
+          { type: 'lambrin', tone: 'nogal', x: 8, w: 62 },
+          { type: 'marmol', tone: 'blanco', x: 74, w: 172 },
+          { type: 'lambrin', tone: 'nogal', x: 250, w: 62 }
+        ]
+      }
+    }
+  ];
+  function modelo(id) {
+    for (var i = 0; i < MODELOS.length; i++) if (MODELOS[i].id === id) return MODELOS[i];
+    return null;
+  }
+
   function fromHash(hash) {
+    var mm = /(?:^#|&)m=([a-z0-9-]{1,32})/.exec(hash || '');
+    if (mm) { var mo = modelo(mm[1]); if (mo) return sanitize(mo.state); }
     var m = /(?:^#|&)d=([A-Za-z0-9_-]{8,3000})/.exec(hash || '');
     return m ? decode(m[1]) : null;
   }
@@ -96,6 +122,6 @@
     NUM: NUM, ENUM: ENUM, PANEL_TYPES: PANEL_TYPES, PANEL_TONES: PANEL_TONES, MAX_PANELS: MAX_PANELS,
     FINISH_NAMES: FINISH_NAMES, PANEL_NAMES: PANEL_NAMES, TONE_NAMES: TONE_NAMES, DOOR_NAMES: DOOR_NAMES,
     sanitize: sanitize, sanitizePanels: sanitizePanels, encode: encode, decode: decode, fromHash: fromHash,
-    describePanels: describePanels
+    describePanels: describePanels, MODELOS: MODELOS, modelo: modelo
   };
 })();

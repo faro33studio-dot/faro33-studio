@@ -250,6 +250,12 @@ gtag('config', 'G-91L2N1S9T3');
 .back,.mbs-more a,.mb-link,.ls-dots button,.row a.val,a[href^="/aviso-de-privacidad/"]{position:relative}
 .back::after,.mbs-more a::after,.mb-link::after,.row a.val::after,a[href^="/aviso-de-privacidad/"]::after{content:"";position:absolute;inset:-14px -8px}
 .ls-dots button::after{content:"";position:absolute;inset:-9px}
+
+  .fld-group[hidden] { display: none; }
+  .models-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .model-chip { font-family: var(--font-ui); font-size: 12px; letter-spacing: .08em; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--border-strong, rgba(0,0,0,.25)); background: transparent; color: inherit; cursor: pointer; min-height: 40px; }
+  .model-chip[aria-pressed="true"] { background: var(--navy-800, #13305c); color: #fff; border-color: var(--navy-800, #13305c); }
+  .model-chip:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 </style>
 <style>
 /* P3b: texto navy en boton verde */
@@ -274,6 +280,14 @@ gtag('config', 'G-91L2N1S9T3');
 
   <div class="cfg-wrap">
     <section class="cfg-panel" aria-label="Controles del diseño">
+
+      <div class="fld-group" id="models-group" hidden>
+        <div class="fld">
+          <div class="lbl"><span>Modelos</span><b id="out-model">Empieza de cero</b></div>
+          <div class="models-list" id="models-list" role="group" aria-label="Modelos predefinidos"></div>
+        </div>
+        <div class="hint">Parte de un modelo ya armado y cámbiale lo que quieras. Puedes verlo en 3D desde el botón de arriba.</div>
+      </div>
 
       <div class="fld-group">
         <div class="fld">
@@ -302,7 +316,7 @@ gtag('config', 'G-91L2N1S9T3');
       <div class="fld-group">
         <div class="fld">
           <div class="lbl"><span>Largo de la consola de TV</span><b id="out-consolelen">200 cm</b></div>
-          <input type="range" id="in-consolelen" min="120" max="240" step="5" value="200">
+          <input type="range" id="in-consolelen" min="120" max="320" step="5" value="200">
         </div>
         <div class="fld">
           <div class="lbl"><span>Alto de la consola</span><b id="out-consoleh">35 cm</b></div>

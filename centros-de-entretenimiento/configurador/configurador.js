@@ -652,7 +652,24 @@
     });
   }
 
+  /* Chips «Modelos»: cada uno recarga el configurador con ese diseño (#m=<id>) */
+  function buildModels() {
+    var D = window.F33Diseno, group = document.getElementById('models-group'), list = document.getElementById('models-list');
+    if (!D || !D.MODELOS || !D.MODELOS.length || !group || !list) return;
+    var cur = (/(?:^#|&)m=([a-z0-9-]{1,32})/.exec(location.hash) || [])[1] || '';
+    D.MODELOS.forEach(function (m) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'model-chip'; b.textContent = m.name; b.title = m.desc;
+      b.setAttribute('aria-pressed', m.id === cur ? 'true' : 'false');
+      b.addEventListener('click', function () { location.hash = '#m=' + m.id; location.reload(); });
+      list.appendChild(b);
+      if (m.id === cur) document.getElementById('out-model').textContent = m.name;
+    });
+    group.hidden = false;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    buildModels();
     restoreFromHash();
     buildSwatches();
     bindToggle('in-tv', 'tvOn', 'tv-subfields');
