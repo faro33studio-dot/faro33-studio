@@ -933,7 +933,7 @@ gtag('config', 'G-91L2N1S9T3');
   function ease(t){ return t*t*(3-2*t); }
   function update(){
     ticking=false;
-    var h=hero.offsetHeight||innerHeight, p=Math.min(1,Math.max(0,(window.scrollY||0)/(h*0.8))), e=ease(p);
+    var h=hero.offsetHeight||innerHeight, p=Math.min(1,Math.max(0,(window.scrollY||0)/(h*0.6))), e=ease(p);
     hero.style.setProperty('--ov',(0.3+0.7*e).toFixed(3));
     hero.style.setProperty('--wash',(0.9*e).toFixed(3));
     hero.style.setProperty('--hs',(1+0.07*e).toFixed(4));
