@@ -413,7 +413,7 @@ html.js .rv.in{ opacity:1; transform:none; }
 (function(){
   function fire(label){
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', content_name: label || 'WhatsApp', source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp' }); } catch(e){}

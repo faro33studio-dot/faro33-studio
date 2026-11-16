@@ -1466,6 +1466,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
     { webp: 'assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.webp', jpg: 'assets/home/77eb2ef6-6ae7-4114-8267-06fc2db704cb.jpg' }
   ];
   function canRotate(){
+    return false; /* 2026-11-15: el hero queda fijo en la foto del sofá negro (a84fa904) en todas las vistas */
     return window.innerWidth > 768
       && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)
       && !(navigator.connection && navigator.connection.saveData);
@@ -1523,7 +1524,7 @@ html.js .proc-step.rv.in .proc-num{ border-color:var(--brass-500); color:var(--b
   function fire(label, seg){
     var segmento = seg || 'general';
     if (typeof fbq === 'function'){
-      try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
+      try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', content_name: label || 'WhatsApp', segmento: segmento, source_url: location.pathname }); } catch(e){}
     }
     if (typeof gtag === 'function'){
       try { gtag('event', 'generate_lead', { event_category: 'WhatsApp', event_label: label || 'WhatsApp', segmento: segmento }); } catch(e){}

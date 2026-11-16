@@ -294,7 +294,7 @@ gtag('config', 'G-91L2N1S9T3');
   var leadSent = false;
   function sendLead() {   // un solo Lead por visita, al salir hacia WhatsApp (valor estimado: 240 mil / 90 leads)
     if (leadSent) return; leadSent = true;
-    try { fbq('track', 'Lead', { value: 2667, currency: 'MXN', content_name: 'Contacto bridge' }); } catch(e) {}
+    try { fbq('track', 'Lead', { value: 1660, currency: 'MXN', content_name: 'Contacto bridge' }); } catch(e) {}
   }
   function trackWA() {
     sendLead();
