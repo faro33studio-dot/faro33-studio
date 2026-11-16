@@ -81,10 +81,10 @@
   }
 
   /* Modelos predefinidos: el visitante los abre desde el configurador (chips «Modelos») o con #m=<id>
-     (también en la maqueta 3D: /maqueta/#m=nogal-marmol). Cada uno es un diseño completo que pasa por sanitize(). */
+     (también en la maqueta 3D: /maqueta/#m=modelo-nogal-reel). Cada uno es un diseño completo que pasa por sanitize(). */
   var MODELOS = [
     {
-      id: 'nogal-marmol',
+      id: 'modelo-nogal-reel',
       name: 'Nogal y mármol',
       desc: 'Lambrín nogal a los lados, mármol blanco al centro y consola larga de cuatro puertas y un nicho abierto.',
       state: {
