@@ -14,6 +14,7 @@
     ],
     especialidades: [
       ['Interiorismo integral', '/proyecto-integral/'],
+      ['Proyectos integrales con planos', '/proyectos-integrales/'],
       ['Cocinas a la medida', '/cocinas/'],
       ['Centros de entretenimiento', '/centros-de-entretenimiento/'],
       ['Diseña tu centro (configurador)', '/centros-de-entretenimiento/configurador/'],
