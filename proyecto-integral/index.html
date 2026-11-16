@@ -108,8 +108,8 @@ a{ color:inherit; }
   display:flex; align-items:center; gap:18px; margin:0 0 28px;
 }
 .eyebrow::before{ content:""; display:block; width:42px; height:1px; background:var(--navy-800); }
-html.js .eyebrow.rv::before{ width:0; transition:width .9s var(--ease-out) .25s; }
-html.js .eyebrow.rv.in::before{ width:42px; }
+html.js .eyebrow.rv::before{ transform:scaleX(0); transform-origin:left center; transition:transform .9s var(--ease-out) .25s; }
+html.js .eyebrow.rv.in::before{ transform:scaleX(1); }
 
 /* HERO */
 .hero{

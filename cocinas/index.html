@@ -719,8 +719,8 @@ details.rv .compare-note{ color:var(--stone-500); }
 /* Cinematic reveals */
 html.js .reveal{ opacity:0; transform:translateY(30px); transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1); }
 html.js .reveal.is-in{ opacity:1; transform:none; }
-html.js .eyebrow.reveal::before{ width:0; transition:width .9s cubic-bezier(.2,.7,.2,1) .25s; }
-html.js .eyebrow.reveal.is-in::before{ width:42px; }
+html.js .eyebrow.reveal::before{ transform:scaleX(0); transform-origin:left center; transition:transform .9s cubic-bezier(.2,.7,.2,1) .25s; }
+html.js .eyebrow.reveal.is-in::before{ transform:scaleX(1); }
 @media (prefers-reduced-motion: reduce){ html.js .reveal{ opacity:1; transform:none; } }
 /* Kitchen crossfade galleries */
 .kitchen .ph{ position:relative; overflow:hidden; }
