@@ -135,6 +135,7 @@ table.t{border-collapse:collapse;width:100%;min-width:640px;font-family:var(--fu
 .idx b{font-family:var(--fu);font-size:12px;letter-spacing:.2em;color:var(--red);min-width:44px}
 .cierre{background:var(--navy-950);color:#fff;padding:clamp(72px,10vw,140px) 0}
 .cierre .q{font-size:clamp(32px,5.6vw,72px);line-height:1.02;letter-spacing:-.02em;margin:0 0 24px;max-width:18ch;text-wrap:balance}.cierre .q em{font-style:italic;color:var(--gold-300)}
+.bro{display:inline-flex;align-items:center;gap:10px;font-family:var(--fu);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-300);border:1px solid rgba(226,201,154,.55);text-decoration:none;padding:16px 26px;margin:14px 0 0 0;transition:background .2s,color .2s,transform .2s}.bro:hover,.bro:focus-visible{background:var(--gold-300);color:var(--navy-950);transform:translateY(-2px)}.cierre .cta+.bro{margin-left:14px}@media(max-width:640px){.cierre .cta+.bro{margin-left:0;display:flex;justify-content:center}}
 .cierre .row{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:40px;font-family:var(--fu);font-size:12.5px;letter-spacing:.06em;color:rgba(255,255,255,.8)}.cierre .row a{text-decoration:none}
 .foot{background:var(--navy-950);color:rgba(255,255,255,.7);font-family:var(--fu);font-size:12px;padding:0 clamp(24px,5vw,64px) 40px;border-top:1px solid rgba(255,255,255,.12)}.foot div{max-width:1180px;margin:0 auto;padding-top:28px}.foot a{color:inherit}
 .badge{position:fixed;left:12px;bottom:12px;z-index:90;font:600 11px var(--fu);letter-spacing:.14em;text-transform:uppercase;background:var(--gold-300);color:var(--navy-900);padding:8px 12px;border-radius:999px}
@@ -481,6 +482,7 @@ opacity:0;transform:translateY(16px);visibility:hidden;pointer-events:none;trans
     <p class="q">Si ya tienes planos o medidas, <em>empezamos desde ahí.</em></p>
     <p class="lead" style="color:rgba(255,255,255,.82);max-width:56ch">Mándalos por WhatsApp y te decimos qué conviene resolver primero.</p>
     <a class="cta" data-ref="integrales-cierre" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20Proyectos%20integrales%20y%20quiero%20cotizar%20un%20proyecto%20con%20planos%20para%20obra%20y%20taller." target="_blank" rel="noopener">Cotizar mi proyecto por WhatsApp →</a>
+    <a class="bro" data-brochure="integrales-cierre" href="/assets/brochure/faro33-proyecto-integral.pdf" download="Faro33-Proyecto-Integral.pdf" type="application/pdf">Descargar brochure (PDF, 5 MB) ↓</a>
     <p class="hours" style="font-family:var(--fu);font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.7);margin:14px 0 0">Lun–Vie 10:00–17:00 · Sáb 10:00–14:00</p>
     <div class="row"><a data-ref="integrales-contacto" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20Proyectos%20integrales.">WhatsApp · +52 667 540 2559</a><a href="https://www.instagram.com/faro_33studio/">@faro_33studio</a><span>Blv. Pedro María Anaya 1142-E · Culiacán</span></div>
   </div>
@@ -513,6 +515,19 @@ opacity:0;transform:translateY(16px);visibility:hidden;pointer-events:none;trans
   document.addEventListener('click',function(e){
     var a=e.target&&e.target.closest?e.target.closest('a[href*="wa.me"]'):null;
     if(a)fire((a.getAttribute('data-ref')||'wa').slice(0,40));
+  },true);
+})();
+</script>
+
+<script>
+/* Descarga de brochure → evento propio en Meta Pixel (custom, para audiencias futuras) y GA4. src = botón de origen */
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[data-brochure]'):null;
+    if(!a)return;
+    var src=(a.getAttribute('data-brochure')||'brochure').slice(0,40);
+    if(typeof fbq==='function'){try{fbq('trackCustom','DescargaBrochure',{content_name:'Brochure proyecto integral',content_category:'Landing proyectos integrales',src:src,source_url:location.pathname});}catch(_){}}
+    if(typeof gtag==='function'){try{gtag('event','brochure_download',{event_category:'Brochure',event_label:'Landing proyectos integrales: '+src,file_name:'faro33-proyecto-integral.pdf',src:src});}catch(_){}}
   },true);
 })();
 </script>

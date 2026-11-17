@@ -539,6 +539,7 @@ html.js .rv.in{ opacity:1; transform:none; }
       <p class="quote">La primera visita es una conversación, <span class="acc">no una cotización.</span></p>
       <p class="lead" style="color:rgba(255,255,255,0.82)">Mándanos las medidas o los planos de tu casa por WhatsApp. De ahí agendamos la visita, vemos el espacio y te decimos con honestidad qué se puede hacer y en qué orden.</p>
       <a class="cotiza" href="https://wa.me/526675402559?text=Hola%20Faro%2033%2C%20quiero%20un%20proyecto%20integral%20para%20mi%20casa.%20Les%20mando%20los%20planos%20o%20las%20medidas." target="_blank" rel="noopener">Enviar mis planos por WhatsApp →</a>
+      <a class="bro" data-brochure="integral-cierre" href="/assets/brochure/faro33-proyecto-integral.pdf" download="Faro33-Proyecto-Integral.pdf" type="application/pdf">Descargar brochure (PDF, 5 MB) ↓</a>
       <div class="row">
         <a href="https://wa.me/526675402559" target="_blank" rel="noopener">WhatsApp · +52 667 540 2559</a>
         <a href="https://www.instagram.com/faro_33studio/" target="_blank" rel="noopener">@faro_33studio</a>
@@ -560,6 +561,7 @@ html.js .rv.in{ opacity:1; transform:none; }
   </div></div>
 </div>
 <style>
+.bro{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-ui);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-300,#E2C99A);border:1px solid rgba(226,201,154,.55);text-decoration:none;padding:16px 26px;margin:14px 0 0 14px;transition:background .2s,color .2s,transform .2s}.bro:hover,.bro:focus-visible{background:var(--gold-300,#E2C99A);color:var(--navy-900,#0A1B36);transform:translateY(-2px)}@media(max-width:640px){.bro{display:flex;justify-content:center;margin:14px 0 0}}
 .related-projects{ background:var(--linen-50); padding: clamp(64px,9vw,128px) clamp(24px,5vw,64px); }
 .related-projects .inner{ max-width:1180px; margin:0 auto; }
 .related-projects .head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom: clamp(28px,4vw,48px); flex-wrap:wrap; }
@@ -588,6 +590,19 @@ html.js .rv.in{ opacity:1; transform:none; }
   <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.262.594 4.46 1.72 6.397L3.2 28.8l6.564-1.694a12.749 12.749 0 006.239 1.594h.005c7.067 0 12.8-5.73 12.8-12.8 0-3.42-1.331-6.633-3.748-9.052A12.722 12.722 0 0016.003 3.2zm0 23.357h-.004a10.61 10.61 0 01-5.41-1.481l-.387-.23-3.895 1.005 1.04-3.795-.252-.39a10.6 10.6 0 01-1.625-5.66c0-5.866 4.776-10.64 10.642-10.64a10.57 10.57 0 017.527 3.122 10.575 10.575 0 013.115 7.527c-.003 5.866-4.778 10.642-10.751 10.642zm5.84-7.974c-.32-.16-1.893-.934-2.187-1.04-.294-.107-.508-.16-.722.16-.213.32-.827 1.04-1.014 1.253-.187.213-.374.24-.694.08-.32-.16-1.35-.498-2.572-1.586-.95-.847-1.59-1.894-1.778-2.214-.187-.32-.02-.493.14-.652.143-.143.32-.374.48-.561.16-.187.213-.32.32-.534.107-.213.053-.4-.027-.561-.08-.16-.722-1.74-.989-2.385-.262-.626-.527-.54-.722-.55l-.614-.011a1.18 1.18 0 00-.853.4c-.293.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.307.16.214 2.255 3.444 5.464 4.83.764.33 1.36.527 1.826.674.767.244 1.466.21 2.018.127.616-.092 1.893-.774 2.16-1.522.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
   <span class="wa-fab-lbl">Hablemos</span>
 </a>
+
+<script>
+/* Descarga de brochure → evento propio en Meta Pixel (custom, para audiencias futuras) y GA4. src = botón de origen */
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[data-brochure]'):null;
+    if(!a)return;
+    var src=(a.getAttribute('data-brochure')||'brochure').slice(0,40);
+    if(typeof fbq==='function'){try{fbq('trackCustom','DescargaBrochure',{content_name:'Brochure proyecto integral',content_category:'Proyecto integral',src:src,source_url:location.pathname});}catch(_){}}
+    if(typeof gtag==='function'){try{gtag('event','brochure_download',{event_category:'Brochure',event_label:'Proyecto integral: '+src,file_name:'faro33-proyecto-integral.pdf',src:src});}catch(_){}}
+  },true);
+})();
+</script>
 
 <script>
 /* Meta Pixel + GA4 — WhatsApp clicks are the conversion signal */
