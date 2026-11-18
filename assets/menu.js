@@ -20,7 +20,8 @@
       ['Diseña tu centro (configurador)', '/centros-de-entretenimiento/configurador/'],
       ['Centro transformable en 3D', '/centros-de-entretenimiento/maqueta/'],
       ['Acabados de pared', '/acabados-de-pared/'],
-      ['Muros para negocios', '/acabados-de-pared/#negocios']
+      ['Muros para negocios', '/acabados-de-pared/#negocios'],
+      ['Cortinas onduladas', '/cortinas/']
     ],
     proyectos: [
       ['Todos los proyectos', '/proyectos/'],
@@ -107,6 +108,12 @@
     + '<a href="mailto:faro33studio@gmail.com">Correo</a><br>'
     + '<a href="/aviso-de-privacidad/">Aviso de privacidad</a> · <a href="/aviso-de-privacidad/#cookies" data-cookie-prefs>Cookies</a></div>'
     + '</div></aside>';
+  var pageWA = document.querySelector('a[data-menu-whatsapp]');
+  if (pageWA) {
+    var menuWA = wrap.querySelector('.f33m-wa');
+    menuWA.href = pageWA.href;
+    menuWA.setAttribute('data-ref', pageWA.getAttribute('data-menu-whatsapp'));
+  }
   document.body.appendChild(wrap);
 
   var panel = wrap.querySelector('.f33m-panel');

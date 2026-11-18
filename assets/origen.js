@@ -43,7 +43,7 @@
   /* ---------- código de página ---------- */
   var PAGES = {
     '': 'inicio', 'muebles': 'muebles', 'proyecto-integral': 'integral', 'proyectos-integrales': 'integrales', 'cocinas': 'cocinas',
-    'acabados-de-pared': 'acabados', 'centros-de-entretenimiento': 'centros', 'proyectos': 'proyectos',
+    'acabados-de-pared': 'acabados', 'cortinas': 'cortinas', 'centros-de-entretenimiento': 'centros', 'proyectos': 'proyectos',
     'nosotros': 'nosotros', 'contacto': 'contacto', 'caso-oshio': 'oshio', 'casa-en-la-colina': 'colina',
     'casa-quintas': 'quintas', 'un-rincon-cerca-del-cielo': 'rincon', 'un-pedacito-de-cielo': 'pedacito',
     'cocina-oxford': 'oxford', 'rincon-de-delicias': 'delicias', 'aviso-de-privacidad': 'aviso'
