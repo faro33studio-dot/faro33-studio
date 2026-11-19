@@ -114,3 +114,53 @@
     }
   }, true);
 })();
+
+/* Faro 33 — API de conversiones (servidor) para el Lead de WhatsApp.
+   Envuelve fbq SOLO si el Pixel real está cargado (con consentimiento, fuera de localhost y de bots: en esos casos
+   fbq es un stub y no se toca nada). En cada fbq('track','Lead',…) añade un eventID y envía el mismo evento al
+   Worker de Cloudflare, que lo reenvía a Meta con ese event_id: Meta deduplica navegador y servidor.
+   No se envía correo, teléfono ni ningún dato personal: solo cookies _fbp/_fbc, URL y parámetros del Lead. */
+(function () {
+  'use strict';
+  var ENDPOINT = 'https://faro33-capi.faro33studio.workers.dev';
+  var KEEP = ['value', 'currency', 'content_name', 'content_category', 'content_ids', 'cta'];
+  function real(f) { return typeof f === 'function' && (Array.isArray(f.queue) || typeof f.callMethod === 'function'); }
+  function cookie(n) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + n + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  function fbc() {
+    var c = cookie('_fbc');
+    if (c) return c;
+    var m = location.search.match(/[?&]fbclid=([^&]+)/);
+    return m ? 'fb.1.' + Date.now() + '.' + decodeURIComponent(m[1]) : '';
+  }
+  function send(id, data) {
+    var custom = {};
+    KEEP.forEach(function (k) { if (data && data[k] !== undefined) custom[k] = data[k]; });
+    var body = JSON.stringify({
+      event_name: 'Lead', event_id: id, url: location.href.slice(0, 500),
+      fbp: cookie('_fbp'), fbc: fbc(), custom: custom
+    });
+    try { fetch(ENDPOINT, { method: 'POST', body: body, keepalive: true, credentials: 'omit', headers: { 'Content-Type': 'text/plain' } }).catch(function () {}); } catch (e) {}
+  }
+  function install() {
+    var orig = window.fbq;
+    if (!real(orig) || orig.__f33capi || window.__f33bot) return;
+    var wrapped = function () {
+      var a = [].slice.call(arguments);
+      if (a[0] === 'track' && a[1] === 'Lead') {
+        try {
+          var id = 'l' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+          a[3] = Object.assign({}, a[3], { eventID: id });
+          send(id, a[2]);
+        } catch (e) {}
+      }
+      return orig.apply(this, a);
+    };
+    for (var k in orig) { try { wrapped[k] = orig[k]; } catch (e) {} }
+    wrapped.__f33capi = true;
+    window.fbq = wrapped;
+  }
+  install();
+})();
