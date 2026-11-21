@@ -90,7 +90,7 @@ opcionales con `npx wrangler` requieren Node y solo son para respaldos.
 
 1. Abre la base `faro33-forms`.
 2. Pestaña **Console** (consola SQL).
-3. Copia **todo** el contenido de `salida_codigo/backend/db/schema.sql` y pégalo.
+3. Copia **todo** el contenido de `backend/db/schema.sql` y pégalo.
 4. **Execute**. Deben aparecer `submissions` y `audit`.
 5. Si la consola solo acepta una sentencia por vez, ejecuta por separado cada
    bloque `CREATE TABLE` y cada `CREATE INDEX` (todos son idempotentes).
@@ -132,7 +132,7 @@ WhatsApp, correo, Notion, GitHub ni en un chat con IA.
 1. En el repositorio, genera el archivo que se pega en Cloudflare:
 
    ```bash
-   cd salida_codigo/backend
+   cd backend
    node build.mjs --schema ../cuestionario/schema.json
    ```
 
@@ -401,7 +401,7 @@ WHERE status IN ('cerrado', 'descartado', 'no_contactar')
 ## 9. Estructura del proyecto
 
 ```
-salida_codigo/backend/
+backend/
 ├── db/schema.sql            Tablas e índices de D1
 ├── src/lib/cripto.js        AES-GCM-256, HMAC-SHA256, base64
 ├── src/lib/llaves.js        Versionado de llaves
@@ -417,10 +417,10 @@ salida_codigo/backend/
 Para regenerar y probar:
 
 ```bash
-cd salida_codigo/backend
+cd backend
 node build.mjs --schema ../cuestionario/schema.json
 cd ../..
-node --test salida_codigo/backend/test/
+node --test backend/test/
 ```
 
 ---
