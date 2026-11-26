@@ -34,6 +34,7 @@
       ['Un pedacito de cielo', '/un-pedacito-de-cielo/']
     ],
     estudio: [
+      ['Cuestionario de proyecto', '/cuestionario/'],
       ['Sobre nosotros', '/nosotros/'],
       ['Proceso', '/#proceso'],
       ['Preguntas frecuentes', '/#faq']
