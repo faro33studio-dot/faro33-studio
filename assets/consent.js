@@ -1,7 +1,7 @@
 /* Faro 33 — aviso de cookies (México, LFPDPPP).
    Modelo: consentimiento tácito + opción clara de rechazo para analítica y publicidad.
    - Barra pequeña, no bloqueante, abajo a la izquierda (no choca con el botón de WhatsApp).
-   - "Aceptar" la oculta. "Rechazar" apaga GA4 y Meta Pixel desde ese momento y en visitas futuras
+   - "Aceptar" la oculta. "Rechazar" apaga GA4, Meta Pixel, TikTok Pixel y Clarity desde ese momento y en visitas futuras
      (el bloqueo anticipado vive en el <head> de cada página: ver F33_CONSENT_EARLY en CLAUDE.md).
    - Cualquier enlace con [data-cookie-prefs] vuelve a abrir la barra.
    La elección se guarda 12 meses en localStorage ('f33-consent'). */
@@ -69,6 +69,8 @@
       /* apagar desde este momento, sin recargar */
       window['ga-disable-' + GA] = true;
       try { if (typeof fbq === 'function') fbq('consent', 'revoke'); } catch (e) {}
+      try { if (window.ttq && window.ttq.revokeConsent) { window.ttq.revokeConsent(); window.ttq.disableCookie(); } } catch (e) {}
+      try { if (typeof window.clarity === 'function') window.clarity('consent', false); } catch (e) {}
     } else if (prev && prev.c === 'no') {
       /* antes había rechazado: la medición estaba bloqueada desde el inicio de la página */
       location.reload();
