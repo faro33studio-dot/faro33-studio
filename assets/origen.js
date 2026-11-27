@@ -183,7 +183,7 @@
    Clarity no se carga en /cuestionario/ (formulario con datos personales). Sin datos personales en ningún evento. */
 (function () {
   'use strict';
-  var TIKTOK_PIXEL_ID = '';   /* p. ej. 'CXXXXXXXXXXXXXXXXXXX' — Events Manager de TikTok Ads */
+  var TIKTOK_PIXEL_ID = 'DC4I9CJC77U9PR64VN1G';   /* Events Manager de TikTok Ads (2026-11-26) */
   var CLARITY_ID = '';        /* p. ej. 'abcd1234ef' — clarity.microsoft.com → Settings → Overview */
 
   function rejected() {
