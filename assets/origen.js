@@ -184,7 +184,7 @@
 (function () {
   'use strict';
   var TIKTOK_PIXEL_ID = 'DC4I9CJC77U9PR64VN1G';   /* Events Manager de TikTok Ads (2026-11-26) */
-  var CLARITY_ID = '';        /* p. ej. 'abcd1234ef' — clarity.microsoft.com → Settings → Overview */
+  var CLARITY_ID = 'zk2s52vvan';   /* clarity.microsoft.com (2026-11-26) */
 
   function rejected() {
     try {
